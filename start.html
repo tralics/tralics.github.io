@@ -1,0 +1,773 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation of Tralics &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started with Tralics" href="step.html" />
+    <link rel="prev" title="Example of the \loop command in Tralics" href="loop.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation of Tralics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#standard-example">Standard example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#small-example">Small example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-transcript-file">The transcript file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameterisation">Parameterisation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Documentation of Tralics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation-of-tralics">
+<h1>Documentation of Tralics<a class="headerlink" href="#documentation-of-tralics" title="Link to this heading"></a></h1>
+<p>Content: A first <a class="reference external" href="#ex1">example</a>, a second <a class="reference external" href="#ex2">example</a>,
+interpretation of the <a class="reference external" href="#trans">transcript file</a> and
+<a class="reference external" href="#parm">parameterisation</a>.</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This web page is assumed to explain how to read the <em>Tralics</em>
+documentation, and gives some examples. In general, LaTeX input is
+written <code class="docutils literal notranslate"><span class="pre">\like{this}</span></code> and the XML output <code class="docutils literal notranslate"><span class="pre">&lt;like&gt;that&lt;/like&gt;</span></code>. You
+run <em>Tralics</em> on a file myfile.tex via the command tralics myfile. You
+can provide some options, before or after the file name. This may
+produce <em>errors</em> or other <em>messages</em>.</p>
+</section>
+<section id="standard-example">
+<h2>Standard example<a class="headerlink" href="#standard-example" title="Link to this heading"></a></h2>
+<p>Let’s consider a TeX file, named hello1.tex that consists of the
+following lines.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\documentclass{article}
+\begin{document}
+Hello, world!
+\end{document}
+</pre></div>
+</div>
+</div>
+<p>You compile this file by saying tralics hello1.tex; the extension may be
+omitted. If you think that the output is too verbose, you can use the
+silent option: say tralics hello1 -silent. Then you will see the
+following 8 lines on the terminal</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">tralics</span> <span class="mf">2.15.4</span><span class="p">,</span> <span class="n">a</span> <span class="n">LaTeX</span> <span class="n">to</span> <span class="n">XML</span> <span class="n">translator</span><span class="p">,</span> <span class="n">running</span> <span class="n">on</span> <span class="n">maclaurin</span>
+<span class="n">Copyright</span> <span class="n">INRIA</span><span class="o">/</span><span class="n">MIAOU</span><span class="o">/</span><span class="n">APICS</span><span class="o">/</span><span class="n">MARELLE</span> <span class="mi">2002</span><span class="o">-</span><span class="mi">2015</span><span class="p">,</span> <span class="n">Jos</span>\<span class="s1">&#39;e Grimm</span>
+<span class="n">Licensed</span> <span class="n">under</span> <span class="n">the</span> <span class="n">CeCILL</span> <span class="n">Free</span> <span class="n">Software</span> <span class="n">Licensing</span> <span class="n">Agreement</span>
+<span class="n">Starting</span> <span class="n">translation</span> <span class="n">of</span> <span class="n">file</span> <span class="n">hello1</span><span class="o">.</span><span class="n">tex</span><span class="o">.</span>
+<span class="n">Document</span> <span class="n">class</span><span class="p">:</span> <span class="n">article</span> <span class="mi">2011</span><span class="o">/</span><span class="mi">05</span><span class="o">/</span><span class="mi">09</span> <span class="n">v1</span><span class="mf">.2</span> <span class="n">Article</span> <span class="n">document</span> <span class="k">class</span><span class="w"> </span><span class="nc">for</span> <span class="n">Tralics</span>
+<span class="n">Output</span> <span class="n">written</span> <span class="n">on</span> <span class="n">hello1</span><span class="o">.</span><span class="n">xml</span> <span class="p">(</span><span class="mi">176</span> <span class="nb">bytes</span><span class="p">)</span><span class="o">.</span>
+<span class="n">No</span> <span class="n">error</span> <span class="n">found</span><span class="o">.</span>
+<span class="p">(</span><span class="n">For</span> <span class="n">more</span> <span class="n">information</span><span class="p">,</span> <span class="n">see</span> <span class="n">transcript</span> <span class="n">file</span> <span class="n">hello1</span><span class="o">.</span><span class="n">log</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The fifth line might be <em>Dummy default configuration file used</em>; this
+indicates that <em>Tralics</em> is unable to find the configuration. The fifth
+line may be missing; this means that the article.clt file was not found.
+Note that <em>Tralics</em> never reads the file article.cls, and does not
+complain if class files or packages are missing. You can use the option
+-confdir=bar to indicates that the configuration file or class file is
+located in the bar directory; this option can be given more than once,
+in order to specify more than one location.</p>
+<p>In some cases, when <em>Tralics</em> thinks you are compiling the Raweb, a
+fatal error may be signaled before the transcript file is opened. In all
+other cases, it writes some information on the transcript file (in the
+example above, the file hello1.log has 186 lines; in verbose mode, this
+could be 1071). In particular all errors appear in this file. In some
+cases, a file foo.img is created: it holds some information about
+graphic files when <code class="docutils literal notranslate"><span class="pre">\includegraphics</span></code> is used. Generally, an XML file
+is produced, it looks like the following</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;
+&lt;!DOCTYPE std SYSTEM &#39;classes.dtd&#39;&gt;
+&lt;!-- Translated from latex by tralics 2.15.4, date: 2015/08/20--&gt;
+&lt;std&gt;
+&lt;p&gt;Hello, world!
+&lt;/p&gt;
+&lt;/std&gt;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="small-example">
+<h2>Small example<a class="headerlink" href="#small-example" title="Link to this heading"></a></h2>
+<p>Assume that your document source contains the lines that follow.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% Example file tralics-ex1.tex $Revision: 1.1 $
+\begin{xmlelement}{preview}
+This is a test. An \unknown command. A math formula $a^$.
+\def\test#1#2?{#1,#2.}\test ok?\typeout{A message}
+\end{xmlelement}
+% EOF
+</pre></div>
+</div>
+</div>
+<p>If you run <em>Tralics</em> on the document, you will see the following on the
+terminal:</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">tralics</span> <span class="mf">2.2</span> <span class="p">(</span><span class="n">pl2</span><span class="p">),</span> <span class="n">a</span> <span class="n">LaTeX</span> <span class="n">to</span> <span class="n">XML</span> <span class="n">translator</span>
+<span class="o">%</span> <span class="p">(</span><span class="n">some</span> <span class="n">lines</span> <span class="n">omitted</span> <span class="n">here</span><span class="p">)</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">3</span> <span class="n">of</span> <span class="n">file</span> <span class="n">tralics</span><span class="o">-</span><span class="n">ex1</span><span class="o">.</span><span class="n">tex</span><span class="p">:</span>
+<span class="n">Undefined</span> <span class="n">command</span> \<span class="n">unknown</span><span class="o">.</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">3</span> <span class="n">of</span> <span class="n">file</span> <span class="n">tralics</span><span class="o">-</span><span class="n">ex1</span><span class="o">.</span><span class="n">tex</span><span class="p">:</span>
+<span class="n">Math</span> <span class="n">formula</span> <span class="n">should</span> <span class="ow">not</span> <span class="n">finish</span> <span class="k">with</span> <span class="o">^.</span>
+<span class="n">A</span> <span class="n">message</span>
+<span class="o">%</span> <span class="p">(</span><span class="n">lines</span> <span class="n">omitted</span> <span class="n">here</span><span class="p">)</span>
+<span class="p">(</span><span class="n">For</span> <span class="n">more</span> <span class="n">information</span><span class="p">,</span> <span class="n">see</span> <span class="n">transcript</span> <span class="n">file</span> <span class="n">tralics</span><span class="o">-</span><span class="n">ex1</span><span class="o">.</span><span class="n">log</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We indicated with colors some omissions. We left the identification line
+(this is a very old version), the error messages, the result of
+<code class="docutils literal notranslate"><span class="pre">\typeout</span></code>, and the last line. Note that everything that is printed on
+the screen is also printed in the transcript file.</p>
+<p>Four lines are printed because <em>Tralics</em> noticed two errors on the third
+line. The fourth line is OK, but the <code class="docutils literal notranslate"><span class="pre">\test</span></code> macro has a weird syntax.
+There is no <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code>, no <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code> and no
+<code class="docutils literal notranslate"><span class="pre">\end{document}</span></code>: these commands are useful, but there absence is not
+an error. The <code class="docutils literal notranslate"><span class="pre">xmlelement</span></code> environment allows you to put XML elements
+of any name in the result file.</p>
+<p>The XML code generated by <em>Tralics</em> is the following:</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39; encoding=&#39;iso-8859-1&#39;?&gt;
+&lt;!DOCTYPE unknown SYSTEM &#39;unknown.dtd&#39;&gt;
+&lt;!-- translated from latex by tralics 2.2 (pl2)--&gt;
+&lt;unknown&gt;
+&lt;p&gt;&lt;preview&gt;This is a test. An &lt;error l=&#39;3&#39; c=&#39;Undefined command &#39;/&gt;command. % CR added
+A math formula &lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;% CR added
+&lt;mi&gt;a&lt;/mi&gt;&lt;/math&gt;&lt;/formula&gt;.
+o,k.
+&lt;/preview&gt;
+&lt;/p&gt;&lt;/unknown&gt;
+</pre></div>
+</div>
+</div>
+<p>Some comments: in TeX, a newline character is equivalent to a space
+(unless followed by another newline character, the result being
+<code class="docutils literal notranslate"><span class="pre">\par</span></code>). In some cases, spaces disappear (in particular after a
+space); if a line is terminated by a space and a new line, and the next
+line starts with a space, the translator sees only one space, the
+newline character; its translation is a newline character. As a result
+most line breaks are the same in the input file and in the resulting XML
+document. On the other hand, spaces are ignored in math mode, and all
+math formulas produce long lines. In our examples, we have edited all
+these formulas, but for the example above, we have indicated (via blue
+comments) the places where new line characters have been added.</p>
+<p>By default, every error produces an error element in the XML file; for
+the current version of <em>Tralics</em>, the first element is
+<code class="docutils literal notranslate"><span class="pre">&lt;error</span> <span class="pre">n='\unknown'</span> <span class="pre">l='3'</span> <span class="pre">c='Undefined</span> <span class="pre">command'/&gt;</span></code> and the second is
+<code class="docutils literal notranslate"><span class="pre">&lt;error</span> <span class="pre">n='$'</span> <span class="pre">l='3'</span> <span class="pre">c='Math</span> <span class="pre">formula</span> <span class="pre">should</span> <span class="pre">not</span>&#160;&#160;&#160;&#160; <span class="pre">finish</span> <span class="pre">with</span> <span class="pre">^'/&gt;</span></code>.
+You can invoke <em>Tralics</em> with the -noxmlerror flag, case where no such
+elements are generated. You can invoke <em>Tralics</em> with the -noundefmac
+flag, in the case, the XML file will contain <code class="docutils literal notranslate"><span class="pre">\unknown</span></code> instead of the
+<code class="docutils literal notranslate"><span class="pre">&lt;error&gt;</span></code> element. You can invoke <em>Tralics</em> with the -nomathml flag,
+in the case, the XML file will not contain MathML elements. Using
+-nomathml -noxmlerror yields the following file (as the math expression
+is not fully converted, there is one less error).</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39; encoding=&#39;iso-8859-1&#39;?&gt;
+&lt;!DOCTYPE unknown SYSTEM &#39;unknown.dtd&#39;&gt;
+&lt;!-- translated from latex by tralics 2.7 (pl5)--&gt;
+&lt;unknown&gt;
+&lt;p&gt;&lt;preview&gt;This is a test. An command. A math formula
+&lt;texmath type=&#39;inline&#39;&gt;a^&lt;/texmath&gt;.
+o,k.
+&lt;/preview&gt;
+&lt;/p&gt;&lt;/unknown&gt;
+</pre></div>
+</div>
+</div>
+<p>We have designed an XSLT style sheet (named preview.xsl) whose purpose
+is to remove from the XML output everything but the <code class="docutils literal notranslate"><span class="pre">&lt;preview&gt;</span></code>
+elements. It is possible to process the resulting document like any
+other XML document, in this case, we convert it to XSL-fo, via the
+simplefo.xsl style sheet then to dvi and PostScript. We hacked the
+fotex.sty file, so that the following command
+<code class="docutils literal notranslate"><span class="pre">\RequirePackage[active]{preview}</span></code> (preview package by David Kastrup)
+is activated. As a result, lots of code inserted by the simplefo.xsl
+style sheet becomes useless, and only <code class="docutils literal notranslate"><span class="pre">&lt;preview&gt;</span></code> elements are used.
+As a consequence, the PostScript contains only the translation of the
+two lines of code. Converting to an image, it is <img alt="preview example" src="_images/img_5.png" /> In
+the documentation, all images are obtained in this fashion.</p>
+</section>
+<section id="the-transcript-file">
+<span id="trans"></span><h2>The transcript file<a class="headerlink" href="#the-transcript-file" title="Link to this heading"></a></h2>
+<p>The transcript file contains more or less lines, depending on whether
+<code class="docutils literal notranslate"><span class="pre">\tracingall</span></code> and friends are used. You can also use the option
+-verbose, this will trace everything, including the bootstrap phase.</p>
+<p>The format of the file is like that of TeX. A line of the form
+<em>{catcode}</em> says that the <code class="docutils literal notranslate"><span class="pre">\catcode</span></code> command has been seen; the line
+<em>+scanint for \catcode-&gt;38</em> says that <code class="docutils literal notranslate"><span class="pre">\catcode</span></code> has fetched the
+integer 38 (such information is missing in the TeX transcript); a line
+of the form <em>{begin-group character}</em> or <em>{math shift character}</em> says
+that a character was interpreted as a command (TeX indicates which one,
+open brace or dollar, but this information is less useful), a line of
+the form <em>\foo #1#2#3-&gt;#2</em> explains that a macro is about to be
+expanded, it is followed by the values of the arguments.</p>
+<p>When TeX sees a character, for instance when handling <code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world!</span></code>,
+it traces it as <em>{the letter H}</em>; in order to reduce the size of the
+transcript, only the first letter of a group is printed, so you will see
+<em>{horizontal mode: the letter H}</em>, then <em>{blank space }</em>, and <em>{the
+letter w}</em> and finally <em>{blank space }</em>. On the other hand, <em>Tralics</em>
+shows all characters, in the form <em>Character sequence: Hello, world! .</em>
+The period here is not part of the sequence, it makes the space that
+precedes visible (this space is the end-of-line character). These
+characters are kept in a buffer, and later on transferred to the current
+XML element, you will see <em>{Text:Hello, word!^^J}</em>. Note that ^^J stands
+for a newline character (generally, a line break in the source gives a
+line break in the XML file). If a letter, like H, is seen in vertical
+mode, then TeX starts a new paragraph and switches to horizontal mode;
+this is indicated in some cryptic manner. On the other hand, when
+<em>Tralics</em> creates a new paragraph it says so via: <em>{Push p 1}</em> (the
+number says how many elements are on the XML stack). At the end of the
+paragraph you will see <em>{Pop 1: document_v p_v}</em>; after popping, the
+stack holds only the document element; you can see that both elements
+were entered in vertical mode (<em>Tralics</em> does indicate the switch to
+horizontal mode).</p>
+<p>The trace holds also lines of the form <em>++ Input stack empty at end of
+file</em> that explain interaction with the file system, lines of the form
+<em>+stack: level + 2 for brace entered on line 13</em> whenever a new slot in
+the save stack is allocated, and <em>+stack: level - 2 for brace from line
+13</em> when the slot is deallocated; you may also see <em>+stack: restoring
+integer value 4 for \catcode38</em> before deallocation.</p>
+<p>We shall comment now (a part of) the full trace of the previous example.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Transcript</span> <span class="n">file</span> <span class="n">of</span> <span class="n">tralics</span> <span class="mf">2.15.4</span> <span class="k">for</span> <span class="n">file</span> <span class="n">tralics</span><span class="o">-</span><span class="n">ex1</span><span class="o">.</span><span class="n">tex</span>
+<span class="n">Copyright</span> <span class="n">INRIA</span><span class="o">/</span><span class="n">MIAOU</span><span class="o">/</span><span class="n">APICS</span><span class="o">/</span><span class="n">MARELLE</span> <span class="mi">2002</span><span class="o">-</span><span class="mi">2015</span><span class="p">,</span> <span class="n">Jos</span>\<span class="s1">&#39;e Grimm</span>
+<span class="n">Tralics</span> <span class="ow">is</span> <span class="n">licensed</span> <span class="n">under</span> <span class="n">the</span> <span class="n">CeCILL</span> <span class="n">Free</span> <span class="n">Software</span> <span class="n">Licensing</span> <span class="n">Agreement</span>
+<span class="n">Start</span> <span class="n">compilation</span><span class="p">:</span> <span class="mi">2015</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">20</span> <span class="mi">13</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mi">44</span>
+<span class="n">OS</span><span class="p">:</span> <span class="n">Apple</span><span class="p">,</span> <span class="n">machine</span> <span class="n">maclaurin</span>
+</pre></div>
+</div>
+</div>
+<p>The first line indicates the <em>Tralics</em> version and the name of the file
+to be compiled; this is followed by the Copyright notice. Then comes the
+compilation date and time, followed by the operating system and the name
+of the computer.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Starting translation of file tralics-ex1.tex.
+Output encoding: UTF8  (idem transcript).
+Left quote is ` right quote is &#39;
+++ Input encoding is 1 (iso-8859-1) for the main file
+</pre></div>
+</div>
+</div>
+<p>You can see that that the XML file, as well as the transcript file will
+be encoded in UTF-8, while the input file is, by default, assumed to be
+latin1 (the file can say how it is encoded, but the file is not yet
+interpreted). The example is all ASCII, so this is irrelevant here.
+Moreover, left and right code have there default value.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>++ file .tralics_rc does not exist.
+++ file ../confdir/.tralics_rc exists.
+Configuration file identification: standard $ Revision: 2.24 $
+Read configuration file ../confdir/.tralics_rc.
+Configuration file has type \documentclass
+No \documentclass in source file
+Using some default type
+dtd is unknown from unknown.dtd (standard mode)
+OK with the configuration file, dealing with the TeX file...
+There are 6 lines
+Starting translation
+</pre></div>
+</div>
+</div>
+<p>You see where <em>Tralics</em> searches for its configuration file, .tralics_rc
+and where it is found. This configuration file says that the document
+type to use comes from the <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> command of the main file;
+however there is no <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> command in this file, so a
+default DTD will be used. For explanations see
+<a class="reference external" href="titlepage.html#explanations">here</a>. After that, <em>Tralics</em> is ready
+to translate the six lines of the file. But, before this, there is a
+bootstrap phase.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">countdef</span> \<span class="n">count</span><span class="o">@=</span>\<span class="n">count255</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The transcript file contains many line of this form; this one says that
+<code class="docutils literal notranslate"><span class="pre">\count&#64;</span></code> is the counter 255. (note: this is the largest counter in
+plain TeX; however <code class="docutils literal notranslate"><span class="pre">\newcounter</span></code> never allocates this one).</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">countdef</span> \<span class="n">c</span><span class="nd">@enumi</span><span class="o">=</span>\<span class="n">count22</span><span class="p">}</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">theenumi</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">theenumi</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">number</span> \<span class="n">c</span><span class="nd">@enumi</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Whenever a counter is created, here <code class="docutils literal notranslate"><span class="pre">enumi</span></code>, a command is defined; you
+can see here that this globally changes an undefined command into a
+macro.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">countdef</span> \<span class="n">c</span><span class="nd">@section</span><span class="o">=</span>\<span class="n">count46</span><span class="p">}</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">thesection</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">thesection</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">number</span> \<span class="n">c</span><span class="nd">@section</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">newcounter</span><span class="o">-&gt;</span>\<span class="n">cl</span><span class="nd">@chapter</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="n">entered</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">0</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="nd">@elt</span> \<span class="n">relax</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="nd">@elt</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="nd">@elt</span><span class="o">=</span>\<span class="n">relax</span><span class="p">}</span>
+\<span class="n">cl</span><span class="nd">@chapter</span> <span class="o">-&gt;</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">killing</span> \<span class="nd">@elt</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="kn">from</span><span class="w"> </span><span class="nn">line</span> <span class="mi">0</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">cl</span><span class="nd">@chapter</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">cl</span><span class="nd">@chapter</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="nd">@elt</span> <span class="p">{</span><span class="n">section</span><span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<p>Here we define a counter that depends on another counter. This results
+into redefining <code class="docutils literal notranslate"><span class="pre">\cl&#64;chapter</span></code>. Inside a group, <code class="docutils literal notranslate"><span class="pre">\&#64;elt</span></code> is redefined
+by be <code class="docutils literal notranslate"><span class="pre">\relax</span></code>. Whenever a group is opened or closed, <em>Tralics</em>
+indicates the line number; here this is still zero. We shall omit most
+of the bootstrap phase, and focus on a single line.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[13] {\catcode`\&amp;=13\global\def&amp;{\char38 }}%
+{begin-group character}
++stack: level + 2 for brace entered on line 13
+{\catcode}
++scanint for \catcode-&gt;38
++scanint for \catcode-&gt;13
+{changing \catcode38=4 into \catcode38=13}
+{\global}
+{\global\def}
+{globally changing &amp;=undefined}
+{into &amp;=macro:-&gt;\char 38 }
+{end-group character}
++stack: restoring integer value 4 for \catcode38
++stack: level - 2 for brace from line 13
+</pre></div>
+</div>
+</div>
+<p>Whenever a line is read, it is printed in the transcript file, preceded
+by the line number in square brackets. Here we define the value of the
+ampersand character as an active character. For this, we start changing
+its category code in a group; when the closing brace is seen, the old
+value is restored. Since the ampersand is globally defined, it will not
+be restored. Note that <code class="docutils literal notranslate"><span class="pre">\char38</span></code> could have been replaced by
+<code class="docutils literal notranslate"><span class="pre">\char</span></code>&amp;`.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">73</span><span class="p">]</span> <span class="o">%%</span> <span class="n">End</span> <span class="n">bootstrap</span> <span class="n">commands</span> <span class="k">for</span> <span class="n">latex</span>
+<span class="o">++</span> <span class="n">Input</span> <span class="n">stack</span> <span class="n">empty</span> <span class="n">at</span> <span class="n">end</span> <span class="n">of</span> <span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<p>All the bootstrap commands were in a virtual file; <em>Tralics</em> says here
+that the input stack is empty. This means the real start of the
+translation.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[1] % Example file tralics-ex1.tex $Revision: 1.16 $
+[2] \begin{xmlelement}{preview}
+{\begin}
+{\begin xmlelement}
++stack: level + 2 for environment entered on line 2
+{\xmlelement}
+{Push argument 1}
+Character sequence: preview.
+{Text:preview}
+{Pop 1: document_v argument_v}
+{Push p 1}
+{Push ELT 2}
+</pre></div>
+</div>
+</div>
+<p>The first token in the file is the <code class="docutils literal notranslate"><span class="pre">\begin</span></code> command. This command
+reads an environment name, which is indicated on the next line. A new
+level of grouping is entered and an item is pushed on the save stack
+(this holds the name of the environment). Then <code class="docutils literal notranslate"><span class="pre">\xmlelement</span></code> is
+executed, thus logged. This command reads a name, but using a different
+algorithm than <code class="docutils literal notranslate"><span class="pre">\begin</span></code>. The idea is to translate the next argument
+into a temporary element, and convert it into a string; the line
+<em>{Text:preview}</em> shows what is put in the temporary, this will be the
+name of the box. The XML stack is used for this purpose, the temporary
+is named “argument” in this context.</p>
+<p>Once <code class="docutils literal notranslate"><span class="pre">\xmlelement</span></code> has found the name of the box to create, it leaves
+vertical mode (i.e., starts a new paragraph), then starts a new XML
+element with the given name. So two objects are push on the XML stack.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[3] This is a test. An \unknown command. A math formula $a^$.
+Character sequence: This is a test. An .
+{Text:This is a test. An }
+Error signaled at line 3 of file tralics-ex1.tex:
+Undefined command \unknown.
+Character sequence: command. A math formula .
+{math shift character}
+{Text:command. A math formula }
+{reassigning \@curmathfont=0}
++stack: level + 3 for math entered on line 3
++stack: level - 3 for math from line 3
+Math: $a^$
+{Inline formula
+1 ME 11 - char a - 0
+2 ME 7 - char ^ - 0
+}
+Error signaled at line 3 of file tralics-ex1.tex:
+Math formula should not finish with ^.
+Character sequence: . .
+</pre></div>
+</div>
+</div>
+<p>The third line holds some letters, a command, some letters, a formula
+and more letters. Since the command is undefined, no line is added to
+the transcript (except the two error lines). Now comes the math formula.
+There are two passes; for the first pass, you can see that everything
+happens in a group, and that the current math font is set to zero; after
+that comes a cryptic description of the formula; the second pass signals
+an error.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> \<span class="n">def</span>\<span class="n">test</span><span class="c1">#1#2?{#1,#2.}\test ok?\typeout{A message}</span>
+<span class="p">{</span>\<span class="n">def</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">test</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">test</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="c1">#1#2?-&gt;#1,#2.}</span>
+\<span class="n">test</span> <span class="c1">#1#2?-&gt;#1,#2.</span>
+<span class="c1">#1&lt;-o</span>
+<span class="c1">#2&lt;-k</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="n">o</span><span class="p">,</span><span class="n">k</span><span class="o">..</span>
+<span class="p">{</span>\<span class="n">typeout</span><span class="p">}</span>
+<span class="n">A</span> <span class="n">message</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span>  <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>Here is a macro definition, followed by by a macro expansion. There are
+two character sequences: one comes from the body of the macro, and one
+from the end-of-line character.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> \<span class="n">end</span><span class="p">{</span><span class="n">xmlelement</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">end</span><span class="p">}</span>
+<span class="p">{</span><span class="n">Text</span><span class="p">:</span><span class="o">.</span>
+<span class="n">o</span><span class="p">,</span><span class="n">k</span><span class="o">.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>When the <code class="docutils literal notranslate"><span class="pre">\end</span></code> command is seen, all characters gathered so far are
+put into the current XML element; there is a dot from line 3, four
+characters from line 4, and two newline characters.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">end</span> <span class="n">xmlelement</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">endxmlelement</span><span class="p">}</span>
+<span class="p">{</span><span class="n">Pop</span> <span class="mi">2</span><span class="p">:</span> <span class="n">document_v</span> <span class="n">p_v</span> <span class="n">ELT_h</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">endgroup</span> <span class="p">(</span><span class="k">for</span> <span class="n">env</span><span class="p">)}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">killing</span> \<span class="n">test</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">ending</span> <span class="n">environment</span> <span class="n">xmlelement</span><span class="p">;</span> <span class="n">resuming</span> <span class="n">document</span><span class="o">.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">environment</span> <span class="kn">from</span><span class="w"> </span><span class="nn">line</span> <span class="mi">2</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span>  <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">\end</span></code> command grabs its argument, then executes
+<code class="docutils literal notranslate"><span class="pre">\endxmlelement</span></code>. This command closes the current paragraph (assuming
+one has been opened, which is not the case here) then closes the current
+element, and pops the XML stack. After that the <code class="docutils literal notranslate"><span class="pre">\end</span></code> command pops
+the save stack; the <code class="docutils literal notranslate"><span class="pre">\test</span></code> command is restored to its previous value
+(undefined) and the current environment is shown.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">%</span> <span class="n">EOF</span>
+<span class="o">++</span> <span class="n">Input</span> <span class="n">stack</span> <span class="n">empty</span> <span class="n">at</span> <span class="n">end</span> <span class="n">of</span> <span class="n">file</span>
+<span class="p">{</span><span class="n">Text</span><span class="p">:</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Line 6 is ignored, as it is commented out. Since this is the last line
+of the file, <em>Tralics</em> checks if there is another file on its stack;
+since the stack is empty, this is the end of the job. The characters
+gathered so far (the newline corresponding to the end of line 5) are
+inserted in the current XML element.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bib</span> <span class="n">stats</span><span class="p">:</span> <span class="n">seen</span> <span class="mi">0</span> <span class="n">entries</span><span class="o">.</span>
+<span class="n">Math</span> <span class="n">stats</span><span class="p">:</span> <span class="n">formulas</span> <span class="mi">1</span><span class="p">,</span> <span class="n">kernels</span> <span class="mi">0</span><span class="p">,</span> <span class="n">trivial</span> <span class="mi">0</span><span class="p">,</span> \<span class="n">mbox</span> <span class="mi">0</span><span class="p">,</span> <span class="n">large</span> <span class="mi">0</span><span class="p">,</span> <span class="n">small</span> <span class="mf">0.</span>
+<span class="n">Buffer</span> <span class="n">realloc</span> <span class="mi">1</span><span class="p">,</span> <span class="n">string</span> <span class="mi">1353</span><span class="p">,</span> <span class="n">size</span> <span class="mi">12379</span><span class="p">,</span> <span class="n">merge</span> <span class="mi">0</span>
+<span class="n">Macros</span> <span class="n">created</span> <span class="mi">178</span><span class="p">,</span> <span class="n">deleted</span> <span class="mi">8</span><span class="p">;</span> <span class="nb">hash</span> <span class="n">size</span> <span class="mi">2400</span><span class="p">;</span> <span class="n">foonotes</span> <span class="mf">0.</span>
+<span class="n">Save</span> <span class="n">stack</span> <span class="o">+</span><span class="mi">18</span> <span class="o">-</span><span class="mf">18.</span>
+<span class="n">Attribute</span> <span class="nb">list</span> <span class="n">search</span> <span class="mi">1528</span><span class="p">(</span><span class="mi">1509</span><span class="p">)</span> <span class="n">found</span> <span class="mi">1083</span> <span class="ow">in</span> <span class="mi">1129</span> <span class="n">elements</span> <span class="p">(</span><span class="mi">1120</span> <span class="n">at</span> <span class="n">boot</span><span class="p">)</span><span class="o">.</span>
+<span class="n">Number</span> <span class="n">of</span> <span class="n">ref</span> <span class="mi">0</span><span class="p">,</span> <span class="n">of</span> <span class="n">used</span> <span class="n">labels</span> <span class="mi">0</span><span class="p">,</span> <span class="n">of</span> <span class="n">defined</span> <span class="n">labels</span> <span class="mi">0</span><span class="p">,</span> <span class="n">of</span> <span class="n">ext</span><span class="o">.</span> <span class="n">ref</span><span class="o">.</span> <span class="mf">0.</span>
+<span class="n">Output</span> <span class="n">written</span> <span class="n">on</span> <span class="n">tralics</span><span class="o">-</span><span class="n">ex1</span><span class="o">.</span><span class="n">xml</span> <span class="p">(</span><span class="mi">453</span> <span class="nb">bytes</span><span class="p">)</span><span class="o">.</span>
+<span class="n">There</span> <span class="n">were</span> <span class="mi">2</span> <span class="n">errors</span><span class="o">.</span>
+<span class="p">(</span><span class="n">For</span> <span class="n">more</span> <span class="n">information</span><span class="p">,</span> <span class="n">see</span> <span class="n">transcript</span> <span class="n">file</span> <span class="n">tralics</span><span class="o">-</span><span class="n">ex1</span><span class="o">.</span><span class="n">log</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Finally <em>Tralics</em> shows some statistics, they are explained
+<a class="reference external" href="doc-step.html#stats">here</a>.</p>
+</section>
+<section id="parameterisation">
+<span id="parm"></span><h2>Parameterisation<a class="headerlink" href="#parameterisation" title="Link to this heading"></a></h2>
+<p>You can change the name of some elements. For instance, consider the
+following input.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\documentclass{article}
+% Example file tralics-ex2.tex $Revision: 1.1 $
+\begin{document}
+\begin{itemize} \item [A] B \end{itemize}
+\begin{glossaire} \glo{x}{y}\end{glossaire}
+\part{A}\chapter{B}\section{C} \subsection{D}
+\subsubsection{E}\paragraph{F} \subparagraph{G}
+\begin{motscle}first,second \end{motscle}
+\mbox{$a$}
+\declaretopic{10}{foo}\caption[opt]{ok}
+\footnote{anote} \includegraphics{x.ps}
+\begin{figure}\includegraphics{y.ps}\end{figure}
+\end{document}
+</pre></div>
+</div>
+</div>
+<p>It will be translated into</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nb">list</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;simple&#39;</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">item</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid25&#39;</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">B</span> <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">item</span><span class="o">&gt;&lt;/</span><span class="nb">list</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">list</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;gloss&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">Glossary</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;</span><span class="n">item</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">y</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">item</span><span class="o">&gt;&lt;/</span><span class="nb">list</span><span class="o">&gt;&lt;/</span><span class="n">div3</span><span class="o">&gt;&lt;/</span><span class="n">div2</span><span class="o">&gt;&lt;/</span><span class="n">div1</span><span class="o">&gt;&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div0</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid26&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div0</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid27&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div0</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid28&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div1</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid29&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">D</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div2</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid30&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">E</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div3</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid31&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">F</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div4</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid32&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">G</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">keywords</span><span class="o">&gt;&lt;</span><span class="n">term</span><span class="o">&gt;</span><span class="n">first</span><span class="o">&lt;/</span><span class="n">term</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span><span class="n">second</span><span class="o">&lt;/</span><span class="n">term</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">keywords</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">mbox</span><span class="o">&gt;&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;&lt;</span><span class="n">simplemath</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">simplemath</span><span class="o">&gt;&lt;/</span><span class="n">formula</span><span class="o">&gt;&lt;/</span><span class="n">mbox</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">topic</span> <span class="n">num</span><span class="o">=</span><span class="s1">&#39;10&#39;</span><span class="o">&gt;&lt;</span><span class="n">t_titre</span><span class="o">&gt;</span><span class="n">foo</span><span class="o">&lt;/</span><span class="n">t_titre</span><span class="o">&gt;&lt;/</span><span class="n">topic</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">caption</span><span class="o">&gt;</span><span class="n">ok</span><span class="o">&lt;/</span><span class="n">caption</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">note</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid33&#39;</span> <span class="n">place</span><span class="o">=</span><span class="s1">&#39;foot&#39;</span><span class="o">&gt;</span><span class="n">anote</span><span class="o">&lt;/</span><span class="n">note</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">figure</span> <span class="n">file</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">figure</span> <span class="n">file</span><span class="o">=</span><span class="s1">&#39;y&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid34&#39;</span><span class="o">&gt;&lt;/</span><span class="n">figure</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div4</span><span class="o">&gt;&lt;/</span><span class="n">div3</span><span class="o">&gt;&lt;/</span><span class="n">div2</span><span class="o">&gt;&lt;/</span><span class="n">div1</span><span class="o">&gt;&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>The commands in blue are specific to the raweb; they are no longer
+defined. Without them, the current translation is the following. Note
+that <code class="docutils literal notranslate"><span class="pre">\part</span></code>, <code class="docutils literal notranslate"><span class="pre">\chapter</span></code> and <code class="docutils literal notranslate"><span class="pre">\section</span></code> are considered equivalent
+by the article class: they generate a <code class="docutils literal notranslate"><span class="pre">div0</span></code> element, and are no
+nested. However the <code class="docutils literal notranslate"><span class="pre">id-text</span></code> attributes are different (translation of
+<code class="docutils literal notranslate"><span class="pre">\thepart</span></code>, <code class="docutils literal notranslate"><span class="pre">\thechapter</span></code>, etc).</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nb">list</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;simple&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">item</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid1&#39;</span><span class="o">&gt;&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">item</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nb">list</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div0</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;I&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cid1&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div0</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cid2&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div0</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cid3&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">div1</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid2&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">D</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">div2</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid3&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">E</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">div3</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1.1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid4&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">F</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">div4</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1.1.1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid5&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">G</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="n">keywords</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span><span class="n">first</span><span class="o">&lt;/</span><span class="n">term</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">term</span><span class="o">&gt;</span><span class="n">second</span><span class="o">&lt;/</span><span class="n">term</span><span class="o">&gt;</span>
+          <span class="o">&lt;/</span><span class="n">keywords</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">mbox</span><span class="o">&gt;&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;&lt;</span><span class="n">simplemath</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">simplemath</span><span class="o">&gt;&lt;/</span><span class="n">formula</span><span class="o">&gt;&lt;/</span><span class="n">mbox</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">caption</span><span class="o">&gt;</span><span class="n">ok</span><span class="o">&lt;/</span><span class="n">caption</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">alt_head</span><span class="o">&gt;</span><span class="n">opt</span><span class="o">&lt;/</span><span class="n">alt_head</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">note</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid6&#39;</span> <span class="n">place</span><span class="o">=</span><span class="s1">&#39;foot&#39;</span><span class="o">&gt;</span><span class="n">anote</span><span class="o">&lt;/</span><span class="n">note</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">figure</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span> <span class="n">file</span><span class="o">=</span><span class="s1">&#39;x&#39;</span> <span class="n">extension</span><span class="o">=</span><span class="s1">&#39;ps&#39;</span><span class="o">/&gt;</span>
+          <span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="n">figure</span> <span class="n">file</span><span class="o">=</span><span class="s1">&#39;y&#39;</span> <span class="n">extension</span><span class="o">=</span><span class="s1">&#39;ps&#39;</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid7&#39;</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;figure&#39;</span><span class="o">/&gt;</span>
+        <span class="o">&lt;/</span><span class="n">div4</span><span class="o">&gt;</span>
+      <span class="o">&lt;/</span><span class="n">div3</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">div2</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">div1</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Consider the following file (it is called unused.tcf).</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## This is an example of a configuration file for tralics</span>
+<span class="c1">## Copyright 2006 Inria/apics, Jose&#39; Grimm</span>
+<span class="c1">##  $Id: unused.tcf,v 1.1 2006/07/17 09:09:06 grimm Exp  $</span>
+<span class="c1">## tralics ident rc=unused.tcf  $Revision: 1.1  $</span>
+
+  <span class="n">xml_labelitem_name</span> <span class="o">=</span> <span class="s2">&quot;Xlabel&quot;</span>
+  <span class="n">xml_gloitem_name</span> <span class="o">=</span> <span class="s2">&quot;Xglolabel&quot;</span>
+  <span class="n">xml_item_name</span> <span class="o">=</span> <span class="s2">&quot;Xitem&quot;</span>
+  <span class="n">xml_div0_name</span> <span class="o">=</span> <span class="s2">&quot;Xdiv0&quot;</span>
+  <span class="n">xml_div1_name</span> <span class="o">=</span> <span class="s2">&quot;Xdiv1&quot;</span>
+  <span class="n">xml_div2_name</span> <span class="o">=</span> <span class="s2">&quot;Xdiv2&quot;</span>
+  <span class="n">xml_div3_name</span> <span class="o">=</span> <span class="s2">&quot;Xdiv3&quot;</span>
+  <span class="n">xml_div4_name</span> <span class="o">=</span> <span class="s2">&quot;Xdiv4&quot;</span>
+  <span class="n">xml_div5_name</span> <span class="o">=</span> <span class="s2">&quot;Xdiv5&quot;</span>
+  <span class="n">xml_div6_name</span> <span class="o">=</span> <span class="s2">&quot;Xdiv6&quot;</span>
+  <span class="n">xml_subfigure_name</span> <span class="o">=</span> <span class="s2">&quot;Xsubfigure&quot;</span>
+  <span class="n">xml_row_name</span> <span class="o">=</span> <span class="s2">&quot;Xrow&quot;</span>
+  <span class="n">xml_cell_name</span> <span class="o">=</span> <span class="s2">&quot;Xcell&quot;</span>
+  <span class="n">xml_keywords_name</span> <span class="o">=</span> <span class="s2">&quot;Xkeywords&quot;</span>
+  <span class="n">xml_term_name</span> <span class="o">=</span> <span class="s2">&quot;Xterm&quot;</span>
+  <span class="n">xml_mbox_name</span> <span class="o">=</span> <span class="s2">&quot;Xmbox&quot;</span>
+  <span class="n">xml_topic_name</span> <span class="o">=</span> <span class="s2">&quot;Xtopic&quot;</span>
+  <span class="n">xml_caption_name</span> <span class="o">=</span> <span class="s2">&quot;Xcaption&quot;</span>
+  <span class="n">xml_footnote_name</span> <span class="o">=</span> <span class="s2">&quot;Xnote&quot;</span>
+  <span class="n">xml_fbox_name</span> <span class="o">=</span> <span class="s2">&quot;Xfbox&quot;</span>
+  <span class="n">xml_box_name</span> <span class="o">=</span> <span class="s2">&quot;Xbox&quot;</span>
+  <span class="n">xml_picture_name</span> <span class="o">=</span> <span class="s2">&quot;Xpicture&quot;</span>
+  <span class="n">xml_graphics_name</span> <span class="o">=</span> <span class="s2">&quot;Xgraphics&quot;</span>
+  <span class="n">xml_figure_name</span> <span class="o">=</span> <span class="s2">&quot;Xfigure&quot;</span>
+  <span class="n">xml_table_name</span> <span class="o">=</span> <span class="s2">&quot;Xtable&quot;</span>
+  <span class="n">xml_Table_name</span> <span class="o">=</span> <span class="s2">&quot;XTable&quot;</span>
+  <span class="n">xml_bezier_name</span> <span class="o">=</span> <span class="s2">&quot;Xbezier&quot;</span>
+  <span class="n">xml_put_name</span> <span class="o">=</span> <span class="s2">&quot;Xput&quot;</span>
+  <span class="n">xml_line_name</span> <span class="o">=</span> <span class="s2">&quot;Xline&quot;</span>
+  <span class="n">xml_vector_name</span> <span class="o">=</span> <span class="s2">&quot;Xvector&quot;</span>
+  <span class="n">xml_oval_name</span> <span class="o">=</span> <span class="s2">&quot;Xoval&quot;</span>
+  <span class="n">xml_dashline_name</span> <span class="o">=</span> <span class="s2">&quot;Xdashline&quot;</span>
+  <span class="n">xml_drawline_name</span> <span class="o">=</span> <span class="s2">&quot;Xdrawline&quot;</span>
+  <span class="n">xml_dottedline_name</span> <span class="o">=</span> <span class="s2">&quot;Xdottedline&quot;</span>
+  <span class="n">xml_circle_name</span> <span class="o">=</span> <span class="s2">&quot;Xcircle&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>Compile with tralics tralics-ex2 -type unused -trivialmath=2, you get</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">unknown</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nb">list</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;simple&#39;</span><span class="o">&gt;&lt;</span><span class="n">Xlabel</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">Xlabel</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xitem</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid1&#39;</span><span class="o">&gt;&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Xitem</span><span class="o">&gt;&lt;/</span><span class="nb">list</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xdiv0</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;I&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cid1&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Xdiv0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xdiv0</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cid2&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Xdiv0</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xdiv0</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;cid3&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xdiv1</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid2&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">D</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xdiv2</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid3&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">E</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xdiv3</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1.1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid4&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">F</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xdiv4</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1.1.1.1.1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid5&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">G</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xkeywords</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xterm</span><span class="o">&gt;</span><span class="n">first</span><span class="o">&lt;/</span><span class="n">Xterm</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xterm</span><span class="o">&gt;</span><span class="n">second</span><span class="o">&lt;/</span><span class="n">Xterm</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Xkeywords</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;&lt;</span><span class="n">Xmbox</span><span class="o">&gt;&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;&lt;</span><span class="n">simplemath</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">simplemath</span><span class="o">&gt;&lt;/</span><span class="n">formula</span><span class="o">&gt;&lt;/</span><span class="n">Xmbox</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">caption</span><span class="o">&gt;</span><span class="n">ok</span><span class="o">&lt;/</span><span class="n">caption</span><span class="o">&gt;&lt;</span><span class="n">alt_head</span><span class="o">&gt;</span><span class="n">opt</span><span class="o">&lt;/</span><span class="n">alt_head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xnote</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid6&#39;</span> <span class="n">place</span><span class="o">=</span><span class="s1">&#39;foot&#39;</span><span class="o">&gt;</span><span class="n">anote</span><span class="o">&lt;/</span><span class="n">Xnote</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">Xfigure</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span> <span class="n">file</span><span class="o">=</span><span class="s1">&#39;x&#39;</span> <span class="n">extension</span><span class="o">=</span><span class="s1">&#39;ps&#39;</span><span class="o">/&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">figure</span> <span class="n">file</span><span class="o">=</span><span class="s1">&#39;y&#39;</span> <span class="n">extension</span><span class="o">=</span><span class="s1">&#39;ps&#39;</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid7&#39;</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;Xfigure&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">Xdiv4</span><span class="o">&gt;&lt;/</span><span class="n">Xdiv3</span><span class="o">&gt;&lt;/</span><span class="n">Xdiv2</span><span class="o">&gt;&lt;/</span><span class="n">Xdiv1</span><span class="o">&gt;&lt;/</span><span class="n">Xdiv0</span><span class="o">&gt;&lt;/</span><span class="n">unknown</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

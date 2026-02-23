@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two examples for the Titlepage mechanism of Tralics &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Examples of transcripts" href="titlepage-ex3.html" />
+    <link rel="prev" title="Two examples for the Titlepage mechanism of Tralics" href="titlepage-ex1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Two examples for the Titlepage mechanism of Tralics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cedram-test-1">Cedram test 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cedram-test-2">Cedram test 2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Two examples for the Titlepage mechanism of Tralics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="two-examples-for-the-titlepage-mechanism-of-tralics">
+<h1>Two examples for the Titlepage mechanism of Tralics<a class="headerlink" href="#two-examples-for-the-titlepage-mechanism-of-tralics" title="Link to this heading"></a></h1>
+<p>First example. The source file is described <a class="reference external" href="titlepage.html">here</a>.
+This file was produced in Jan. 2004 Some line breaks were inserted, they
+are marked by red underscores.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39; encoding=&#39;iso-8859-1&#39;?&gt;
+&lt;!DOCTYPE tpa SYSTEM &#39;tpa.dtd&#39;&gt;
+&lt;!-- translated from latex by tralics 1.9t--&gt;
+&lt;tpa from_type=&#39;OK&#39; from-tpa=&#39;ok&#39; language=&#39;english&#39;&gt;
+&lt;titlepage a2=&#39;b2&#39; a1=&#39;b1&#39; att2=&#39;foo2&#39; att1=&#39;foo&#39;&gt;
+__&lt;title-element tea=&#39;tea-val&#39;&gt;Titlepage customisation
+__in Tralics&lt;/title-element&gt;
+&lt;utitle-element tea=&#39;utea-val&#39;&gt;No title&lt;/utitle-element&gt;
+&lt;autL bl=&#39;blval&#39; al=&#39;alval&#39;&gt;&lt;aut auta=&#39;autaval&#39;&gt;Jos� Grimm&lt;/aut&gt;
+&lt;aut auta=&#39;autaval&#39;&gt;Knuth&lt;/aut&gt;
+&lt;aut auta=&#39;autaval&#39;&gt;JG&lt;/aut&gt;
+&lt;aut auta=&#39;autaval&#39;&gt;DEK&lt;/aut&gt;
+&lt;/autL&gt;
+&lt;uautL bl=&#39;blval&#39; al=&#39;alval&#39;&gt;&lt;aut auta=&#39;autaval&#39;&gt;No authors&lt;/aut&gt;&lt;/uautL&gt;
+&lt;abstract ab=&#39;AB1&#39;&gt;&lt;p&gt;
+This is an abstract with &lt;/p&gt;
+&lt;p&gt;some paragraphs in it&lt;/p&gt;
+&lt;p&gt;ok ?
+&lt;/p&gt;&lt;/abstract&gt;
+&lt;abstract ab=&#39;AB2&#39;&gt;
+This is an abstract without paragraphs in it
+&lt;/abstract&gt;
+&lt;abstract ab=&#39;AB3&#39;&gt;&lt;p&gt;Another abstract &lt;/p&gt;
+&lt;p&gt;with &lt;/p&gt;
+&lt;p&gt;in it&lt;/p&gt;&lt;/abstract&gt;
+&lt;abstract ab=&#39;AB4&#39;&gt;Another abstract without par&lt;/abstract&gt;
+&lt;uabstract ab=&#39;AB5&#39;&gt;no abstract1&lt;/uabstract&gt;
+&lt;uabstract ab=&#39;AB6&#39;&gt;no abstract2&lt;/uabstract&gt;
+&lt;uabstract ab=&#39;AB7&#39;&gt;no abstract3&lt;/uabstract&gt;
+&lt;uabstract ab=&#39;AB8&#39;&gt;no abstract4&lt;/uabstract&gt;
+&lt;UR&gt;&lt;Rocq&gt;&lt;/Rocq&gt;
+&lt;URsop&gt;&lt;/URsop&gt;
+&lt;/UR&gt;
+&lt;sUR en=&#39;research unit&#39; fr=&#39;unit� de recherche&#39;&gt;&lt;Rocq en=&#39;nearparis&#39;&gt;&lt;/Rocq&gt;
+&lt;sURsop fr=&#39;dans le sud&#39;&gt;&lt;/sURsop&gt;
+&lt;sURlor fr=&#39; dans l&amp;apos;est&#39;&gt;&lt;/sURlor&gt;
+&lt;/sUR&gt;
+&lt;Address&gt;somewhere&lt;/Address&gt;
+&lt;cmdp&gt;nodefault&lt;/cmdp&gt;
+&lt;cmdA&gt;CMDA&lt;/cmdA&gt;
+&lt;cmdB&gt;CMDB&lt;/cmdB&gt;
+&lt;cmdC&gt;CMDC&lt;/cmdC&gt;
+&lt;/titlepage&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/tpa&gt;
+</pre></div>
+</div>
+</div>
+<p>First example, new syntax</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39; encoding=&#39;iso-8859-1&#39;?&gt;
+&lt;!DOCTYPE tpa SYSTEM &#39;tpa.dtd&#39;&gt;
+&lt;!-- translated from latex by tralics 2.8--&gt;
+&lt;tpa from_type=&#39;OK&#39; from-tpa=&#39;ok&#39;&gt;
+&lt;titlepage a2=&#39;b2&#39; a1=&#39;b1&#39; att2=&#39;foo2&#39; att1=&#39;foo&#39;&gt;&lt;title-element tea=&#39;tea-val&#39;&gt;Titlepage customisation in Tralics&lt;/title-element&gt;
+&lt;utitle-element tea=&#39;utea-val&#39;&gt;No title&lt;/utitle-element&gt;
+&lt;autL bl=&#39;blval&#39; al=&#39;alval&#39;&gt;&lt;aut auta=&#39;autaval&#39;&gt;Jos� Grimm&lt;/aut&gt;
+&lt;aut auta=&#39;autaval&#39;&gt;Knuth&lt;/aut&gt;
+&lt;aut auta=&#39;autaval&#39;&gt;JG&lt;/aut&gt;
+&lt;aut auta=&#39;autaval&#39;&gt;DEK&lt;/aut&gt;
+&lt;/autL&gt;
+&lt;uautL bl=&#39;blval&#39; al=&#39;alval&#39;&gt;&lt;aut auta=&#39;autaval&#39;&gt;No authors&lt;/aut&gt;&lt;/uautL&gt;
+&lt;abstract ab=&#39;AB1&#39;&gt;&lt;p&gt;
+This is an abstract with&lt;/p&gt;
+&lt;p&gt;some paragraphs in it&lt;/p&gt;
+&lt;p&gt;ok ?
+&lt;/p&gt;&lt;/abstract&gt;
+&lt;abstract ab=&#39;AB2&#39;&gt;
+This is an abstract without paragraphs in it
+&lt;/abstract&gt;
+&lt;abstract ab=&#39;AB3&#39;&gt;&lt;p&gt;Another abstract&lt;/p&gt;
+&lt;p&gt;with&lt;/p&gt;
+&lt;p&gt;in it&lt;/p&gt;&lt;/abstract&gt;
+&lt;abstract ab=&#39;AB4&#39;&gt;Another abstract without par&lt;/abstract&gt;
+&lt;uabstract ab=&#39;AB5&#39;&gt;no abstract1&lt;/uabstract&gt;
+&lt;uabstract ab=&#39;AB6&#39;&gt;no abstract2&lt;/uabstract&gt;
+&lt;uabstract ab=&#39;AB7&#39;&gt;no abstract3&lt;/uabstract&gt;
+&lt;uabstract ab=&#39;AB8&#39;&gt;no abstract4&lt;/uabstract&gt;
+&lt;UR&gt;
+&lt;Rocq/&gt;
+&lt;URsop/&gt;
+&lt;/UR&gt;
+&lt;sUR en=&#39;research unit&#39; fr=&#39;unit� de recherche&#39;&gt;
+&lt;Rocq en=&#39;nearparis&#39;/&gt;
+&lt;sURsop fr=&#39;dans le sud&#39;/&gt;
+&lt;sURlor fr=&#39; dans l&amp;apos;est&#39;/&gt;
+&lt;/sUR&gt;
+&lt;Address&gt;somewhere&lt;/Address&gt;
+&lt;cmdp&gt;nodefault&lt;/cmdp&gt;
+&lt;cmdA&gt;CMDA&lt;/cmdA&gt;
+&lt;cmdB&gt;CMDB&lt;/cmdB&gt;
+&lt;cmdC&gt;CMDC&lt;/cmdC&gt;
+&lt;/titlepage&gt;
+&lt;p/&gt;
+&lt;/tpa&gt;
+</pre></div>
+</div>
+</div>
+<section id="cedram-test-1">
+<span id="ex2"></span><h2>Cedram test 1<a class="headerlink" href="#cedram-test-1" title="Link to this heading"></a></h2>
+<p>Second example file for the titlepage command. Some line breaks were
+inserted, they are marked by red underscores.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39; encoding=&#39;iso-8859-1&#39;?&gt;
+&lt;!DOCTYPE cedram SYSTEM &#39;cedram.dtd&#39;&gt;
+&lt;!-- translated from latex by tralics 2.7c--&gt;
+&lt;cedram&gt;
+&lt;article&gt;&lt;production&gt;
+&lt;fichier_tex&gt;bo&lt;/fichier_tex&gt;
+&lt;fichier_bib&gt;bo&lt;/fichier_bib&gt;
+&lt;date_prod&gt;2006-6-16&lt;/date_prod&gt;&lt;/production&gt;
+
+&lt;date_reception&gt;2004-06-14&lt;/date_reception&gt;
+&lt;date_acceptation&gt;2004-12-09&lt;/date_acceptation&gt;
+&lt;auteur&gt;
+&lt;prenom&gt;Donald&lt;/prenom&gt;
+&lt;middlename&gt;E.&lt;/middlename&gt;
+&lt;nom&gt;&lt;hi rend=&#39;it&#39;&gt;Knuth&lt;/hi&gt;&lt;/nom&gt;
+&lt;adresse&gt;&lt;TeX/&gt; Users Group  P.O. Box 869 Santa Barbara,
+__ CA 93102-0869 USA&lt;/adresse&gt;
+&lt;mel&gt;d.e.knuth@somewhere.on.the.net&lt;/mel&gt;
+&lt;/auteur&gt;
+&lt;titre xml:lang=&#39;fr&#39;&gt;Coefficients Fourier pour fonctions
+__ &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;msup&gt;&lt;mi&gt;L&lt;/mi&gt; &lt;mi&gt;&amp;infin;&lt;/mi&gt; &lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt; simples
+__&lt;/titre&gt;
+&lt;TeXtitre xml:lang=&#39;fr&#39;&gt;Coefficients Fourier pour fonctions
+__$L^\infty $ simple&lt;/TeXtitre&gt;
+&lt;titre xml:lang=&#39;en&#39;&gt;Fourier coefficients for simple
+__ &lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;msup&gt;&lt;mi&gt;L&lt;/mi&gt; &lt;mi&gt;&amp;infin;&lt;/mi&gt; &lt;/msup&gt;
+__&lt;/math&gt;&lt;/formula&gt; functions&lt;/titre&gt;
+&lt;TeXtitre xml:lang=&#39;en&#39;&gt;Fourier coefficients for
+__simple $L^\infty $ functions&lt;/TeXtitre&gt;
+&lt;langue&gt;en&lt;/langue&gt;
+&lt;resume xml:lang=&#39;en&#39;&gt;This is an abstract with a beautiful inline
+__formule &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;&lt;mrow&gt;
+__&lt;msub&gt;&lt;mi&gt;&amp;lambda;&lt;/mi&gt; &lt;mi&gt;n&lt;/mi&gt; &lt;/msub&gt;
+__&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+__&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;N&lt;/mi&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;mi&gt;n&lt;/mi&gt;
+__&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;
+__&lt;mn&gt;1&lt;/mn&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;
+__&lt;mo&gt;)&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;O&lt;/mi&gt;
+__&lt;mo&gt;(&lt;/mo&gt;&lt;/mrow&gt;&lt;msqrt&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msqrt&gt;&lt;mrow&gt;
+__&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+__&lt;/mrow&gt;&lt;/math&gt;&lt;/formula&gt;, where &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;
+__&lt;mn&gt;1&lt;/mn&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;
+__&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/formula&gt;
+__is a real-valued constant.&lt;/resume&gt;
+&lt;TEXresume xml:lang=&#39;en&#39;&gt;This is an abstract with a beautiful inline
+__formule $\lambda _n(\pi ) = \frac N2 n \log n + C_1(\pi ) n +
+__O(\sqrt n\log n)$, where $C_1(\pi )$
+__is a real-valued constant.&lt;/TEXresume&gt;
+&lt;resume xml:lang=&#39;fr&#39;&gt;Mon r�sum� avec ma formule &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;&amp;lambda;&lt;/mi&gt; &lt;mi&gt;n&lt;/mi&gt; &lt;/msub&gt;
+__&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+__&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;N&lt;/mi&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+__&lt;mi&gt;n&lt;/mi&gt;&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;
+__&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt; &lt;mn&gt;1&lt;/mn&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;
+__&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;O&lt;/mi&gt;
+__&lt;mo&gt;(&lt;/mo&gt;&lt;/mrow&gt;&lt;msqrt&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msqrt&gt;&lt;mrow&gt;
+__&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;
+__&lt;/math&gt;&lt;/formula&gt;, o� &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt; &lt;mn&gt;1&lt;/mn&gt;
+__ &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;
+__&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/formula&gt; est une constante r�elle.&lt;/resume&gt;
+&lt;TEXresume xml:lang=&#39;fr&#39;&gt;Mon r�sum� avec ma formule $\lambda _n(\pi )
+__= \frac N2 n \log n + C_1(\pi ) n + O(\sqrt n\log n)$, o� $C_1(\pi )$
+__est une constante r�elle.&lt;/TEXresume&gt;
+&lt;motcle xml:lang=&#39;fr&#39;&gt;fonctions &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;&lt;msup&gt;&lt;mi&gt;L&lt;/mi&gt;
+__ &lt;mi&gt;&amp;infin;&lt;/mi&gt;
+&lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt;
+__ simples, fonction lambda&lt;/motcle&gt;
+&lt;motcle xml:lang=&#39;en&#39;&gt;simple &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;&lt;msup&gt;
+__&lt;mi&gt;L&lt;/mi&gt; &lt;mi&gt;&amp;infin;&lt;/mi&gt; &lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt; functions, lambda
+__ function&lt;/motcle&gt;
+&lt;msc&gt;11M26, 11M36, 11S40&lt;/msc&gt;
+&lt;/article&gt;
+&lt;p/&gt;
+__&lt;biblio&gt;
+&lt;citation from=&#39;year&#39; key=&#39;Bar03&#39; id=&#39;bid0&#39;
+__userid=&#39;cite:Ba03&#39; type=&#39;article&#39;&gt;
+&lt;bauteurs&gt;&lt;nom&gt;Barnes&lt;/nom&gt;&lt;prenom&gt;E. W.&lt;/prenom&gt;&lt;initiale&gt;E. W.&lt;/initiale&gt;
+__&lt;particule/&gt;&lt;junior/&gt;&lt;/bauteurs&gt;
+&lt;title&gt;On the expression of Euler&#39;s constant as a definite integral&lt;/title&gt;
+&lt;bjournal&gt;Messenger of Math.&lt;/bjournal&gt;
+&lt;bvolume&gt;33&lt;/bvolume&gt;
+&lt;byear&gt;1903&lt;/byear&gt;
+&lt;bpages&gt;59&amp;ndash;61&lt;/bpages&gt;
+&lt;/citation&gt;
+__
+&lt;citation from=&#39;year&#39; key=&#39;Bom00&#39; id=&#39;bid2&#39;
+__userid=&#39;cite:Bo99&#39; type=&#39;article&#39;&gt;
+&lt;bauteurs&gt;&lt;nom&gt;Bombieri&lt;/nom&gt;&lt;prenom&gt;E.&lt;/prenom&gt;
+__&lt;initiale&gt;E.&lt;/initiale&gt;&lt;particule/&gt;&lt;junior/&gt;&lt;/bauteurs&gt;
+&lt;title&gt;Remarks on Weil&#39;s quadratic functional in the theory
+__ of prime numbers&amp;nbsp;I&lt;/title&gt;
+&lt;bjournal&gt;Rend. Mat. Acc. Lincei, Ser.&amp;nbsp;IX&lt;/bjournal&gt;
+&lt;bvolume&gt;11&lt;/bvolume&gt;
+&lt;byear&gt;2000&lt;/byear&gt;
+&lt;bpages&gt;183&amp;ndash;233&lt;/bpages&gt;
+&lt;/citation&gt;
+__
+&lt;citation from=&#39;year&#39; key=&#39;BPY01&#39; id=&#39;bid1&#39;
+__userid=&#39;cite:BPY01&#39; type=&#39;article&#39;&gt;
+&lt;bauteurs&gt;&lt;nom&gt;Biane&lt;/nom&gt;&lt;prenom&gt;P.&lt;/prenom&gt;&lt;initiale&gt;P.&lt;/initiale&gt;
+__&lt;particule/&gt;&lt;junior/&gt;&lt;nom&gt;Pitman&lt;/nom&gt;&lt;prenom&gt;J.&lt;/prenom&gt;
+__&lt;initiale&gt;J.&lt;/initiale&gt;&lt;particule/&gt;&lt;junior/&gt;&lt;nom&gt;Yor&lt;/nom&gt;
+__&lt;prenom&gt;M.&lt;/prenom&gt;&lt;initiale&gt;M.&lt;/initiale&gt;&lt;particule/&gt;&lt;junior/&gt;
+__&lt;/bauteurs&gt;
+&lt;title&gt;Probability laws related to the Jacobi $\theta $ and Riemann
+__ $\zeta $ functions, and Brownian excursions&lt;/title&gt;
+&lt;bjournal&gt;Bull. Amer. Math. Soc.&lt;/bjournal&gt;
+&lt;bvolume&gt;38&lt;/bvolume&gt;
+&lt;byear&gt;2001&lt;/byear&gt;
+&lt;bpages&gt;435&amp;ndash;465&lt;/bpages&gt;
+&lt;/citation&gt;&lt;/biblio&gt;&lt;/cedram&gt;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="cedram-test-2">
+<span id="ex2new"></span><h2>Cedram test 2<a class="headerlink" href="#cedram-test-2" title="Link to this heading"></a></h2>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  &lt;?xml version=&#39;1.0&#39; encoding=&#39;iso-8859-1&#39;?&gt;
+  &lt;!DOCTYPE cedram SYSTEM &#39;cedram.dtd&#39;&gt;
+  &lt;!-- translated from latex by tralics 2.8--&gt;
+  &lt;cedram&gt;
+  &lt;article&gt;&lt;production&gt;
+  &lt;fichier_tex&gt;bo&lt;/fichier_tex&gt;
+  &lt;fichier_bib&gt;bo&lt;/fichier_bib&gt;
+  &lt;date_prod&gt;2006-7-18&lt;/date_prod&gt;&lt;/production&gt;
+
+  &lt;date_reception&gt;2004-06-14&lt;/date_reception&gt;
+  &lt;date_acceptation&gt;2004-12-09&lt;/date_acceptation&gt;
+  &lt;auteur&gt;
+  &lt;prenom&gt;Donald&lt;/prenom&gt;
+  &lt;middlename&gt;E.&lt;/middlename&gt;
+  &lt;nom&gt;&lt;hi rend=&#39;it&#39;&gt;Knuth&lt;/hi&gt;&lt;/nom&gt;
+  &lt;adresse&gt;&lt;TeX/&gt; Users Group  P.O. Box 869 Santa Barbara,
+__CA 93102-0869 USA&lt;/adresse&gt;
+  &lt;mel&gt;d.e.knuth@somewhere.on.the.net&lt;/mel&gt;
+  &lt;/auteur&gt;
+  &lt;titre xml:lang=&#39;fr&#39;&gt;Coefficients Fourier pour fonctions
+__&lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;msup&gt;&lt;mi&gt;L&lt;/mi&gt; &lt;mi&gt;&amp;infin;&lt;/mi&gt; &lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt; simples&lt;/titre&gt;
+  &lt;TeXtitre xml:lang=&#39;fr&#39;&gt;Coefficients Fourier pour fonctions
+__&lt;texmath type=&#39;inline&#39;&gt;L^\infty &lt;/texmath&gt; simples&lt;/TeXtitre&gt;
+  &lt;titre xml:lang=&#39;en&#39;&gt;Fourier coefficients for simple
+__&lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;msup&gt;&lt;mi&gt;L&lt;/mi&gt; &lt;mi&gt;&amp;infin;&lt;/mi&gt; &lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt; functions&lt;/titre&gt;
+  &lt;TeXtitre xml:lang=&#39;en&#39;&gt;Fourier coefficients for simple
+__&lt;texmath type=&#39;inline&#39;&gt;L^\infty &lt;/texmath&gt; functions&lt;/TeXtitre&gt;
+  &lt;langue&gt;en&lt;/langue&gt;
+  &lt;resume xml:lang=&#39;en&#39;&gt;This is an abstract with a beautiful inline formula
+__&lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;&amp;lambda;&lt;/mi&gt; &lt;mi&gt;n&lt;/mi&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;
+__&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;N&lt;/mi&gt; &lt;mn&gt;2&lt;/mn&gt;
+__&lt;/mfrac&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msub&gt;
+__&lt;mi&gt;C&lt;/mi&gt; &lt;mn&gt;1&lt;/mn&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)
+__&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;/mrow&gt;&lt;msqrt&gt;&lt;mi&gt;n&lt;/mi&gt;
+__&lt;/msqrt&gt;&lt;mrow&gt;&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+__&lt;/mrow&gt;&lt;/math&gt;&lt;/formula&gt;, where &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt;
+__ &lt;mn&gt;1&lt;/mn&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;
+__&lt;/math&gt;&lt;/formula&gt; is a real-valued constant.
+  &lt;/resume&gt;
+  &lt;TEXresume xml:lang=&#39;en&#39;&gt;This is an abstract with a beautiful
+__inline formula &lt;texmath type=&#39;inline&#39;&gt;\lambda _n(\pi ) = \frac{N}{2}
+__n \log n + C_1(\pi ) n +
+__  O(\sqrt{n}\log {n})&lt;/texmath&gt;, where &lt;texmath type=&#39;inline&#39;&gt;C_1(\pi )
+__&lt;/texmath&gt; is a real-valued constant.
+  &lt;/TEXresume&gt;
+  &lt;resume xml:lang=&#39;fr&#39;&gt;Mon r�sum� avec ma formule
+  &lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+__&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;&amp;lambda;&lt;/mi&gt; &lt;mi&gt;n&lt;/mi&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;
+__&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mi&gt;N&lt;/mi&gt; &lt;mn&gt;2&lt;/mn&gt;
+__&lt;/mfrac&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;
+__&lt;msub&gt;&lt;mi&gt;C&lt;/mi&gt; &lt;mn&gt;1&lt;/mn&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)
+__&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;/mrow&gt;&lt;msqrt&gt;&lt;mi&gt;n&lt;/mi&gt;
+__&lt;/msqrt&gt;&lt;mrow&gt;&lt;mo form=&#39;prefix&#39;&gt;log&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;
+__&lt;/mrow&gt;&lt;/math&gt;&lt;/formula&gt;, o� &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;&lt;mrow&gt;&lt;msub&gt;
+__&lt;mi&gt;C&lt;/mi&gt; &lt;mn&gt;1&lt;/mn&gt; &lt;/msub&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;pi;&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;
+__&lt;/mrow&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/formula&gt; est une constante r�elle.
+  &lt;/resume&gt;
+  &lt;TEXresume xml:lang=&#39;fr&#39;&gt;Mon r�sum� avec ma formule
+  &lt;texmath type=&#39;inline&#39;&gt;\lambda _n(\pi ) = \frac{N}{2} n \log n
+__+ C_1(\pi ) n +
+  O(\sqrt{n}\log {n})&lt;/texmath&gt;, o�
+__&lt;texmath type=&#39;inline&#39;&gt;C_1(\pi )&lt;/texmath&gt; est une constante r�elle.
+  &lt;/TEXresume&gt;
+  &lt;motcle xml:lang=&#39;fr&#39;&gt;fonctions &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;&lt;msup&gt;&lt;mi&gt;L&lt;/mi&gt;
+__&lt;mi&gt;&amp;infin;&lt;/mi&gt; &lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt; simples, fonction lambda&lt;/motcle&gt;
+__  &lt;motcle xml:lang=&#39;en&#39;&gt;simple &lt;formula type=&#39;inline&#39;&gt;
+__&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;&lt;msup&gt;
+__&lt;mi&gt;L&lt;/mi&gt; &lt;mi&gt;&amp;infin;&lt;/mi&gt; &lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt; functions,
+__lambda function&lt;/motcle&gt;
+  &lt;msc&gt;11M26, 11M36, 11S40&lt;/msc&gt;
+  &lt;/article&gt;
+  &lt;p/&gt;&lt;biblio&gt;
+  &lt;citation from=&#39;year&#39; key=&#39;Bar03&#39; id=&#39;bid0&#39; userid=&#39;cite:Ba03&#39;
+__type=&#39;article&#39;&gt;
+  &lt;bauteurs&gt;&lt;nom&gt;Barnes&lt;/nom&gt;&lt;prenom&gt;E. W.&lt;/prenom&gt;
+__&lt;initiale&gt;E. W.&lt;/initiale&gt;&lt;particule/&gt;&lt;junior/&gt;&lt;/bauteurs&gt;
+  &lt;title&gt;On the expression of Euler&#39;s constant as a definite integral&lt;/title&gt;
+  &lt;bjournal&gt;Messenger of Math.&lt;/bjournal&gt;
+  &lt;bvolume&gt;33&lt;/bvolume&gt;
+  &lt;byear&gt;1903&lt;/byear&gt;
+  &lt;bpages&gt;59&amp;ndash;61&lt;/bpages&gt;
+  &lt;/citation&gt;
+  &lt;citation from=&#39;year&#39; key=&#39;Bom00&#39; id=&#39;bid2&#39; userid=&#39;cite:Bo99&#39;
+__type=&#39;article&#39;&gt;
+  &lt;bauteurs&gt;&lt;nom&gt;Bombieri&lt;/nom&gt;&lt;prenom&gt;E.&lt;/prenom&gt;
+__&lt;initiale&gt;E.&lt;/initiale&gt;&lt;particule/&gt;&lt;junior/&gt;&lt;/bauteurs&gt;
+  &lt;title&gt;Remarks on Weil&#39;s quadratic functional in the theory of
+__prime numbers&amp;nbsp;I&lt;/title&gt;
+  &lt;bjournal&gt;Rend. Mat. Acc. Lincei, Ser.&amp;nbsp;IX&lt;/bjournal&gt;
+  &lt;bvolume&gt;11&lt;/bvolume&gt;
+  &lt;byear&gt;2000&lt;/byear&gt;
+  &lt;bpages&gt;183&amp;ndash;233&lt;/bpages&gt;
+  &lt;/citation&gt;
+  &lt;citation from=&#39;year&#39; key=&#39;BPY01&#39; id=&#39;bid1&#39; userid=&#39;cite:BPY01&#39;
+__type=&#39;article&#39;&gt;
+  &lt;bauteurs&gt;&lt;nom&gt;Biane&lt;/nom&gt;&lt;prenom&gt;P.&lt;/prenom&gt;&lt;initiale&gt;P.&lt;/initiale&gt;
+__&lt;particule/&gt;&lt;junior/&gt;&lt;nom&gt;Pitman&lt;/nom&gt;&lt;prenom&gt;J.&lt;/prenom&gt;
+__&lt;initiale&gt;J.&lt;/initiale&gt;&lt;particule/&gt;&lt;junior/&gt;&lt;nom&gt;Yor&lt;/nom&gt;
+__&lt;prenom&gt;M.&lt;/prenom&gt;&lt;initiale&gt;M.&lt;/initiale&gt;&lt;particule/&gt;&lt;junior/&gt;&lt;/bauteurs&gt;
+  &lt;title&gt;Probability laws related to the Jacobi $\theta $ and
+__Riemann $\zeta $ functions, and Brownian excursions&lt;/title&gt;
+  &lt;bjournal&gt;Bull. Amer. Math. Soc.&lt;/bjournal&gt;
+  &lt;bvolume&gt;38&lt;/bvolume&gt;
+  &lt;byear&gt;2001&lt;/byear&gt;
+  &lt;bpages&gt;435&amp;ndash;465&lt;/bpages&gt;
+  &lt;/citation&gt;&lt;/biblio&gt;&lt;/cedram&gt;
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

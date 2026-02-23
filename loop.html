@@ -1,0 +1,889 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example of the \loop command in Tralics &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation of Tralics" href="start.html" />
+    <link rel="prev" title="Implementation of the LaTeX3 Bundle in Tralics" href="latex3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example of the \loop command in Tralics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-example">The example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-result">The result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-in-the-transcript-file">What is in the transcript file?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analysis-of-the-transcript-file">Analysis of the transcript file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Example of the \loop command in Tralics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="example-of-the-loop-command-in-tralics">
+<h1>Example of the \loop command in Tralics<a class="headerlink" href="#example-of-the-loop-command-in-tralics" title="Link to this heading"></a></h1>
+<p>In this page we describe a non-trivial example of the
+<a class="reference external" href="doc-l.html#cmd-loop">\loop</a> command. We also show how to analyse
+the transcript file produced by <em>Tralics</em>.</p>
+<section id="the-example">
+<h2>The example<a class="headerlink" href="#the-example" title="Link to this heading"></a></h2>
+<p>Consider a document that contains the following code:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% this is file testloop.tex $Revision: 1.4 $
+%\tracingall
+\let\olda\a %% \newcount defines \a globally...
+\countdef\td 4 \td=0%% no need to allocate a counter
+\newif\ifprime \newif\ifunknown
+\newcount\n \newcount\p \newcount\d \newcount\a \newcount\N
+\def\primes#1{2,~3% assume that #1 is at least 3
+  \n=#1 \advance\n by-2 % n more to go
+  \p=5 % odd primes starting with p
+  \loop\ifnum\n&gt;0 \printifprime\advance\p by2 \repeat}
+\def\printp{,% we will invoke \printp if p is prime
+  \N=\n \divide\N by 8 \multiply \N by -8 \advance\N by \n
+  \ifnum\N=0 {
+  }\else{ }\fi
+  \ifnum\n=1 and~\fi % this precedes the last value
+  \number\p \advance\n by -1 }
+\def\printifprime{\testprimality \ifprime\printp\fi}
+\def\testprimality{{\d=3 \global\primetrue
+  \loop\trialdivision \ifunknown\advance\d by2 \repeat}}
+\def\trialdivision{\a=\p \divide\a by\d
+    \global\advance\td by 1 %% count calls to trialdivision
+  \ifnum\a&gt;\d \unknowntrue\else\unknownfalse\fi
+  \multiply\a by\d
+  \ifnum\a=\p \global\primefalse\unknownfalse\fi}
+
+The first thirty prime numbers are \primes{30}. trial division macro was
+expanded \the\td\ times. %% Knuth says cpu time=4 sec, I see 0.02
+\let\a\olda %% restore
+</pre></div>
+</div>
+</div>
+</section>
+<section id="the-result">
+<h2>The result<a class="headerlink" href="#the-result" title="Link to this heading"></a></h2>
+<p>The XML translation by <em>Tralics</em> is:</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&#39;1.0&#39; encoding=&#39;iso-8859-1&#39;?&gt;
+&lt;!DOCTYPE unknown SYSTEM &#39;unknown.dtd&#39;&gt;
+&lt;!-- translated from latex by tralics 2.2 (pl3)--&gt;
+&lt;unknown&gt;
+&lt;p&gt;The first thirty prime numbers are 2,&amp;nbsp;3, 5, 7, 11, 13,
+17, 19, 23, 29, 31, 37, 41, 43,
+47, 53, 59, 61, 67, 71, 73, 79,
+83, 89, 97, 101, 103, 107, 109, and&amp;nbsp;113. trial division macro was
+expanded 132 times.&lt;/p&gt;
+&lt;/unknown&gt;
+</pre></div>
+</div>
+</div>
+<p>The example above is in the <a class="reference external" href="index.html#texbook">TeXbook</a>, at the end
+of Chapter 20. We just added the code that computes the number of calls
+of <code class="docutils literal notranslate"><span class="pre">\trialdivision</span></code>, and the test of <code class="docutils literal notranslate"><span class="pre">\n</span></code> mod 8, that avoids long
+lines in the XML output. You may wish to look at the description of:
+<a class="reference external" href="doc-n.html#cmd-newcount">\newcount</a>,
+<a class="reference external" href="doc-n.html#cmd-newif">\newif</a>, <a class="reference external" href="doc-i.html#cmd-ifnum">\ifnum</a>.</p>
+</section>
+<section id="what-is-in-the-transcript-file">
+<h2>What is in the transcript file?<a class="headerlink" href="#what-is-in-the-transcript-file" title="Link to this heading"></a></h2>
+<p>We show here the content of the transcript file for version 2.15.4
+rather than 2.2 (pl3) or 2.7 (pl5). The XML file is the same, modulo (a)
+the encoding, which is now UTF-8, (b) the comment line with the version
+also indicates teh compilation time, (c) <code class="docutils literal notranslate"><span class="pre">&amp;nbsp;</span></code> has been replaced
+aby a character. The transcript file starts like this</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Transcript file of tralics 2.15.4 for file testloop1.tex
+Copyright INRIA/MIAOU/APICS/MARELLE 2002-2015, Jos\&#39;e Grimm
+Tralics is licensed under the CeCILL Free Software Licensing Agreement
+Start compilation: 2015/12/02 16:44:19
+OS: Apple, machine maclaurin
+Starting translation of file testloop1.tex.
+Output encoding: UTF8  (idem transcript).
+Left quote is ` right quote is &#39;
+\notrivialmath=1
+++ Input encoding is 1 (iso-8859-1) for the main file
+++ file .tralics_rc does not exist.
+++ file ../confdir/.tralics_rc exists.
+Configuration file identification: standard $ Revision: 2.24 $
+Read configuration file ../confdir/.tralics_rc.
+Configuration file has type \documentclass
+No \documentclass in source file
+Using some default type
+dtd is unknown from unknown.dtd (standard mode)
+OK with the configuration file, dealing with the TeX file...
+There are 30 lines
+</pre></div>
+</div>
+</div>
+<p>These lines are printed before translation starts. What you can see is
+that some configuration file was used, that did not define a document
+type for <em>Tralics</em> compatible with the current <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> (there
+is no document class specified in the source). As a consequence, the
+main XML element will be called <code class="docutils literal notranslate"><span class="pre">&lt;unknown&gt;</span></code>.</p>
+<p>Let’s remove the comment on the line with <code class="docutils literal notranslate"><span class="pre">\tracingall</span></code>. This will
+have as effect to add much more lines to the transcript file. (We could
+also use the –verbose flag, this would enter verbose mode from the
+start, and add some additional lines to the transcript file).</p>
+<p>As a general rule, all lines of the form [number] text indicate source
+lines, read by <em>Tralics</em>. Other lines start with a plus sign, an open
+brace, or a command. A line of the form {let} indicates that the main
+command interpreter of <em>Tralics</em> has executed the command <code class="docutils literal notranslate"><span class="pre">\let</span></code>. In
+some cases, a second line is printed by the C++ code associated to the
+command. Here you can see the arguments read by the command, and the
+effects: new and old value of <code class="docutils literal notranslate"><span class="pre">\a</span></code>.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> \<span class="n">let</span>\<span class="n">olda</span>\<span class="n">a</span> <span class="o">%%</span> \<span class="n">newcount</span> <span class="n">defines</span> \<span class="n">a</span> <span class="n">globally</span><span class="o">...</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">olda</span> \<span class="n">a</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">olda</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">olda</span><span class="o">=</span>\<span class="n">a</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Here, you can see that <code class="docutils literal notranslate"><span class="pre">\newif</span></code> reads a command, and calls twice the
+inter code of <code class="docutils literal notranslate"><span class="pre">\let</span></code>.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> \<span class="n">newif</span>\<span class="n">ifprime</span> \<span class="n">newif</span>\<span class="n">ifunknown</span>
+<span class="p">{</span>\<span class="n">newif</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">newif</span> \<span class="n">ifprime</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">primetrue</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">primetrue</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">primefalse</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">primefalse</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iffalse</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is now the trace for <code class="docutils literal notranslate"><span class="pre">\global\primetrue</span></code>. The <code class="docutils literal notranslate"><span class="pre">\global</span></code> command
+is a prefix that applies to the assignment that follows, that can be of
+the form <code class="docutils literal notranslate"><span class="pre">\def</span> <span class="pre">cmd</span></code> or <code class="docutils literal notranslate"><span class="pre">\count</span> <span class="pre">nbr=...</span></code>; the next token is fully
+expanded. In this case, <code class="docutils literal notranslate"><span class="pre">\primetrue</span></code> is a user defined command, the
+transcript file shows the body and the arguments (there are none here).
+The third line shows the argument of <code class="docutils literal notranslate"><span class="pre">\global</span></code> (the first token in the
+assignment sequence). What happens is the following; if the first
+non-expandable token is not an assignment operator, you will get an
+error of the form <em>You cannot use the prefix \global before \par</em>.
+Otherwise, the assignment will be marked global. You can have more than
+one prefix (for instance, before <code class="docutils literal notranslate"><span class="pre">\def</span></code>); so you can see <em>You cannot
+use the prefix \globallong before \count</em>.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+\<span class="n">primetrue</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span>
+<span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iffalse</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This behaviour is different from TeX: if you say
+<code class="docutils literal notranslate"><span class="pre">\global</span> <span class="pre">\let</span> <span class="pre">\ifprime</span> <span class="pre">\iftrue</span></code>, TeX will print only one line in its
+transcript file. And for the code above, you will see:</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+\<span class="n">primetrue</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span>
+</pre></div>
+</div>
+</div>
+<p>Chapter 24 of the <a class="reference external" href="index.html#texbook">TeXbook</a> starts with
+explanations of what a &lt;number&gt; or a &lt;dimen&gt; is. These rules are
+complicated, this is why <em>Tralics</em> prints in the transcript file lines
+starting with +scanint or +scandimen whenever such a thing is scanned.
+In general the result is used by a command (here <code class="docutils literal notranslate"><span class="pre">\countdef</span></code>) or put
+in a register (here register number 4, via its symbolic name <code class="docutils literal notranslate"><span class="pre">\td</span></code>).
+If you ask: what is <code class="docutils literal notranslate"><span class="pre">\td</span></code>, the answer will be <code class="docutils literal notranslate"><span class="pre">\count4</span></code> (previous
+versions of <em>Tralics</em> printed something like <code class="docutils literal notranslate"><span class="pre">\countref1540</span></code>, for a
+command that accesses to position 1540 in the table of integers). If the
+value of a counter is changed, you see the old and new value. If these
+two values are equal, you see reassigning instead of changing.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> \<span class="n">countdef</span>\<span class="n">td</span> <span class="mi">4</span> \<span class="n">td</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">{</span>\<span class="n">countdef</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">countdef</span><span class="o">-&gt;</span><span class="mi">4</span>
+<span class="p">{</span>\<span class="n">countdef</span> \<span class="n">td</span><span class="o">=</span>\<span class="n">count4</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">count4</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">td</span><span class="o">-&gt;</span><span class="mi">0</span>
+<span class="p">{</span><span class="n">reassigning</span> \<span class="n">count4</span><span class="o">=</span><span class="mi">0</span><span class="p">}</span>
+<span class="o">...</span>
+<span class="p">{</span>\<span class="n">divide</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">N</span><span class="o">-&gt;</span><span class="mi">8</span> <span class="o">%</span><span class="n">this</span> <span class="n">divides</span> <span class="n">N</span> <span class="n">by</span> <span class="mi">8</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">28</span> <span class="n">into</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>In previous versions of <em>Tralics</em>, the third line was of the form
+<code class="docutils literal notranslate"><span class="pre">{\countdef</span> <span class="pre">\n=1553}</span></code>, where 1553 is to be interpreted as above (since
+1540 was the index for counter 4, an easy computation shows that 1553 is
+the index of counter 17; the current version improves a bit the
+interpretation of the transcript file; even in silent mode, the
+transcript contains a line for each use of command of the type
+<code class="docutils literal notranslate"><span class="pre">\countdef</span></code>.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> \<span class="n">newcount</span>\<span class="n">n</span> \<span class="n">newcount</span>\<span class="n">p</span> \<span class="n">newcount</span>\<span class="n">d</span> \<span class="n">newcount</span>\<span class="n">a</span> \<span class="n">newcount</span>\<span class="n">N</span>
+<span class="p">{</span>\<span class="n">newcount</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">countdef</span> \<span class="n">n</span><span class="o">=</span>\<span class="n">count65</span><span class="p">}</span>
+<span class="o">...</span>
+<span class="p">{</span>\<span class="n">countdef</span> \<span class="n">N</span><span class="o">=</span>\<span class="n">count69</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>You may see lines like these when a group starts. Here a begin-group
+character, i.e., a character of <code class="docutils literal notranslate"><span class="pre">\catcode</span></code> 1, an open brace, caused a
+new group to be pushed on the stack. The current level is increased to 2
+(bottom level is number 1). You can also see that the current line is 27
+(because all the stack alterations are the result of the <code class="docutils literal notranslate"><span class="pre">\primes</span></code>
+command.)</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">begin</span><span class="o">-</span><span class="n">group</span> <span class="n">character</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="n">entered</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">27</span>
+</pre></div>
+</div>
+</div>
+<p>You may see lines like these when a group ends. Here an end-group
+character, i.e., a character of <code class="docutils literal notranslate"><span class="pre">\catcode</span></code> 2, a closing brace, caused
+the stack to be unwound. The current execution level decreases (from 2
+down to 1). The commands <code class="docutils literal notranslate"><span class="pre">\ifunknown</span></code> and <code class="docutils literal notranslate"><span class="pre">\iterate</span></code> are restored
+(we truncated the value). Two integers are restored (<code class="docutils literal notranslate"><span class="pre">\d</span></code> and <code class="docutils literal notranslate"><span class="pre">\a</span></code>).</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="n">group</span> <span class="n">character</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iffalse</span><span class="o">.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">count68</span><span class="o">=</span><span class="mf">0.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">ifnum</span> <span class="o">...</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">count67</span><span class="o">=</span><span class="mf">0.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="kn">from</span><span class="w"> </span><span class="nn">line</span> <span class="mi">27</span>
+</pre></div>
+</div>
+</div>
+<p>If in TeX, you say <code class="docutils literal notranslate"><span class="pre">\par</span> <span class="pre">The</span> <span class="pre">first</span> <span class="pre">thirty</span> <span class="pre">prime</span> <span class="pre">numbers</span> <span class="pre">are</span></code>, a line
+is added to the transcript for each group of letters (a line is also
+added for each non-letter, for instance a space). As can been seen, a
+paragraph is started, and horizontal mode is entered because of the
+first letter.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">the</span> <span class="n">letter</span> <span class="n">T</span><span class="p">}</span>
+<span class="p">{</span><span class="n">horizontal</span> <span class="n">mode</span><span class="p">:</span> <span class="n">the</span> <span class="n">letter</span> <span class="n">T</span><span class="p">}</span>
+<span class="p">{</span><span class="n">blank</span> <span class="n">space</span>  <span class="p">}</span>
+<span class="p">{</span><span class="n">the</span> <span class="n">letter</span> <span class="n">f</span><span class="p">}</span>
+<span class="p">{</span><span class="n">blank</span> <span class="n">space</span>  <span class="p">}</span>
+<span class="p">{</span><span class="n">the</span> <span class="n">letter</span> <span class="n">t</span><span class="p">}</span>
+<span class="p">{</span><span class="n">blank</span> <span class="n">space</span>  <span class="p">}</span>
+<span class="p">{</span><span class="n">the</span> <span class="n">letter</span> <span class="n">p</span><span class="p">}</span>
+<span class="p">{</span><span class="n">blank</span> <span class="n">space</span>  <span class="p">}</span>
+<span class="p">{</span><span class="n">the</span> <span class="n">letter</span> <span class="n">n</span><span class="p">}</span>
+<span class="p">{</span><span class="n">blank</span> <span class="n">space</span>  <span class="p">}</span>
+<span class="p">{</span><span class="n">the</span> <span class="n">letter</span> <span class="n">a</span><span class="p">}</span>
+<span class="p">{</span><span class="n">blank</span> <span class="n">space</span>  <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is the <em>Tralics</em> transcript file</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="n">The</span> <span class="n">first</span> <span class="n">thirty</span> <span class="n">prime</span> <span class="n">numbers</span> <span class="n">are</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>You can see that there is no difference between spaces and other
+characters. The character sequence starts with the character that
+follows the space after colon, and ends with the characters that
+precedes the period (in the example, the first character is a T, the
+last is a space). Currently, mode changes are not logged.</p>
+</section>
+<section id="analysis-of-the-transcript-file">
+<h2>Analysis of the transcript file<a class="headerlink" href="#analysis-of-the-transcript-file" title="Link to this heading"></a></h2>
+<p>This is what the transcript file contains, starting with the line that
+follows the definitions. Lines preceding line 25 contain definitions and
+global assignments. Current mode is outer vertical, so that newline
+characters between definitions are ignored. Empty lines and <code class="docutils literal notranslate"><span class="pre">\par</span></code>
+commands are ignored as well, but appear in the transcript.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">25</span><span class="p">]</span>
+<span class="p">{</span>\<span class="n">par</span><span class="p">}</span>
+<span class="p">[</span><span class="mi">26</span><span class="p">]</span>
+<span class="p">{</span>\<span class="n">par</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>A new paragraph is started when the letter T is seen. The following
+things happen: current mode becomes horizontal; a new XML element is
+created; a new frame is pushed on the stack. What you see in the
+transcript file is the name of the frame, in some cases, as here, the
+frame and the element have the same name. At the end of the run, the XML
+tree contains three sons: the <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> element created here, and two
+newline characters, one before and one after. This element contains one
+son: a piece of text.</p>
+<p>For every character translated, something is printed in the transcript
+file. The transcript file is flushed whenever a non-character is seen
+(here the <code class="docutils literal notranslate"><span class="pre">\primes</span></code> command). The characters are put in another
+buffer, flushed when needed.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">27</span><span class="p">]</span> <span class="n">The</span> <span class="n">first</span> <span class="n">thirty</span> <span class="n">prime</span> <span class="n">numbers</span> <span class="n">are</span> \<span class="n">primes</span><span class="p">{</span><span class="mi">30</span><span class="p">}</span><span class="o">.</span> <span class="n">trial</span> <span class="n">division</span> <span class="n">macro</span> <span class="n">was</span>
+<span class="p">{</span><span class="n">Push</span> <span class="n">p</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="n">The</span> <span class="n">first</span> <span class="n">thirty</span> <span class="n">prime</span> <span class="n">numbers</span> <span class="n">are</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>You can see the body and arguments of the <code class="docutils literal notranslate"><span class="pre">\primes</span></code> command (the
+transcript file contains a single line, contrarily to TeX that inserts
+newline characters whenever the line is full). You can also see that the
+expansion of <code class="docutils literal notranslate"><span class="pre">~</span></code> is <code class="docutils literal notranslate"><span class="pre">\nobreakspace</span></code>. The lines shown here add some
+characters to the XML buffer, namely 2, 3, a comma, and whatever
+<code class="docutils literal notranslate"><span class="pre">\nobreakspace</span></code> translates to.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">primes</span> <span class="c1">#1-&gt;2,~3\n =#1 \advance \n by-2 \p =5 \loop \ifnum \n &gt;0</span>
+    \<span class="n">printifprime</span> \<span class="n">advance</span> \<span class="n">p</span> <span class="n">by2</span> \<span class="n">repeat</span>
+<span class="c1">#1&lt;-30</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span><span class="o">.</span>
+<span class="o">~</span> <span class="o">-&gt;</span>\<span class="n">nobreakspace</span>
+<span class="p">{</span>\<span class="n">nobreakspace</span><span class="p">}</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="mf">3.</span>
+</pre></div>
+</div>
+</div>
+<p>This is the transcript for <code class="docutils literal notranslate"><span class="pre">\n</span> <span class="pre">=#1</span> <span class="pre">\advance</span> <span class="pre">\n</span> <span class="pre">by-2</span> <span class="pre">\p</span> <span class="pre">=5</span></code>.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">count65</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">n</span><span class="o">-&gt;</span><span class="mi">30</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count65</span><span class="o">=</span><span class="mi">0</span> <span class="n">into</span> \<span class="n">count65</span><span class="o">=</span><span class="mi">30</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">n</span><span class="o">-&gt;-</span><span class="mi">2</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count65</span><span class="o">=</span><span class="mi">30</span> <span class="n">into</span> \<span class="n">count65</span><span class="o">=</span><span class="mi">28</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">count66</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">p</span><span class="o">-&gt;</span><span class="mi">5</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count66</span><span class="o">=</span><span class="mi">0</span> <span class="n">into</span> \<span class="n">count66</span><span class="o">=</span><span class="mi">5</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is the outer loop: we have to compute <code class="docutils literal notranslate"><span class="pre">\n</span></code> prime numbers (since
+we have already printed 2 and 3, the current value of <code class="docutils literal notranslate"><span class="pre">\n</span></code> is 28), and
+the candidate <code class="docutils literal notranslate"><span class="pre">\p</span></code> is 5. After this is found to be prime or not-prime,
+we increment it by two (because even numbers greater than two cannot be
+prime) and continue the loop.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">loop</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">undefined</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">ifnum</span> \<span class="n">n</span> <span class="o">&gt;</span><span class="mi">0</span> <span class="o">...</span> <span class="p">}</span>
+\<span class="n">iterate</span> <span class="o">-&gt;</span>\<span class="n">ifnum</span> \<span class="n">n</span> <span class="o">&gt;</span><span class="mi">0</span> \<span class="n">printifprime</span> \<span class="n">advance</span> \<span class="n">p</span> <span class="n">by2</span> \<span class="n">relax</span>
+    \<span class="n">expandafter</span> \<span class="n">iterate</span> \<span class="n">fi</span>
+</pre></div>
+</div>
+</div>
+<p>Here you can see the expansion of <code class="docutils literal notranslate"><span class="pre">\ifnum</span> <span class="pre">\n</span> <span class="pre">&gt;0</span></code>. Two numbers are
+compared, the result is true. <em>Tralics</em> indicates the values, it also
+indicates for each conditional its serial number.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span>\<span class="n">ifnum1</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">28</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">0</span>
+<span class="o">+</span><span class="n">iftest1</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+<p>We do not indicate here what is done with the number 5. We skip some
+code and go to 13.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">printifprime</span> <span class="o">-&gt;</span>\<span class="n">testprimality</span> \<span class="n">ifprime</span> \<span class="n">printp</span> \<span class="n">fi</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<p>The idea is the following: we open a group, and set <code class="docutils literal notranslate"><span class="pre">\d</span></code> to 3. We make
+the a priori assumption that our number is prime (the <code class="docutils literal notranslate"><span class="pre">\global</span></code> is
+needed, because we have to know, outside the group, whether the number
+is prime or not). The <code class="docutils literal notranslate"><span class="pre">\trialdivision</span></code> macro sets <code class="docutils literal notranslate"><span class="pre">\ifunknown</span></code> to
+some value: if set to false, the status is known, indicated by
+<code class="docutils literal notranslate"><span class="pre">\ifprime</span></code>. The number <code class="docutils literal notranslate"><span class="pre">\d</span></code> is incremented by 2. Loop invariant: we
+assume that <code class="docutils literal notranslate"><span class="pre">\p</span></code> is not a multiple of any prime number less that
+<code class="docutils literal notranslate"><span class="pre">\d</span></code>).</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">printifprime</span> <span class="o">-&gt;</span>\<span class="n">testprimality</span> \<span class="n">ifprime</span> \<span class="n">printp</span> \<span class="n">fi</span>
+\<span class="n">testprimality</span> <span class="o">-&gt;</span><span class="p">{</span>\<span class="n">d</span> <span class="o">=</span><span class="mi">3</span> \<span class="k">global</span> \<span class="n">primetrue</span> \<span class="n">loop</span> \<span class="n">trialdivision</span>
+   \<span class="n">ifunknown</span> \<span class="n">advance</span> \<span class="n">d</span> <span class="n">by2</span> \<span class="n">repeat</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">begin</span><span class="o">-</span><span class="n">group</span> <span class="n">character</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="n">entered</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">27</span>
+<span class="p">{</span>\<span class="n">count67</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">d</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count67</span><span class="o">=</span><span class="mi">0</span> <span class="n">into</span> \<span class="n">count67</span><span class="o">=</span><span class="mi">3</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+\<span class="n">primetrue</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span>
+<span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>We are now in the inner loop. (note that <code class="docutils literal notranslate"><span class="pre">\iterate</span></code> is locally
+redefined for each loop)</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">loop</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;...</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span> <span class="o">...</span>  <span class="p">}</span>
+\<span class="n">iterate</span><span class="o">-&gt;</span>\<span class="n">trialdivision</span> \<span class="n">ifunknown</span> \<span class="n">advance</span> \<span class="n">d</span> <span class="n">by2</span> \<span class="n">relax</span>
+  \<span class="n">expandafter</span> \<span class="n">iterate</span> \<span class="n">fi</span>
+</pre></div>
+</div>
+</div>
+<p>We divide 13 by 3, quotient in <code class="docutils literal notranslate"><span class="pre">\a</span></code>, and increment the number of
+divisions. We set <code class="docutils literal notranslate"><span class="pre">\ifunknown</span></code> to false, because 3 is less than 4.
+Said otherwise our divider <code class="docutils literal notranslate"><span class="pre">\d</span></code> is less that the square root of
+<code class="docutils literal notranslate"><span class="pre">\p</span></code>, not big enough to conclude that <code class="docutils literal notranslate"><span class="pre">\p</span></code> is prime.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">trialdivision</span> <span class="o">-&gt;</span>\<span class="n">a</span> <span class="o">=</span>\<span class="n">p</span> \<span class="n">divide</span> \<span class="n">a</span> <span class="n">by</span>\<span class="n">d</span>
+   \<span class="k">global</span> \<span class="n">advance</span> \<span class="n">td</span> <span class="n">by</span> <span class="mi">1</span>
+   \<span class="n">ifnum</span> \<span class="n">a</span> <span class="o">&gt;</span>\<span class="n">d</span> \<span class="n">unknowntrue</span> \<span class="k">else</span> \<span class="n">unknownfalse</span> \<span class="n">fi</span>
+   \<span class="n">multiply</span> \<span class="n">a</span> <span class="n">by</span>\<span class="n">d</span> \<span class="n">ifnum</span> \<span class="n">a</span> <span class="o">=</span>\<span class="n">p</span> \<span class="k">global</span> \<span class="n">primefalse</span> \<span class="n">unknownfalse</span> \<span class="n">fi</span>
+<span class="p">{</span>\<span class="n">count68</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">13</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">0</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">13</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">divide</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">13</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">4</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">td</span><span class="o">-&gt;</span><span class="mi">1</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">count4</span><span class="o">=</span><span class="mi">4</span> <span class="n">into</span> \<span class="n">count4</span><span class="o">=</span><span class="mi">5</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">ifnum28</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">4</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="o">+</span><span class="n">iftest28</span> <span class="n">true</span>
+\<span class="n">unknowntrue</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iftrue</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iffalse</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">else28</span>
+<span class="o">+</span>\<span class="n">fi28</span>
+</pre></div>
+</div>
+</div>
+<p>We multiply 4 by 3, in <code class="docutils literal notranslate"><span class="pre">\a</span></code>, and compared to <code class="docutils literal notranslate"><span class="pre">\p</span></code>. Comparison is
+false, <code class="docutils literal notranslate"><span class="pre">\d</span></code> does not divide <code class="docutils literal notranslate"><span class="pre">\p</span></code>. We cannot conclude that <code class="docutils literal notranslate"><span class="pre">\p</span></code> is
+not prime.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">multiply</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">4</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">12</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">ifnum29</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">12</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">13</span>
+<span class="o">+</span><span class="n">iftest29</span> <span class="n">false</span>
+<span class="o">+</span>\<span class="n">fi29</span>
+</pre></div>
+</div>
+</div>
+<p>Since we do not know that our number is prime, we must continue
+checking. We first increment out divider. We find it convenient to
+exchange the order of the <code class="docutils literal notranslate"><span class="pre">\iterate</span></code> and <code class="docutils literal notranslate"><span class="pre">\fi</span></code> tokens (in this case,
+the only effect of the <code class="docutils literal notranslate"><span class="pre">\fi</span></code> is to pop the condition stack). Purpose
+of the <code class="docutils literal notranslate"><span class="pre">\relax</span></code>: the scanint procedure reads an integer, and could
+evaluate the <code class="docutils literal notranslate"><span class="pre">\expandafter</span></code> without this token (said otherwise, the
+space after the digit 2 is not necessary).</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span>\<span class="n">ifunknown30</span>
+<span class="o">+</span><span class="n">iftest30</span> <span class="n">true</span>
+<span class="p">{</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">d</span><span class="o">-&gt;</span><span class="mi">2</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count67</span><span class="o">=</span><span class="mi">3</span> <span class="n">into</span> \<span class="n">count67</span><span class="o">=</span><span class="mi">5</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">relax</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">expandafter</span> \<span class="n">iterate</span> \<span class="n">fi</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">fi30</span>
+</pre></div>
+</div>
+</div>
+<p>We have to execute the loop a second time.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">iterate</span> <span class="o">-&gt;</span>\<span class="n">trialdivision</span> \<span class="n">ifunknown</span> \<span class="n">advance</span> \<span class="n">d</span> <span class="n">by2</span> \<span class="n">relax</span>
+  \<span class="n">expandafter</span> \<span class="n">iterate</span> \<span class="n">fi</span>
+\<span class="n">trialdivision</span> <span class="o">-&gt;</span>\<span class="n">a</span> <span class="o">=</span>\<span class="n">p</span> \<span class="n">divide</span> \<span class="n">a</span> <span class="n">by</span>\<span class="n">d</span> \<span class="k">global</span> \<span class="n">advance</span> \<span class="n">td</span> <span class="n">by</span> <span class="mi">1</span>
+  \<span class="n">ifnum</span> \<span class="n">a</span> <span class="o">&gt;</span>\<span class="n">d</span> \<span class="n">unknowntrue</span> \<span class="k">else</span> \<span class="n">unknownfalse</span> \<span class="n">fi</span>
+  \<span class="n">multiply</span> \<span class="n">a</span> <span class="n">by</span>\<span class="n">d</span> \<span class="n">ifnum</span> \<span class="n">a</span> <span class="o">=</span>\<span class="n">p</span> \<span class="k">global</span> \<span class="n">primefalse</span> \<span class="n">unknownfalse</span> \<span class="n">fi</span>
+</pre></div>
+</div>
+</div>
+<p>We see here that 5 does not divide 13. However 13 is less than
+<code class="docutils literal notranslate"><span class="pre">5\times(5+1)</span></code>, hence is prime. Said otherwise, conditional number 31
+shows that primality of 13 depends only on the result of test 32.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">count68</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">13</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">12</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">13</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">divide</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">5</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">13</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">2</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">td</span><span class="o">-&gt;</span><span class="mi">1</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">count4</span><span class="o">=</span><span class="mi">5</span> <span class="n">into</span> \<span class="n">count4</span><span class="o">=</span><span class="mi">6</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">ifnum31</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">2</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">5</span>
+<span class="o">+</span><span class="n">iftest31</span> <span class="n">false</span>
+<span class="o">+</span>\<span class="n">else31</span>
+\<span class="n">unknownfalse</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iffalse</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iffalse</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iffalse</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">fi31</span>
+<span class="p">{</span>\<span class="n">multiply</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">5</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">2</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">10</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">ifnum32</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">10</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">13</span>
+<span class="o">+</span><span class="n">iftest32</span> <span class="n">false</span>
+<span class="o">+</span>\<span class="n">fi32</span>
+</pre></div>
+</div>
+</div>
+<p>Since we know whether our number is prime or not, it is time to conclude
+the inner loop. The assignment <code class="docutils literal notranslate"><span class="pre">\let\iterate\relax</span></code> is not really
+useful, as will be seen in a minute. Its purpose is to release memory.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span>\<span class="n">ifunknown33</span>
+<span class="o">+</span><span class="n">iftest33</span> <span class="n">false</span>
+<span class="o">+</span>\<span class="n">fi33</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">iterate</span> \<span class="n">relax</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;...</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">iterate</span><span class="o">=</span>\<span class="n">relax</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The last action of <code class="docutils literal notranslate"><span class="pre">\testprimality</span></code> is to close the current group.
+What you can see is that two integers are restored (<code class="docutils literal notranslate"><span class="pre">\a</span></code> and <code class="docutils literal notranslate"><span class="pre">\d</span></code>).
+The value of <code class="docutils literal notranslate"><span class="pre">\iterate</span></code> is restored; this is the code of the outer
+loop.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="n">group</span> <span class="n">character</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iffalse</span><span class="o">.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">count68</span><span class="o">=</span><span class="mf">0.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">ifnum</span> \<span class="n">n</span> <span class="o">&gt;</span><span class="mi">0</span> <span class="o">...</span> \<span class="n">fi</span> <span class="o">.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">restoring</span> \<span class="n">count67</span><span class="o">=</span><span class="mf">0.</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="kn">from</span><span class="w"> </span><span class="nn">line</span> <span class="mi">27</span>
+</pre></div>
+</div>
+</div>
+<p>Our number is prime! We print it.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span>\<span class="n">ifprime34</span>
+<span class="o">+</span><span class="n">iftest34</span> <span class="n">true</span>
+\<span class="n">printp</span> <span class="o">-&gt;</span><span class="p">,</span>\<span class="n">N</span> <span class="o">=</span>\<span class="n">n</span> \<span class="n">divide</span> \<span class="n">N</span> <span class="n">by</span> <span class="mi">8</span> <span class="o">...</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="p">,</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>We print a space or a newline character, depending on whether <code class="docutils literal notranslate"><span class="pre">\n</span></code> is
+zero modulo 8. This piece of code is not in the original program. The
+test could also have been: <code class="docutils literal notranslate"><span class="pre">\ifnum\N=0</span> <span class="pre">\char13</span> <span class="pre">\else</span> <span class="pre">\char32</span> <span class="pre">\fi</span></code></p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">count69</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">N</span><span class="o">-&gt;</span><span class="mi">25</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">2</span> <span class="n">into</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">25</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">divide</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">N</span><span class="o">-&gt;</span><span class="mi">8</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">25</span> <span class="n">into</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">3</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">multiply</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">N</span><span class="o">-&gt;-</span><span class="mi">8</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">3</span> <span class="n">into</span> \<span class="n">count69</span><span class="o">=-</span><span class="mi">24</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">N</span><span class="o">-&gt;</span><span class="mi">25</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count69</span><span class="o">=-</span><span class="mi">24</span> <span class="n">into</span> \<span class="n">count69</span><span class="o">=</span><span class="mi">1</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">ifnum35</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">1</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">0</span>
+<span class="o">+</span><span class="n">iftest35</span> <span class="n">false</span>
+<span class="o">+</span>\<span class="n">else35</span>
+<span class="p">{</span><span class="n">begin</span><span class="o">-</span><span class="n">group</span> <span class="n">character</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="n">entered</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">27</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span>  <span class="o">.</span>
+<span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="n">group</span> <span class="n">character</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="kn">from</span><span class="w"> </span><span class="nn">line</span> <span class="mi">27</span>
+<span class="o">+</span>\<span class="n">fi35</span>
+</pre></div>
+</div>
+</div>
+<p>It is not the last number, so that only comma-space is printed.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span>\<span class="n">ifnum36</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">25</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">1</span>
+<span class="o">+</span><span class="n">iftest36</span> <span class="n">false</span>
+<span class="o">+</span>\<span class="n">fi36</span>
+</pre></div>
+</div>
+</div>
+<p>The transcript shows a <code class="docutils literal notranslate"><span class="pre">\fi34</span></code> corresponding to the <code class="docutils literal notranslate"><span class="pre">\ifprime</span></code> above
+and <code class="docutils literal notranslate"><span class="pre">\fi27</span></code> that corresponds to nothing. In fact, we skipped a big
+part of the trace. Testing whether n is prime for n=5, 7, 9, 11, 13, and
+15 uses the conditional 5, 12, 19, 24, 34, and 41: you can see that one
+more test is needed for 13 than for other numbers; remember that if a
+number is prime, a further test has to be done: is it the last one?</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">number</span><span class="o">-&gt;</span><span class="mi">13</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="mf">13.</span>
+<span class="p">{</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">n</span><span class="o">-&gt;-</span><span class="mi">1</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count65</span><span class="o">=</span><span class="mi">25</span> <span class="n">into</span> \<span class="n">count65</span><span class="o">=</span><span class="mi">24</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">fi34</span>
+<span class="p">{</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">p</span><span class="o">-&gt;</span><span class="mi">2</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count66</span><span class="o">=</span><span class="mi">13</span> <span class="n">into</span> \<span class="n">count66</span><span class="o">=</span><span class="mi">15</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">relax</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">expandafter</span> \<span class="n">iterate</span> \<span class="n">fi</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">fi27</span>
+</pre></div>
+</div>
+</div>
+<p>This considers the number 15.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">iterate</span> <span class="o">-&gt;</span>\<span class="n">ifnum</span> \<span class="n">n</span> <span class="o">&gt;</span><span class="mi">0</span> \<span class="n">printifprime</span> \<span class="n">advance</span> \<span class="n">p</span> <span class="n">by2</span> \<span class="n">relax</span> <span class="o">...</span>
+<span class="o">+</span>\<span class="n">ifnum37</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">24</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">0</span>
+<span class="o">+</span><span class="n">iftest37</span> <span class="n">true</span>
+\<span class="n">printifprime</span> <span class="o">-&gt;</span>\<span class="n">testprimality</span> \<span class="n">ifprime</span> \<span class="n">printp</span> \<span class="n">fi</span>
+\<span class="n">testprimality</span> <span class="o">-&gt;</span><span class="p">{</span>\<span class="n">d</span> <span class="o">=</span><span class="mi">3</span> \<span class="k">global</span> \<span class="n">primetrue</span> \<span class="n">loop</span> \<span class="n">trialdivision</span> <span class="o">...</span>
+<span class="p">{</span><span class="n">begin</span><span class="o">-</span><span class="n">group</span> <span class="n">character</span><span class="p">}</span>
+<span class="o">+</span><span class="n">stack</span><span class="p">:</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">brace</span> <span class="n">entered</span> <span class="n">on</span> <span class="n">line</span> <span class="mi">27</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">d</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count67</span><span class="o">=</span><span class="mi">0</span> <span class="n">into</span> \<span class="n">count67</span><span class="o">=</span><span class="mi">3</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+\<span class="n">primetrue</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span>
+<span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Dividing 15 by 3 is not enough to prove that 15 is a prime number.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">loop</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">ifnum</span> <span class="o">...</span> \<span class="n">fi</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">trialdivision</span> \<span class="n">ifunknown</span> <span class="o">...</span> \<span class="n">fi</span> <span class="p">}</span>
+\<span class="n">iterate</span> <span class="o">-&gt;</span>\<span class="n">trialdivision</span> \<span class="n">ifunknown</span> \<span class="n">advance</span> \<span class="n">d</span> <span class="n">by2</span> \<span class="n">relax</span> <span class="o">...</span>
+\<span class="n">trialdivision</span> <span class="o">-&gt;</span>\<span class="n">a</span> <span class="o">=</span>\<span class="n">p</span> \<span class="n">divide</span> \<span class="n">a</span> <span class="n">by</span>\<span class="n">d</span> \<span class="k">global</span> \<span class="n">advance</span> \<span class="n">td</span> <span class="n">by</span> <span class="mi">1</span>  <span class="o">...</span>
+<span class="p">{</span>\<span class="n">count68</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">15</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">0</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">15</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">divide</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">15</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">5</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+<span class="p">{</span>\<span class="k">global</span>\<span class="n">advance</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">td</span><span class="o">-&gt;</span><span class="mi">1</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">count4</span><span class="o">=</span><span class="mi">6</span> <span class="n">into</span> \<span class="n">count4</span><span class="o">=</span><span class="mi">7</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">ifnum38</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">5</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="o">+</span><span class="n">iftest38</span> <span class="n">true</span>
+\<span class="n">unknowntrue</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iftrue</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iffalse</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">else38</span>
+<span class="o">+</span>\<span class="n">fi38</span>
+</pre></div>
+</div>
+</div>
+<p>But dividing 15 by 3 <em>is</em> enough to prove that 15 is a not prime number.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>\<span class="n">multiply</span><span class="p">}</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">a</span><span class="o">-&gt;</span><span class="mi">3</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">5</span> <span class="n">into</span> \<span class="n">count68</span><span class="o">=</span><span class="mi">15</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">ifnum39</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">15</span>
+<span class="o">+</span><span class="n">scanint</span> <span class="k">for</span> \<span class="n">ifnum</span><span class="o">-&gt;</span><span class="mi">15</span>
+<span class="o">+</span><span class="n">iftest39</span> <span class="n">true</span>
+<span class="p">{</span>\<span class="k">global</span><span class="p">}</span>
+\<span class="n">primefalse</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iffalse</span>
+<span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifprime</span> \<span class="n">iffalse</span><span class="p">}</span>
+<span class="p">{</span><span class="n">globally</span> <span class="n">changing</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifprime</span><span class="o">=</span>\<span class="n">iffalse</span><span class="p">}</span>
+\<span class="n">unknownfalse</span> <span class="o">-&gt;</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iffalse</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">ifunknown</span> \<span class="n">iffalse</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iftrue</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">ifunknown</span><span class="o">=</span>\<span class="n">iffalse</span><span class="p">}</span>
+<span class="o">+</span>\<span class="n">fi39</span>
+</pre></div>
+</div>
+</div>
+<p>Skipping 6000 lines.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">iftest563</span> <span class="n">false</span>
+<span class="o">+</span>\<span class="n">fi563</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">iterate</span> \<span class="n">relax</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">iterate</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span><span class="o">-&gt;</span>\<span class="n">ifnum</span> <span class="o">...</span> \<span class="n">fi</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">iterate</span><span class="o">=</span>\<span class="n">relax</span><span class="p">}</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="o">.</span> <span class="n">trial</span> <span class="n">division</span> <span class="n">macro</span> <span class="n">was</span> <span class="o">.</span>
+<span class="p">[</span><span class="mi">28</span><span class="p">]</span> <span class="n">expanded</span> \<span class="n">the</span>\<span class="n">td</span>\ <span class="n">times</span><span class="o">.</span> <span class="o">%</span> <span class="n">Knuth</span> <span class="n">says</span> <span class="n">cpu</span> <span class="n">time</span><span class="o">=</span><span class="mi">4</span> <span class="n">sec</span><span class="p">,</span> <span class="n">I</span> <span class="n">see</span> <span class="mf">0.02</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="n">expanded</span> <span class="o">.</span>
+<span class="p">{</span>\<span class="n">the</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">the</span> \<span class="n">td</span><span class="p">}</span>
+\<span class="n">the</span><span class="o">-&gt;</span><span class="mf">132.</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="mf">132.</span>
+<span class="p">{</span>\ <span class="p">}</span>
+<span class="n">Character</span> <span class="n">sequence</span><span class="p">:</span> <span class="n">times</span><span class="o">.</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>Line 29 of the input file is a hack: the <code class="docutils literal notranslate"><span class="pre">\a</span></code> command is not defined
+by plainTeX, so that Knuth can use, but it is defined in LaTeX, and we
+have to restore it.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">29</span><span class="p">]</span> \<span class="n">let</span>\<span class="n">a</span>\<span class="n">olda</span> <span class="o">%%</span> <span class="n">restore</span>
+<span class="p">{</span>\<span class="n">let</span><span class="p">}</span>
+<span class="p">{</span>\<span class="n">let</span> \<span class="n">a</span> \<span class="n">olda</span><span class="p">}</span>
+<span class="p">{</span><span class="n">changing</span> \<span class="n">a</span><span class="o">=</span>\<span class="n">count68</span><span class="p">}</span>
+<span class="p">{</span><span class="n">into</span> \<span class="n">a</span><span class="o">=</span>\<span class="n">a</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The last line of the file is empty, this is equivalent <code class="docutils literal notranslate"><span class="pre">\par</span></code>, and has
+as effect to finish the current element.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">30</span><span class="p">]</span>
+<span class="p">{</span>\<span class="n">par</span><span class="p">}</span>
+<span class="p">{</span><span class="n">Text</span><span class="p">:</span><span class="n">The</span> <span class="n">first</span> <span class="n">thirty</span> <span class="n">prime</span> <span class="n">numbers</span> <span class="n">are</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span>
+<span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span>
+<span class="mi">47</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span>
+<span class="mi">83</span><span class="p">,</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">107</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="ow">and</span> <span class="mf">113.</span> <span class="n">trial</span> <span class="n">division</span> <span class="n">macro</span> <span class="n">was</span>
+<span class="n">expanded</span> <span class="mi">132</span> <span class="n">times</span><span class="o">.</span> <span class="p">}</span>
+<span class="p">{</span><span class="n">Pop</span> <span class="mi">1</span><span class="p">:</span> <span class="n">document_v</span> <span class="n">p_v</span><span class="p">}</span>
+<span class="o">++</span> <span class="n">Input</span> <span class="n">stack</span> <span class="n">empty</span> <span class="n">at</span> <span class="n">end</span> <span class="n">of</span> <span class="n">file</span>
+</pre></div>
+</div>
+</div>
+<p>Note the last line of the file, the empty one, is not really needed.
+Without it, the last line of the XML result would have been
+<code class="docutils literal notranslate"><span class="pre">expanded</span> <span class="pre">132</span> <span class="pre">times.</span> <span class="pre">&lt;/p&gt;&lt;/unknown&gt;</span></code>. In fact, when <em>Tralics</em> executes
+a <code class="docutils literal notranslate"><span class="pre">\par</span></code> command, it removes the last space (that corresponds in
+general to the end-of-line on the line before the empty line), and adds
+a newline character in the XML tree after the <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> element. In this
+example, there is a space before the comment line 28, the EOL characters
+on lines 28 and 29 are commented out, and this one is visible if the
+paragraph is ended without a <code class="docutils literal notranslate"><span class="pre">\par</span></code> command.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

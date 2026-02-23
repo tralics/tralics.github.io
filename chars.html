@@ -1,0 +1,2087 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Characters in Tralics &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Error recovery in Tralics" href="err.html" />
+    <link rel="prev" title="Arrays in Tralics" href="array.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Characters in Tralics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ascii-characters">ASCII characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#latin1-characters">Latin1 characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#latin1-extended-characters">Latin1 extended characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#latin-extended-additional-characters">Latin extended additional characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dingbats-characters">Dingbats characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-symbols">Other symbols</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#math-symbols">Math symbols</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#arrows">Arrows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mathematical-operators">Mathematical operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous-symbols">Miscellaneous symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#math-characters">Math characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-t1-encoding">The T1 encoding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#needs-to-be-done">Needs to be done</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Characters in Tralics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="characters-in-tralics">
+<h1>Characters in Tralics<a class="headerlink" href="#characters-in-tralics" title="Link to this heading"></a></h1>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line"><a class="reference external" href="#introduction">Introduction</a></div>
+<div class="line"><a class="reference external" href="#ascii">ASCII characters</a> (between U+0020 and U+007F)</div>
+<div class="line"><a class="reference external" href="#latin1">Latin one</a> (between U+00A0 and U+00FF)</div>
+<div class="line"><a class="reference external" href="#ext-latin">Latin extended-A</a> (between U+0100 and U+017F)</div>
+<div class="line"><a class="reference external" href="#not-done">Latin extended-B</a> (between U+0180 and U+024F) [todo]</div>
+<div class="line"><a class="reference external" href="#not-done">IPA Extensions</a> (between U+0250 and U+02AF) [todo]</div>
+<div class="line"><a class="reference external" href="#not-done">Greek, etc</a> (between U+0370 and U+03FF) [todo]</div>
+<div class="line"><a class="reference external" href="#not-done">Cyrillic, etc</a> (between U+0400 and U+04FF) [todo]</div>
+<div class="line"><a class="reference external" href="#latin-extended">Latin Extended Additional</a> (between U+1E00 and
+U+1EFF)</div>
+<div class="line"><a class="reference external" href="#arrows">Arrows</a> (between U+2190 and U+21FF)</div>
+<div class="line"><a class="reference external" href="#mathop">Mathematical Operators</a> (between U+2200 and U+22FF)</div>
+<div class="line"><a class="reference external" href="#misc-tech">Miscellaneous Technical</a> (between U+2300 and U+23FF)
+[with holes]</div>
+<div class="line"><a class="reference external" href="#misc-tech">Miscellaneous Symbols</a> (between U+2600 and U+26FF)
+[with holes]</div>
+<div class="line"><a class="reference external" href="#ding">Dingbats</a> (between U+2700 and U+27BF)</div>
+<div class="line"><a class="reference external" href="#math-char">Mathematical Alphanumeric Symbols</a> (between U+1D400
+and U+1D5FF)</div>
+<div class="line"><a class="reference external" href="#T1-char">The T1 encoding</a></div>
+</div>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>This file explains how to produce all characters defined by the Unicode
+standard, and even more. In earlier versions; <em>Tralics</em> used internally
+the iso-8859-1 encoding, and this is the default input encoding; you
+could tell <em>Tralics</em> that the text is encoded in UTF-8 format, this
+meant that some characters were converted into a sequence of the form
+<code class="docutils literal notranslate"><span class="pre">\char567{}</span></code> (this is read as a sequence of six tokens). The internal
+encoding is now Unicode.</p>
+<p>UTF-8 is a variable length format; each character consists in one to
+four bytes, A, AB, ABC, or ABCD, depending of the first byte. If the
+first bit of A is zero, so that A is an integer between 0 and 127, then
+one byte is used, and the value is A. Thus, an ASCII character
+represents itself in UTF8. Otherwise, A starts with 2, 3 or 4 bits equal
+to 1, and is followed by a zero bit, followed by some useful bits (say
+`a’). The total number of bytes is 2, 3 or 4, respectively, each byte
+B, C, D starts with a bit equal to 1 , and a bit equal to 0, and is
+followed by 6 useful bits, say `b’, or `c’, or `d’; the value of the
+character is `ab’, `abc’ or `abcd’. Thus, using 2, 3 or 4 bytes, we
+can represent 11, 16, or 21 bits. When a line of text is read from a
+file, it is converted to UTF8; at the end of the run, you may see
+something like <em>Input conversion: 14 lines converted.</em> This means that
+almost all lines contained only ASCII characters.</p>
+<p>A construction like <code class="docutils literal notranslate"><span class="pre">\char1000</span></code> means: insert the character number
+1000 in the XML tree. The character must fit on 27 bits. A construction
+like <code class="docutils literal notranslate"><span class="pre">^^ab</span></code> (two lower case hex chars) can be used to represent a 8bit
+character, and a construction like <code class="docutils literal notranslate"><span class="pre">^^^^abcd</span></code> (four lower case hex
+chars) can be used to represent a 16bit character. You can also use five
+hats as in <code class="docutils literal notranslate"><span class="pre">^^^^^1d7e0</span></code> (this is Unicode Mathematical Double-struck
+Digit Eight). An hex char is a digit or a lower case letter between `a’
+and `f’. You can say <code class="docutils literal notranslate"><span class="pre">^^Z</span></code>, where `Z’ can be replaced by any 7bit
+character, except a hat or a hex char; if this case <em>Tralics</em> adds or
+subtracts 64, the result is a 7bit character. For instance <code class="docutils literal notranslate"><span class="pre">^^Z</span></code> is
+the character with code 26, <code class="docutils literal notranslate"><span class="pre">^^&#64;</span></code> is the null character, <code class="docutils literal notranslate"><span class="pre">^^?</span></code> the
+delete character, <code class="docutils literal notranslate"><span class="pre">^^M</span></code> is the end of line character (in the input
+stream), <code class="docutils literal notranslate"><span class="pre">^^J</span></code> is the end of line character (in the output stream).</p>
+<p>An important property of a character is its category code. In plain
+<em>TeX</em> some characters have category code “ignore” or “invalid”, this
+explains why the constructions <code class="docutils literal notranslate"><span class="pre">^^?</span></code> and <code class="docutils literal notranslate"><span class="pre">^^&#64;</span></code> are so useful. When
+<em>Tralics</em> parses a control sequence like <code class="docutils literal notranslate"><span class="pre">\foo</span></code>, then either the
+character that follows the backslash has category “letter” and all
+letters that follow are scanned and a following space is usually
+ignored, or the command name has only one character. In the case of
+<code class="docutils literal notranslate"><span class="pre">\fée</span></code>, the result is a 1-character command (it tries to put an accent
+on the character that follows). You can say
+<code class="docutils literal notranslate"><span class="pre">\catcode`é=11deffée{fairy}</span></code>, and then use the command
+<code class="docutils literal notranslate"><span class="pre">\fée</span></code>. All tables that hold character properties are of size 65536;
+this excludes characters that need 4 UTF8 bytes, but includes all
+characters that can be constructed via the double-hat or four-hat
+construction. In particular <code class="docutils literal notranslate"><span class="pre">\catcode`^^^^^1d7e0=11</span></code> is an
+error. What the command really gets is the following sequence of tokens:
+<code class="docutils literal notranslate"><span class="pre">\char&quot;1D7E0</span></code>, a command followed by 6 character tokens category 12.
+If you say <code class="docutils literal notranslate"><span class="pre">\def\f^^^^^1d7e0{xx}\def\^^^^^1d7e0{xx}</span></code>, the hat
+conversion algorithm is applied; in the first definition, you get a
+command named <code class="docutils literal notranslate"><span class="pre">\f</span></code>, that has to be followed by some character (note
+that <code class="docutils literal notranslate"><span class="pre">\f\char&quot;1D7E0</span></code> is an error, since the category code of the
+letteres are 11, but 12 is expected). The second definition confuses the
+parser: what follows the backslash has no category code, so the name of
+the command is empty, and this empty command has to be followed the
+character; so <code class="docutils literal notranslate"><span class="pre">\^^^^^1d7e1</span></code>, provokes the following error <em>Use of
+\csnameendcsname doesn’t match its definition</em>.</p>
+<p>You can use one of -oe8, -oe1, -oe8a, -oe1a as option to <em>Tralics</em> for
+controlling the encoding used in the XML file. If the option is -oe8 or
+-oe8a, then the declaration is <code class="docutils literal notranslate"><span class="pre">encoding='UTF-8'</span></code>, otherwise it is
+<code class="docutils literal notranslate"><span class="pre">encoding='iso-8859-1'</span></code>. Assume that the input is
+<code class="docutils literal notranslate"><span class="pre">\char16\char65\char233\char378\char1064\char10774\char120587</span></code>. The
+translation is <code class="docutils literal notranslate"><span class="pre">AéźШ⨖𝜋</span></code> (the first character being illegal in HTLK, it
+is not shown here). If the option is -oe8 (the default), the first and
+last characters are encoded as <code class="docutils literal notranslate"><span class="pre">&amp;#x10;</span></code> and <code class="docutils literal notranslate"><span class="pre">&amp;#x1D70B;</span></code>, the others
+are in UTF8; the transcript file will contain the same string. If the
+option is -oe8a, all characters but ASCII ones will be output in the
+form <code class="docutils literal notranslate"><span class="pre">&amp;#xE9;</span></code>, the transcript file will contain
+<code class="docutils literal notranslate"><span class="pre">&amp;#x10;A^^e9^^^^017a^^^^0428^^^^2a16&amp;#x1D70B;</span></code>. If the option is
+-oe1a, the contents will be the same, except for the encoding of the
+file. Finally, if the option is -oe1, the output is the same, except for
+characters whose code is between 128 and 255, that will be printed on
+one byte.</p>
+<p>You can use one of -te8, -te1, -te8a, -te1a as option for controlling
+the encoding used in the transcript file, without the XML file. This
+encoding also used when <em>Tralics</em> prints something on the terminal. For
+instance, this is the output of <code class="docutils literal notranslate"><span class="pre">\show</span></code>, with the option te1a:
+<code class="docutils literal notranslate"><span class="pre">\f^^e9e=macro:</span> <span class="pre">-&gt;fairy.</span></code></p>
+<p>You can use one of -utf8, -latin1 for indicating the default input encoding. In
+LaTeX, you can use the inputenc package for specifying alternate encodings, this
+is not yet implemented. All files are converted into UTF-8 while they are read;
+there is an exception: the main file is converted only after the configuration
+file has been read (this means that the configuration file could contain the
+definition of the encoding). You can declare the encoding of the current file,
+by putting near the head of the file a line that contains <code class="docutils literal notranslate"><span class="pre">-*-</span></code> followed by
+coding: iso-8859-1 or coding: utf8. This works whatever the type of the file:
+configuration file, bibliography data base, or TeX file.</p>
+<p>A given character can appear in one of three modes: typesetting text,
+typesetting maths, and other cases (in general, when creating the name
+of an element, of an attribute, the name of a file to be opened, etc).
+In the case of <code class="docutils literal notranslate"><span class="pre">\input{xx}</span></code>, the characters that are valid are system
+dependent, and <em>Tralics</em> accepts only latin1 characters, without further
+tests. In the same fashion, <code class="docutils literal notranslate"><span class="pre">\xbox{á</span> <span class="pre">b}{\AddAttToCurrent{x=}{y}z}</span></code>
+generates an XML element that contains a space in its name, and an
+attribute name that contains an equals sign. This is illegal, but not
+refused. If you say <code class="docutils literal notranslate"><span class="pre">\xbox{x\xmllatex{\&amp;\#x5678;}{}y}{}</span></code> the result is
+an empty XML with a funny name: <code class="docutils literal notranslate"><span class="pre">&lt;x&amp;#x5678;y/&gt;</span></code>.</p>
+<p>In math mode, each character is classified as an identifier, a number,
+or an operator (such an element can consist of more than one character).
+Hence the translation of <code class="docutils literal notranslate"><span class="pre">$x=1$</span></code> is:
+<code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;</span></code>. There is a built-in table that
+explains the type of every ASCII character. Non-ASCII latin1 characters
+are all considered as operators if their code is between 128 and 191, as
+identifiers otherwise. Thus, the translation of <code class="docutils literal notranslate"><span class="pre">$±á$</span></code> is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;±&lt;/mo&gt;&lt;mi&gt;á&lt;/mi&gt;</span></code>. There is a large number of commands whose
+translation is a Unicode character. LaTeX makes a distinction between
+those that can be used in math, or outside math; this restriction has
+sometimes been removed. For instance <code class="docutils literal notranslate"><span class="pre">\textohm</span></code> is the same as
+<code class="docutils literal notranslate"><span class="pre">^^^^2126</span></code>, and the following expression
+<code class="docutils literal notranslate"><span class="pre">\xbox{\textohm</span> <span class="pre">b}{\textohm$\textohm$}</span></code> is valid. The math formula
+contains an identifier.</p>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\mathchardef\foo1234</span></code>, then TeX interprets <code class="docutils literal notranslate"><span class="pre">\foo</span></code> as
+<code class="docutils literal notranslate"><span class="pre">\mathchar1234</span></code>. See the TeX book for what character this produces.
+For simplicity, <em>Tralics</em> interprets this as <code class="docutils literal notranslate"><span class="pre">\char1234</span></code>; this is the
+character number 1234 (Unicode U+4D2, some Cyrillic character. Any 27
+bit character can be used in this way. A command like <code class="docutils literal notranslate"><span class="pre">\Omega</span></code> can be
+used only in math mode. The translation is an identifier (but most math
+symbols are operators), the value is <code class="docutils literal notranslate"><span class="pre">&amp;Omega;</span></code>. If the option
+<code class="docutils literal notranslate"><span class="pre">-noentnames</span></code> has been given, then translation is <code class="docutils literal notranslate"><span class="pre">&amp;#x3A9;</span></code>.
+Translation of <code class="docutils literal notranslate"><span class="pre">\mathbb</span> <span class="pre">A</span></code> is <code class="docutils literal notranslate"><span class="pre">&amp;Aopf;</span></code> or <code class="docutils literal notranslate"><span class="pre">&amp;#x1D358;</span></code>. If you
+specify the <code class="docutils literal notranslate"><span class="pre">mathvariant</span></code> option, then translation changes to
+<code class="docutils literal notranslate"><span class="pre">&lt;mi</span> <span class="pre">mathvariant='double-struck'&gt;A&lt;/mi&gt;</span></code>.</p>
+<p>In text mode, there are different ways to obtain a character, and they
+are all valid. For instance, if you want a acute, you can say <code class="docutils literal notranslate"><span class="pre">á</span></code>
+(latin1 or UTF8 input) or <code class="docutils literal notranslate"><span class="pre">\char</span></code>á  char”E1` (two variants
+of the <code class="docutils literal notranslate"><span class="pre">\char</span></code> command) or <code class="docutils literal notranslate"><span class="pre">\'a</span>&#160; <span class="pre">\a'a</span></code> (two variants of the accent
+command) or <code class="docutils literal notranslate"><span class="pre">\xmllatex{\&amp;\#xE1;}{}</span>&#160; <span class="pre">\xmllatex{\&amp;aacute;}{}</span></code> (two
+variants of the <code class="docutils literal notranslate"><span class="pre">\xmllatex</span></code> command that refers to a Unicode character
+via an entity).</p>
+</section>
+</section>
+<section id="ascii-characters">
+<h2>ASCII characters<a class="headerlink" href="#ascii-characters" title="Link to this heading"></a></h2>
+<p>Printing characters with code between 33 and 126 is not complicated.
+Character 32 is space, it is impossible to tell the difference between a
+cell that contains only space and an empty space. Character 127 is
+delete, it cannot be printed. For some strange reason, LaTeX provides no
+way for printing a hat or a tilde. This is why <code class="docutils literal notranslate"><span class="pre">\char</span></code> is used in the
+table below.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\begin{tabular}{cccccccccccccccc}
+&amp;!&amp;&quot;&amp;\#&amp;\$&amp;\%&amp;\&amp;&amp;&#39;&amp;(&amp;)&amp;*&amp;+&amp;,&amp;-&amp;.&amp;/\\
+0&amp;1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9&amp;:&amp;;&amp;&lt;&amp;=&amp;&gt;&amp;?\\
+@&amp;A&amp;B&amp;C&amp;D&amp;E&amp;F&amp;G&amp;H&amp;I&amp;J&amp;K&amp;L&amp;M&amp;N&amp;O\\
+P&amp;Q&amp;R&amp;S&amp;T&amp;U&amp;V&amp;W&amp;X&amp;Y&amp;Z&amp;[&amp;\textbackslash&amp;]&amp;\char`\^&amp;\_\\
+`&amp;a&amp;b&amp;c&amp;d&amp;e&amp;f&amp;g&amp;h&amp;i&amp;j&amp;k&amp;l&amp;m&amp;n&amp;o\\
+p&amp;q&amp;r&amp;s&amp;t&amp;u&amp;v&amp;w&amp;x&amp;y&amp;z&amp;\{&amp;|&amp;\}&amp;\char`\~&amp;
+\end{tabular}
+</pre></div>
+</div>
+</div>
+<p>The translation is trivial. We only show the preview (LaTeX image) and
+the HTML characters. <img alt="Ascii Table" src="_images/img_69.png" /></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p></p></td>
+<td><p>!</p></td>
+<td><p>“</p></td>
+<td><p>#</p></td>
+<td><p>$</p></td>
+<td><p>%</p></td>
+<td><p>&amp;</p></td>
+<td><p>‘</p></td>
+<td><p>(</p></td>
+<td><p>)</p></td>
+<td><p>*</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>,</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>.</p></td>
+<td><p>/</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>:</p></td>
+<td><p>;</p></td>
+<td><p>&lt;</p></td>
+<td><p>=</p></td>
+<td><p>&gt;</p></td>
+<td><p>?</p></td>
+</tr>
+<tr class="row-odd"><td><p>&#64;</p></td>
+<td><p>A</p></td>
+<td><p>B</p></td>
+<td><p>C</p></td>
+<td><p>D</p></td>
+<td><p>E</p></td>
+<td><p>F</p></td>
+<td><p>G</p></td>
+<td><p>H</p></td>
+<td><p>I</p></td>
+<td><p>J</p></td>
+<td><p>K</p></td>
+<td><p>L</p></td>
+<td><p>M</p></td>
+<td><p>N</p></td>
+<td><p>O</p></td>
+</tr>
+<tr class="row-even"><td><p>P</p></td>
+<td><p>Q</p></td>
+<td><p>R</p></td>
+<td><p>S</p></td>
+<td><p>T</p></td>
+<td><p>U</p></td>
+<td><p>V</p></td>
+<td><p>W</p></td>
+<td><p>X</p></td>
+<td><p>Y</p></td>
+<td><p>Z</p></td>
+<td><p>[</p></td>
+<td><p>\</p></td>
+<td><p>]</p></td>
+<td><p>^</p></td>
+<td><p>_</p></td>
+</tr>
+<tr class="row-odd"><td><p>`</p></td>
+<td><p>a</p></td>
+<td><p>b</p></td>
+<td><p>c</p></td>
+<td><p>d</p></td>
+<td><p>e</p></td>
+<td><p>f</p></td>
+<td><p>g</p></td>
+<td><p>h</p></td>
+<td><p>i</p></td>
+<td><p>j</p></td>
+<td><p>k</p></td>
+<td><p>l</p></td>
+<td><p>m</p></td>
+<td><p>n</p></td>
+<td><p>o</p></td>
+</tr>
+<tr class="row-even"><td><p>p</p></td>
+<td><p>q</p></td>
+<td><p>r</p></td>
+<td><p>s</p></td>
+<td><p>t</p></td>
+<td><p>u</p></td>
+<td><p>v</p></td>
+<td><p>w</p></td>
+<td><p>x</p></td>
+<td><p>y</p></td>
+<td><p>z</p></td>
+<td><p>{</p></td>
+<td><p>|</p></td>
+<td><p>}</p></td>
+<td><p>~</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="latin1-characters">
+<h2>Latin1 characters<a class="headerlink" href="#latin1-characters" title="Link to this heading"></a></h2>
+<p>These are all the characters with code between x80 and xFF. In fact,
+characters in the range x80 and x9F are not printable. Character A0 is a
+space, character AD is a discretionary hyphen.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\begin{tabular}{cccccccccccccccc}
+~&amp;¡&amp;¢&amp;£&amp;¤&amp;¥&amp;¦&amp;§&amp;¨&amp;©&amp;ª&amp;«&amp;¬&amp;&amp;®&amp;¯\\
+°&amp;±&amp;²&amp;³&amp;´&amp;µ&amp;¶&amp;·&amp;¸&amp;¹&amp;º&amp;»&amp;¼&amp;½&amp;¾&amp;¿\\
+À&amp;Á&amp;Â&amp;Ã&amp;Ä&amp;Å&amp;Æ&amp;Ç&amp;È&amp;É&amp;Ê&amp;Ë&amp;Ì&amp;Í&amp;Î&amp;Ï\\
+Ð&amp;Ñ&amp;Ò&amp;Ó&amp;Ô&amp;Õ&amp;Ö&amp;×&amp;Ø&amp;Ù&amp;Ú&amp;Û&amp;Ü&amp;Ý&amp;Þ&amp;ß\\
+à&amp;á&amp;â&amp;ã&amp;ä&amp;å&amp;æ&amp;ç&amp;è&amp;é&amp;ê&amp;ë&amp;ì&amp;í&amp;î&amp;ï\\
+ð&amp;ñ&amp;ò&amp;ó&amp;ô&amp;õ&amp;ö&amp;÷&amp;ø&amp;ù&amp;ú&amp;û&amp;ü&amp;ý&amp;þ&amp;ÿ\\
+\end{tabular}
+</pre></div>
+</div>
+</div>
+<p><img alt="latin 1, non ascii" src="_images/img_70.png" /></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>°</p></td>
+<td><p>±</p></td>
+<td><p>²</p></td>
+<td><p>³</p></td>
+<td><p>´</p></td>
+<td><p>µ</p></td>
+<td><p>¶</p></td>
+<td><p>·</p></td>
+<td><p>¸</p></td>
+<td><p>¹</p></td>
+<td><p>º</p></td>
+<td><p>»</p></td>
+<td><p>¼</p></td>
+<td><p>½</p></td>
+<td><p>¾</p></td>
+<td><p>¿</p></td>
+</tr>
+<tr class="row-even"><td><p>À</p></td>
+<td><p>Á</p></td>
+<td><p>Â</p></td>
+<td><p>Ã</p></td>
+<td><p>Ä</p></td>
+<td><p>Å</p></td>
+<td><p>Æ</p></td>
+<td><p>Ç</p></td>
+<td><p>È</p></td>
+<td><p>É</p></td>
+<td><p>Ê</p></td>
+<td><p>Ë</p></td>
+<td><p>Ì</p></td>
+<td><p>Í</p></td>
+<td><p>Î</p></td>
+<td><p>Ï</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ð</p></td>
+<td><p>Ñ</p></td>
+<td><p>Ò</p></td>
+<td><p>Ó</p></td>
+<td><p>Ô</p></td>
+<td><p>Õ</p></td>
+<td><p>Ö</p></td>
+<td><p>×</p></td>
+<td><p>Ø</p></td>
+<td><p>Ù</p></td>
+<td><p>Ú</p></td>
+<td><p>Û</p></td>
+<td><p>Ü</p></td>
+<td><p>Ý</p></td>
+<td><p>Þ</p></td>
+<td><p>ß</p></td>
+</tr>
+<tr class="row-even"><td><p>à</p></td>
+<td><p>á</p></td>
+<td><p>â</p></td>
+<td><p>ã</p></td>
+<td><p>ä</p></td>
+<td><p>å</p></td>
+<td><p>æ</p></td>
+<td><p>ç</p></td>
+<td><p>è</p></td>
+<td><p>é</p></td>
+<td><p>ê</p></td>
+<td><p>ë</p></td>
+<td><p>ì</p></td>
+<td><p>í</p></td>
+<td><p>î</p></td>
+<td><p>ï</p></td>
+</tr>
+<tr class="row-odd"><td><p>ð</p></td>
+<td><p>ñ</p></td>
+<td><p>ò</p></td>
+<td><p>ó</p></td>
+<td><p>ô</p></td>
+<td><p>õ</p></td>
+<td><p>ö</p></td>
+<td><p>÷</p></td>
+<td><p>ø</p></td>
+<td><p>ù</p></td>
+<td><p>ú</p></td>
+<td><p>û</p></td>
+<td><p>ü</p></td>
+<td><p>ý</p></td>
+<td><p>þ</p></td>
+<td><p>ÿ</p></td>
+</tr>
+</tbody>
+</table>
+<p>Seven bit input for the same characters.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\begin{tabular}{cccccccccccccccc}
+\nobreakspace&amp;\textexclamdown&amp;\textcent&amp;\textsterling&amp;\textcurrency&amp;\textyen&amp;
+   \textbrokenbar&amp;\textsection&amp;\textasciidieresis&amp;\textcopyright&amp;
+   \textordfeminine&amp;\guillemotleft&amp;\textlnot&amp;\textsofthyphen&amp;
+   \textregistered&amp;\textasciimacron\\
+\textdegree&amp;\textpm&amp;\texttwosuperior&amp;\textthreesuperior&amp;\textasciiacute&amp;
+  \textmu&amp;\textparagraph&amp;\textperiodcentered&amp;\textasciicedilla&amp;
+  \textonesuperior&amp;\textordmasculine&amp;\guillemotright&amp;\textonequarter&amp;
+  \textonehalf&amp;\textthreequarters&amp;\textquestiondown\\
+\`A&amp;\&#39;A&amp;\^A&amp;\~A&amp;\quot;A&amp;\AA&amp;\AE&amp;\c C&amp;\`E&amp;\&#39;E&amp;\^E&amp;\&quot;E&amp;\`I&amp;\&#39;I&amp;\^I&amp;\&quot;I\\
+\DH&amp;\~N&amp;\`O&amp;\&#39;O&amp;\^O&amp;\~O&amp;\&quot;O&amp;\texttimes&amp;\O&amp;\`U&amp;\&#39;U&amp;\^U&amp;\&quot;U&amp;\&#39;Y&amp;\TH&amp;\ss\\
+\`a&amp;\&#39;a&amp;\^a&amp;\~a&amp;\&quot;a&amp;\aa&amp;\ae&amp;\c c&amp;\`e&amp;\&#39;e&amp;\^e&amp;\&quot;e&amp;\`i&amp;\&#39;i&amp;\^i&amp;\&quot;i\\
+\dh&amp;\~n&amp;\`o&amp;\&#39;o&amp;\^o&amp;\~o&amp;\&quot;o&amp;\textdiv&amp;\o&amp;\`u&amp;\&#39;u&amp;\^u&amp;\&quot;u&amp;\&#39;y&amp;\th&amp;\&quot;y\\
+\end{tabular}
+</pre></div>
+</div>
+</div>
+<p>Notes: <code class="docutils literal notranslate"><span class="pre">\textsection=\S</span></code>, <code class="docutils literal notranslate"><span class="pre">\textparagraph=\P</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\textcopyright</span> <span class="pre">=\copyright</span></code>. Concerning French guillemets, you can
+use <code class="docutils literal notranslate"><span class="pre">\og</span></code>, that produces a guillemet and a space, or
+<code class="docutils literal notranslate"><span class="pre">\guillemotleft</span></code> that produces only the guillemet, or <code class="docutils literal notranslate"><span class="pre">«</span></code> or (if the
+current language is French) <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> that produce intelligent guillemets:
+a space is removed if there is one, then another one is added. Example</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\language=1 a\fg{}b\og{}c\guillemotleft{}d\guillemotright{}e}
+{\language=0 a\fg{}b\og{}c\guillemotleft{}d\guillemotright{}e}
+{\language=1 a&lt;&lt;b&lt;&lt; c&lt;&lt;~d&lt;&lt;\,e\,&gt;&gt;f~&gt;&gt;g &gt;&gt;h&gt;&gt;i}
+{\language=0 a&lt;&lt;b&lt;&lt; c&lt;&lt;~d&lt;&lt;\,e\,&gt;&gt;f~&gt;&gt;g &gt;&gt;h&gt;&gt;i}
+{\language=1 a«b« c«~d«\,e\,»f~»g »h»i}
+{\language=0 a«b« c«~d«\,e\,»f~»g »h»i}
+</pre></div>
+</div>
+</div>
+<p>Translation (we replaced character U+A0 by an entity, in order to
+distinguish it from a space).</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>a&amp;#xA0;»b«&amp;#xA0;c«&amp;#xA0;d&amp;#xA0;»e
+a&amp;#xA0;»b«&amp;#xA0;c«d»e
+a«&amp;#xA0;b«&amp;#xA0;c«&amp;#xA0;&amp;#xA0;d«&amp;#xA0;e&amp;#xA0;&amp;#xA0;»f&amp;#xA0;&amp;#xA0;»g&amp;#xA0;»h&amp;#xA0;»i
+a&amp;lt;&amp;lt;b&amp;lt;&amp;lt; c&amp;lt;&amp;lt;&amp;#xA0;d&amp;lt;&amp;lt;&amp;#xA0;e&amp;#xA0;&amp;gt;&amp;gt;f&amp;#xA0;&amp;gt;&amp;gt;g &amp;gt;&amp;gt;h&amp;gt;&amp;gt;i
+a«&amp;#xA0;b«&amp;#xA0;c«&amp;#xA0;&amp;#xA0;d«&amp;#xA0;e&amp;#xA0;&amp;#xA0;»f&amp;#xA0;&amp;#xA0;»g&amp;#xA0;»h&amp;#xA0;»i
+a«b« c«&amp;#xA0;d«&amp;#xA0;e&amp;#xA0;»f&amp;#xA0;»g »h»i
+</pre></div>
+</div>
+</div>
+</section>
+<section id="latin1-extended-characters">
+<h2>Latin1 extended characters<a class="headerlink" href="#latin1-extended-characters" title="Link to this heading"></a></h2>
+<p>These are all the characters with code between U+100 and U+17F.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">nument</span><span class="c1">#1{\xmllatex{\&amp;\#x#1;}{}}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="n">cccccccccccccccc</span><span class="p">}</span>
+\<span class="o">=</span><span class="n">A</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">a</span><span class="o">&amp;</span> \<span class="n">u</span> <span class="n">A</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">a</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">A</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">a</span><span class="o">&amp;</span>\<span class="s1">&#39;C&amp;</span><span class="se">\&#39;</span><span class="s1">c&amp;\^C&amp;\^c&amp;\.C&amp;\.c&amp;</span><span class="se">\v</span><span class="s1"> C&amp;</span><span class="se">\v</span><span class="s1"> c&amp;</span><span class="se">\v</span><span class="s1"> D&amp;</span><span class="se">\v</span><span class="s1"> d </span><span class="se">\\</span>
+\<span class="n">DJ</span><span class="o">&amp;</span>\<span class="n">dj</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">E</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">e</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">E</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">e</span><span class="o">&amp;</span>\<span class="o">.</span><span class="n">E</span><span class="o">&amp;</span>\<span class="o">.</span><span class="n">e</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">E</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">e</span><span class="o">&amp;</span>\<span class="n">v</span> <span class="n">E</span><span class="o">&amp;</span>\<span class="n">v</span> <span class="n">e</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">G</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">g</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">G</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">g</span>\\
+\<span class="o">.</span><span class="n">G</span><span class="o">&amp;</span>\<span class="o">.</span><span class="n">g</span><span class="o">&amp;</span>\<span class="n">c</span> <span class="n">G</span><span class="o">&amp;</span>\<span class="n">c</span> <span class="n">g</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">H</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">h</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">H</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">h</span><span class="o">&amp;</span>\<span class="o">~</span><span class="n">I</span><span class="o">&amp;</span>\<span class="o">~</span><span class="n">i</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">I</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">i</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">I</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">i</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">I</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">i</span>\\
+\<span class="o">.</span><span class="n">I</span><span class="o">&amp;</span>\<span class="n">i</span><span class="o">&amp;</span>\<span class="n">IJ</span><span class="o">&amp;</span>\<span class="n">ij</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">J</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">j</span><span class="o">&amp;</span>\<span class="n">c</span> <span class="n">K</span><span class="o">&amp;</span>\<span class="n">c</span> <span class="n">k</span><span class="o">&amp;</span>\<span class="n">nument</span><span class="p">{</span><span class="mi">138</span><span class="p">}</span><span class="o">&amp;</span>\<span class="s1">&#39;L&amp;</span><span class="se">\&#39;</span><span class="s1">l&amp;\c L&amp;\c l&amp;</span><span class="se">\v</span><span class="s1"> L&amp;</span><span class="se">\v</span><span class="s1"> l&amp;\.L</span><span class="se">\\</span>
+\<span class="o">.</span><span class="n">l</span><span class="o">&amp;</span>\<span class="n">L</span><span class="o">&amp;</span>\<span class="n">l</span><span class="o">&amp;</span>\<span class="s1">&#39;N&amp;</span><span class="se">\&#39;</span><span class="s1">n&amp;\c N&amp;\c n&amp;</span><span class="se">\v</span><span class="s1"> N&amp;</span><span class="se">\v</span><span class="s1"> n&amp;</span><span class="se">\n</span><span class="s1">ument</span><span class="si">{149}</span><span class="s1">&amp;\NG&amp;</span><span class="se">\n</span><span class="s1">g&amp;\=O&amp;\=o&amp;\u O&amp;\u o</span><span class="se">\\</span>
+\<span class="n">H</span> <span class="n">O</span><span class="o">&amp;</span>\<span class="n">H</span> <span class="n">o</span><span class="o">&amp;</span>\<span class="n">OE</span><span class="o">&amp;</span>\<span class="n">oe</span><span class="o">&amp;</span>\<span class="s1">&#39;R&amp;</span><span class="se">\&#39;</span><span class="s1">r&amp;\c R&amp;\c r&amp;</span><span class="se">\v</span><span class="s1"> R&amp;</span><span class="se">\v</span><span class="s1"> r&amp;</span><span class="se">\&#39;</span><span class="s1">S&amp;</span><span class="se">\&#39;</span><span class="s1">s&amp;\^S&amp;\^s&amp;\c S&amp;\c s&amp;</span><span class="se">\\</span>
+\<span class="n">v</span> <span class="n">S</span><span class="o">&amp;</span>\<span class="n">v</span> <span class="n">s</span><span class="o">&amp;</span>\<span class="n">c</span> <span class="n">T</span><span class="o">&amp;</span>\<span class="n">c</span> <span class="n">t</span><span class="o">&amp;</span>\<span class="n">v</span> <span class="n">T</span><span class="o">&amp;</span>\<span class="n">v</span> <span class="n">t</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">T</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">t</span><span class="o">&amp;</span>\<span class="o">~</span><span class="n">U</span><span class="o">&amp;</span>\<span class="o">~</span><span class="n">u</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">U</span><span class="o">&amp;</span>\<span class="o">=</span><span class="n">u</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">U</span><span class="o">&amp;</span>\<span class="n">u</span> <span class="n">u</span><span class="o">&amp;</span>\<span class="n">r</span> <span class="n">U</span><span class="o">&amp;</span>\<span class="n">r</span> <span class="n">u</span>\\
+\<span class="n">H</span> <span class="n">U</span><span class="o">&amp;</span>\<span class="n">H</span> <span class="n">u</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">U</span><span class="o">&amp;</span>\<span class="n">k</span> <span class="n">u</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">W</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">w</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">Y</span><span class="o">&amp;</span>\<span class="o">^</span><span class="n">y</span><span class="o">&amp;</span>\<span class="s2">&quot;Y&amp;</span><span class="se">\&#39;</span><span class="s2">Z&amp;</span><span class="se">\&#39;</span><span class="s2">z&amp;\.Z&amp;\.z&amp;</span><span class="se">\v</span><span class="s2"> Z&amp;</span><span class="se">\v</span><span class="s2"> z&amp;</span><span class="se">\n</span><span class="s2">ument</span><span class="si">{17F}</span><span class="se">\\</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Characters U+138, U+149 and U+17F have no name in <em>Tralics</em>. The first
+one is: `latin small letter kra’, the second is `latin small letter n
+preceded by apostrophe’, and the last is `latin small letter long s’.</p>
+<p>This is the XML translation, without the `tabular’.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="c1">#x100; &amp;#x101; &amp;#x102; &amp;#x103; &amp;#x104; &amp;#x105; &amp;#x106; &amp;#x107;</span>
+<span class="o">&amp;</span><span class="c1">#x108; &amp;#x109; &amp;#x10A; &amp;#x10B; &amp;#x10C; &amp;#x10D; &amp;#x10E; &amp;#x10F;</span>
+<span class="o">&amp;</span><span class="c1">#x110; &amp;#x111; &amp;#x112; &amp;#x113; &amp;#x114; &amp;#x115; &amp;#x116; &amp;#x117;</span>
+<span class="o">&amp;</span><span class="c1">#x118; &amp;#x119; &amp;#x11A; &amp;#x11B; &amp;#x11C; &amp;#x11D; &amp;#x11E; &amp;#x11F;</span>
+<span class="o">&amp;</span><span class="c1">#x120; &amp;#x121; &amp;#x122; &amp;#x123; &amp;#x124; &amp;#x125; &amp;#x126; &amp;#x127;</span>
+<span class="o">&amp;</span><span class="c1">#x128; &amp;#x129; &amp;#x12A; &amp;#x12B; &amp;#x12C; &amp;#x12D; &amp;#x12E; &amp;#x12F;</span>
+<span class="o">&amp;</span><span class="c1">#x130; &amp;#x131; &amp;#x132; &amp;#x133; &amp;#x134; &amp;#x135; &amp;#x136; &amp;#x137;</span>
+<span class="o">&amp;</span><span class="c1">#x138; &amp;#x139; &amp;#x13A; &amp;#x13B; &amp;#x13C; &amp;#x13D; &amp;#x13E; &amp;#x13F;</span>
+<span class="o">&amp;</span><span class="c1">#x140; &amp;#x141; &amp;#x142; &amp;#x143; &amp;#x144; &amp;#x145; &amp;#x146; &amp;#x147;</span>
+<span class="o">&amp;</span><span class="c1">#x148; &amp;#x149; &amp;#x14A; &amp;#x14B; &amp;#x14C; &amp;#x14D; &amp;#x14E; &amp;#x14F;</span>
+<span class="o">&amp;</span><span class="c1">#x150; &amp;#x151; &amp;#x152; &amp;#x153; &amp;#x154; &amp;#x155; &amp;#x156; &amp;#x157;</span>
+<span class="o">&amp;</span><span class="c1">#x158; &amp;#x159; &amp;#x15A; &amp;#x15B; &amp;#x15C; &amp;#x15D; &amp;#x15E; &amp;#x15F;</span>
+<span class="o">&amp;</span><span class="c1">#x160; &amp;#x161; &amp;#x162; &amp;#x163; &amp;#x164; &amp;#x165; &amp;#x166; &amp;#x167;</span>
+<span class="o">&amp;</span><span class="c1">#x168; &amp;#x169; &amp;#x16A; &amp;#x16B; &amp;#x16C; &amp;#x16D; &amp;#x16E; &amp;#x16F;</span>
+<span class="o">&amp;</span><span class="c1">#x170; &amp;#x171; &amp;#x172; &amp;#x173; &amp;#x174; &amp;#x175; &amp;#x176; &amp;#x177;</span>
+<span class="o">&amp;</span><span class="c1">#x178; &amp;#x179; &amp;#x17A; &amp;#x17B; &amp;#x17C; &amp;#x17D; &amp;#x17E; &amp;#x17F;</span>
+</pre></div>
+</div>
+</div>
+<p>As you can see, translation is trivial. In the initial version of the
+software, there was a possibility to obtain entity names.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Ā</p></td>
+<td><p>ā</p></td>
+<td><p>Ă</p></td>
+<td><p>ă</p></td>
+<td><p>Ą</p></td>
+<td><p>ą</p></td>
+<td><p>Ć</p></td>
+<td><p>ć</p></td>
+<td><p>Ĉ</p></td>
+<td><p>ĉ</p></td>
+<td><p>Ċ</p></td>
+<td><p>ċ</p></td>
+<td><p>Č</p></td>
+<td><p>č</p></td>
+<td><p>Ď</p></td>
+<td><p>ď</p></td>
+</tr>
+<tr class="row-even"><td><p>Đ</p></td>
+<td><p>đ</p></td>
+<td><p>Ē</p></td>
+<td><p>ē</p></td>
+<td><p>Ĕ</p></td>
+<td><p>ĕ</p></td>
+<td><p>Ė</p></td>
+<td><p>ė</p></td>
+<td><p>Ę</p></td>
+<td><p>ę</p></td>
+<td><p>Ě</p></td>
+<td><p>ě</p></td>
+<td><p>Ĝ</p></td>
+<td><p>ĝ</p></td>
+<td><p>Ğ</p></td>
+<td><p>ğ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ġ</p></td>
+<td><p>ġ</p></td>
+<td><p>Ģ</p></td>
+<td><p>ģ</p></td>
+<td><p>Ĥ</p></td>
+<td><p>ĥ</p></td>
+<td><p>Ħ</p></td>
+<td><p>ħ</p></td>
+<td><p>Ĩ</p></td>
+<td><p>ĩ</p></td>
+<td><p>Ī</p></td>
+<td><p>ī</p></td>
+<td><p>Ĭ</p></td>
+<td><p>ĭ</p></td>
+<td><p>Į</p></td>
+<td><p>į</p></td>
+</tr>
+<tr class="row-even"><td><p>İ</p></td>
+<td><p>ı</p></td>
+<td><p>Ĳ</p></td>
+<td><p>ĳ</p></td>
+<td><p>Ĵ</p></td>
+<td><p>ĵ</p></td>
+<td><p>Ķ</p></td>
+<td><p>ķ</p></td>
+<td><p>ĸ</p></td>
+<td><p>Ĺ</p></td>
+<td><p>ĺ</p></td>
+<td><p>Ļ</p></td>
+<td><p>ļ</p></td>
+<td><p>Ľ</p></td>
+<td><p>ľ</p></td>
+<td><p>Ŀ</p></td>
+</tr>
+<tr class="row-odd"><td><p>ŀ</p></td>
+<td><p>Ł</p></td>
+<td><p>ł</p></td>
+<td><p>Ń</p></td>
+<td><p>ń</p></td>
+<td><p>Ņ</p></td>
+<td><p>ņ</p></td>
+<td><p>Ň</p></td>
+<td><p>ň</p></td>
+<td><p>ŉ</p></td>
+<td><p>Ŋ</p></td>
+<td><p>ŋ</p></td>
+<td><p>Ō</p></td>
+<td><p>ō</p></td>
+<td><p>Ŏ</p></td>
+<td><p>ŏ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ő</p></td>
+<td><p>ő</p></td>
+<td><p>Œ</p></td>
+<td><p>œ</p></td>
+<td><p>Ŕ</p></td>
+<td><p>ŕ</p></td>
+<td><p>Ŗ</p></td>
+<td><p>ŗ</p></td>
+<td><p>Ř</p></td>
+<td><p>ř</p></td>
+<td><p>Ś</p></td>
+<td><p>ś</p></td>
+<td><p>Ŝ</p></td>
+<td><p>ŝ</p></td>
+<td><p>Ş</p></td>
+<td><p>ş</p></td>
+</tr>
+<tr class="row-odd"><td><p>Š</p></td>
+<td><p>š</p></td>
+<td><p>Ţ</p></td>
+<td><p>ţ</p></td>
+<td><p>Ť</p></td>
+<td><p>ť</p></td>
+<td><p>Ŧ</p></td>
+<td><p>ŧ</p></td>
+<td><p>Ũ</p></td>
+<td><p>ũ</p></td>
+<td><p>Ū</p></td>
+<td><p>ū</p></td>
+<td><p>Ŭ</p></td>
+<td><p>ŭ</p></td>
+<td><p>Ů</p></td>
+<td><p>ů</p></td>
+</tr>
+<tr class="row-even"><td><p>Ű</p></td>
+<td><p>ű</p></td>
+<td><p>Ų</p></td>
+<td><p>ų</p></td>
+<td><p>Ŵ</p></td>
+<td><p>ŵ</p></td>
+<td><p>Ŷ</p></td>
+<td><p>ŷ</p></td>
+<td><p>Ÿ</p></td>
+<td><p>Ź</p></td>
+<td><p>ź</p></td>
+<td><p>Ż</p></td>
+<td><p>ż</p></td>
+<td><p>Ž</p></td>
+<td><p>ž</p></td>
+<td><p>ſ</p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="latin extended A" src="_images/img_68.png" /></p>
+</section>
+<section id="latin-extended-additional-characters">
+<h2>Latin extended additional characters<a class="headerlink" href="#latin-extended-additional-characters" title="Link to this heading"></a></h2>
+<p>We explain here how to obtain all characters between U+1E00 and U+1EFF.
+Character U+1e9a (latin small letter a with right half ring) is not
+implemented. There are two holes in the tables: of 4 and 6 characters
+respectively.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\def\xx#1{\xmllatex{\&amp;\#x#1;}{}}
+\catcode`\&amp;13\def&amp;{ }
+\D A &amp;\D a&amp;\.B&amp;\.b &amp;\d B&amp;\d b&amp;\b B&amp;\b b&amp; \&#39;{\c C} &amp;\&#39;{\c c}&amp;
+\.D &amp;\.d &amp;\d D&amp; \d d &amp;\b D &amp;\b d\\
+\c D &amp;\c d&amp; \V D&amp; \V d &amp;\`{\=E}&amp; \`{\=e} &amp;\&#39;{\=E}&amp;\&#39;{\=e}&amp;
+\V E &amp;\V e &amp;\T E&amp; \T e&amp; \u{\c E}&amp; \u{\c e}&amp; \.F &amp;\.f\\
+\=G &amp;\=g&amp; \.H &amp;\.h&amp; \d H&amp;\d h&amp;\&quot;H &amp;\&quot; h&amp;\c H&amp;\c h&amp;\xx{1e2a}&amp;\xx{1e2b}
+&amp;\T I&amp;\T i&amp;\&#39;{\&quot;I}&amp;\&#39;{\&quot;i}\\
+\&#39;K&amp;\&#39;k&amp;\d K&amp;\d k&amp; \b K&amp;\b k&amp;\d L&amp;\d l&amp;\={\d L}&amp;\={\d l}&amp;\b L&amp;\b l&amp;\V L
+&amp;\V l&amp;\&#39;M&amp;\&#39;m \\
+\.M&amp;\.m&amp;\d M&amp;\d m&amp;\.N&amp;\.n&amp;\d N&amp;\d n&amp;\b N&amp;\b n&amp;\V N&amp;\V n&amp;\~{\&#39;O}&amp;\~{\&#39;o}
+&amp;\~{\&quot;O}&amp;\~{\&quot;o}\\
+\`{\=O}&amp;\`{\=o}&amp;\&#39;{\=O}&amp;\&#39;{\=o}&amp;\&#39;P&amp;\&#39;p&amp;\.P&amp;\.p&amp;\. R&amp;\. r&amp;\d R&amp;\d r&amp;
+\={\d R}&amp;\={\d r}&amp;\b R&amp;\b r\\
+\.S&amp;\.s&amp;\d S&amp;\d s&amp;\.{\&#39;S}&amp;\.{\&#39;s}&amp;\v{\.S}&amp;\v{\.s}&amp;\d{\.S}&amp;\d{\.s}
+&amp;\.T&amp;\. t&amp;\d T&amp;\d t&amp;\b T&amp;\b t\\
+\V T&amp;\V t&amp;\xx{1e72}&amp;\xx{1e73}&amp;\T U&amp;\T u&amp;\V U&amp;\V u&amp;\~{\&#39;U}&amp;\~{\&#39;u}&amp;
+\={\&quot;U}&amp;\={\&quot;u}&amp;\~V&amp;\~v&amp;\d V&amp;\d v\\
+</pre></div>
+</div>
+</div>
+<p>Translation</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="c1">#7680; &amp;#7681; &amp;#7682; &amp;#7683; &amp;#7684; &amp;#7685; &amp;#7686; &amp;#7687;</span>
+   <span class="o">&amp;</span><span class="c1">#7688; &amp;#7689; &amp;#7690; &amp;#7691; &amp;#7692; &amp;#7693; &amp;#7694; &amp;#7695;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+   <span class="o">&amp;</span><span class="c1">#7696; &amp;#7697; &amp;#7698; &amp;#7699; &amp;#7700; &amp;#7701; &amp;#7702; &amp;#7703;</span>
+   <span class="o">&amp;</span><span class="c1">#7704; &amp;#7705; &amp;#7706; &amp;#7707; &amp;#7708; &amp;#7709; &amp;#7710; &amp;#7711;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+   <span class="o">&amp;</span><span class="c1">#7712; &amp;#7713; &amp;#7714; &amp;#7715; &amp;#7716; &amp;#7717; &amp;#7718; &amp;#7719;</span>
+   <span class="o">&amp;</span><span class="c1">#7720; &amp;#7721; &amp;#x1e2a;&amp;#x1e2b;&amp;#7724; &amp;#7725; &amp;#7726; &amp;#7727;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+   <span class="o">&amp;</span><span class="c1">#7728; &amp;#7729; &amp;#7730; &amp;#7731; &amp;#7732; &amp;#7733; &amp;#7734; &amp;#7735;</span>
+   <span class="o">&amp;</span><span class="c1">#7736; &amp;#7737; &amp;#7738; &amp;#7739; &amp;#7740; &amp;#7741; &amp;#7742; &amp;#7743;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+   <span class="o">&amp;</span><span class="c1">#7744; &amp;#7745; &amp;#7746; &amp;#7747; &amp;#7748; &amp;#7749; &amp;#7750; &amp;#7751;</span>
+   <span class="o">&amp;</span><span class="c1">#7752; &amp;#7753; &amp;#7754; &amp;#7755; &amp;#7756; &amp;#7757; &amp;#7758; &amp;#7759;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+   <span class="o">&amp;</span><span class="c1">#7760; &amp;#7761; &amp;#7762; &amp;#7763; &amp;#7764; &amp;#7765; &amp;#7766; &amp;#7767;</span>
+   <span class="o">&amp;</span><span class="c1">#7768; &amp;#7769; &amp;#7770; &amp;#7771; &amp;#7772; &amp;#7773; &amp;#7774; &amp;#7775;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+   <span class="o">&amp;</span><span class="c1">#7776; &amp;#7777; &amp;#7778; &amp;#7779; &amp;#7780; &amp;#7781; &amp;#7782; &amp;#7783;</span>
+   <span class="o">&amp;</span><span class="c1">#7784; &amp;#7785; &amp;#7786; &amp;#7787; &amp;#7788; &amp;#7789; &amp;#7790; &amp;#7791;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+   <span class="o">&amp;</span><span class="c1">#7792; &amp;#7793; &amp;#x1e72;&amp;#x1e73;&amp;#7796; &amp;#7797; &amp;#7798; &amp;#7799;</span>
+   <span class="o">&amp;</span><span class="c1">#7800; &amp;#7801; &amp;#7802; &amp;#7803; &amp;#7804; &amp;#7805; &amp;#7806; &amp;#7807;&lt;/p&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><img alt="latin extended additional" src="_images/img_92.png" /></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Ḁ</p></td>
+<td><p>ḁ</p></td>
+<td><p>Ḃ</p></td>
+<td><p>ḃ</p></td>
+<td><p>Ḅ</p></td>
+<td><p>ḅ</p></td>
+<td><p>Ḇ</p></td>
+<td><p>ḇ</p></td>
+<td><p>Ḉ</p></td>
+<td><p>ḉ</p></td>
+<td><p>Ḋ</p></td>
+<td><p>ḋ</p></td>
+<td><p>Ḍ</p></td>
+<td><p>ḍ</p></td>
+<td><p>Ḏ</p></td>
+<td><p>ḏ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ḑ</p></td>
+<td><p>ḑ</p></td>
+<td><p>Ḓ</p></td>
+<td><p>ḓ</p></td>
+<td><p>Ḕ</p></td>
+<td><p>ḕ</p></td>
+<td><p>Ḗ</p></td>
+<td><p>ḗ</p></td>
+<td><p>Ḙ</p></td>
+<td><p>ḙ</p></td>
+<td><p>Ḛ</p></td>
+<td><p>ḛ</p></td>
+<td><p>Ḝ</p></td>
+<td><p>ḝ</p></td>
+<td><p>Ḟ</p></td>
+<td><p>ḟ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ḡ</p></td>
+<td><p>ḡ</p></td>
+<td><p>Ḣ</p></td>
+<td><p>ḣ</p></td>
+<td><p>Ḥ</p></td>
+<td><p>ḥ</p></td>
+<td><p>Ḧ</p></td>
+<td><p>ḧ</p></td>
+<td><p>Ḩ</p></td>
+<td><p>ḩ</p></td>
+<td><p>Ḫ</p></td>
+<td><p>ḫ</p></td>
+<td><p>Ḭ</p></td>
+<td><p>ḭ</p></td>
+<td><p>Ḯ</p></td>
+<td><p>ḯ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ḱ</p></td>
+<td><p>ḱ</p></td>
+<td><p>Ḳ</p></td>
+<td><p>ḳ</p></td>
+<td><p>Ḵ</p></td>
+<td><p>ḵ</p></td>
+<td><p>Ḷ</p></td>
+<td><p>ḷ</p></td>
+<td><p>Ḹ</p></td>
+<td><p>ḹ</p></td>
+<td><p>Ḻ</p></td>
+<td><p>ḻ</p></td>
+<td><p>Ḽ</p></td>
+<td><p>ḽ</p></td>
+<td><p>Ḿ</p></td>
+<td><p>ḿ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ṁ</p></td>
+<td><p>ṁ</p></td>
+<td><p>Ṃ</p></td>
+<td><p>ṃ</p></td>
+<td><p>Ṅ</p></td>
+<td><p>ṅ</p></td>
+<td><p>Ṇ</p></td>
+<td><p>ṇ</p></td>
+<td><p>Ṉ</p></td>
+<td><p>ṉ</p></td>
+<td><p>Ṋ</p></td>
+<td><p>ṋ</p></td>
+<td><p>Ṍ</p></td>
+<td><p>ṍ</p></td>
+<td><p>Ṏ</p></td>
+<td><p>ṏ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ṑ</p></td>
+<td><p>ṑ</p></td>
+<td><p>Ṓ</p></td>
+<td><p>ṓ</p></td>
+<td><p>Ṕ</p></td>
+<td><p>ṕ</p></td>
+<td><p>Ṗ</p></td>
+<td><p>ṗ</p></td>
+<td><p>Ṙ</p></td>
+<td><p>ṙ</p></td>
+<td><p>Ṛ</p></td>
+<td><p>ṛ</p></td>
+<td><p>Ṝ</p></td>
+<td><p>ṝ</p></td>
+<td><p>Ṟ</p></td>
+<td><p>ṟ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ṡ</p></td>
+<td><p>ṡ</p></td>
+<td><p>Ṣ</p></td>
+<td><p>ṣ</p></td>
+<td><p>Ṥ</p></td>
+<td><p>ṥ</p></td>
+<td><p>Ṧ</p></td>
+<td><p>ṧ</p></td>
+<td><p>Ṩ</p></td>
+<td><p>ṩ</p></td>
+<td><p>Ṫ</p></td>
+<td><p>ṫ</p></td>
+<td><p>Ṭ</p></td>
+<td><p>ṭ</p></td>
+<td><p>Ṯ</p></td>
+<td><p>ṯ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ṱ</p></td>
+<td><p>ṱ</p></td>
+<td><p>Ṳ</p></td>
+<td><p>ṳ</p></td>
+<td><p>Ṵ</p></td>
+<td><p>ṵ</p></td>
+<td><p>Ṷ</p></td>
+<td><p>ṷ</p></td>
+<td><p>Ṹ</p></td>
+<td><p>ṹ</p></td>
+<td><p>Ṻ</p></td>
+<td><p>ṻ</p></td>
+<td><p>Ṽ</p></td>
+<td><p>ṽ</p></td>
+<td><p>Ṿ</p></td>
+<td><p>ṿ</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\catcode`\&amp;13\def&amp;{ }
+\`W&amp;\`w&amp;\&#39;W&amp;\&#39;w&amp;\&quot;W&amp;\&quot;w&amp;\.W&amp;\.w&amp;\d W&amp;\d w&amp;\. X&amp;\. x&amp;\&quot;X&amp;\&quot;x&amp;\. Y&amp;\.y\\
+\^Z&amp;\^z&amp;\d Z&amp;\d z&amp;\b Z&amp;\b z&amp;\b h&amp;\&quot; t&amp;\r
+w&amp;\r y&amp;?&amp;\xx{1e9b}\\
+\d A&amp;\d a&amp;\h A&amp;\h a&amp;\^{\&#39;A}&amp;\^{\&#39;a}&amp;\^{\`A}&amp;\^{\`a}&amp;{\^{\h A}}&amp;\^{\h a}&amp;
+\~{\^A}&amp;\~{\^a}&amp;\d{\^A}&amp;\d{\^a}&amp;\&#39;{\u A}&amp;\&#39;{\u a}\\
+\`{\u A}&amp;\`{\u a}&amp;\h{\u A}&amp;\h{\u a}&amp;\~{\u A}&amp;\~{\u a}&amp;\d{\u A}&amp;\d{\u a}&amp;\d E&amp;
+\d e&amp;\h E&amp;\h e&amp;\~ E&amp;\~e&amp;\&#39;{\^E}&amp;\&#39;{\^e}\\
+\^{\`E}&amp;\^{\`e}&amp;\^{\h E}&amp;\^{\h e}&amp;\~{\^E}&amp;\~{\^e}&amp;\^{\d E}&amp;\^{\d e}&amp;\h I&amp;
+\h i&amp;\d I&amp;\d i&amp; \d O &amp;\d o&amp;\h O&amp;\h o\\
+\&#39;{\^O}&amp;\&#39;{\^o}&amp;\`{\^O}&amp;\`{\^o}&amp;\^{\h O}&amp;\^{\h o}&amp;\~{\^O}&amp;\~{\^o}&amp;
+\^{\d O}&amp;\^{\d o}&amp;\&#39;{\H O}&amp;\&#39;{\H o}&amp;\`{\H O}&amp;\`{\H o}&amp;\h{\H O}&amp;\h{\H o}\\
+\~{\H O}&amp;\~{\H o}&amp;\d{\H O}&amp;\d{\H o}&amp;\d U&amp;\d u&amp;\h U&amp;\h u&amp;\&#39;{\H U}&amp;\&#39;{\H u}&amp;
+\`{\H U}&amp;\`{\H u}&amp;\h{\H U}&amp;\h{\H u}&amp;\~{\H U}&amp;\~{\H u}\\
+\H{\d U}&amp;\H{\d u}&amp;\` Y&amp;\` y&amp;\d Y&amp;\d y&amp;\h Y&amp;\h y&amp;\~ Y&amp;\~y
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7808; &amp;#7809; &amp;#7810; &amp;#7811; &amp;#7812; &amp;#7813; &amp;#7814; &amp;#7815;</span>
+ <span class="o">&amp;</span><span class="c1">#7816; &amp;#7817; &amp;#7818; &amp;#7819; &amp;#7820; &amp;#7821; &amp;#7822; &amp;#7823;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7824; &amp;#7825; &amp;#7826; &amp;#7827; &amp;#7828; &amp;#7829; &amp;#7830; &amp;#7831;</span>
+ <span class="o">&amp;</span><span class="c1">#7832; &amp;#7833; ? &amp;#x1e9b;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7840; &amp;#7841; &amp;#7842; &amp;#7843; &amp;#7844; &amp;#7845; &amp;#7846; &amp;#7847;</span>
+ <span class="o">&amp;</span><span class="c1">#7848; &amp;#7849; &amp;#7850; &amp;#7851; &amp;#7852; &amp;#7853; &amp;#7854; &amp;#7855;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7856; &amp;#7857; &amp;#7858; &amp;#7859; &amp;#7860; &amp;#7861; &amp;#7862; &amp;#7863;</span>
+ <span class="o">&amp;</span><span class="c1">#7864; &amp;#7865; &amp;#7866; &amp;#7867; &amp;#7868; &amp;#7869; &amp;#7870; &amp;#7871;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7872; &amp;#7873; &amp;#7874; &amp;#7875; &amp;#7876; &amp;#7877; &amp;#7878; &amp;#7879;</span>
+ <span class="o">&amp;</span><span class="c1">#7880; &amp;#7881; &amp;#7882; &amp;#7883; &amp;#7884; &amp;#7885; &amp;#7886; &amp;#7887;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7888; &amp;#7889; &amp;#7890; &amp;#7891; &amp;#7892; &amp;#7893; &amp;#7894; &amp;#7895;</span>
+ <span class="o">&amp;</span><span class="c1">#7896; &amp;#7897; &amp;#7898; &amp;#7899; &amp;#7900; &amp;#7901; &amp;#7902; &amp;#7903;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7904; &amp;#7905; &amp;#7906; &amp;#7907; &amp;#7908; &amp;#7909; &amp;#7910; &amp;#7911;</span>
+ <span class="o">&amp;</span><span class="c1">#7912; &amp;#7913; &amp;#7914; &amp;#7915; &amp;#7916; &amp;#7917; &amp;#7918; &amp;#7919;&lt;/p&gt;&lt;p noindent=&#39;true&#39;&gt;</span>
+ <span class="o">&amp;</span><span class="c1">#7920; &amp;#7921; &amp;#7922; &amp;#7923; &amp;#7924; &amp;#7925; &amp;#7926; &amp;#7927;</span>
+ <span class="o">&amp;</span><span class="c1">#7928; &amp;#7929;&lt;/p&gt;</span>
+</pre></div>
+</div>
+</div>
+<p><img alt="latin extended additional 2" src="_images/img_93.png" /></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Ẁ</p></td>
+<td><p>ẁ</p></td>
+<td><p>Ẃ</p></td>
+<td><p>ẃ</p></td>
+<td><p>Ẅ</p></td>
+<td><p>ẅ</p></td>
+<td><p>Ẇ</p></td>
+<td><p>ẇ</p></td>
+<td><p>Ẉ</p></td>
+<td><p>ẉ</p></td>
+<td><p>Ẋ</p></td>
+<td><p>ẋ</p></td>
+<td><p>Ẍ</p></td>
+<td><p>ẍ</p></td>
+<td><p>Ẏ</p></td>
+<td><p>ẏ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ẑ</p></td>
+<td><p>ẑ</p></td>
+<td><p>Ẓ</p></td>
+<td><p>ẓ</p></td>
+<td><p>Ẕ</p></td>
+<td><p>ẕ</p></td>
+<td><p>ẖ</p></td>
+<td><p>ẗ</p></td>
+<td><p>ẘ</p></td>
+<td><p>ẙ</p></td>
+<td><p>?</p></td>
+<td><p>ẛ</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Ạ</p></td>
+<td><p>ạ</p></td>
+<td><p>Ả</p></td>
+<td><p>ả</p></td>
+<td><p>Ấ</p></td>
+<td><p>ấ</p></td>
+<td><p>Ầ</p></td>
+<td><p>ầ</p></td>
+<td><p>Ẩ</p></td>
+<td><p>ẩ</p></td>
+<td><p>Ẫ</p></td>
+<td><p>ẫ</p></td>
+<td><p>Ậ</p></td>
+<td><p>ậ</p></td>
+<td><p>Ắ</p></td>
+<td><p>ắ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ằ</p></td>
+<td><p>ằ</p></td>
+<td><p>Ẳ</p></td>
+<td><p>ẳ</p></td>
+<td><p>Ẵ</p></td>
+<td><p>ẵ</p></td>
+<td><p>Ặ</p></td>
+<td><p>ặ</p></td>
+<td><p>Ẹ</p></td>
+<td><p>ẹ</p></td>
+<td><p>Ẻ</p></td>
+<td><p>ẻ</p></td>
+<td><p>Ẽ</p></td>
+<td><p>ẽ</p></td>
+<td><p>Ế</p></td>
+<td><p>ế</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ề</p></td>
+<td><p>ề</p></td>
+<td><p>Ể</p></td>
+<td><p>ể</p></td>
+<td><p>Ễ</p></td>
+<td><p>ễ</p></td>
+<td><p>Ệ</p></td>
+<td><p>ệ</p></td>
+<td><p>Ỉ</p></td>
+<td><p>ỉ</p></td>
+<td><p>Ị</p></td>
+<td><p>ị</p></td>
+<td><p>Ọ</p></td>
+<td><p>ọ</p></td>
+<td><p>Ỏ</p></td>
+<td><p>ỏ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ố</p></td>
+<td><p>ố</p></td>
+<td><p>Ồ</p></td>
+<td><p>ồ</p></td>
+<td><p>Ổ</p></td>
+<td><p>ổ</p></td>
+<td><p>Ỗ</p></td>
+<td><p>ỗ</p></td>
+<td><p>Ộ</p></td>
+<td><p>ộ</p></td>
+<td><p>Ớ</p></td>
+<td><p>ớ</p></td>
+<td><p>Ờ</p></td>
+<td><p>ờ</p></td>
+<td><p>Ở</p></td>
+<td><p>ở</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ỡ</p></td>
+<td><p>ỡ</p></td>
+<td><p>Ợ</p></td>
+<td><p>ợ</p></td>
+<td><p>Ụ</p></td>
+<td><p>ụ</p></td>
+<td><p>Ủ</p></td>
+<td><p>ủ</p></td>
+<td><p>Ứ</p></td>
+<td><p>ứ</p></td>
+<td><p>Ừ</p></td>
+<td><p>ừ</p></td>
+<td><p>Ử</p></td>
+<td><p>ử</p></td>
+<td><p>Ữ</p></td>
+<td><p>ữ</p></td>
+</tr>
+<tr class="row-even"><td><p>Ự</p></td>
+<td><p>ự</p></td>
+<td><p>Ỳ</p></td>
+<td><p>ỳ</p></td>
+<td><p>Ỵ</p></td>
+<td><p>ỵ</p></td>
+<td><p>Ỷ</p></td>
+<td><p>ỷ</p></td>
+<td><p>Ỹ</p></td>
+<td><p>ỹ</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dingbats-characters">
+<h2>Dingbats characters<a class="headerlink" href="#dingbats-characters" title="Link to this heading"></a></h2>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">\ding</span></code> command in order to access one character of
+the Zapf Dingbats fonts. The command takes one argument, an integer (it
+is parsed by the <code class="docutils literal notranslate"><span class="pre">scanint</span></code> routine, see
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details, so that
+<code class="docutils literal notranslate"><span class="pre">\ding{</span></code>A}` is as valid as <code class="docutils literal notranslate"><span class="pre">\char</span></code>A`). If the
+number is between 33 and 126, or between 161 and 239, or between 241 and
+254, then you get one of the characters listed below. Otherwise, the
+translation is <code class="docutils literal notranslate"><span class="pre">bad!</span></code></p>
+<p>Example that shows the complete list.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\LARGE
+\begin{tabular}{cccccccccccccccc}
+%\catcode`\&amp;13\def&amp;{ }
+&amp;\ding{&quot;21}&amp;\ding{&quot;22}&amp;\ding{&quot;23}&amp;\ding{&quot;24}&amp;\ding{&quot;25}&amp;\ding{&quot;26}&amp;\ding{&quot;27}&amp;
+\ding{&quot;28}&amp;\ding{&quot;29}&amp;\ding{&quot;2A}&amp;\ding{&quot;2B}&amp;\ding{&quot;2C}&amp;\ding{&quot;2D}&amp;\ding{&quot;2E}&amp;\ding{&quot;2F}\\
+\ding{&quot;30}&amp;\ding{&quot;31}&amp;\ding{&quot;32}&amp;\ding{&quot;33}&amp;\ding{&quot;34}&amp;\ding{&quot;35}&amp;\ding{&quot;36}&amp;\ding{&quot;37}&amp;
+\ding{&quot;38}&amp;\ding{&quot;39}&amp;\ding{&quot;3A}&amp;\ding{&quot;3B}&amp;\ding{&quot;3C}&amp;\ding{&quot;3D}&amp;\ding{&quot;3E}&amp;\ding{&quot;3F}\\
+\ding{&quot;40}&amp;\ding{&quot;41}&amp;\ding{&quot;42}&amp;\ding{&quot;43}&amp;\ding{&quot;44}&amp;\ding{&quot;45}&amp;\ding{&quot;46}&amp;\ding{&quot;47}&amp;
+\ding{&quot;48}&amp;\ding{&quot;49}&amp;\ding{&quot;4A}&amp;\ding{&quot;4B}&amp;\ding{&quot;4C}&amp;\ding{&quot;4D}&amp;\ding{&quot;4E}&amp;\ding{&quot;4F}\\
+\ding{&quot;50}&amp;\ding{&quot;51}&amp;\ding{&quot;52}&amp;\ding{&quot;53}&amp;\ding{&quot;54}&amp;\ding{&quot;55}&amp;\ding{&quot;56}&amp;\ding{&quot;57}&amp;
+\ding{&quot;58}&amp;\ding{&quot;59}&amp;\ding{&quot;5A}&amp;\ding{&quot;5B}&amp;\ding{&quot;5C}&amp;\ding{&quot;5D}&amp;\ding{&quot;5E}&amp;\ding{&quot;5F}\\
+\ding{&quot;60}&amp;\ding{&quot;61}&amp;\ding{&quot;62}&amp;\ding{&quot;63}&amp;\ding{&quot;64}&amp;\ding{&quot;65}&amp;\ding{&quot;66}&amp;\ding{&quot;67}&amp;
+\ding{&quot;68}&amp;\ding{&quot;69}&amp;\ding{&quot;6A}&amp;\ding{&quot;6B}&amp;\ding{&quot;6C}&amp;\ding{&quot;6D}&amp;\ding{&quot;6E}&amp;\ding{&quot;6F}\\
+\ding{&quot;70}&amp;\ding{&quot;71}&amp;\ding{&quot;72}&amp;\ding{&quot;73}&amp;\ding{&quot;74}&amp;\ding{&quot;75}&amp;\ding{&quot;76}&amp;\ding{&quot;77}&amp;
+\ding{&quot;78}&amp;\ding{&quot;79}&amp;\ding{&quot;7A}&amp;\ding{&quot;7B}&amp;\ding{&quot;7C}&amp;\ding{&quot;7D}&amp;\ding{&quot;7E}&amp;\\
+&amp;\ding{&quot;A1}&amp;\ding{&quot;A2}&amp;\ding{&quot;A3}&amp;\ding{&quot;A4}&amp;\ding{&quot;A5}&amp;\ding{&quot;A6}&amp;\ding{&quot;A7}&amp;
+\ding{&quot;A8}&amp;\ding{&quot;A9}&amp;\ding{&quot;AA}&amp;\ding{&quot;AB}&amp;\ding{&quot;AC}&amp;\ding{&quot;AD}&amp;\ding{&quot;AE}&amp;\ding{&quot;AF}\\
+\ding{&quot;B0}&amp;\ding{&quot;B1}&amp;\ding{&quot;B2}&amp;\ding{&quot;B3}&amp;\ding{&quot;B4}&amp;\ding{&quot;B5}&amp;\ding{&quot;B6}&amp;\ding{&quot;B7}&amp;
+\ding{&quot;B8}&amp;\ding{&quot;B9}&amp;\ding{&quot;BA}&amp;\ding{&quot;BB}&amp;\ding{&quot;BC}&amp;\ding{&quot;BD}&amp;\ding{&quot;BE}&amp;\ding{&quot;BF}\\
+\ding{&quot;C0}&amp;\ding{&quot;C1}&amp;\ding{&quot;C2}&amp;\ding{&quot;C3}&amp;\ding{&quot;C4}&amp;\ding{&quot;C5}&amp;\ding{&quot;C6}&amp;\ding{&quot;C7}&amp;
+\ding{&quot;C8}&amp;\ding{&quot;C9}&amp;\ding{&quot;CA}&amp;\ding{&quot;CB}&amp;\ding{&quot;CC}&amp;\ding{&quot;CD}&amp;\ding{&quot;CE}&amp;\ding{&quot;CF}\\
+\ding{&quot;D0}&amp;\ding{&quot;D1}&amp;\ding{&quot;D2}&amp;\ding{&quot;D3}&amp;\ding{&quot;D4}&amp;\ding{&quot;D5}&amp;\ding{&quot;D6}&amp;\ding{&quot;D7}&amp;
+\ding{&quot;D8}&amp;\ding{&quot;D9}&amp;\ding{&quot;DA}&amp;\ding{&quot;DB}&amp;\ding{&quot;DC}&amp;\ding{&quot;DD}&amp;\ding{&quot;DE}&amp;\ding{&quot;DF}\\
+\ding{&quot;E0}&amp;\ding{&quot;E1}&amp;\ding{&quot;E2}&amp;\ding{&quot;E3}&amp;\ding{&quot;E4}&amp;\ding{&quot;E5}&amp;\ding{&quot;E6}&amp;\ding{&quot;E7}&amp;
+\ding{&quot;E8}&amp;\ding{&quot;E9}&amp;\ding{&quot;EA}&amp;\ding{&quot;EB}&amp;\ding{&quot;EC}&amp;\ding{&quot;ED}&amp;\ding{&quot;EE}&amp;\ding{&quot;EF}\\
+&amp;\ding{&quot;F1}&amp;\ding{&quot;F2}&amp;\ding{&quot;F3}&amp;\ding{&quot;F4}&amp;\ding{&quot;F5}&amp;\ding{&quot;F6}&amp;\ding{&quot;F7}&amp;
+\ding{&quot;F8}&amp;\ding{&quot;F9}&amp;\ding{&quot;FA}&amp;\ding{&quot;FB}&amp;\ding{&quot;FC}&amp;\ding{&quot;FD}&amp;\ding{&quot;FE}&amp;\\
+\end{tabular}
+}
+</pre></div>
+</div>
+</div>
+<p>Translation, without the table and the font change. As you can see, the
+codes are between U+2700 and U+27BF, with some exceptions. For instance
+character 169 gives U+2666. This is black diamond suit. But the file
+mmlalias.ent defines <code class="docutils literal notranslate"><span class="pre">&amp;diamondsuit;</span></code> to be the same character, and
+this is used to translate <code class="docutils literal notranslate"><span class="pre">$\diamondsuit$</span></code>.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="c1">#x2701; &amp;#x2702; &amp;#x2703; &amp;#x2704; &amp;#x260E; &amp;#x2706; &amp;#x2707;</span>
+<span class="o">&amp;</span><span class="c1">#x2708; &amp;#x2709; &amp;#x261B; &amp;#x261E; &amp;#x270C; &amp;#x270D; &amp;#x270E; &amp;#x270F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2710; &amp;#x2711; &amp;#x2712; &amp;#x2713; &amp;#x2714; &amp;#x2715; &amp;#x2716; &amp;#x2717;</span>
+<span class="o">&amp;</span><span class="c1">#x2718; &amp;#x2719; &amp;#x271A; &amp;#x271B; &amp;#x271C; &amp;#x271D; &amp;#x271E; &amp;#x271F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2720; &amp;#x2721; &amp;#x2722; &amp;#x2723; &amp;#x2724; &amp;#x2725; &amp;#x2726; &amp;#x2727;</span>
+<span class="o">&amp;</span><span class="c1">#x2605; &amp;#x2729; &amp;#x272A; &amp;#x272B; &amp;#x272C; &amp;#x272D; &amp;#x272E; &amp;#x272F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2730; &amp;#x2731; &amp;#x2732; &amp;#x2733; &amp;#x2734; &amp;#x2735; &amp;#x2736; &amp;#x2737;</span>
+<span class="o">&amp;</span><span class="c1">#x2738; &amp;#x2739; &amp;#x273A; &amp;#x273B; &amp;#x273C; &amp;#x273D; &amp;#x273E; &amp;#x273F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2740; &amp;#x2741; &amp;#x2742; &amp;#x2743; &amp;#x2744; &amp;#x2745; &amp;#x2746; &amp;#x2747;</span>
+<span class="o">&amp;</span><span class="c1">#x2748; &amp;#x2749; &amp;#x274A; &amp;#x274B; &amp;#x25CF; &amp;#x274D; &amp;#x25A0; &amp;#x274F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2750; &amp;#x2751; &amp;#x2752; &amp;#x25B2; &amp;#x25BC; &amp;#x25C6; &amp;#x2756; &amp;#x25D7;</span>
+<span class="o">&amp;</span><span class="c1">#x2758; &amp;#x2759; &amp;#x275A; &amp;#x275B; &amp;#x275C; &amp;#x275D; &amp;#x275E; &lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="c1">#x2761; &amp;#x2762; &amp;#x2763; &amp;#x2764; &amp;#x2765; &amp;#x2766; &amp;#x2767;</span>
+<span class="o">&amp;</span><span class="c1">#x2663; &amp;#x2666; &amp;#x2665; &amp;#x2660; &amp;#x2460; &amp;#x2461; &amp;#x2462; &amp;#x2463;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2464; &amp;#x2465; &amp;#x2466; &amp;#x2467; &amp;#x2468; &amp;#x2469; &amp;#x2776; &amp;#x2777;</span>
+<span class="o">&amp;</span><span class="c1">#x2778; &amp;#x2779; &amp;#x277A; &amp;#x277B; &amp;#x277C; &amp;#x277D; &amp;#x277E; &amp;#x277F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2780; &amp;#x2781; &amp;#x2782; &amp;#x2783; &amp;#x2784; &amp;#x2785; &amp;#x2786; &amp;#x2787;</span>
+<span class="o">&amp;</span><span class="c1">#x2788; &amp;#x2789; &amp;#x278A; &amp;#x278B; &amp;#x278C; &amp;#x278D; &amp;#x278E; &amp;#x278F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x2790; &amp;#x2791; &amp;#x2792; &amp;#x2793; &amp;#x2794; &amp;#x2192; &amp;#x2194; &amp;#x2195;</span>
+<span class="o">&amp;</span><span class="c1">#x2798; &amp;#x2799; &amp;#x279A; &amp;#x279B; &amp;#x279C; &amp;#x279D; &amp;#x279E; &amp;#x279F;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&amp;</span><span class="c1">#x27A0; &amp;#x27A1; &amp;#x27A2; &amp;#x27A3; &amp;#x27A4; &amp;#x27A5; &amp;#x27A6; &amp;#x27A7;</span>
+<span class="o">&amp;</span><span class="c1">#x27A8; &amp;#x27A9; &amp;#x27AA; &amp;#x27AB; &amp;#x27AC; &amp;#x27AD; &amp;#x27AE; &amp;#x27AF;&lt;/p&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="c1">#x27B1; &amp;#x27B2; &amp;#x27B3; &amp;#x27B4; &amp;#x27B5; &amp;#x27B6; &amp;#x27B7;</span>
+<span class="o">&amp;</span><span class="c1">#x27B8; &amp;#x27B9; &amp;#x27BA; &amp;#x27BB; &amp;#x27BC; &amp;#x27BD; &amp;#x27BE; &lt;/p&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>This is the table</p>
+<p><img alt="Zapf Dingbats characters" src="_images/img_71.png" /></p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p></p></td>
+<td><p>✁</p></td>
+<td><p>✂</p></td>
+<td><p>✃</p></td>
+<td><p>✄</p></td>
+<td><p>☎</p></td>
+<td><p>✆</p></td>
+<td><p>✇</p></td>
+<td><p>✈</p></td>
+<td><p>✉</p></td>
+<td><p>☛</p></td>
+<td><p>☞</p></td>
+<td><p>✌</p></td>
+<td><p>✍</p></td>
+<td><p>✎</p></td>
+<td><p>✏</p></td>
+</tr>
+<tr class="row-even"><td><p>✐</p></td>
+<td><p>✑</p></td>
+<td><p>✒</p></td>
+<td><p>✓</p></td>
+<td><p>✔</p></td>
+<td><p>✕</p></td>
+<td><p>✖</p></td>
+<td><p>✗</p></td>
+<td><p>✘</p></td>
+<td><p>✙</p></td>
+<td><p>✚</p></td>
+<td><p>✛</p></td>
+<td><p>✜</p></td>
+<td><p>✝</p></td>
+<td><p>✞</p></td>
+<td><p>✟</p></td>
+</tr>
+<tr class="row-odd"><td><p>✠</p></td>
+<td><p>✡</p></td>
+<td><p>✢</p></td>
+<td><p>✣</p></td>
+<td><p>✤</p></td>
+<td><p>✥</p></td>
+<td><p>✦</p></td>
+<td><p>✧</p></td>
+<td><p>★</p></td>
+<td><p>✩</p></td>
+<td><p>✪</p></td>
+<td><p>✫</p></td>
+<td><p>✬</p></td>
+<td><p>✭</p></td>
+<td><p>✮</p></td>
+<td><p>✯</p></td>
+</tr>
+<tr class="row-even"><td><p>✰</p></td>
+<td><p>✱</p></td>
+<td><p>✲</p></td>
+<td><p>✳</p></td>
+<td><p>✴</p></td>
+<td><p>✵</p></td>
+<td><p>✶</p></td>
+<td><p>✷</p></td>
+<td><p>✸</p></td>
+<td><p>✹</p></td>
+<td><p>✺</p></td>
+<td><p>✻</p></td>
+<td><p>✼</p></td>
+<td><p>✽</p></td>
+<td><p>✾</p></td>
+<td><p>✿</p></td>
+</tr>
+<tr class="row-odd"><td><p>❀</p></td>
+<td><p>❁</p></td>
+<td><p>❂</p></td>
+<td><p>❃</p></td>
+<td><p>❄</p></td>
+<td><p>❅</p></td>
+<td><p>❆</p></td>
+<td><p>❇</p></td>
+<td><p>❈</p></td>
+<td><p>❉</p></td>
+<td><p>❊</p></td>
+<td><p>❋</p></td>
+<td><p>●</p></td>
+<td><p>❍</p></td>
+<td><p>■</p></td>
+<td><p>❏</p></td>
+</tr>
+<tr class="row-even"><td><p>❐</p></td>
+<td><p>❑</p></td>
+<td><p>❒</p></td>
+<td><p>▲</p></td>
+<td><p>▼</p></td>
+<td><p>◆</p></td>
+<td><p>❖</p></td>
+<td><p>◗</p></td>
+<td><p>❘</p></td>
+<td><p>❙</p></td>
+<td><p>❚</p></td>
+<td><p>❛</p></td>
+<td><p>❜</p></td>
+<td><p>❝</p></td>
+<td><p>❞</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>❡</p></td>
+<td><p>❢</p></td>
+<td><p>❣</p></td>
+<td><p>❤</p></td>
+<td><p>❥</p></td>
+<td><p>❦</p></td>
+<td><p>❧</p></td>
+<td><p>♣</p></td>
+<td><p>♦</p></td>
+<td><p>♥</p></td>
+<td><p>♠</p></td>
+<td><p>①</p></td>
+<td><p>②</p></td>
+<td><p>③</p></td>
+<td><p>④</p></td>
+</tr>
+<tr class="row-even"><td><p>⑤</p></td>
+<td><p>⑥</p></td>
+<td><p>⑦</p></td>
+<td><p>⑧</p></td>
+<td><p>⑨</p></td>
+<td><p>⑩</p></td>
+<td><p>❶</p></td>
+<td><p>❷</p></td>
+<td><p>❸</p></td>
+<td><p>❹</p></td>
+<td><p>❺</p></td>
+<td><p>❻</p></td>
+<td><p>❼</p></td>
+<td><p>❽</p></td>
+<td><p>❾</p></td>
+<td><p>❿</p></td>
+</tr>
+<tr class="row-odd"><td><p>➀</p></td>
+<td><p>➁</p></td>
+<td><p>➂</p></td>
+<td><p>➃</p></td>
+<td><p>➄</p></td>
+<td><p>➅</p></td>
+<td><p>➆</p></td>
+<td><p>➇</p></td>
+<td><p>➈</p></td>
+<td><p>➉</p></td>
+<td><p>➊</p></td>
+<td><p>➋</p></td>
+<td><p>➌</p></td>
+<td><p>➍</p></td>
+<td><p>➎</p></td>
+<td><p>➏</p></td>
+</tr>
+<tr class="row-even"><td><p>➐</p></td>
+<td><p>➑</p></td>
+<td><p>➒</p></td>
+<td><p>➓</p></td>
+<td><p>➔</p></td>
+<td><p>→</p></td>
+<td><p>↔</p></td>
+<td><p>↕</p></td>
+<td><p>➘</p></td>
+<td><p>➙</p></td>
+<td><p>➚</p></td>
+<td><p>➛</p></td>
+<td><p>➜</p></td>
+<td><p>➝</p></td>
+<td><p>➞</p></td>
+<td><p>➟</p></td>
+</tr>
+<tr class="row-odd"><td><p>➠</p></td>
+<td><p>➡</p></td>
+<td><p>➢</p></td>
+<td><p>➣</p></td>
+<td><p>➤</p></td>
+<td><p>➥</p></td>
+<td><p>➦</p></td>
+<td><p>➧</p></td>
+<td><p>➨</p></td>
+<td><p>➩</p></td>
+<td><p>➪</p></td>
+<td><p>➫</p></td>
+<td><p>➬</p></td>
+<td><p>➭</p></td>
+<td><p>➮</p></td>
+<td><p>➯</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>➱</p></td>
+<td><p>➲</p></td>
+<td><p>➳</p></td>
+<td><p>➴</p></td>
+<td><p>➵</p></td>
+<td><p>➶</p></td>
+<td><p>➷</p></td>
+<td><p>➸</p></td>
+<td><p>➹</p></td>
+<td><p>➺</p></td>
+<td><p>➻</p></td>
+<td><p>➼</p></td>
+<td><p>➽</p></td>
+<td><p>➾</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="other-symbols">
+<h2>Other symbols<a class="headerlink" href="#other-symbols" title="Link to this heading"></a></h2>
+<p>Here is a list of commands that are known to <em>Tralics</em> but whose
+translation does not correspond to a Unicode character. Thus, an error
+is signaled.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span>\<span class="n">textascendercompwordmark</span>\<span class="n">textcapitalcompwordmark</span>
+<span class="o">%</span> \<span class="n">textlbrackdbl</span>\<span class="n">textrbrackdbl</span>\<span class="n">texttildelow</span>\<span class="n">textleaf</span>\<span class="n">textdivorced</span>\<span class="n">textborn</span>
+<span class="o">%</span> \<span class="n">textquotestraightbase</span>\<span class="n">textquotestraightdblbase</span>\<span class="n">textmarried</span>\<span class="n">textdied</span>
+<span class="o">%</span> \<span class="n">textinterrobangdown</span>\<span class="n">textcopyleft</span>\<span class="n">textdollaroldstyle</span>\<span class="n">textdollaroldstyle</span>
+<span class="o">%</span> \<span class="n">textblank</span>\<span class="n">textcentoldstyle</span>\<span class="n">textcentoldstyle</span>
+<span class="o">%</span> \<span class="n">textcentoldstyle</span>\<span class="n">textdblhyphen</span>
+<span class="o">%</span> \<span class="n">textfouroldstyle</span> \<span class="n">textfiveoldstyle</span> \<span class="n">texteightoldstyle</span>\<span class="n">textnineoldstyle</span>
+<span class="o">%</span> \<span class="n">textoneoldstyle</span> \<span class="n">textsevenoldstyle</span>\<span class="n">textsixoldstyle</span>
+<span class="o">%</span> \<span class="n">textthreeoldstyle</span>\<span class="n">textzerooldstyle</span> \<span class="n">texttwooldstyle</span>
+</pre></div>
+</div>
+</div>
+<p>Here is a list of commands whose name start with `text’.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">textacutedbl</span>\ \<span class="n">textasciiacute</span>\
+\<span class="n">textasciiacutex</span>\  \<span class="n">textasciibreve</span>\  \<span class="n">textasciicaron</span>\  \<span class="n">textasciicedilla</span>\
+\<span class="n">textasciicircum</span>\  \<span class="n">textasciidieresis</span>\  \<span class="n">textasciigrave</span>\  \<span class="n">textasciimacron</span>\
+\<span class="n">textasciitilde</span>\  \<span class="n">textasteriskcentered</span>\  \<span class="n">textbackslash</span>\ \<span class="n">textbaht</span>\ \<span class="n">textbar</span>\
+\<span class="n">textbardbl</span>\  \<span class="n">textbigcircle</span>\    \<span class="n">textbraceleft</span>\
+\<span class="n">textbraceright</span>\  \<span class="n">textbrokenbar</span>\  \<span class="n">textbullet</span>\
+\<span class="n">textcelsius</span>\  \<span class="n">textcent</span>\   \<span class="n">textcircledP</span>\  \<span class="n">textcolonmonetary</span>\
+\<span class="n">textcopyright</span>\  \<span class="n">textcurrency</span>\  \<span class="n">textdagger</span>\
+\<span class="n">textdaggerdbl</span>\    \<span class="n">textdegree</span>\
+\<span class="n">textdiv</span>\  \<span class="n">textdollar</span>\    \<span class="n">textdong</span>\
+\<span class="n">textdownarrow</span>\ \<span class="n">textellipsis</span>\  \<span class="n">textemdash</span>\  \<span class="n">textendash</span>\
+\<span class="n">textestimated</span>\  \<span class="n">texteuro</span>\  \<span class="n">textexclamdown</span>\  \<span class="n">textflorin</span>\
+\<span class="n">textfractionsolidus</span>\  \<span class="n">textfractionsolidus</span>\
+\<span class="n">textfrenchfranc</span>\ \<span class="n">textgravedbl</span>\  \<span class="n">textgreater</span>\
+\<span class="n">textinterrobang</span>\  \<span class="n">textlangle</span>\
+\<span class="n">textleftarrow</span>\  \<span class="n">textless</span>\  \<span class="n">textlira</span>\  \<span class="n">textlnot</span>\
+\<span class="n">textlquill</span>\  \<span class="n">textmho</span>\  \<span class="n">textminus</span>\  \<span class="n">textmu</span>\
+\<span class="n">textmusicalnote</span>\  \<span class="n">textnaira</span>\   \<span class="n">textnormal</span>\  \<span class="n">textnospace</span>\
+\<span class="n">textnumero</span>\  \<span class="n">textohm</span>\  \<span class="n">textonehalf</span>\   \<span class="n">textonequarter</span>\
+\<span class="n">textonesuperior</span>\  \<span class="n">textopenbullet</span>\  \<span class="n">textordfeminine</span>\  \<span class="n">textordmasculine</span>\
+\<span class="n">textparagraph</span>\  \<span class="n">textperiodcentered</span>\  \<span class="n">textpertenthousand</span>\  \<span class="n">textperthousand</span>\
+\<span class="n">textpeso</span>\  \<span class="n">textpilcrow</span>\  \<span class="n">textpm</span>\  \<span class="n">textquestiondown</span>\  \<span class="n">textquotedblleft</span>\
+\<span class="n">textquotedblright</span>\  \<span class="n">textquoteleft</span>\  \<span class="n">textquoteright</span>\  \<span class="n">textquotesingle</span>\
+\<span class="n">textrangle</span>\ \<span class="n">textrecipe</span>\  \<span class="n">textreferencemark</span>\  \<span class="n">textregistered</span>\
+\<span class="n">textrightarrow</span>\   \<span class="n">textrquill</span>\   \<span class="n">textsection</span>\
+\<span class="n">textservicemark</span>\ \<span class="n">textsofthyphen</span>\  \<span class="n">textsterling</span>
+\<span class="n">textsurd</span>\   \<span class="n">textthreequarters</span>\  \<span class="n">textthreequartersemdash</span>\
+\<span class="n">textthreesuperior</span>\   \<span class="n">texttimes</span>\  \<span class="n">texttrademark</span>\
+\<span class="n">texttwelveudash</span>\  \<span class="n">texttwosuperior</span>\  \<span class="n">textunderscore</span>\
+\<span class="n">textuparrow</span>\  \<span class="n">textvisiblespace</span>\    \<span class="n">textwon</span>\  \<span class="n">textyen</span>\
+</pre></div>
+</div>
+</div>
+<p>Translation: ″ ´ ′ ̆ ̌ ¸ ⌃ ¨ ‵ ¯ ~ ⁎ \ ฿ | ‖ ◯ { } ¦ • ℃ ¢ ℗ ₡ © ¤ † ‡
+° ÷ $ ₫ ↓ … — – ℮ € ¡ ƒ ⁄ ⁄ ₣ ‶ &gt; ‽ 〈 ← &lt; ₤ ¬ ⁅ ℧ — µ ♪ ₦ ​ № Ω ½ ¼ ¹ ◦
+ª º ¶ · ‱ ‰ ₱ ¶ ± ¿ “ ” ‘ ’ ‘ 〉 ℞ ※ ® → ⁆ § ℠ ­ £√ ¾ — ³ × ™ — ² _ ↑ ␣
+₩ ¥</p>
+<section id="math-symbols">
+<h3>Math symbols<a class="headerlink" href="#math-symbols" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">We present here some math characters; for a full and up-to-date list
+of constructions consult <a class="reference external" href="quadrat/testmath.xml">Producing MathML with
+Tralics</a>. All character tables shown here are
+converted from XML to Pdf via xmltex, then to png images. You can say
+<code class="docutils literal notranslate"><span class="pre">\mathmo{\&amp;\#x2190;}</span></code> in order to access the Unicode character
+U+2190 as a math operator. On the other hand <code class="docutils literal notranslate"><span class="pre">^^^^2190</span></code> produces the
+same character as a math identifier. In what follows, we assume the
+following definition</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">\def\unimp#1{\mathmo{\&amp;\#x#1;}}</span></code></div>
+</div>
+<p>There is a file named tralics-iso.sty, that defines <code class="docutils literal notranslate"><span class="pre">\mathslarr</span></code> to be
+equivalent to <code class="docutils literal notranslate"><span class="pre">\mathmo{\&amp;\#x2190;}</span></code>. The Unicode name of this
+character is: `leftwards arrow’, and isoamsa defines the entity
+<code class="docutils literal notranslate"><span class="pre">&amp;slarr;</span></code> as `short left arrow’.</p>
+</section>
+</section>
+<section id="arrows">
+<h2>Arrows<a class="headerlink" href="#arrows" title="Link to this heading"></a></h2>
+<p>Characters with code between U+2190 and U+21FF are shown in the table
+below. Some symbols have no glyphs in the standard LaTeX fonts. They are
+shown in the table by a dot if there is no entity in the isoamsXXX
+files, their Unicode number otherwise.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$\begin{array}{lccccccccccccccccc}
+\text{2190}&amp;\mathslarr&amp;\mathuarr&amp; \mathsrarr&amp;\mathdarr&amp;
+ \mathharr&amp; \mathvarr&amp;\mathnwarr&amp;\mathnearr&amp;
+ \mathsearr&amp; \mathswarr&amp; \mathnlarr&amp;\mathnrarr&amp;
+ .&amp;\mathrarrw&amp; \mathLarr&amp;\mathUarr\\
+\text{21A0}&amp;\mathRarr&amp; \mathDarr&amp; \mathlarrtl&amp;\mathrarrtl&amp;
+  \mathmapstoleft&amp;\mathmapstoup&amp;\mathmap&amp;\mathmapstodown&amp;
+  .&amp;\mathlarrhk&amp;\mathrarrhk&amp;\mathlarrlp&amp;
+  \mathrarrlp&amp;\mathharrw&amp;\mathnharr&amp;\unimp{21af}\\
+\text{21B0}&amp;\mathlsh&amp;\mathrsh&amp;\mathldsh&amp;\mathrdsh&amp;
+ .&amp;.&amp;\mathcularr&amp;\mathcurarr&amp;
+ . &amp; .&amp;\matholarr&amp;\mathorarr&amp;
+ \mathlharu&amp;\mathlhard&amp;\mathuharr&amp;\mathuharl\\
+\text{21C0}&amp;\mathrharu&amp;\mathrhard&amp;\mathdharr&amp;\mathdharl&amp;
+ \mathrlarr&amp;\mathudarr&amp;\mathlrarr&amp;\mathllarr&amp;
+ \mathuuarr&amp;\mathrrarr&amp;\mathddarr&amp;\mathlrhar&amp;
+ \mathrlhar&amp;\mathnlArr&amp;\mathnhArr&amp;\mathnrArr\\
+\text{21D0}&amp;\mathlArr&amp;\mathuArr&amp;\mathrArr&amp;\mathdArr&amp;
+ \mathhArr&amp;\mathvArr&amp;\mathnwArr&amp;\mathneArr&amp;
+ \mathseArr&amp;\mathswArr&amp;\mathlAarr&amp;\mathrAarr&amp;
+ \unimp{21dc}&amp;\mathzigrarr&amp;.&amp;.\\
+\text{21E0}&amp;\unimp{21e0}&amp; .&amp; \unimp{21e2}&amp; .&amp;
+ \mathlarrb&amp; \mathrarrb&amp; .&amp; .&amp;
+ .&amp; .&amp; . &amp; . &amp; . &amp; .&amp; .&amp;  .\\
+\text{21F0}&amp; .&amp; .&amp;. &amp; .&amp; . &amp; \mathduarr&amp; .&amp; .&amp;
+ .&amp; .&amp; .&amp;  .&amp; .&amp; \mathloarr&amp; \mathroarr&amp; \mathhoarr\\
+\end{array}$
+</pre></div>
+</div>
+</div>
+<p>Translation is trivial. We omit a big part of the table.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">math</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">mtable</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mtext</span><span class="o">&gt;</span><span class="mi">2190</span><span class="o">&lt;/</span><span class="n">mtext</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="c1">#x02190;&lt;/mo&gt;&lt;/mtd&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="c1">#x02191;&lt;/mo&gt;&lt;/mtd&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="c1">#x02192;&lt;/mo&gt;&lt;/mtd&gt;</span>
+   <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="c1">#x021FE;&lt;/mo&gt;&lt;/mtd&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="c1">#x021FF;&lt;/mo&gt;&lt;/mtd&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">mtable</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">math</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">formula</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>This is the preview. <img alt="Unicode Arrows" src="_images/img_126.png" /></p>
+</section>
+<section id="mathematical-operators">
+<h2>Mathematical operators<a class="headerlink" href="#mathematical-operators" title="Link to this heading"></a></h2>
+<p>Characters with code between U+2200 and U+22FF are shown in the table
+below. Some symbols have no glyphs in the standard LaTeX fonts. Symbols
+between U+22F2 and U+22FF (variants of `element of’) are not shown.
+Others are shown by their Unicode number.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$\begin{array}{lccccccccccccccccc}
+\text{2200}&amp; \mathforall&amp; \mathcomp&amp;\mathpart&amp;\mathexist&amp;
+ \mathnexist&amp;  \mathempty&amp; \unimp{2206}&amp;\mathnabla&amp;
+ \mathisin&amp;\mathnotin&amp;\unimp{220a}&amp;\mathni&amp;
+ \mathnotni&amp;\unimp{220d}&amp;\unimp{220e}&amp;\mathprod\\
+\text{2210}&amp;\mathcoprod&amp;\mathsum&amp;\mathminus&amp;\mathmnplus&amp;
+  \mathplusdo&amp;\unimp{2215}&amp;\mathsetmn&amp;\mathlowast&amp;
+  \mathcompfn&amp;\unimp{2219}&amp;\mathradic&amp;\unimp{221B}&amp;
+  \unimp{221c}&amp;\mathprop&amp;\mathinfin&amp;\mathangrt\\
+\text{2220}&amp;\mathang&amp;\mathangmsd&amp;\unimp{2222}&amp;\mathshortmid&amp;
+  \mathnmid&amp;\mathspar&amp;\mathnpar&amp;\mathand&amp;
+  \mathor&amp;\mathcap&amp;\mathcup&amp;\mathint&amp;
+  \mathInt&amp;\mathtint&amp;\mathconint&amp;\mathConint\\
+\text{2230}&amp;\mathCconint&amp;\mathcwint&amp;\mathcwconint&amp;\mathawconint&amp;
+ \maththerefore&amp;\mathbecaus&amp;\mathratio&amp;\mathColon&amp;
+ \mathminusd&amp;\unimp{2239}&amp;\mathmDDot&amp;\mathhomtht&amp;
+ \maththksim&amp;\mathbsim&amp;\mathac&amp;\mathmstpos\\
+\text{2240}&amp;\mathwreath&amp;\mathnsim&amp;\mathesim&amp;\mathsime&amp;
+  \mathnsime&amp;\mathcong&amp;\mathsimne&amp;\mathncong&amp;
+  \mathasymp&amp;\mathnap&amp;\mathape&amp;\mathapid&amp;
+  \mathbcong&amp;\mathasympeq&amp;\mathbump&amp;\mathbumpe\\
+\text{2250}&amp;\mathesdot&amp;\matheDot&amp;\mathefDot&amp;\matherDot&amp;
+  \mathcolone&amp;\mathecolon&amp;\mathecir&amp;\mathcire&amp;
+   \unimp{2258}&amp;\unimp{2259}&amp;\unimp{225a}&amp;\unimp{225b}&amp;
+   \mathtrie&amp;\unimp{225d}&amp;\unimp{225e}&amp;\mathequest\\
+\text{2260}&amp;\mathne&amp;\mathequiv&amp;\mathnequiv&amp;\unimp{2263}&amp;
+  \mathle&amp;\mathge&amp;\mathlE&amp;\mathgE&amp;
+  \mathlnE&amp;\mathgnE&amp;\mathLt&amp;\mathGt&amp;
+  \mathtwixt&amp;\mathNotCupCap&amp;\mathnlt&amp;\mathngt\\
+\text{2270}&amp;\mathnle&amp;\mathnge&amp;\mathlsim&amp;\mathgsim&amp;
+  \mathnlsim&amp;\mathngsim&amp;\mathlg&amp;\mathgl&amp;
+  \mathntlg&amp;\mathntgl&amp;\mathpr&amp;\mathsc&amp;
+  \mathprcue&amp;\mathsccue&amp;\mathprsim&amp;\mathscsim\\
+\text{2280}&amp;\mathnpr&amp;\mathnsc&amp;\mathsub&amp;\mathsup&amp;
+ \mathnsub&amp;\mathnsup&amp;\mathsube&amp;\mathsupe&amp;
+  \mathnsube&amp;\mathnsupe&amp;\mathsubne&amp;\mathsupne&amp;
+ \unimp{228c}&amp;\mathcupdot&amp;\mathuplus&amp;\mathsqsub\\
+\text{2290}&amp;\mathsqsup&amp;\mathsqsube&amp;\mathsqsupe&amp;\mathsqcap&amp;
+  \mathsqcup&amp;\mathoplus&amp;\mathominus&amp;\mathotimes&amp;
+  \mathosol&amp;\mathodot&amp;\mathocir&amp;\mathoast&amp;
+  \unimp{229c}&amp;\mathodash&amp;\mathplusb&amp;\mathminusb\\
+\text{22a0}&amp;\mathtimesb&amp;\mathsdotb&amp;\mathvdash&amp;\mathdashv&amp;
+  \mathtop&amp;\mathbottom&amp;\unimp{22a6}&amp;\mathmodels&amp;
+   \mathvDash&amp;\mathVdash&amp;\mathVvdash&amp;\mathVDash&amp;
+   \mathnvdash&amp;\mathnvDash&amp;\mathnVdash&amp;\mathnVDash\\
+\text{22b0}&amp;\mathprurel&amp;\unimp{22b1}&amp;\mathvltri&amp;\mathvrtri&amp;
+ \mathltrie&amp;\mathrtrie&amp;\mathorigof&amp;\mathimof&amp;
+  \mathmumap&amp;\mathhercon&amp;\mathintcal&amp;\mathveebar&amp;
+  \unimp{22bc}&amp;\mathbarvee&amp;\mathangrtvb&amp;\mathlrtri\\
+\text{22c0}&amp;\mathxwedge&amp;\mathxvee&amp;\mathxcap&amp;\mathxcup&amp;
+ \mathdiam&amp;\mathsdot&amp;\mathsstarf&amp;\mathdivonx&amp;
+  \mathbowtie&amp;\mathltimes&amp;\mathrtimes&amp;\mathlthree&amp;
+  \mathrthree&amp;\mathbsime&amp;\mathcuvee&amp;\mathcuwed\\
+\text{22d0}&amp;\mathSub&amp;\mathSup&amp;\mathCap&amp;\mathCup&amp;
+  \mathfork&amp;\mathepar&amp;\mathlessdot&amp;\mathgtrdot&amp;
+  \mathLl&amp;\mathGg&amp;\mathleg&amp;\mathgel&amp;
+   \unimp{22dc}&amp;\unimp{22dd}&amp;\mathcuepr&amp;\mathcuesc\\
+\text{22e0}&amp;\mathnprcue&amp;\mathnsccue&amp;\mathnsqsube&amp;\mathnsqsupe&amp;
+  \unimp{22e4}&amp;\unimp{22e5}&amp;\mathlnsim&amp;\mathgnsim&amp;
+  \mathprecnsim&amp;\mathscnsim&amp;\mathnltri&amp;\mathnrtri&amp;
+  \mathnltrie&amp;\mathnrtrie&amp;\mathvellip&amp;\mathctdot\\
+\text{22f0}&amp;\mathutdot&amp;\mathdtdot&amp;\mathdisin&amp;\mathisinsv&amp;
+  \mathisins&amp;\mathisindot&amp;\mathnotinvc&amp;\mathnotinvb&amp;
+  \unimp{22f8}&amp;\mathisinE&amp;\mathnisd&amp;\mathxnis&amp;
+  \mathnis&amp;\mathnotnivc&amp;\mathnotnivb&amp;\unimp{22ff}\\
+\end{array}$
+</pre></div>
+</div>
+</div>
+<p>This is the preview. <img alt="Unicode Mathematical operators" src="_images/img_127.png" /></p>
+</section>
+<section id="miscellaneous-symbols">
+<h2>Miscellaneous symbols<a class="headerlink" href="#miscellaneous-symbols" title="Link to this heading"></a></h2>
+<p>We consider here symbols between U+2300 and U+23FF. About 30 symbols are
+implemented. The table shows also some symbols between U+2600 and
+U+2607, and others between U+263D and U+2685.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$\begin{array}{lccccccccccccccccc}
+\text{2300}&amp; \unimp{2300}&amp;\unimp{2301}&amp;\unimp{2302}&amp;\unimp{2303}&amp;
+ \unimp{2304}&amp;\mathbarwedge&amp;\mathBarwed&amp;\unimp{2307}&amp;
+ \mathlceil&amp;\mathrceil&amp;\mathlfloor&amp;\mathrfloor&amp;
+ \mathdrcrop&amp;\mathdlcrop&amp;\mathurcrop&amp;\mathulcrop\\
+\text{2310}&amp;\mathbnot&amp; \unimp{2311}&amp; \mathprofline&amp;\mathprofsurf&amp;
+ \unimp{2314}&amp; \mathtelrec&amp;\mathtarget&amp;\unimp{2317}&amp;
+ \unimp{2318}&amp; \unimp{2319}&amp; \unimp{231a}&amp; \unimp{231b}&amp;
+  \mathulcorner&amp; \mathurcorner&amp;\mathllcorner&amp;\mathlrcorner\\
+\text{2320}&amp;\unimp{2320}&amp;\unimp{2321}&amp;\mathfrown&amp;\mathsmile&amp;
+ \unimp{2324}&amp;\unimp{2325}&amp;\unimp{2326}&amp;\unimp{2327}&amp;
+  \unimp{2328}&amp;\mathlangle&amp;\mathrangle&amp;\unimp{232b}&amp;
+  \unimp{232c}&amp; \mathcylcty&amp;\mathprofalar&amp;\unimp{232f}\\
+\text{2330}&amp;&amp;&amp;&amp;&amp;&amp;&amp;\mathtopbot&amp;&amp;&amp;\unimp{2339}&amp;&amp;&amp;&amp;
+  \mathovbar&amp; &amp;\mathsolbar\\
+\text{2340}&amp;\unimp{2340}&amp;&amp;&amp;&amp;&amp;&amp;&amp;\unimp{2347}&amp;\unimp{2348}\\
+\text{2350}&amp;\unimp{2350}&amp;&amp;&amp;&amp;&amp;&amp;&amp;\unimp{2357}\\
+\text{2600}&amp;&amp;\unimp{2601}&amp;&amp;&amp;&amp;\mathbigstar&amp;\mathstar&amp;&amp;&amp;&amp;&amp;&amp;\unimp{260C}&amp;
+  \unimp{260d}\unimp{263d}&amp; \unimp{263e}&amp;\unimp{263f}\\
+\text{2640}&amp;\mathfemale&amp;\unimp{2641}&amp;\mathmale&amp;\unimp{2643}
+  &amp;\unimp{2644}&amp;\unimp{2645}&amp;\unimp{2646}&amp;\unimp{2647}&amp;\unimp{2648}&amp;
+\unimp{2649}&amp;\unimp{264A}&amp;\unimp{264b}&amp;\unimp{264c}&amp;
+  \unimp{264d}&amp;\unimp{264e} &amp;\unimp{264f}\\
+\text{2650}&amp;\unimp{2650}&amp;\unimp{2651}&amp;\unimp{2652}&amp;\unimp{2653}
+  &amp;\unimp{2654}&amp;\unimp{2655}&amp;\unimp{2656}&amp;\unimp{2657}&amp;\unimp{2658}&amp;
+\unimp{2659}&amp;\unimp{265A}&amp;\unimp{265b}&amp;\unimp{265c}&amp;
+  \unimp{265d}&amp;\unimp{265e} &amp;\unimp{265f}\\
+\text{2660}&amp;\mathspadesuit&amp;\unimp{2661}&amp;\unimp{2662}&amp;\mathclubsuit
+  &amp;\unimp{2664}&amp;\mathheartsuit&amp;\mathdiamondsuit&amp;\unimp{2667}&amp;&amp;
+\unimp{2669}&amp;\mathsung&amp;&amp;&amp;
+  \mathflat&amp;\mathnatur &amp;\mathsharp\\
+\text{2680}&amp;\unimp{2680}&amp;\unimp{2681}&amp;\unimp{2682}&amp;\unimp{2683}
+  &amp;\unimp{2684}&amp;\unimp{2685}\\
+\end{array}$
+</pre></div>
+</div>
+</div>
+<p>This is the preview.</p>
+<p><img alt="Unicode Miscellaneous symbols" src="_images/img_128.png" /></p>
+</section>
+<section id="math-characters">
+<h2>Math characters<a class="headerlink" href="#math-characters" title="Link to this heading"></a></h2>
+<p>Symbols between U+1D400 and U+1D7FF. First part. There are 12 empty
+slots in the table symbols. These characters are somewhere else. They
+are marked by a plus sign.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$\begin{array}{lccccccccccccccccc}
+\text{1d400}&amp;\unimp{1d400}&amp;\unimp{1d401}&amp;\unimp{1d402}&amp;\unimp{1d403}&amp;
+ \unimp{1d404}&amp;\unimp{1d405}&amp;\unimp{1d406}&amp;\unimp{1d407}&amp;
+ \unimp{1d408}&amp;\unimp{1d409}&amp;\unimp{1d40a}&amp;\unimp{1d40b}&amp;
+ \unimp{1d40c}&amp;\unimp{1d40d}&amp;\unimp{1d40e}&amp;\unimp{1d40f}\\
+\text{1d410}&amp;\unimp{1d410}&amp;\unimp{1d411}&amp;\unimp{1d412}&amp;\unimp{1d413}&amp;
+ \unimp{1d414}&amp;\unimp{1d415}&amp;\unimp{1d416}&amp;\unimp{1d417}&amp;
+ \unimp{1d418}&amp;\unimp{1d419}&amp;\unimp{1d41a}&amp;\unimp{1d41b}&amp;
+ \unimp{1d41c}&amp;\unimp{1d41d}&amp;\unimp{1d41e}&amp;\unimp{1d41f}\\
+\text{1d420}&amp;\unimp{1d420}&amp;\unimp{1d421}&amp;\unimp{1d422}&amp;\unimp{1d423}&amp;
+ \unimp{1d424}&amp;\unimp{1d425}&amp;\unimp{1d426}&amp;\unimp{1d427}&amp;
+ \unimp{1d428}&amp;\unimp{1d429}&amp;\unimp{1d42a}&amp;\unimp{1d42b}&amp;
+ \unimp{1d42c}&amp;\unimp{1d42d}&amp;\unimp{1d42e}&amp;\unimp{1d42f}\\
+\text{1d430}&amp;\unimp{1d430}&amp;\unimp{1d431}&amp;\unimp{1d432}&amp;\unimp{1d433}&amp;
+ \unimp{1d434}&amp;\unimp{1d435}&amp;\unimp{1d436}&amp;\unimp{1d437}&amp;
+ \unimp{1d438}&amp;\unimp{1d439}&amp;\unimp{1d43a}&amp;\unimp{1d43b}&amp;
+ \unimp{1d43c}&amp;\unimp{1d43d}&amp;\unimp{1d43e}&amp;\unimp{1d43f}\\
+\text{1d440}&amp;\unimp{1d440}&amp;\unimp{1d441}&amp;\unimp{1d442}&amp;\unimp{1d443}&amp;
+ \unimp{1d444}&amp;\unimp{1d445}&amp;\unimp{1d446}&amp;\unimp{1d447}&amp;
+ \unimp{1d448}&amp;\unimp{1d449}&amp;\unimp{1d44a}&amp;\unimp{1d44b}&amp;
+ \unimp{1d44c}&amp;\unimp{1d44d}&amp;\unimp{1d44e}&amp;\unimp{1d44f}\\
+\text{1d450}&amp;\unimp{1d450}&amp;\unimp{1d451}&amp;\unimp{1d452}&amp;\unimp{1d453}&amp;
+ \unimp{1d454}&amp;+\unimp{210e}&amp;\unimp{1d456}&amp;\unimp{1d457}&amp;
+ \unimp{1d458}&amp;\unimp{1d459}&amp;\unimp{1d45a}&amp;\unimp{1d45b}&amp;
+ \unimp{1d45c}&amp;\unimp{1d45d}&amp;\unimp{1d45e}&amp;\unimp{1d45f}\\
+\text{1d460}&amp;\unimp{1d460}&amp;\unimp{1d461}&amp;\unimp{1d462}&amp;\unimp{1d463}&amp;
+ \unimp{1d464}&amp;\unimp{1d465}&amp;\unimp{1d466}&amp;\unimp{1d467}&amp;
+ \unimp{1d468}&amp;\unimp{1d469}&amp;\unimp{1d46a}&amp;\unimp{1d46b}&amp;
+ \unimp{1d46c}&amp;\unimp{1d46d}&amp;\unimp{1d46e}&amp;\unimp{1d46f}\\
+\text{1d470}&amp;\unimp{1d470}&amp;\unimp{1d471}&amp;\unimp{1d472}&amp;\unimp{1d473}&amp;
+ \unimp{1d474}&amp;\unimp{1d475}&amp;\unimp{1d476}&amp;\unimp{1d477}&amp;
+ \unimp{1d478}&amp;\unimp{1d479}&amp;\unimp{1d47a}&amp;\unimp{1d47b}&amp;
+ \unimp{1d47c}&amp;\unimp{1d47d}&amp;\unimp{1d47e}&amp;\unimp{1d47f}\\
+\text{1d480}&amp;\unimp{1d480}&amp;\unimp{1d481}&amp;\unimp{1d482}&amp;\unimp{1d483}&amp;
+ \unimp{1d484}&amp;\unimp{1d485}&amp;\unimp{1d486}&amp;\unimp{1d487}&amp;
+ \unimp{1d488}&amp;\unimp{1d489}&amp;\unimp{1d48a}&amp;\unimp{1d48b}&amp;
+ \unimp{1d48c}&amp;\unimp{1d48d}&amp;\unimp{1d48e}&amp;\unimp{1d48f}\\
+\text{1d490}&amp;\unimp{1d490}&amp;\unimp{1d491}&amp;\unimp{1d492}&amp;\unimp{1d493}&amp;
+ \unimp{1d494}&amp;\unimp{1d495}&amp;\unimp{1d496}&amp;\unimp{1d497}&amp;
+ \unimp{1d498}&amp;\unimp{1d499}&amp;\unimp{1d49a}&amp;\unimp{1d49b}&amp;
+ \mathAscr&amp;+\mathBscr&amp;\mathCscr&amp;\mathDscr\\
+\text{1d4a0}&amp;+\mathEscr&amp;+\mathFscr&amp;\mathGscr&amp;+\mathHscr&amp;
+ +\mathIscr&amp;\mathJscr&amp;\mathKscr&amp;+\mathLscr&amp;
+ +\mathMscr&amp;\mathNscr&amp;\mathOscr&amp;\mathPscr&amp;
+ \mathQscr&amp;+\mathRscr&amp;\mathSscr&amp;\mathTscr\\
+\text{1d4b0}&amp;\mathUscr&amp;\mathVscr&amp;\mathWscr&amp;\mathXscr&amp;
+ \mathYscr&amp;\mathZscr&amp;\mathascr&amp;\mathbscr&amp;
+ \mathcscr&amp;\mathdscr&amp;+\mathescr&amp;\mathfscr&amp;
+ +\mathgscr&amp;\mathhscr&amp;\mathiscr&amp;\mathjscr\\
+\text{1d4c0}&amp;\mathkscr&amp;\mathlscr&amp;\mathmscr&amp;\mathnscr&amp;
+ +\mathoscr&amp;\mathpscr&amp;\mathqscr&amp;\mathrscr&amp;
+ \mathsscr&amp;\mathtscr&amp;\mathuscr&amp;\mathvscr&amp;
+ \mathwscr&amp;\mathxscr&amp;\mathyscr&amp;\mathzscr\\
+\text{1d4d0}&amp;\unimp{1d4d0}&amp;\unimp{1d4d1}&amp;\unimp{1d4d2}&amp;\unimp{1d4d3}&amp;
+ \unimp{1d4d4}&amp;\unimp{1d4d5}&amp;\unimp{1d4d6}&amp;\unimp{1d4d7}&amp;
+ \unimp{1d4d8}&amp;\unimp{1d4d9}&amp;\unimp{1d4da}&amp;\unimp{1d4db}&amp;
+ \unimp{1d4dc}&amp;\unimp{1d4dd}&amp;\unimp{1d4de}&amp;\unimp{1d4df}\\
+\text{1d4e0}&amp;\unimp{1d4e0}&amp;\unimp{1d4e1}&amp;\unimp{1d4e2}&amp;\unimp{1d4e3}&amp;
+ \unimp{1d4e4}&amp;\unimp{1d4e5}&amp;\unimp{1d4e6}&amp;\unimp{1d4e7}&amp;
+ \unimp{1d4e8}&amp;\unimp{1d4e9}&amp;\unimp{1d4ea}&amp;\unimp{1d4eb}&amp;
+ \unimp{1d4ec}&amp;\unimp{1d4ed}&amp;\unimp{1d4ee}&amp;\unimp{1d4ef}\\
+\text{1d4f0}&amp;\unimp{1d4f0}&amp;\unimp{1d4f1}&amp;\unimp{1d4f2}&amp;\unimp{1d4f3}&amp;
+ \unimp{1d4f4}&amp;\unimp{1d4f5}&amp;\unimp{1d4f6}&amp;\unimp{1d4f7}&amp;
+ \unimp{1d4f8}&amp;\unimp{1d4f9}&amp;\unimp{1d4fa}&amp;\unimp{1d4fb}&amp;
+ \unimp{1d4fc}&amp;\unimp{1d4fd}&amp;\unimp{1d4fe}&amp;\unimp{1d4ff}\\
+\end{array}$
+</pre></div>
+</div>
+</div>
+<p><img alt="Unicode Mathematical alphanumeric symbols" src="_images/img_129.png" /></p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$\begin{array}{lccccccccccccccccc}
+\text{1d500}&amp;\unimp{1d500}&amp;\unimp{1d501}&amp;\unimp{1d502}&amp;\unimp{1d503}&amp;
+ \mathAfr&amp;\mathBfr&amp;+\mathCfr&amp;\mathDfr&amp;
+ \mathEfr&amp;\mathFfr&amp;\mathGfr&amp;+\mathHfr&amp;
+ +\mathIfr&amp;\mathJfr&amp;\mathKfr&amp;\mathLfr\\
+\text{1d510}&amp;\mathMfr&amp;\mathNfr&amp;\mathOfr&amp;\mathPfr&amp;
+ \mathQfr&amp;+\mathRfr&amp;\mathSfr&amp;\mathTfr&amp;
+ \mathUfr&amp;\mathVfr&amp;\mathWfr&amp;\mathXfr&amp;
+ \mathYfr&amp;+\mathZfr&amp;\mathafr&amp;\mathbfr\\
+\text{1d520}&amp;\mathcfr&amp;\mathdfr&amp;\mathefr&amp;\mathffr&amp;
+ \mathgfr&amp;\mathhfr&amp;\mathifr&amp;\mathjfr&amp;
+ \mathkfr&amp;\mathlfr&amp;\mathmfr&amp;\mathnfr&amp;
+ \mathofr&amp;\mathpfr&amp;\mathqfr&amp;\mathrfr\\
+\text{1d530}&amp;\mathsfr&amp;\mathtfr&amp;\mathufr&amp;\mathvfr&amp;
+ \mathwfr&amp;\mathxfr&amp;\mathyfr&amp;\mathzfr&amp;
+ \mathAopf&amp;\mathBopf&amp;+\mathCopf&amp;\mathDopf&amp;
+ \mathEopf&amp;\mathFopf&amp;\mathGopf&amp;+\mathHopf\\
+\text{1d540}&amp;\mathIopf&amp;\mathJopf&amp;\mathKopf&amp;\mathLopf&amp;
+ \mathMopf&amp;+\mathNopf&amp;\mathOopf&amp;+\mathPopf&amp;
+ +\mathQopf&amp;+\mathRopf&amp;\mathSopf&amp;\mathTopf&amp;
+ \mathUopf&amp;\mathVopf&amp;\mathWopf&amp;\mathXopf\\
+\text{1d550}&amp;\mathYopf&amp;+\mathZopf&amp;\mathaopf&amp;\mathbopf&amp;
+ \mathcopf&amp;\mathdopf&amp;\matheopf&amp;\mathfopf&amp;
+ \mathgopf&amp;\mathhopf&amp;\mathiopf&amp;\mathjopf&amp;
+ \mathkopf&amp;\mathlopf&amp;\mathmopf&amp;\mathnopf\\
+\text{1d560}&amp;\mathoopf&amp;\mathpopf&amp;\mathqopf&amp;\mathropf&amp;
+ \mathsopf&amp;\mathtopf&amp;\mathuopf&amp;\mathvopf&amp;
+ \mathwopf&amp;\mathxopf&amp;\mathyopf&amp;\mathzopf&amp;
+ \unimp{1d56c}&amp;\unimp{1d56d}&amp;\unimp{1d56e}&amp;\unimp{1d56f}\\
+\text{1d570}&amp;\unimp{1d570}&amp;\unimp{1d571}&amp;\unimp{1d572}&amp;\unimp{1d573}&amp;
+ \unimp{1d574}&amp;\unimp{1d575}&amp;\unimp{1d576}&amp;\unimp{1d577}&amp;
+ \unimp{1d578}&amp;\unimp{1d579}&amp;\unimp{1d57a}&amp;\unimp{1d57b}&amp;
+ \unimp{1d57c}&amp;\unimp{1d57d}&amp;\unimp{1d57e}&amp;\unimp{1d57f}\\
+\text{1d580}&amp;\unimp{1d580}&amp;\unimp{1d581}&amp;\unimp{1d582}&amp;\unimp{1d583}&amp;
+ \unimp{1d584}&amp;\unimp{1d585}&amp;\unimp{1d586}&amp;\unimp{1d587}&amp;
+ \unimp{1d588}&amp;\unimp{1d589}&amp;\unimp{1d58a}&amp;\unimp{1d58b}&amp;
+ \unimp{1d58c}&amp;\unimp{1d58d}&amp;\unimp{1d58e}&amp;\unimp{1d58f}\\
+\text{1d590}&amp;\unimp{1d590}&amp;\unimp{1d591}&amp;\unimp{1d592}&amp;\unimp{1d593}&amp;
+ \unimp{1d594}&amp;\unimp{1d595}&amp;\unimp{1d596}&amp;\unimp{1d597}&amp;
+ \unimp{1d598}&amp;\unimp{1d599}&amp;\unimp{1d59a}&amp;\unimp{1d59b}&amp;
+ \unimp{1d59c}&amp;\unimp{1d59d}&amp;\unimp{1d59e}&amp;\unimp{1d59f}\\
+\text{1d5a0}&amp;\unimp{1d5a0}&amp;\unimp{1d5a1}&amp;\unimp{1d5a2}&amp;\unimp{1d5a3}&amp;
+ \unimp{1d5a4}&amp;\unimp{1d5a5}&amp;\unimp{1d5a6}&amp;\unimp{1d5a7}&amp;
+ \unimp{1d5a8}&amp;\unimp{1d5a9}&amp;\unimp{1d5aa}&amp;\unimp{1d5ab}&amp;
+ \unimp{1d5ac}&amp;\unimp{1d5ad}&amp;\unimp{1d5ae}&amp;\unimp{1d5af}\\
+\text{1d5b0}&amp;\unimp{1d5b0}&amp;\unimp{1d5b1}&amp;\unimp{1d5b2}&amp;\unimp{1d5b3}&amp;
+ \unimp{1d5b4}&amp;\unimp{1d5b5}&amp;\unimp{1d5b6}&amp;\unimp{1d5b7}&amp;
+ \unimp{1d5b8}&amp;\unimp{1d5b9}&amp;\unimp{1d5ba}&amp;\unimp{1d5bb}&amp;
+ \unimp{1d5bc}&amp;\unimp{1d5bd}&amp;\unimp{1d5be}&amp;\unimp{1d5af}\\
+\text{1d5c0}&amp;\unimp{1d5c0}&amp;\unimp{1d5c1}&amp;\unimp{1d5c2}&amp;\unimp{1d5c3}&amp;
+ \unimp{1d5c4}&amp;\unimp{1d5c5}&amp;\unimp{1d5c6}&amp;\unimp{1d5c7}&amp;
+ \unimp{1d5c8}&amp;\unimp{1d5c9}&amp;\unimp{1d5ca}&amp;\unimp{1d5cb}&amp;
+ \unimp{1d5cc}&amp;\unimp{1d5cd}&amp;\unimp{1d5ce}&amp;\unimp{1d5cf}\\
+\text{1d5d0}&amp;\unimp{1d5d0}&amp;\unimp{1d5d1}&amp;\unimp{1d5d2}&amp;\unimp{1d5d3}&amp;
+ \unimp{1d5d4}&amp;\unimp{1d5d5}&amp;\unimp{1d5d6}&amp;\unimp{1d5d7}&amp;
+ \unimp{1d5d8}&amp;\unimp{1d5d9}&amp;\unimp{1d5da}&amp;\unimp{1d5db}&amp;
+ \unimp{1d5dc}&amp;\unimp{1d5dd}&amp;\unimp{1d5de}&amp;\unimp{1d5df}\\
+\text{1d5e0}&amp;\unimp{1d5e0}&amp;\unimp{1d5e1}&amp;\unimp{1d5e2}&amp;\unimp{1d5e3}&amp;
+ \unimp{1d5e4}&amp;\unimp{1d5e5}&amp;\unimp{1d5e6}&amp;\unimp{1d5e7}&amp;
+ \unimp{1d5e8}&amp;\unimp{1d5e9}&amp;\unimp{1d5ea}&amp;\unimp{1d5eb}&amp;
+ \unimp{1d5ec}&amp;\unimp{1d5ed}&amp;\unimp{1d5ee}&amp;\unimp{1d5ef}\\
+\text{1d5f0}&amp;\unimp{1d5f0}&amp;\unimp{1d5f1}&amp;\unimp{1d5f2}&amp;\unimp{1d5f3}&amp;
+ \unimp{1d5f4}&amp;\unimp{1d5f5}&amp;\unimp{1d5f6}&amp;\unimp{1d5f7}&amp;
+ \unimp{1d5f8}&amp;\unimp{1d5f9}&amp;\unimp{1d5fa}&amp;\unimp{1d5fb}&amp;
+ \unimp{1d5fc}&amp;\unimp{1d5fd}&amp;\unimp{1d5fe}&amp;\unimp{1d5ff}\\
+\end{array}$
+</pre></div>
+</div>
+</div>
+<p><img alt="Unicode Mathematical alphanumeric symbols 2" src="_images/img_130.png" /></p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$\begin{array}{lccccccccccccccccc}
+\text{1d600}&amp;\unimp{1d600}&amp;\unimp{1d601}&amp;\unimp{1d602}&amp;\unimp{1d603}&amp;
+ \unimp{1d604}&amp;\unimp{1d605}&amp;\unimp{1d606}&amp;\unimp{1d607}&amp;
+ \unimp{1d608}&amp;\unimp{1d609}&amp;\unimp{1d60a}&amp;\unimp{1d60b}&amp;
+ \unimp{1d60c}&amp;\unimp{1d60d}&amp;\unimp{1d60e}&amp;\unimp{1d60f}\\
+\text{1d610}&amp;\unimp{1d610}&amp;\unimp{1d611}&amp;\unimp{1d612}&amp;\unimp{1d613}&amp;
+ \unimp{1d614}&amp;\unimp{1d615}&amp;\unimp{1d616}&amp;\unimp{1d617}&amp;
+ \unimp{1d618}&amp;\unimp{1d619}&amp;\unimp{1d61a}&amp;\unimp{1d61b}&amp;
+ \unimp{1d61c}&amp;\unimp{1d61d}&amp;\unimp{1d61e}&amp;\unimp{1d61f}\\
+\text{1d620}&amp;\unimp{1d620}&amp;\unimp{1d621}&amp;\unimp{1d622}&amp;\unimp{1d623}&amp;
+ \unimp{1d624}&amp;\unimp{1d625}&amp;\unimp{1d626}&amp;\unimp{1d627}&amp;
+ \unimp{1d628}&amp;\unimp{1d629}&amp;\unimp{1d62a}&amp;\unimp{1d62b}&amp;
+ \unimp{1d62c}&amp;\unimp{1d62d}&amp;\unimp{1d62e}&amp;\unimp{1d62f}\\
+\text{1d630}&amp;\unimp{1d630}&amp;\unimp{1d631}&amp;\unimp{1d632}&amp;\unimp{1d633}&amp;
+ \unimp{1d634}&amp;\unimp{1d635}&amp;\unimp{1d636}&amp;\unimp{1d637}&amp;
+ \unimp{1d638}&amp;\unimp{1d639}&amp;\unimp{1d63a}&amp;\unimp{1d63b}&amp;
+ \unimp{1d63c}&amp;\unimp{1d63d}&amp;\unimp{1d63e}&amp;\unimp{1d63f}\\
+\text{1d640}&amp;\unimp{1d640}&amp;\unimp{1d641}&amp;\unimp{1d642}&amp;\unimp{1d643}&amp;
+ \unimp{1d644}&amp;\unimp{1d645}&amp;\unimp{1d646}&amp;\unimp{1d647}&amp;
+ \unimp{1d648}&amp;\unimp{1d649}&amp;\unimp{1d64a}&amp;\unimp{1d64b}&amp;
+ \unimp{1d64c}&amp;\unimp{1d64d}&amp;\unimp{1d64e}&amp;\unimp{1d64f}\\
+\text{1d650}&amp;\unimp{1d650}&amp;\unimp{1d651}&amp;\unimp{1d652}&amp;\unimp{1d653}&amp;
+ \unimp{1d654}&amp;\unimp{1d655}&amp;\unimp{1d656}&amp;\unimp{1d657}&amp;
+ \unimp{1d658}&amp;\unimp{1d659}&amp;\unimp{1d65a}&amp;\unimp{1d65b}&amp;
+ \unimp{1d65c}&amp;\unimp{1d65d}&amp;\unimp{1d65e}&amp;\unimp{1d65f}\\
+\text{1d660}&amp;\unimp{1d660}&amp;\unimp{1d661}&amp;\unimp{1d662}&amp;\unimp{1d663}&amp;
+ \unimp{1d664}&amp;\unimp{1d665}&amp;\unimp{1d666}&amp;\unimp{1d667}&amp;
+ \unimp{1d668}&amp;\unimp{1d669}&amp;\unimp{1d66a}&amp;\unimp{1d66b}&amp;
+ \unimp{1d66c}&amp;\unimp{1d66d}&amp;\unimp{1d66e}&amp;\unimp{1d66f}\\
+\text{1d670}&amp;\unimp{1d670}&amp;\unimp{1d671}&amp;\unimp{1d672}&amp;\unimp{1d673}&amp;
+ \unimp{1d674}&amp;\unimp{1d675}&amp;\unimp{1d676}&amp;\unimp{1d677}&amp;
+ \unimp{1d678}&amp;\unimp{1d679}&amp;\unimp{1d67a}&amp;\unimp{1d67b}&amp;
+ \unimp{1d67c}&amp;\unimp{1d67d}&amp;\unimp{1d67e}&amp;\unimp{1d67f}\\
+\text{1d670}&amp;\unimp{1d670}&amp;\unimp{1d671}&amp;\unimp{1d672}&amp;\unimp{1d673}&amp;
+ \unimp{1d674}&amp;\unimp{1d675}&amp;\unimp{1d676}&amp;\unimp{1d677}&amp;
+ \unimp{1d678}&amp;\unimp{1d679}&amp;\unimp{1d67a}&amp;\unimp{1d67b}&amp;
+ \unimp{1d67c}&amp;\unimp{1d67d}&amp;\unimp{1d67e}&amp;\unimp{1d67f}\\
+\text{1d680}&amp;\unimp{1d680}&amp;\unimp{1d681}&amp;\unimp{1d682}&amp;\unimp{1d683}&amp;
+ \unimp{1d684}&amp;\unimp{1d685}&amp;\unimp{1d686}&amp;\unimp{1d687}&amp;
+ \unimp{1d688}&amp;\unimp{1d689}&amp;\unimp{1d68a}&amp;\unimp{1d68b}&amp;
+ \unimp{1d68c}&amp;\unimp{1d68d}&amp;\unimp{1d68e}&amp;\unimp{1d68f}\\
+\text{1d690}&amp;\unimp{1d690}&amp;\unimp{1d691}&amp;\unimp{1d692}&amp;\unimp{1d693}&amp;
+ \unimp{1d694}&amp;\unimp{1d695}&amp;\unimp{1d696}&amp;\unimp{1d697}&amp;
+ \unimp{1d698}&amp;\unimp{1d699}&amp;\unimp{1d69a}&amp;\unimp{1d69b}&amp;
+ \unimp{1d69c}&amp;\unimp{1d69d}&amp;\unimp{1d69e}&amp;\unimp{1d69f}\\
+\text{1d6a0}&amp;\unimp{1d6a0}&amp;\unimp{1d6a1}&amp;\unimp{1d6a2}&amp;\unimp{1d6a3}&amp;
+ &amp;&amp;&amp;&amp;
+ \unimp{1d6a8}&amp;\unimp{1d6a9}&amp;\unimp{1d6aa}&amp;\unimp{1d6ab}&amp;
+ \unimp{1d6ac}&amp;\unimp{1d6ad}&amp;\unimp{1d6ae}&amp;\unimp{1d6af}\\
+\text{1d6b0}&amp;\unimp{1d6b0}&amp;\unimp{1d6b1}&amp;\unimp{1d6b2}&amp;\unimp{1d6b3}&amp;
+ \unimp{1d6b4}&amp;\unimp{1d6b5}&amp;\unimp{1d6b6}&amp;\unimp{1d6b7}&amp;
+ \unimp{1d6b8}&amp;\unimp{1d6b9}&amp;\unimp{1d6ba}&amp;\unimp{1d6bb}&amp;
+ \unimp{1d6bc}&amp;\unimp{1d6bd}&amp;\unimp{1d6be}&amp;\unimp{1d6bf}\\
+\text{1d6c0}&amp;\unimp{1d6c0}&amp;\unimp{1d6c1}&amp;\unimp{1d6c2}&amp;\unimp{1d6c3}&amp;
+ \unimp{1d6c4}&amp;\unimp{1d6c5}&amp;\unimp{1d6c6}&amp;\unimp{1d6c7}&amp;
+ \unimp{1d6c8}&amp;\unimp{1d6c9}&amp;\unimp{1d6ca}&amp;\unimp{1d6cb}&amp;
+ \unimp{1d6cc}&amp;\unimp{1d6cd}&amp;\unimp{1d6ce}&amp;\unimp{1d6cf}\\
+\text{1d6d0}&amp;\unimp{1d6d0}&amp;\unimp{1d6d1}&amp;\unimp{1d6d2}&amp;\unimp{1d6d3}&amp;
+ \unimp{1d6d4}&amp;\unimp{1d6d5}&amp;\unimp{1d6d6}&amp;\unimp{1d6d7}&amp;
+ \unimp{1d6d8}&amp;\unimp{1d6d9}&amp;\unimp{1d6da}&amp;\unimp{1d6db}&amp;
+ \unimp{1d6dc}&amp;\unimp{1d6dd}&amp;\unimp{1d6de}&amp;\unimp{1d6df}\\
+\text{1d6e0}&amp;\unimp{1d6e0}&amp;\unimp{1d6e1}&amp;\unimp{1d6e2}&amp;\unimp{1d6e3}&amp;
+ \unimp{1d6e4}&amp;\unimp{1d6e5}&amp;\unimp{1d6e6}&amp;\unimp{1d6e7}&amp;
+ \unimp{1d6e8}&amp;\unimp{1d6e9}&amp;\unimp{1d6ea}&amp;\unimp{1d6eb}&amp;
+ \unimp{1d6ec}&amp;\unimp{1d6ed}&amp;\unimp{1d6ee}&amp;\unimp{1d6ef}\\
+\text{1d6f0}&amp;\unimp{1d6f0}&amp;\unimp{1d6f1}&amp;\unimp{1d6f2}&amp;\unimp{1d6f3}&amp;
+ \unimp{1d6f4}&amp;\unimp{1d6f5}&amp;\unimp{1d6f6}&amp;\unimp{1d6f7}&amp;
+ \unimp{1d6f8}&amp;\unimp{1d6f9}&amp;\unimp{1d6fa}&amp;\unimp{1d6fb}&amp;
+ \unimp{1d6fc}&amp;\unimp{1d6fd}&amp;\unimp{1d6fe}&amp;\unimp{1d6ff}\\
+\end{array}$
+</pre></div>
+</div>
+</div>
+<p><img alt="Unicode Mathematical alphanumeric symbols 3" src="_images/img_131.png" /></p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\text{1d700}&amp;\unimp{1d700}&amp;\unimp{1d701}&amp;\unimp{1d702}&amp;\unimp{1d703}&amp;
+ \unimp{1d704}&amp;\unimp{1d705}&amp;\unimp{1d706}&amp;\unimp{1d707}&amp;
+ \unimp{1d708}&amp;\unimp{1d709}&amp;\unimp{1d70a}&amp;\unimp{1d70b}&amp;
+ \unimp{1d70c}&amp;\unimp{1d70d}&amp;\unimp{1d70e}&amp;\unimp{1d70f}\\
+\text{1d710}&amp;\unimp{1d710}&amp;\unimp{1d711}&amp;\unimp{1d712}&amp;\unimp{1d713}&amp;
+ \unimp{1d714}&amp;\unimp{1d715}&amp;\unimp{1d716}&amp;\unimp{1d717}&amp;
+ \unimp{1d718}&amp;\unimp{1d719}&amp;\unimp{1d71a}&amp;\unimp{1d71b}&amp;
+ \unimp{1d71c}&amp;\unimp{1d71d}&amp;\unimp{1d71e}&amp;\unimp{1d71f}\\
+\text{1d720}&amp;\unimp{1d720}&amp;\unimp{1d721}&amp;\unimp{1d722}&amp;\unimp{1d723}&amp;
+ \unimp{1d724}&amp;\unimp{1d725}&amp;\unimp{1d726}&amp;\unimp{1d727}&amp;
+ \unimp{1d728}&amp;\unimp{1d729}&amp;\unimp{1d72a}&amp;\unimp{1d72b}&amp;
+ \unimp{1d72c}&amp;\unimp{1d72d}&amp;\unimp{1d72e}&amp;\unimp{1d72f}\\
+\text{1d730}&amp;\unimp{1d730}&amp;\unimp{1d731}&amp;\unimp{1d732}&amp;\unimp{1d733}&amp;
+ \unimp{1d734}&amp;\unimp{1d735}&amp;\unimp{1d736}&amp;\unimp{1d737}&amp;
+ \unimp{1d738}&amp;\unimp{1d739}&amp;\unimp{1d73a}&amp;\unimp{1d73b}&amp;
+ \unimp{1d73c}&amp;\unimp{1d73d}&amp;\unimp{1d73e}&amp;\unimp{1d73f}\\
+\text{1d740}&amp;\unimp{1d740}&amp;\unimp{1d741}&amp;\unimp{1d742}&amp;\unimp{1d743}&amp;
+ \unimp{1d744}&amp;\unimp{1d745}&amp;\unimp{1d746}&amp;\unimp{1d747}&amp;
+ \unimp{1d748}&amp;\unimp{1d749}&amp;\unimp{1d74a}&amp;\unimp{1d74b}&amp;
+ \unimp{1d74c}&amp;\unimp{1d74d}&amp;\unimp{1d74e}&amp;\unimp{1d74f}\\
+\text{1d750}&amp;\unimp{1d750}&amp;\unimp{1d751}&amp;\unimp{1d752}&amp;\unimp{1d753}&amp;
+ \unimp{1d754}&amp;\unimp{1d755}&amp;\unimp{1d756}&amp;\unimp{1d757}&amp;
+ \unimp{1d758}&amp;\unimp{1d759}&amp;\unimp{1d75a}&amp;\unimp{1d75b}&amp;
+ \unimp{1d75c}&amp;\unimp{1d75d}&amp;\unimp{1d75e}&amp;\unimp{1d75f}\\
+\text{1d760}&amp;\unimp{1d760}&amp;\unimp{1d761}&amp;\unimp{1d762}&amp;\unimp{1d763}&amp;
+ \unimp{1d764}&amp;\unimp{1d765}&amp;\unimp{1d766}&amp;\unimp{1d767}&amp;
+ \unimp{1d768}&amp;\unimp{1d769}&amp;\unimp{1d76a}&amp;\unimp{1d76b}&amp;
+ \unimp{1d76c}&amp;\unimp{1d76d}&amp;\unimp{1d76e}&amp;\unimp{1d76f}\\
+\text{1d7c0}&amp;&amp;&amp;&amp;&amp; &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;
+ &amp;&amp;\unimp{1d7ce}&amp;\unimp{1d7cf}\\
+\text{1d7d0}&amp;\unimp{1d7d0}&amp;\unimp{1d7d1}&amp;\unimp{1d7d2}&amp;\unimp{1d7d3}&amp;
+ \unimp{1d7d4}&amp;\unimp{1d7d5}&amp;\unimp{1d7d6}&amp;\unimp{1d7d7}&amp;
+ \unimp{1d7d8}&amp;\unimp{1d7d9}&amp;\unimp{1d7da}&amp;\unimp{1d7db}&amp;
+ \unimp{1d7dc}&amp;\unimp{1d7dd}&amp;\unimp{1d7de}&amp;\unimp{1d7df}\\
+\text{1d7e0}&amp;\unimp{1d7e0}&amp;\unimp{1d7e1}&amp;\unimp{1d7e2}&amp;\unimp{1d7e3}&amp;
+ \unimp{1d7e4}&amp;\unimp{1d7e5}&amp;\unimp{1d7e6}&amp;\unimp{1d7e7}&amp;
+ \unimp{1d7e8}&amp;\unimp{1d7e9}&amp;\unimp{1d7ea}&amp;\unimp{1d7eb}&amp;
+ \unimp{1d7ec}&amp;\unimp{1d7ed}&amp;\unimp{1d7ee}&amp;\unimp{1d7ef}\\
+\text{1d7f0}&amp;\unimp{1d7f0}&amp;\unimp{1d7f1}&amp;\unimp{1d7f2}&amp;\unimp{1d7f3}&amp;
+ \unimp{1d7f4}&amp;\unimp{1d7f5}&amp;\unimp{1d7f6}&amp;\unimp{1d7f7}&amp;
+ \unimp{1d7f8}&amp;\unimp{1d7f9}&amp;\unimp{1d7fa}&amp;\unimp{1d7fb}&amp;
+ \unimp{1d7fc}&amp;\unimp{1d7fd}&amp;\unimp{1d7fe}&amp;\unimp{1d7ff}\\
+\end{array}$
+</pre></div>
+</div>
+</div>
+<p>Some characters are missing: sans serif bold greek lower case sans serif
+bold greek italic <img alt="Unicode Mathematical alphanumeric symbols 4" src="_images/img_132.png" /></p>
+</section>
+<section id="the-t1-encoding">
+<h2>The T1 encoding<a class="headerlink" href="#the-t1-encoding" title="Link to this heading"></a></h2>
+<p>For some encodings, <em>Tralics</em> proposes a conversion to UTF8. The name of
+the command has the form <code class="docutils literal notranslate"><span class="pre">T1-encoding</span></code>, hence cannot be used directly;
+see below how to alias it to, say, <code class="docutils literal notranslate"><span class="pre">\foo</span></code>. The command reads an
+argument that must be an integer, for instance <code class="docutils literal notranslate"><span class="pre">\foo{65}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\foo{'101}</span></code>, <code class="docutils literal notranslate"><span class="pre">\foo{&quot;41}</span></code>, <code class="docutils literal notranslate"><span class="pre">\foo{`A}</span></code>, <code class="docutils literal notranslate"><span class="pre">\foo{\count0}</span></code>
+(the braces are mandatory). The expansion is of the form <code class="docutils literal notranslate"><span class="pre">\char128</span></code>.
+This is a single token, as produced by <code class="docutils literal notranslate"><span class="pre">\chardef</span></code>. In the T1 encoding,
+hex location DF contains “SS”, but this is not a Unicode character, thus
+provokes an error; character with position less than 32 are not
+translated. The argument</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">expandafter</span>\<span class="n">let</span>\<span class="n">expandafter</span>\<span class="n">enc</span>\<span class="n">csname</span> <span class="n">T1</span><span class="o">-</span><span class="n">encoding</span>\<span class="n">endcsname</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;20}\enc{&quot;</span><span class="mi">21</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;22}\enc{&quot;</span><span class="mi">23</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;24}\enc{&quot;</span><span class="mi">25</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;26}\enc{&quot;</span><span class="mi">27</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;28}\enc{&quot;</span><span class="mi">29</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;2A}\enc{&quot;</span><span class="mi">2</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;2C}\enc{&quot;</span><span class="mi">2</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;2E}\enc{&quot;</span><span class="mi">2</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;30}\enc{&quot;</span><span class="mi">31</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;32}\enc{&quot;</span><span class="mi">33</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;34}\enc{&quot;</span><span class="mi">35</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;36}\enc{&quot;</span><span class="mi">37</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;38}\enc{&quot;</span><span class="mi">39</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;3A}\enc{&quot;</span><span class="mi">3</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;3C}\enc{&quot;</span><span class="mi">3</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;3E}\enc{&quot;</span><span class="mi">3</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;40}\enc{&quot;</span><span class="mi">41</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;42}\enc{&quot;</span><span class="mi">43</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;44}\enc{&quot;</span><span class="mi">45</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;46}\enc{&quot;</span><span class="mi">47</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;48}\enc{&quot;</span><span class="mi">49</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;4A}\enc{&quot;</span><span class="mi">4</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;4C}\enc{&quot;</span><span class="mi">4</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;4E}\enc{&quot;</span><span class="mi">4</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;50}\enc{&quot;</span><span class="mi">51</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;52}\enc{&quot;</span><span class="mi">53</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;54}\enc{&quot;</span><span class="mi">55</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;56}\enc{&quot;</span><span class="mi">57</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;58}\enc{&quot;</span><span class="mi">59</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;5A}\enc{&quot;</span><span class="mi">5</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;5C}\enc{&quot;</span><span class="mi">5</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;5E}\enc{&quot;</span><span class="mi">5</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;60}\enc{&quot;</span><span class="mi">61</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;62}\enc{&quot;</span><span class="mi">63</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;64}\enc{&quot;</span><span class="mi">65</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;66}\enc{&quot;</span><span class="mi">67</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;68}\enc{&quot;</span><span class="mi">69</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;6A}\enc{&quot;</span><span class="mi">6</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;6C}\enc{&quot;</span><span class="mi">6</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;6E}\enc{&quot;</span><span class="mi">6</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;70}\enc{&quot;</span><span class="mi">71</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;72}\enc{&quot;</span><span class="mi">73</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;74}\enc{&quot;</span><span class="mi">75</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;76}\enc{&quot;</span><span class="mi">77</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;78}\enc{&quot;</span><span class="mi">79</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;7A}\enc{&quot;</span><span class="mi">7</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;7C}\enc{&quot;</span><span class="mi">7</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;7E}\enc{&quot;</span><span class="mi">7</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;80}\enc{&quot;</span><span class="mi">81</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;82}\enc{&quot;</span><span class="mi">83</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;84}\enc{&quot;</span><span class="mi">85</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;86}\enc{&quot;</span><span class="mi">87</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;88}\enc{&quot;</span><span class="mi">89</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;8A}\enc{&quot;</span><span class="mi">8</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;8C}\enc{&quot;</span><span class="mi">8</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;8E}\enc{&quot;</span><span class="mi">8</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;90}\enc{&quot;</span><span class="mi">91</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;92}\enc{&quot;</span><span class="mi">93</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;94}\enc{&quot;</span><span class="mi">95</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;96}\enc{&quot;</span><span class="mi">97</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;98}\enc{&quot;</span><span class="mi">99</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;9A}\enc{&quot;</span><span class="mi">9</span><span class="n">B</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;9C}\enc{&quot;</span><span class="mi">9</span><span class="n">D</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;9E}\enc{&quot;</span><span class="mi">9</span><span class="n">F</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;A0}\enc{&quot;</span><span class="n">A1</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;A2}\enc{&quot;</span><span class="n">A3</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;A4}\enc{&quot;</span><span class="n">A5</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;A6}\enc{&quot;</span><span class="n">A7</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;A8}\enc{&quot;</span><span class="n">A9</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;AA}\enc{&quot;</span><span class="n">AB</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;AC}\enc{&quot;</span><span class="n">AD</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;AE}\enc{&quot;</span><span class="n">AF</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;B0}\enc{&quot;</span><span class="n">B1</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;B2}\enc{&quot;</span><span class="n">B3</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;B4}\enc{&quot;</span><span class="n">B5</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;B6}\enc{&quot;</span><span class="n">B7</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;B8}\enc{&quot;</span><span class="n">B9</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;BA}\enc{&quot;</span><span class="n">BB</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;BC}\enc{&quot;</span><span class="n">BD</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;BE}\enc{&quot;</span><span class="n">BF</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;C0}\enc{&quot;</span><span class="n">C1</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;C2}\enc{&quot;</span><span class="n">C3</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;C4}\enc{&quot;</span><span class="n">C5</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;C6}\enc{&quot;</span><span class="n">C7</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;C8}\enc{&quot;</span><span class="n">C9</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;CA}\enc{&quot;</span><span class="n">CB</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;CC}\enc{&quot;</span><span class="n">CD</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;CE}\enc{&quot;</span><span class="n">CF</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;D0}\enc{&quot;</span><span class="n">D1</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;D2}\enc{&quot;</span><span class="n">D3</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;D4}\enc{&quot;</span><span class="n">D5</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;D6}\enc{&quot;</span><span class="n">D7</span><span class="p">}</span><span class="o">%</span><span class="s2">&quot;</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;D8}\enc{&quot;</span><span class="n">D9</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;DA}\enc{&quot;</span><span class="n">DB</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;DC}\enc{&quot;</span><span class="n">DD</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;DE}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;E0}\enc{&quot;</span><span class="n">E1</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;E2}\enc{&quot;</span><span class="n">E3</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;E4}\enc{&quot;</span><span class="n">E5</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;E6}\enc{&quot;</span><span class="n">E7</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;E8}\enc{&quot;</span><span class="n">E9</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;EA}\enc{&quot;</span><span class="n">EB</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;EC}\enc{&quot;</span><span class="n">ED</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;EE}\enc{&quot;</span><span class="n">EF</span><span class="p">}</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;F0}\enc{&quot;</span><span class="n">F1</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;F2}\enc{&quot;</span><span class="n">F3</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;F4}\enc{&quot;</span><span class="n">F5</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;F6}\enc{&quot;</span><span class="n">F7</span><span class="p">}</span><span class="o">%</span>
+\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;F8}\enc{&quot;</span><span class="n">F9</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;FA}\enc{&quot;</span><span class="n">FB</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;FC}\enc{&quot;</span><span class="n">FD</span><span class="p">}</span>\<span class="n">enc</span><span class="p">{</span><span class="s2">&quot;FE}\enc{&quot;</span><span class="n">FF</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Translation</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>␣!&quot;#$%&amp;&#39;()*+,-./
+0123456789:;&lt;=&gt;?
+@ABCDEFGHIJKLMNO
+PQRSTUVWXYZ[\]^_
+`abcdefghijklmno
+pqrstuvwxyz{|}~-
+ĂĄĆČĎĚĘĞĹĽŁŇŃŊŐŔ
+ŘŚŠŞŤŢŰŮŸŹŽŻĲİđ§
+ăąćčďěęğĺľłńňŋőŕ
+řśšşťţűůÿźžżĳ¡¿£
+ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏ
+ÐÑÒÓÔÕÖŒØÙÚÛÜÝÞ
+àáâãäåæçèéêëìíîï
+ðñòóôõöœøùúûüýþß
+</pre></div>
+</div>
+</div>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\OT2-encoding</span></code> (and its alias <code class="docutils literal notranslate"><span class="pre">\wncyr-encoding</span></code>)
+describes the OT2 (cyrillic) encoding. This is a 7bit alphabet, and we
+show all the 128 characters, in order. Some of these characters are
+accents, hence placed on the character that precedes (or in the margin).</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ЊЉЏЭІЄЂЋњљџэієђћ
+ЮЖЙЁѴѲЅЯюжйёѵѳѕя
+̈!”Ѣ̆%́’()*ѣ,-./
+0123456789:;«¹»?
+̆АБЦДЕФГХИЈКЛМНО
+ПЧРСТУВЩШЫЗ[“]ЬЪ
+‘абцдефгхијклмно
+пчрстувщшыз-—№ьъ
+</pre></div>
+</div>
+</div>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\OT1-encoding</span></code> describes the OT1 encoding. This is a 7bit
+alphabet, and some slots contain accent and ligatures; they are not
+implemented, and marked by a red x in the table that follows.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ΓΔΘΛΞΠΣΥΦΨΩxxxxx
+xxxxxxxxxßæœøÆŒØ
+x!&quot;#$%&amp;&#39;()*+,-./
+0123456789:;¡=¿?
+@ABCDEFGHIJKLMNO
+PQRSTUVWXYZ[x]xx
+`abcdefghijklmno
+pqrstuvwxyzxxxxx
+</pre></div>
+</div>
+</div>
+<section id="needs-to-be-done">
+<h3>Needs to be done<a class="headerlink" href="#needs-to-be-done" title="Link to this heading"></a></h3>
+<p>Not all characters are available. In particular cyrillic letters are
+missing. Some characters, like <code class="docutils literal notranslate"><span class="pre">\'\AE</span></code> are recognized, but not shown
+in the tables.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1109 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration files of Tralics: syntax and usage &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="All packages known by Tralics, alphabetic order" href="packages.html" />
+    <link rel="prev" title="Command-line options" href="options.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration files of Tralics: syntax and usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-tralics-prints-on-the-terminal">2. What Tralics prints on the terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#explanations">3. Explanations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#launching-tralics">3.1. Launching Tralics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-the-potential-type">3.2. Finding the Potential Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-the-type">3.3. Finding the Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-type">3.4 Using the Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bootstrap-code">3.5 Bootstrap code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-titlepage-info">4. The titlepage info</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#syntax">4.1 Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#semantics">4.2 Semantics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interpreting-the-ces-item">4.3. Interpreting the CES item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interpreting-the-ces-flags">4.4. Interpreting the CES flags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#comments">4.5. Comments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#special-action">4.6. Special action</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#classes-and-packages">5. Classes and packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-configuration-file">5.1 User configuration file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuration files of Tralics: syntax and usage</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration-files-of-tralics-syntax-and-usage">
+<h1>Configuration files of Tralics: syntax and usage<a class="headerlink" href="#configuration-files-of-tralics-syntax-and-usage" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This document explains how to modify the output of <em>Tralics</em>:</p>
+<ul class="simple">
+<li><p>A general configuration file, or a specialized <em>tcf</em> file, is used to
+find the document type;</p></li>
+<li><p>This allows you to change the name of some elements, or the DTD of
+the XML document;</p></li>
+<li><p>A mechanism is provided for collecting meta data at the start of the
+document when a command, for instance \maketitle, is seen;</p></li>
+<li><p>Additional files (of type <em>ult</em>, <em>plt</em>, and <em>clt</em>) can be used
+instead of package and classe files.</p></li>
+</ul>
+<p>In this document, we explain the syntax of the configuration file using
+<a class="reference external" href="titlepage-conf.html">this</a> configuration file. We consider two TeX
+files <a class="reference external" href="titlepage-ex1.html#ex1">this one</a>, and <a class="reference external" href="titlepage-ex1.html#ex2">that
+one</a>, and show the XML result <a class="reference external" href="titlepage-ex2.html#ex1">(this
+XML)</a> and <a class="reference external" href="titlepage-ex2.html#ex2">(that
+XML)</a> and the log file produced by Tralics
+<a class="reference external" href="titlepage-ex3.html#ex1">(first)</a> and
+<a class="reference external" href="titlepage-ex3.html#ex2new">(second)</a>. We shall alse use the
+following <a class="reference external" href="titlepage-conf.html#tpa">tpa.tcf</a> files.</p>
+</section>
+<section id="what-tralics-prints-on-the-terminal">
+<h2>2. What Tralics prints on the terminal<a class="headerlink" href="#what-tralics-prints-on-the-terminal" title="Link to this heading"></a></h2>
+<p>First example, using original syntax.</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grimm@medee$ tralics tpa -configfile ../config_tpa -verbose
+This is tralics 1.9t, a LaTeX to XML translator
+Copyright INRIA/MIAOU/APICS 2002-2004, Jos� Grimm
+Starting xml processing for tpa.
+&lt;!-- S1 --&gt;
+Trying config file from user specs:../config_tpa
+Read configuration file ../config_tpa.
+Configuration file has type \documentclass
+Seen \documentclass tpa
+&lt;!-- S2 --&gt;
+Potential type is tpa
+Defined type: default
+Defined type: tpa
+Defined type: unused
+Defined type: eurotex
+Using type tpa
+dtd is tpa from tpa.dtd (standard mode)
+Ok with the config file, dealing with the TeX file...
+&lt;!-- S3 --&gt;
+Error signaled at line 35:
+No value given for command \cmdp.
+&lt;!-- S4 --&gt;
+Seen 0 bibliographic entries
+Used 1237 commands
+math stats : formulas 0, non trivial kernels 0, cells 0,
+   special 0 trivial 0, \mbox 0 large 0 small 0.
+List stats: short 0 inc 2 alloc 529
+Buffer realloc 0 string 1455 size 17863; merge 0
+Macros created 28 deleted 4
+Save stack +12 -12
+Attribute list search 191(119) found 156 in 1081 elements (1037 after boot)
+number of ref 0, of used labels 0, of defined labels 0, of ext. ref. 0
+Modules with 0, without 0, sections with 0, without 0
+There was no image.
+Output written on tpa.xml (1436 bytes).
+There was one error.
+(For more information, see transcript file tpa.log)
+</pre></div>
+</div>
+</div>
+<p>First example, using new syntax.</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grimm@medee$ tralics tpa -verbose
+This is tralics 2.8, a LaTeX to XML translator
+Copyright INRIA/MIAOU/APICS 2002-2006, Jos\&#39;e Grimm
+Licensed under the CeCILL Free Software Licensing Agreement
+Starting xml processing for tpa.
+&lt;!-- S1 --&gt;
+Configuration file identification: standard $ Revision: 2.24 $
+Read configuration file /user/grimm/home/cvs/tralics/.tralics_rc.
+Configuration file has type \documentclass
+Seen \documentclass tpa
+&lt;!-- S2 --&gt;
+Potential type is tpa
+Defined type: std
+Configuration file identification: tpa.tcf $ Revision: 1.3 $
+Read tcf file for type: ../confdir/tpa.tcf
+Using type tpa
+dtd is tpa from tpa.dtd (standard mode)
+Ok with the config file, dealing with the TeX file...
+&lt;!-- S3 --&gt;
+Error signaled at line 35 of file tpa.tex:
+No value given for command \cmdp.
+&lt;!-- S4 --&gt;
+Bib stats: seen 0 entries
+Seen 0 bibliographic entries
+Used 1810 commands
+Math stats: formulas 0, non trivial kernels 0,
+   special 0, trivial 0, \mbox 0, large 0, small 0.
+Buffer realloc 0, string 1642, size 17963, merge 0
+Macros created 86, deleted 4.
+Save stack +24 -24.
+Attribute list search 1700(1549) found 1019 in 1495 elements (1450 after boot).
+Number of ref 0, of used labels 0, of defined labels 0, of ext. ref. 0.
+Modules with 0, without 0, sections with 0, without 0
+There was no image.
+Output written on tpa.xml (1378 bytes).
+There was one error.
+(For more information, see transcript file tpa.log)
+</pre></div>
+</div>
+</div>
+<p>Second example, non-verbose mode</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grimm@medee$ tralics bo
+This is tralics 2.8, a LaTeX to XML translator
+Copyright INRIA/MIAOU/APICS 2002-2006, Jos\&#39;e Grimm
+Licensed under the CeCILL Free Software Licensing Agreement
+Starting xml processing for bo.
+Configuration file identification: standard $ Revision: 2.24 $
+Read configuration file /user/grimm/home/cvs/tralics/.tralics_rc.
+Configuration file identification: cedram.tcf $ Revision: 1.1 $
+Read tcf file for type: cedram.tcf
+Translation terminated after title page
+Bib stats: seen 0 entries
+Seen 3 bibliographic entries
+Used 1866 commands
+Math stats: formulas 16, non trivial kernels 10,
+   special 0, trivial 0, \mbox 0, large 0, small 8.
+Buffer realloc 7, string 1881, size 25733, merge 2
+Macros created 114, deleted 10.
+Save stack +154 -154.
+Attribute list search 1847(1549) found 1010 in 1620 elements (1450 after boot).
+Number of ref 0, of used labels 0, of defined labels 0, of ext. ref. 0.
+Modules with 0, without 0, sections with 0, without 0
+There was no image.
+Output written on bo.xml (5209 bytes).
+No error found.
+(For more information, see transcript file bo.log)
+</pre></div>
+</div>
+</div>
+</section>
+<section id="explanations">
+<h2>3. Explanations<a class="headerlink" href="#explanations" title="Link to this heading"></a></h2>
+<p>The lines above show the command used to call <em>Tralics</em>, and its
+response. We have added some markers in order to make the explanations
+easy to follow.</p>
+<p>The first example was run in 2004, using an old version of the software.
+We have rerun the example, with the new version of <em>Tralics</em>. As you can
+see, the resulting XML is differerent (1378 bytes instead of 1536). You
+can compare the <a class="reference external" href="titlepage-ex2.html#ex1old">old version</a> with the
+<a class="reference external" href="titlepage-ex2.html#ex1new">new version</a>. The differences are the
+following: first, spaces before a <code class="docutils literal notranslate"><span class="pre">\par</span></code> command are removed, this
+means that the XML contains no space before a closing <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code> tag;
+second, <code class="docutils literal notranslate"><span class="pre">&lt;foo&gt;&lt;/foo&gt;</span></code> is now printed as <code class="docutils literal notranslate"><span class="pre">&lt;foo/&gt;</span></code>; third, the
+<code class="docutils literal notranslate"><span class="pre">language</span></code> atttribute is now added to the document element only if the
+configuration file contains <code class="docutils literal notranslate"><span class="pre">att_language=&quot;language&quot;</span></code> (the right hand
+side of the assignment defines the attribute name).</p>
+<section id="launching-tralics">
+<h3>3.1. Launching Tralics<a class="headerlink" href="#launching-tralics" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">For a list of all arguments of the Tralics command, see the page
+<a class="reference external" href="raweb.html#options">Options of the program</a>. The command line used
+for the first example is:</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">tpa</span> <span class="pre">-configfile</span> <span class="pre">../config_tpa</span> <span class="pre">-verbose</span></code></div>
+<div class="line">It tells the program to translate a file named <code class="docutils literal notranslate"><span class="pre">tpa.tex</span></code>, in verbose
+mode, using a given configuration file. The verbose option is
+equivalent to a <code class="docutils literal notranslate"><span class="pre">\tracingall</span></code> command in the TeX source (its effect
+is to print a lot of things in the transcript file); moreover some
+additional lines are printed on the screen (especially concerning
+configuration).</div>
+</div>
+<p><em>Tralics</em> analyses first the arguments. All options start with a single
+or double dash. Instead of <code class="docutils literal notranslate"><span class="pre">-configfile</span> <span class="pre">foo</span></code>, you can say
+<code class="docutils literal notranslate"><span class="pre">-configfile=foo</span></code> (whitout spaces). For historical reasons, you can
+also say <code class="docutils literal notranslate"><span class="pre">-config_file=foo</span></code>, and, since version 2.8, the short form
+<code class="docutils literal notranslate"><span class="pre">-config=foo</span></code> is allowed. There is exactly one argument to the
+<code class="docutils literal notranslate"><span class="pre">tralics</span></code> command that does not start with a dash, it is the name of
+the TeX input file (extension <code class="docutils literal notranslate"><span class="pre">.tex</span></code> is optional).</p>
+<p>The transcript file (here <code class="docutils literal notranslate"><span class="pre">tpa.log</span></code>) is opened after all arguments
+have been successfully parsed. Almost everything printed on the terminal
+is also printed to the transcript file. In the example, the version
+number is printed, the Copyright notice, then the line: `Starting xml
+processing for tpa’. The TeX input file is read next, once and for all.</p>
+</section>
+<section id="finding-the-potential-type">
+<h3>3.2. Finding the Potential Type<a class="headerlink" href="#finding-the-potential-type" title="Link to this heading"></a></h3>
+<p>Step S1 shows <em>Tralics</em> examining the configuration file, in order to
+find the Document Type. This information will be used to select a part
+of the configuration file, or the whole of a tcf file, using the rules
+that follow.</p>
+<ol class="arabic simple">
+<li><p>If you say <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-noconfig</span></code>, then no configuration file is read
+at all.</p></li>
+<li><p>If you say <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-configfile=foo</span></code>, then <em>Tralics</em> will print
+<em>Trying config file from user specs</em>, and try to use this file.</p></li>
+<li><p>If you say <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-configfile=foo.tcf</span></code>, then <em>Tralics</em> will print
+the same as above; it will also search the file in the `confdir’
+directory.</p></li>
+<li><p>If the source file contains
+<code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">tralics</span> <span class="pre">configuration</span> <span class="pre">file</span> <span class="pre">'foobar'</span></code>, then <em>Tralics</em> will print
+<em>Trying config file from source file</em>, and try to use this file. In
+case of failure, and if the name ‘foobar’ contains no dot, the suffix
+<code class="docutils literal notranslate"><span class="pre">.tcf</span></code> is added, and the next rule is applied.</p></li>
+<li><p>If the source file contains
+<code class="docutils literal notranslate"><span class="pre">%</span> <span class="pre">tralics</span> <span class="pre">configuration</span> <span class="pre">file</span> <span class="pre">'foobar.tcf'</span></code>, then <em>Tralics</em> will
+print the same as above; it will also search the file in the
+`confdir’ directory.</p></li>
+<li><p>The default configuration file is named <code class="docutils literal notranslate"><span class="pre">.tralics_rc</span></code> (or
+<code class="docutils literal notranslate"><span class="pre">tralics_rc</span></code> on Windows). The current directory is looked at first,
+then the tralicsdir, finally the home directory.</p></li>
+<li><p>If you say <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-dir</span> <span class="pre">TOTO</span></code>, or <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-dir=TOTO</span></code>, then
+<code class="docutils literal notranslate"><span class="pre">TOTO/src/.tralics_rc</span></code> is the second try.</p></li>
+<li><p>The home directory, or its <code class="docutils literal notranslate"><span class="pre">src</span></code> subdirectory, is searched next.
+(Depending on the operating system, this can fail, because there is
+no standard way of defining the home directory of the user).</p></li>
+<li><p>If you set the shell variable <code class="docutils literal notranslate"><span class="pre">TRALICSDIR</span></code> to <code class="docutils literal notranslate"><span class="pre">somedir</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">RAWEBDIR</span></code> to <code class="docutils literal notranslate"><span class="pre">somedir</span></code>, then <code class="docutils literal notranslate"><span class="pre">somedir/src/.tralics_rc</span></code> is the
+last try. If neither variable is set, then some default location will
+be used.</p></li>
+</ol>
+<ul class="simple">
+<li><p>If a configuration file has been given on the command line, but not
+found according to rules 2 and 3, then no configuration file will be
+used.</p></li>
+<li><p>For rules 4 and 5, only the first hundred lines of the source file
+are considered, the line must start with a percent character; you can
+use an upper case T in the string “tralics”; the configuration file
+name is delimited by single quotes; the line can hold additional
+characters that are ignored.</p></li>
+<li><p>If a configuration file has been given in the source file, but not
+found according to rules 4 and 5, then the default configuration file
+will be used.</p></li>
+<li><p>In the case of rules 3 and 5, a tcf file is looked at, say
+<code class="docutils literal notranslate"><span class="pre">foo.tcf</span></code>. It is first searched in the current directory, then in
+all directories specified by the <code class="docutils literal notranslate"><span class="pre">confdir</span></code> options, then in a
+default directory. For instance, if you say
+<code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-confdir=mydir/</span></code> (final slash optional), the second try
+would be <code class="docutils literal notranslate"><span class="pre">mydir/foo.tcf</span></code>. If this file is not found, a default
+location, for instance <code class="docutils literal notranslate"><span class="pre">../confdir/foo.tcf</span></code>, is tried. If you
+specify <code class="docutils literal notranslate"><span class="pre">dir1</span></code> then <code class="docutils literal notranslate"><span class="pre">dir2</span></code>, then the order will be: current
+directory, dir2, dir1, default directory.</p></li>
+</ul>
+<p>In the configuration file, you can use # or % as comment characters.
+This file contains declarations inside groups (for instance
+<code class="docutils literal notranslate"><span class="pre">BeginAlias</span></code> … <code class="docutils literal notranslate"><span class="pre">End</span></code> on lines
+<a class="reference external" href="titlepage-conf.html#l11">11</a>–<a class="reference external" href="titlepage-conf.html#l14">14</a> or
+<code class="docutils literal notranslate"><span class="pre">BeginType</span></code> … <code class="docutils literal notranslate"><span class="pre">End</span></code> on lines
+<a class="reference external" href="titlepage-conf.html#l16">16</a>–<a class="reference external" href="titlepage-conf.html#l25">25</a>). The
+end of a group is defined by a line that starts with the 3 letters
+`End’, followed by anything. Some commands are allowed outside groups.</p>
+<p>In the example, you can see that the user defined configuration file has
+been read and an important information extracted from line
+<a class="reference external" href="titlepage-conf.html#l8">8</a>, namely
+<code class="docutils literal notranslate"><span class="pre">'Configuration</span> <span class="pre">file</span> <span class="pre">has</span> <span class="pre">type</span> <span class="pre">\documentclass'</span></code> and <em>Tralics</em> has
+<code class="docutils literal notranslate"><span class="pre">Seen</span> <span class="pre">\documentclass</span> <span class="pre">tpa</span></code>.</p>
+<p>The <em>documentclass</em> is defined as the argument of the first
+<code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> command seen in the TeX source. This may be different
+from the real document class because of one of the following</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\csname</span> <span class="pre">documentclass\endcsname</span></code> is used;</p></li>
+<li><p>The real class is declared in another file, loaded via <code class="docutils literal notranslate"><span class="pre">\input</span></code>;</p></li>
+<li><p>There is a line break between the command and its argument, and the
+parser skips this one;</p></li>
+<li><p>A line like <code class="docutils literal notranslate"><span class="pre">%\documentclass{report}</span></code> defines the type as report.
+If a double percent sign is used, the match fails. The translator
+will ignore such a line, if standard category codes are in effect.</p></li>
+<li><p>In some cases, there is no <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> in the document. In
+theses cases, some default action is done.</p></li>
+</ul>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-type</span> <span class="pre">FOO</span></code>, then the type will be FOO. Otherwise,
+if the configuration file contains, at toplevel, the declaration
+<code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">=fOO</span></code>, then the type will be fOO. If the configuration file
+contains <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">=\documentclass</span></code>, then the type will be the
+<em>documentclass</em>, as explained above. If you say nothing, then the type
+is the documentclass. This will be called the <em>potential type</em>, that
+needs to be converted into a real type.</p>
+</section>
+<section id="finding-the-type">
+<h3>3.3. Finding the Type<a class="headerlink" href="#finding-the-type" title="Link to this heading"></a></h3>
+<p>When <em>Tralics</em> enters step S2, it says: Potential type is tpa. It tries
+to match this type with all the types that are defined. In this case
+they are four types defined, default
+(<a class="reference external" href="titlepage-conf.html#l16">l.16</a>), tpa
+(<a class="reference external" href="titlepage-conf.html#l48">l.48</a>), unused
+(<a class="reference external" href="titlepage-conf.html#l94">l.94</a>) and eurotex
+(<a class="reference external" href="titlepage-conf.html#l134">l.134</a>), and one of them is to be
+selected.</p>
+<p>In case of failure, aliases are considered. There is line
+<a class="reference external" href="titlepage-conf.html#l12">12</a> that says that `report’ is the same as
+`article’, but `article’ is undefined, so that this line discarded. In
+the same fashion, `inriaslides’ and `foiltex’ are aliases to
+`slides’, which is undefined. Near the end of the file, lines
+<a class="reference external" href="titlepage-conf.html#l154">154</a> to <a class="reference external" href="titlepage-conf.html#l156">156</a>
+say that `foo’ and `foo2004’ are alias to tpa, which is undefined.
+Thus we have only two useful lines, one that says that `foo’ is an
+alias for `TPA’ and `unused’, while `foo2003’ is an alias for
+`unused’. Only the first valid alias for `foo’ is considered.</p>
+<p>Hence, for this configuration file, aliasing adds two new types: `foo’
+for `TPA’, `foo2003’ for `unused’.</p>
+<p>In the case of the first example, new syntax, we use the standard
+configuration file. This defines a single type, std, plus some aliases.
+We show here the content of it (without the comments).</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Type</span> <span class="o">=</span> \<span class="n">documentclass</span>
+
+<span class="n">BeginType</span> <span class="n">std</span>
+  <span class="n">DocType</span> <span class="o">=</span> <span class="n">std</span> <span class="n">classes</span><span class="o">.</span><span class="n">dtd</span>
+<span class="n">End</span>
+
+<span class="n">BeginAlias</span>
+  <span class="n">torture</span> <span class="n">torture1</span> <span class="n">torture2</span>
+  <span class="n">std</span> <span class="n">report</span> <span class="n">book</span> <span class="n">article</span> <span class="n">minimal</span>
+<span class="n">End</span>
+</pre></div>
+</div>
+</div>
+<p>Since version 2.8, tcf files are considered. This means that, if the
+potential type is tpa, and the file <code class="docutils literal notranslate"><span class="pre">tpa.tcf</span></code> exists (or its alternate
+location <code class="docutils literal notranslate"><span class="pre">../confdir/tpa.tcf</span></code>), it will be used. This is what happens
+in our example and <em>Tralics</em> says: <em>Read tcf file for type:
+../confdir/tpa.tcf</em>. If the potential type is, as ‘torture2’ above,
+aliased to `torture’, and if `torture’ is not a type defined in the
+configuration file, then <code class="docutils literal notranslate"><span class="pre">torture.tcf</span></code> and <code class="docutils literal notranslate"><span class="pre">../confdir/torture.tcf</span></code>
+are considered; if the file exists, it will be read, and `torture’
+becomes the effective type.</p>
+<p>If aliasing fails, a second try is made, ignoring final digits in the
+name. Thus `fooNNNN’ is equivalent to `tpa’, whatever NNNN (if NNNN is
+a number, different from 2003). Since the standard distribution contains
+a file <code class="docutils literal notranslate"><span class="pre">ra.tcf</span></code>, if you say <code class="docutils literal notranslate"><span class="pre">\documentclass{ra2003}</span></code> (and this is
+required for the RAWEB, year 2003), the type will be `ra’. See <a class="reference external" href="raweb.html#main-doc">example
+of the raweb</a>.</p>
+<p>In case of failure, the first type of the configuration file is used
+(this is `std’ for the default configuration file).</p>
+<p>In case of failure (if the configuration file does specify no type) then
+`book’, `report’ or `article’ classes are recognized as a special
+case. In the same fashion, if no <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> command is seen in
+the TeX source, then plainTeX input is assumed. No error is signaled,
+but no parameterization code is executed.</p>
+<p>In our example, we get the message <em>Using type tpa</em>. Everything that is
+out of the `tpa’ scope is ignored from the configuration file. If a tcf
+file, is given, its entire content is considered.</p>
+</section>
+<section id="using-the-type">
+<h3>3.4 Using the Type<a class="headerlink" href="#using-the-type" title="Link to this heading"></a></h3>
+<p>What remains in the configuration file, after removing what is
+irrelevant to the current type, consists in two blocks:
+<code class="docutils literal notranslate"><span class="pre">BeginTitlePage</span> <span class="pre">...</span> <span class="pre">End</span></code> (lines <a class="reference external" href="titlepage-conf.html#l50">50</a> –
+<a class="reference external" href="titlepage-conf.html#l86">86</a>) <code class="docutils literal notranslate"><span class="pre">BeginCommands</span> <span class="pre">...</span> <span class="pre">End</span></code> (lines
+<a class="reference external" href="titlepage-conf.html#l87">87</a> – <a class="reference external" href="titlepage-conf.html#l89">89</a>)
+and some isolated commands (in this example there is only line
+<a class="reference external" href="titlepage-conf.html#l49">49</a>, but for other types lines
+<a class="reference external" href="titlepage-conf.html#l17">17</a> – <a class="reference external" href="titlepage-conf.html#l20">20</a> or
+lines <a class="reference external" href="titlepage-conf.html#l29">29</a> –
+<a class="reference external" href="titlepage-conf.html#l43">43</a> are considered).</p>
+<p>From now on, all line numbers refer to the <code class="docutils literal notranslate"><span class="pre">tpa.tcf</span></code> file; the first
+block is at lines
+<a class="reference external" href="titlepage-conf.html#l311">311</a>–<a class="reference external" href="titlepage-conf.html#l347">347</a>,
+the second at lines
+<a class="reference external" href="titlepage-conf.html#l348">348</a>–<a class="reference external" href="titlepage-conf.html#l350">350</a>,
+the isolated line at <a class="reference external" href="titlepage-conf.html#l308">308</a>.</p>
+<p>The important command is the `DocType’ line. <em>Tralics</em> says: <em>dtd is
+tpa from tpa.dtd (standard mode)</em>. It might say something like: <em>dtd is
+raweb from raweb.dtd (mode RAWEB2003)</em>, case where you are creating
+Inria’s Raweb for year 2003.</p>
+<ul class="simple">
+<li><p>A line of the form <code class="docutils literal notranslate"><span class="pre">DocAttrib</span> <span class="pre">=</span> <span class="pre">test</span> <span class="pre">&quot;foo&quot;</span></code>
+(<a class="reference external" href="titlepage-conf.html#l31">l.31</a> for instance) informs <em>Tralics</em>
+to add <code class="docutils literal notranslate"><span class="pre">test='foo'</span></code> to the attribute list of the document element.
+Comments are allowed after the string “foo”.</p></li>
+<li><p>A line of the form <code class="docutils literal notranslate"><span class="pre">DocAttrib</span> <span class="pre">=</span> <span class="pre">test</span> <span class="pre">\specialyear</span></code>
+(<a class="reference external" href="titlepage-conf.html#l19">l.19</a>) informs <em>Tralics</em> to add
+<code class="docutils literal notranslate"><span class="pre">test='2003'</span></code> to the attribute list of the document element. The
+default year will be 2004 starting May, 1st. If you say
+<code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">-year</span> <span class="pre">2005</span></code>, then the special year is 2005.</p></li>
+<li><p>A line of the form <code class="docutils literal notranslate"><span class="pre">DocAttrib</span> <span class="pre">=</span> <span class="pre">test</span> <span class="pre">\foo</span></code>
+(<a class="reference external" href="titlepage-conf.html#l18">l.18</a>) informs <em>Tralics</em> to add
+<code class="docutils literal notranslate"><span class="pre">test='fooval'</span></code> to the attribute list of the document element. More
+precisely, <code class="docutils literal notranslate"><span class="pre">\addattributestodocument{x}{\foo}</span></code> is added to the
+document hook. This means that the <code class="docutils literal notranslate"><span class="pre">\foo</span></code> command is evaluated just
+after <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code>.</p></li>
+<li><p>A line of the form
+<code class="docutils literal notranslate"><span class="pre">DocAttrib</span> <span class="pre">=</span> <span class="pre">z</span> <span class="pre">\the\day\space</span> <span class="pre">\the\month\space</span> <span class="pre">\the\year</span></code>
+(<a class="reference external" href="titlepage-conf.html#l20">l.20</a>) informs <em>Tralics</em> to add
+<code class="docutils literal notranslate"><span class="pre">z='29</span> <span class="pre">1</span> <span class="pre">2004'</span></code> to the attribute list of the document element.
+Every character on the line is considered. Comments are forbidden.</p></li>
+<li><p>A line of the form <code class="docutils literal notranslate"><span class="pre">makefo=&quot;xsltproc</span> <span class="pre">--catalogs</span> <span class="pre">-o</span> <span class="pre">%A.fo</span> <span class="pre">%B</span> <span class="pre">%C&quot;</span></code>
+(<a class="reference external" href="titlepage-conf.html#l33">l.33</a>) is useful only for the RA. After
+translation is complete, the <code class="docutils literal notranslate"><span class="pre">xsltproc</span></code> command will be called with
+arguments depending on the file name, and other things. All the
+commands defined by the RA type (and commented in the example) follow
+these schema. See <a class="reference external" href="raweb4.html#run3">Running Tralics -ps</a>.</p></li>
+<li><p>A line of the form <code class="docutils literal notranslate"><span class="pre">xml_labelitem_name</span> <span class="pre">=</span> <span class="pre">&quot;Xlabel&quot;</span></code>
+(<a class="reference external" href="titlepage-conf.html#l95">l.95</a>) tells <em>Tralics</em> to use the name
+Xlabel instead of the name label. See example elsewhere.</p></li>
+<li><p>A block of the form
+<code class="docutils literal notranslate"><span class="pre">BeginCommands</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">\def\recurse{\recurse\recurse}</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">EndCommands</span></code>
+is copied (without first and last line) into the TeX source, just
+before the <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> command (the one used to find the type;
+nothing is done if no such command exists). You can see this in the
+transcript file. It is marked `Insert 2’, because there is a second
+insertion of the same kind, see later.
+<strong>Note</strong> In the current version, it is inserted <em>before</em> the command.
+See <a class="reference external" href="#inserts">explanations</a>.</p></li>
+<li><p>Each line in a TitlePage block is analyzed, and a table is created.
+See later.</p></li>
+</ul>
+<p>Now <em>Tralics</em> prints: <em>Ok with the config file, dealing with the TeX
+file…</em></p>
+</section>
+<section id="bootstrap-code">
+<h3>3.5 Bootstrap code<a class="headerlink" href="#bootstrap-code" title="Link to this heading"></a></h3>
+<p>In the transcript file, at the start of Step S3, you can see that the
+source file has 38 lines. After that, the transcript file contains, for
+every source line its content, and for every command executed some
+information (this is because we are in verbose mode).</p>
+<p>Some lines are not shown, they are of the form <code class="docutils literal notranslate"><span class="pre">\let\endgraf\par</span></code>.
+Then comes a bunch of lines of the form
+<code class="docutils literal notranslate"><span class="pre">Defining</span> <span class="pre">\InsertTitlepage</span> <span class="pre">as</span> <span class="pre">\TitlePageCmd</span> <span class="pre">0</span></code>. Almost every line from
+the TitlePage block is associated to such a line. In fact, every line
+that start with a backslash (a LaTeX command) defines a command, and if
+you say <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">\foo</span></code>, then <code class="docutils literal notranslate"><span class="pre">\foo</span></code> is an alias to the command defined
+on the previous line. In the case of <code class="docutils literal notranslate"><span class="pre">&lt;UR&gt;</span> <span class="pre">-</span></code>, no command is created,
+but such lines are nevertheless useful.</p>
+<p>Each line is followed by a second line, of the form
+<code class="docutils literal notranslate"><span class="pre">usual</span> <span class="pre">&lt;abstract</span> <span class="pre">ab='AB1'/&gt;</span> <span class="pre">(flags</span> <span class="pre">+par</span> <span class="pre">+env)</span></code>. We shall see in a
+moment how the flags have to be interpreted.</p>
+<div class="line-block">
+<div class="line">You can see this in the transcript file:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">[1]</span> <span class="pre">\cmdb{\cmdBval}</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">++</span> <span class="pre">End</span> <span class="pre">of</span> <span class="pre">virtual</span> <span class="pre">file.</span></code></div>
+<div class="line">This is a consequence of the B or C flag, as explained later.</div>
+</div>
+<p>The transcript file contains <code class="docutils literal notranslate"><span class="pre">[1]</span> <span class="pre">\def\cmdAval{CMDA}</span></code>, plus some other
+lines, not shown here. This is the first line of the TeX source.</p>
+</section>
+</section>
+<section id="the-titlepage-info">
+<h2>4. The titlepage info<a class="headerlink" href="#the-titlepage-info" title="Link to this heading"></a></h2>
+<p>In the configuration file, there are some lines that define the
+titlepage info. In this way, you can add, to <em>Tralics</em>, some commands
+like <code class="docutils literal notranslate"><span class="pre">\author</span></code>, <code class="docutils literal notranslate"><span class="pre">\title</span></code>, etc, that can be used (exactly once, at
+most once, at least once, as you like) before the <code class="docutils literal notranslate"><span class="pre">\maketitle</span></code> command
+(you chose your own name, variants are allowed). These commands should
+appear before the main text; they are forbidden in a paragraph (you can
+always insert a <code class="docutils literal notranslate"><span class="pre">\par</span></code> before them). Only one <code class="docutils literal notranslate"><span class="pre">\maketitle</span></code> command
+is allowed in the document.</p>
+<section id="syntax">
+<h3>4.1 Syntax<a class="headerlink" href="#syntax" title="Link to this heading"></a></h3>
+<p>Each line of the configuration file in the title page info section is
+formed of one to four tokens; these have a type, say A, E, S, C; the
+interpretation of the line depends on the lists of these types.</p>
+<ul class="simple">
+<li><p>An A token corresponds to the string <code class="docutils literal notranslate"><span class="pre">alias</span></code>, it could also be
+<code class="docutils literal notranslate"><span class="pre">action</span></code> or <code class="docutils literal notranslate"><span class="pre">execute</span></code> see below;</p></li>
+<li><p>An E token corresponds to an element, of the form <code class="docutils literal notranslate"><span class="pre">&lt;...&gt;</span></code> (all
+characters up to the greater-than sign are read, it is assumed that
+the result is a valid XML element);</p></li>
+<li><p>A S token corresponds to a character string of the form <code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>
+(all characters up to the closing double-quote are read);</p></li>
+<li><p>A C token corresponds to a command, of the form <code class="docutils literal notranslate"><span class="pre">\xxx</span></code> (all letters
+following the backslash are read);</p></li>
+<li><p>Tokens E, S, and C can be preceded by one or two modifiers. Currently
+characters ?+- (question, plus, minus) and letters ABCeEpq are
+allowed;</p></li>
+<li><p>No modifier is allowed for the first and last token.</p></li>
+</ul>
+<p>Our example starts with a CESS, followed by an AESS, and two CES. After
+that comes a CEES, and the first E has plus as modifier. The order of
+elements is important. There can be only one CESS element, and it has to
+be the first. You can put an AESS only after an AESS or a CESS. You
+cannot put an AS element after a CESS, AESS or E.</p>
+</section>
+<section id="semantics">
+<h3>4.2 Semantics<a class="headerlink" href="#semantics" title="Link to this heading"></a></h3>
+<p>We shall discuss the meaning of these token list, in the order of use in
+the example.</p>
+<dl>
+<dt>CESS</dt><dd><p>Example: <code class="docutils literal notranslate"><span class="pre">\cmd</span> <span class="pre">&lt;elt&gt;</span> <span class="pre">&quot;att1&quot;</span> <span class="pre">&quot;att2&quot;</span></code>.</p>
+<p>This declaration has to be the first in the list. It defines a
+command <code class="docutils literal notranslate"><span class="pre">\cmd</span></code>, that can be used only once in the document, after
+<code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code>. The effect is to insert the <code class="docutils literal notranslate"><span class="pre">&lt;elt&gt;</span></code> element
+into the XML tree. In what follows, we shall call it the <em>TPA
+element</em>. This element is formed of other elements defined by the
+titlepage info, the names of these elements are statically defined,
+their content is dynamic (i.e. the names depends on the configuration
+file, the content on the TeX document). The string <code class="docutils literal notranslate"><span class="pre">att1</span></code> is a list
+of attributes added to the TPA element and the string <code class="docutils literal notranslate"><span class="pre">att2</span></code> is a
+list of attributes added to the document element.</p>
+<p>There is an example on lines <a class="reference external" href="titlepage-conf.html#l312">312</a> and
+<a class="reference external" href="titlepage-conf.html#l313">313</a>; the title page element is named
+`titlepage’, it has two attributes, with value `att1’ and `att2’
+with value `foo1’ and `foo2’. If used via the command defined on
+line <a class="reference external" href="titlepage-conf.html#l312">312</a>, it has two additional
+attributes `a1’ and `a2’, and the document element has attributes
+`from_type’ and `from_tpa’. There is another example line
+<a class="reference external" href="titlepage-conf.html#l207">207</a>; the attribute name is empty, thus
+the attribute value will be ignored by the translator. See section
+<a class="reference external" href="#titlepage-action">Special action</a> for the use of this special
+value.</p>
+</dd>
+<dt>AESS</dt><dd><p>Example: <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">\cmda</span> <span class="pre">&quot;att1p&quot;</span> <span class="pre">&quot;att2p&quot;</span></code>. This declaration is valid
+only after a CESS declaration (or after another AESS declaration). It
+defines a command <code class="docutils literal notranslate"><span class="pre">\cmda</span></code> that can be used instead of <code class="docutils literal notranslate"><span class="pre">\cmd</span></code>
+(only one of these commands can be used). The result is the same;
+however <code class="docutils literal notranslate"><span class="pre">att1p</span></code> is used instead of <code class="docutils literal notranslate"><span class="pre">att1</span></code> for the attribute list
+of the TPA element, and <code class="docutils literal notranslate"><span class="pre">att2p</span></code> is used instead of <code class="docutils literal notranslate"><span class="pre">att2</span></code> for the
+document element (same remark as above for special attribute values
+in <code class="docutils literal notranslate"><span class="pre">att2p</span></code>).</p>
+<p>In what follows, the <code class="docutils literal notranslate"><span class="pre">\TPA</span></code> command means one of the commands
+defined by this rule or the preceding one.</p>
+</dd>
+<dt>CEES</dt><dd><p>Example: <code class="docutils literal notranslate"><span class="pre">\cmdb</span> <span class="pre">+&lt;master&gt;</span> <span class="pre">&lt;local&gt;</span> <span class="pre">&quot;val&quot;</span></code>. Note that the plus sign
+is required before the master element. Examples can be seen on line
+<a class="reference external" href="titlepage-conf.html#l316">316</a> and
+<a class="reference external" href="titlepage-conf.html#l317">317</a>. See comments below.</p>
+<p>This declaration has as side effect that the TPA element will contain
+a <code class="docutils literal notranslate"><span class="pre">&lt;master&gt;</span></code> element, formed of a number of <code class="docutils literal notranslate"><span class="pre">&lt;local&gt;</span></code> elements.
+Initially there is only one, initialized with “val”.</p>
+<p>The declaration has another effect, it defines a command <code class="docutils literal notranslate"><span class="pre">\cmdb</span></code>,
+that has to be used before <code class="docutils literal notranslate"><span class="pre">\TPA</span></code> command. It takes one argument,
+and creates a <code class="docutils literal notranslate"><span class="pre">&lt;local&gt;</span></code> whose content is the translation of the
+argument. This element is added to the end of the <code class="docutils literal notranslate"><span class="pre">&lt;master&gt;</span></code>
+element. Note that the default value is removed in case at least one
+value is given.</p>
+</dd>
+<dt>CES</dt><dd><p>Example: <code class="docutils literal notranslate"><span class="pre">\cmdc</span> <span class="pre">&lt;elt&gt;</span> <span class="pre">&quot;value&quot;</span></code>. The element can have the flags p,
+q, e or E, and the value can have the flags +ABC. The effect is to
+define a command <code class="docutils literal notranslate"><span class="pre">\cmdc</span></code> (or an environment <code class="docutils literal notranslate"><span class="pre">cmdc</span></code> if the E flag
+has been given), that can be used only before the <code class="docutils literal notranslate"><span class="pre">\TPA</span></code> command.
+The argument of the command, (or the content of the environment) is
+translated, put in a <code class="docutils literal notranslate"><span class="pre">&lt;elt&gt;</span></code> element, and added to the TPA element.
+If no flag is given for the element, paragraphs are forbidden in the
+argument. If you want to use paragraphs (either <code class="docutils literal notranslate"><span class="pre">\par</span></code> or <code class="docutils literal notranslate"><span class="pre">\\</span></code>)
+you must use the P flag (lower-case letter). In the same fashion, a
+lower case E means environment without paragraphs, an upper case E
+means environment with paragraphs. If the q flag is given, paragraphs
+are forbidden, but you can use <code class="docutils literal notranslate"><span class="pre">\\</span></code>, which is ignored. (in fact,
+the command reads an optional star, an optional argument, and the
+result is replaced by a space). Other flags are described in the
+section <a class="reference external" href="#titlepage-flags">Interpreting the CES flags</a> below.
+There is a special trick for the case where the name of the element
+associated to the command is empty. Assume that the configuration
+file contains <code class="docutils literal notranslate"><span class="pre">\cmd</span> <span class="pre">&lt;&gt;</span> <span class="pre">+&quot;text&quot;</span></code>. In the case where the user does
+not use <code class="docutils literal notranslate"><span class="pre">\cmd</span></code>, an error will be signaled, and <code class="docutils literal notranslate"><span class="pre">text</span></code> will appear
+in the resulting XML. If the user says <code class="docutils literal notranslate"><span class="pre">\cmd{foo}</span></code>, then <em>Tralics</em>
+remembers the use and issues no complain. Moreover, it reads the
+argument, and pushes <code class="docutils literal notranslate"><span class="pre">foo\par</span></code> in the input stream (the reason why
+<code class="docutils literal notranslate"><span class="pre">\par</span></code> is executed is to make sure that <em>Tralics</em> remains in
+vertical mode).</p>
+</dd>
+<dt>CCS</dt><dd><p>Example <code class="docutils literal notranslate"><span class="pre">\cmdd</span> <span class="pre">\cmde</span> <span class="pre">&quot;text&quot;</span></code>. The effect is the same as
+<code class="docutils literal notranslate"><span class="pre">\def\cmdd{\cmde{text}}</span></code>. However, “text” is not translated, it is
+taken verbatim.</p>
+</dd>
+<dt>AC</dt><dd><p>If you say <code class="docutils literal notranslate"><span class="pre">alias</span> <span class="pre">\foo</span></code>, then \foo is an alias for the command
+defined on the previous line.</p>
+</dd>
+<dt>E</dt><dd><p>Example: <code class="docutils literal notranslate"><span class="pre">&lt;UR&gt;</span> <span class="pre">-</span></code>. The dash after the element is required. Another
+example is: <code class="docutils literal notranslate"><span class="pre">&lt;sUR</span> <span class="pre">fr='unit�</span> <span class="pre">de</span> <span class="pre">recherche'</span> <span class="pre">en='research</span> <span class="pre">unit'&gt;</span> <span class="pre">-</span></code>.
+In this second example, we have an element named `sUR’, that has two
+attributes. The effect is to put, in the XML result, this element
+(with its attributes), and its content is a list of items declared in
+the configuration file (the list can be empty).</p>
+</dd>
+<dt>CE</dt><dd><p>The syntax is <code class="docutils literal notranslate"><span class="pre">\cmdf</span> <span class="pre">?+</span> <span class="pre">&lt;elt&gt;</span></code>. Example:
+<code class="docutils literal notranslate"><span class="pre">\sURsop</span> <span class="pre">?+</span> <span class="pre">&lt;sUR</span> <span class="pre">fr='dans</span> <span class="pre">le</span> <span class="pre">sud'&gt;</span></code>. This has as effect to define a
+command, here <code class="docutils literal notranslate"><span class="pre">\sURsop</span></code>, that takes no argument, whose effect is to
+insert, to the element <code class="docutils literal notranslate"><span class="pre">&lt;elt&gt;</span></code> (that must be defined by the
+previous rule) an empty element, whose name is <code class="docutils literal notranslate"><span class="pre">cmdf</span></code>, and that has
+the attributes of <code class="docutils literal notranslate"><span class="pre">&lt;elt&gt;</span></code>. In the example, we would get:
+<code class="docutils literal notranslate"><span class="pre">&lt;sURsop</span> <span class="pre">fr='dans</span> <span class="pre">le</span> <span class="pre">sud'/&gt;</span></code>.</p>
+</dd>
+<dt>CEE</dt><dd><p>The syntax is <code class="docutils literal notranslate"><span class="pre">\cmdg</span> <span class="pre">?</span> <span class="pre">&lt;elt&gt;</span> <span class="pre">&lt;eltx&gt;</span></code>. Same as above, but the
+element created is <code class="docutils literal notranslate"><span class="pre">&lt;eltx&gt;</span></code> instead of one named <code class="docutils literal notranslate"><span class="pre">cmdf</span></code> with the
+attributes of <code class="docutils literal notranslate"><span class="pre">&lt;elt&gt;</span></code>. Example
+<code class="docutils literal notranslate"><span class="pre">\sParis</span> <span class="pre">?&lt;sUR&gt;</span> <span class="pre">&lt;Rocq</span> <span class="pre">en='nearparis'&gt;</span></code> gives
+<code class="docutils literal notranslate"><span class="pre">&lt;Rocq</span> <span class="pre">en='nearparis'/&gt;</span></code>.</p>
+</dd>
+<dt>S</dt><dd><p>The character string is inserted verbatim in the XML tree.</p>
+</dd>
+<dt>AC</dt><dd><p>The syntax is <code class="docutils literal notranslate"><span class="pre">execute</span> <span class="pre">\cmd</span></code> or <code class="docutils literal notranslate"><span class="pre">action</span> <span class="pre">\cmd</span></code>. When <em>Tralics</em>
+sees the <code class="docutils literal notranslate"><span class="pre">\InsertTitlepage</span></code> command, it executes <code class="docutils literal notranslate"><span class="pre">\xbox{}{\cmd}</span></code>,
+this gives an XML element that is inserted in the current tree.</p>
+</dd>
+</dl>
+<p><strong>Note.</strong> Since Version 2.8, <em>Tralics</em> can produce UTF-8 output. Some
+arguments are copied verbatim from the input to the output,
+independently of this setting. The example shown above for case ‘E’
+contains the string <code class="docutils literal notranslate"><span class="pre">fr='unit�</span> <span class="pre">de</span> <span class="pre">recherche'</span></code> (see configuration file,
+line 71). If you read the file containing this string in UTF8 mode, an
+error will be signaled by <em>Tralics</em>. If you use it in UTF8 output mode,
+no error is signaled, but the result is invalid. The solution is to use
+seven bit input and character entities, like <code class="docutils literal notranslate"><span class="pre">&amp;#xe9;</span></code>. See line 332 of
+the configuration file, where this patch has been applied.</p>
+</section>
+<section id="interpreting-the-ces-item">
+<h3>4.3. Interpreting the CES item<a class="headerlink" href="#interpreting-the-ces-item" title="Link to this heading"></a></h3>
+<p>If the titlepage contains <code class="docutils literal notranslate"><span class="pre">\cmd</span> <span class="pre">?&lt;elt&gt;</span> <span class="pre">?&quot;value&quot;</span></code>, this defines a
+command <code class="docutils literal notranslate"><span class="pre">\cmd</span></code> that produces an element <code class="docutils literal notranslate"><span class="pre">&lt;elt&gt;</span></code>, with a default
+value “value”. The first question mark has to be replaced by nothing or
+one of p, q, e or E, the second by one of A, B, C or plus sign. If e or
+E is given, then an environment is defined, instead of a command.</p>
+<p>Look at the second transcript file, line
+<a class="reference external" href="titlepage-ex3.html#l649">649</a>. First, the translator sees a command;
+here it is <code class="docutils literal notranslate"><span class="pre">\lastname</span></code>, but what the translator knows is the command
+code and its subcode; no name to is attached to this command code so
+that you will see ``{(Unknown)}’’. The translator executes a piece of
+code that depends on the command code; this piece of code prints line
+<a class="reference external" href="titlepage-ex3.html#l650">650</a>, namely ``{titlepage 8}’’, where 8
+is the subcode of the command (the transcript file says, on line
+<a class="reference external" href="titlepage-ex3.html#l330">330</a>, ``Defining \lastname as
+\TitlePageCmd 8’’, so that this is coherent.) The title page data
+structure, contains for line 8, not only the name of the element to
+create, but also the name of the command. Thus, you can see on line
+<a class="reference external" href="titlepage-ex3.html#l651">651</a> the name of the command,
+``{titlepage 8=lastname}’’ and on line
+<a class="reference external" href="titlepage-ex3.html#l652">652</a> the start of the action ``{Push nom
+1}’’.</p>
+<p>The effect of <code class="docutils literal notranslate"><span class="pre">\cmd{foo}</span></code> is roughly the same as
+<code class="docutils literal notranslate"><span class="pre">\setbox8\xbox{elt}{foo}</span></code> (replace `cmd’ by the name of the command,
+`elt’ by the name of the element, and `setbox8’ by the effective
+location in the titlepage structure, this can differ slightly from the
+index of the command in the table). In the first version of <em>Tralics</em>
+the argument of the command was read, translated, and the stack was
+popped after that. As a consequence category codes were fixed once and
+for all. When you say <code class="docutils literal notranslate"><span class="pre">\setbox8=\hbox</span></code>, then TeX will execute the
+<code class="docutils literal notranslate"><span class="pre">\hbox</span></code> command, and push a special marker on the stack. When the
+closing brace of the command is found, TeX will fix the glue of the box,
+then pop its special stack, and then finish the assignment. No argument
+is read, category changes are allowed, all modifications are local to
+the group defined by the braces.</p>
+<p>In the case of a titlepage element, another special marker is put on the
+stack by <em>Tralics</em>. In general, the opening brace in <code class="docutils literal notranslate"><span class="pre">\cmd{foo}</span></code> does
+not change the grouping level (this is different from <code class="docutils literal notranslate"><span class="pre">\hbox</span></code>), so
+that the transcript file will contain:
+<code class="docutils literal notranslate"><span class="pre">+stack:</span> <span class="pre">level</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">for</span> <span class="pre">titlepage</span> <span class="pre">argument</span></code> (see transcript file, line
+<a class="reference external" href="titlepage-ex3.html#l653">653</a>). In a simple case, for instance
+<code class="docutils literal notranslate"><span class="pre">\Atitle</span></code>, the opening brace is sensed line
+<a class="reference external" href="titlepage-ex3.html#l539">539</a>, the closing brace on line
+<a class="reference external" href="titlepage-ex3.html#l547">547</a>, and this is followed by a line of the
+form ``+stack: level - 2 for titlepage argument’’. This means that the
+current level will decrease from 2 to 1, which is the bottom level (what
+you do <em>not</em> see in the current version is that the level is incremented
+by one, when the special closing brace is seen).</p>
+<p>Assume that <code class="docutils literal notranslate"><span class="pre">\cmd&#64;hook</span></code> is defined. Then <code class="docutils literal notranslate"><span class="pre">\cmd{foo}</span></code> behaves like
+<code class="docutils literal notranslate"><span class="pre">\setbox8</span> <span class="pre">\xbox{elt}</span> <span class="pre">{\cmd&#64;hook</span> <span class="pre">{foo}}</span></code>. This does not work if you use
+`cmd’ as an environment. In fact, the argument of <code class="docutils literal notranslate"><span class="pre">\foo</span></code> is read, and
+the token list <code class="docutils literal notranslate"><span class="pre">{\cmd&#64;hook</span> <span class="pre">{foo}}</span></code> is pushed back in the input stream.
+An example is given in the configuration line
+<a class="reference external" href="titlepage-conf.html#l263">263</a>. The transcript file, on line
+<a class="reference external" href="titlepage-ex3.html#l653">653</a>, shows the inserted brace, not the
+initial one; on line <a class="reference external" href="titlepage-ex3.html#l654">654</a>, you see the call
+of <code class="docutils literal notranslate"><span class="pre">\lastname&#64;hook</span></code>. On line <a class="reference external" href="titlepage-ex3.html#l657">657</a>, you
+will see ``stack: level + 3’’, this is because the hook expands to
+<code class="docutils literal notranslate"><span class="pre">\textit{#1}</span></code>, and this is the same as <code class="docutils literal notranslate"><span class="pre">{\it</span> <span class="pre">#1}</span></code>. On line
+<a class="reference external" href="titlepage-ex3.html#l660">660</a>, you see the closing brace that
+delimits the argument of the <code class="docutils literal notranslate"><span class="pre">\it</span></code> command, on line
+<a class="reference external" href="titlepage-ex3.html#l664">664</a> the closing brace of the titlepage
+command, and on line <a class="reference external" href="titlepage-ex3.html#l667">667</a> another closing
+brace (input line 7 has the form <code class="docutils literal notranslate"><span class="pre">\author{XYZ}</span></code>, the <code class="docutils literal notranslate"><span class="pre">\author</span></code>
+command command is defined to be <code class="docutils literal notranslate"><span class="pre">\relax</span></code> by the configuration file
+line <a class="reference external" href="titlepage-conf.html#l238">238</a>, the 3 items X, Y, Z are
+commands. The transcript file says, line
+<a class="reference external" href="titlepage-ex3.html#l666">666</a>: ``{Pop 1: document_v nom_t}’’. This
+means that the current element (to be popped) is a <code class="docutils literal notranslate"><span class="pre">&lt;nom&gt;</span></code> in a
+<code class="docutils literal notranslate"><span class="pre">&lt;document&gt;</span></code>.</p>
+<p>Assume that <code class="docutils literal notranslate"><span class="pre">\cmd&#64;helper</span></code> is defined. Then <code class="docutils literal notranslate"><span class="pre">\cmd{foo}</span></code> behaves like
+<code class="docutils literal notranslate"><span class="pre">\setbox25</span> <span class="pre">\xbox{elt}</span> <span class="pre">{\cmd&#64;helper</span> <span class="pre">foo}</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">\begin{cmd}foo\end{cmd}</span></code> behaves like
+<code class="docutils literal notranslate"><span class="pre">\setbox25=</span> <span class="pre">\begin{xmlelement}</span> <span class="pre">{elt}\cmd&#64;helper</span> <span class="pre">foo\end{xmlelement}</span></code>.
+More precisely: if the command is defined, it is inserted and executed.
+Braces are group delimiters. If we consider the case of `Btitle’, whose
+execution starts line <a class="reference external" href="titlepage-ex3.html#l554">554</a>, we can see line
+<a class="reference external" href="titlepage-ex3.html#l556">556</a> that the opening brace that follows is
+a special one (that leaves the level unchanged), and on line
+<a class="reference external" href="titlepage-ex3.html#l557">557</a> that the level is increased by one.
+The closing brace is seen on line <a class="reference external" href="titlepage-ex3.html#l568">568</a>, and
+line <a class="reference external" href="titlepage-ex3.html#l570">570</a> shows that the level goes down
+from 3 to 2 (as previously, you do not see it raising to 3). But you see
+the effects: on line <a class="reference external" href="titlepage-ex3.html#l569">569</a> the value of
+<code class="docutils literal notranslate"><span class="pre">\&#64;nomathml</span></code> is restored. Line <a class="reference external" href="titlepage-ex3.html#l572">572</a>
+matches line <a class="reference external" href="titlepage-ex3.html#l557">557</a>: the brace level goes
+down from 2 to 1.</p>
+<p>The situation is similar for environments. On lines
+<a class="reference external" href="titlepage-ex3.html#l805">805</a>, <a class="reference external" href="titlepage-ex3.html#l849">849</a>,
+<code class="docutils literal notranslate"><span class="pre">\begin{Aabstract}</span></code> or <code class="docutils literal notranslate"><span class="pre">\begin{Babstract}</span></code> is seen. On lines
+<a class="reference external" href="titlepage-ex3.html#l806">806</a>, <a class="reference external" href="titlepage-ex3.html#l811">811</a>
+(and similarly, <a class="reference external" href="titlepage-ex3.html#l850">850</a>,
+<a class="reference external" href="titlepage-ex3.html#l855">855</a>) we have two lines that say that the
+current level increases or is unchanged. This is independent of the
+existence of a helper or not. On line <a class="reference external" href="titlepage-ex3.html#l842">842</a>
+and <a class="reference external" href="titlepage-ex3.html#l887">887</a> we execute <code class="docutils literal notranslate"><span class="pre">\end{Aabstract}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">\end{Babstract}</span></code>. In general, this expands to <code class="docutils literal notranslate"><span class="pre">\endAabstract</span></code>. But
+this is a special case, so that, after restoring what is needed (line
+<a class="reference external" href="titlepage-ex3.html#l888">888</a> for instance), and unwinding the stack
+(line <a class="reference external" href="titlepage-ex3.html#l890">890</a>), execution resumes with popping
+the XML stack. As is the case of a non-environment, you see the level
+decrease twice, but one of them (line <a class="reference external" href="titlepage-ex3.html#l891">891</a>)
+is immediately corrected.</p>
+</section>
+<section id="interpreting-the-ces-flags">
+<h3>4.4. Interpreting the CES flags<a class="headerlink" href="#interpreting-the-ces-flags" title="Link to this heading"></a></h3>
+<p>We finish the discussion of a command defined by:
+<code class="docutils literal notranslate"><span class="pre">\cmd</span> <span class="pre">&lt;elt&gt;</span> <span class="pre">?&quot;value&quot;</span></code>, where, instead of the question mark, you can
+use one of A, B, C or plus sign. You can also say nothing. Then, if the
+command is never used, <code class="docutils literal notranslate"><span class="pre">&lt;elt&gt;value&lt;/elt&gt;</span></code> is added in proper place to
+the TPA element.</p>
+<p>On the titlepage example, lines <a class="reference external" href="titlepage-conf.html#l342">342</a>
+–<a class="reference external" href="titlepage-conf.html#l345">345</a>, we define <code class="docutils literal notranslate"><span class="pre">\cmdp</span></code>, <code class="docutils literal notranslate"><span class="pre">\cmdA</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\cmdB</span></code>, <code class="docutils literal notranslate"><span class="pre">\cmdC</span></code> in a similar fashion, but add a flag before the
+value. None of these commands is used in the TeX file (first example),
+and you can observe the following facts.</p>
+<ul class="simple">
+<li><p><em>Tralics</em> complains with: <em>Error signaled at line 35: No value given
+for command \cmdp.</em> In fact, when Tralics sees the
+<code class="docutils literal notranslate"><span class="pre">\InsertTitlepage</span></code> command, it notices that <code class="docutils literal notranslate"><span class="pre">\cmdp</span></code> has not been
+called and complains, because the plus-sign flags means: this value
+is required.</p></li>
+<li><p>In the case where the flag is one of A, B or C, then <code class="docutils literal notranslate"><span class="pre">&quot;value&quot;</span></code> is a
+LaTeX command, that will be evaluated and translated (In fact,
+<em>Tralics</em> removes the double quotes, and inserts the characters in
+one of its buffers, or converts the string into a token list that is
+appended to the input token list). The non trivial point is: when is
+the command evaluated?</p></li>
+<li><p>In the case of `A’ flag, the command is evaluated just before the
+<code class="docutils literal notranslate"><span class="pre">\documentclass{TPA}</span></code> command. It is marked <a class="reference external" href="titlepage-ex3.html#insert1">Insert
+1</a> in the transcript file. Since there
+is a second insert, <em>Tralics</em> sees the following source lines : lines
+1 to 4 (this being the <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> line), the line 1 (for line
+of some insert), then line 88 (marked <a class="reference external" href="titlepage-ex3.html#insert2">Insert
+2</a>, this is a `BeginCommands’ block,
+starting at line <a class="reference external" href="titlepage-conf.html#l87">87</a>), then lines 5, 6,
+etc. Line <a class="reference external" href="titlepage-ex3.html#insert3">5</a> is marked `A destroyed’
+so that we know that the command is evaluated before this.</p></li>
+<li><p><strong>Note:</strong> Since version 2.9, the command is evaluated <em>before</em> the
+<code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> command. See <a class="reference external" href="#inserts">explanations</a>.</p></li>
+<li><p>In the case of `B’ flag, the command is evaluated at begindocument.
+More precisely, <code class="docutils literal notranslate"><span class="pre">\AtBeginDocument{\cmdb{\cmdBval}}</span></code> is executed.
+This can been seen in the transcript file: after `Defining \cmdb’,
+there is <a class="reference external" href="titlepage-ex3.html#insert4">the line</a>
+<code class="docutils literal notranslate"><span class="pre">[1]</span> <span class="pre">\cmdb{\cmdBval}</span></code>, followed by <code class="docutils literal notranslate"><span class="pre">++</span> <span class="pre">End</span> <span class="pre">of</span> <span class="pre">virtual</span> <span class="pre">file.</span></code> This
+is a hack needed to convert the character string into a list of 4
+tokens (two braces, two commands), and this token list is fed to
+<code class="docutils literal notranslate"><span class="pre">\AtBeginDocument</span></code>.
+These tokens are stored somewhere, and executed after the
+<code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code>, the result can be seen in the log in the region
+marked `<a class="reference external" href="titlepage-ex3.html#documenthook">documenthook</a>’.</p></li>
+<li><p>In the case of `C’ flag, the command is evaluated when the TPA
+command is seen. In the transcript file is <a class="reference external" href="titlepage-ex3.html#insert5">the
+line</a> <code class="docutils literal notranslate"><span class="pre">[1]</span> <span class="pre">\cmdc{\cmdCval}</span></code>,
+followed by <code class="docutils literal notranslate"><span class="pre">++</span> <span class="pre">End</span> <span class="pre">of</span> <span class="pre">virtual</span> <span class="pre">file.</span></code> This is a hack, as above (the
+string is converted into a list of tokens, then executed).</p></li>
+</ul>
+</section>
+<section id="comments">
+<h3>4.5. Comments<a class="headerlink" href="#comments" title="Link to this heading"></a></h3>
+<p>The purpose of the CEES construction is to define a list of authors. See
+example 1, where we have four authors, each defined by a single name.
+Example 2 is more complicated, but incomplete. The idea would be the
+following: the XML file contains a <code class="docutils literal notranslate"><span class="pre">&lt;auteur&gt;</span></code> element for each author
+(the configuration file works for a single author, elements are
+hard-coded <a class="reference external" href="titlepage-conf.html#l213">l.213</a>,
+<a class="reference external" href="titlepage-conf.html#l221">l.221</a>. Authors can be divided into real
+authors and contributors, the number of them is automatically computed
+(<a class="reference external" href="titlepage-conf.html#l222">l.222</a>) and
+<a class="reference external" href="titlepage-conf.html#l223">l.223</a>). It is easy to create the
+<code class="docutils literal notranslate"><span class="pre">&lt;nombre_auteurs&gt;</span></code>: define a CES command, and do not use it, add flag
+C; then some command is evaluated at the end, when the number of authors
+is known.</p>
+<p>The source file shows a <code class="docutils literal notranslate"><span class="pre">\author</span></code> command, containing the name
+(structured via 3 commands) but not the affiliation (address, email,
+etc), that are defined elsewhere. Very often, this is given via
+footnotes, or special notes, like <code class="docutils literal notranslate"><span class="pre">\thanks</span></code>. Some people use shorthand
+notations like <code class="docutils literal notranslate"><span class="pre">{A,B}&#64;foo.bar</span></code> for <code class="docutils literal notranslate"><span class="pre">A&#64;foo.bar</span></code> and <code class="docutils literal notranslate"><span class="pre">B&#64;foo.bar</span></code>.</p>
+</section>
+<section id="special-action">
+<h3>4.6. Special action<a class="headerlink" href="#special-action" title="Link to this heading"></a></h3>
+<p>When you launch <em>Tralics</em> with the option <code class="docutils literal notranslate"><span class="pre">-tpa_status=X</span></code>, this
+controls what happens after the titlepage has been translated. If X is
+<code class="docutils literal notranslate"><span class="pre">all</span></code> (or starts with the letter `a’), then the whole document is
+translated as usual. If X is <code class="docutils literal notranslate"><span class="pre">title</span></code> (or starts with the letter `t’),
+then only the titlepage is translated. The resulting XML will contain
+the TPA element, maybe some junk, maybe the bibliography. If X is
+<code class="docutils literal notranslate"><span class="pre">config</span></code> (or starts with the letter `c’), then the result depends on
+the configuration file, more precisely on the second attribute list of
+the titlepage command (see examples lines
+<a class="reference external" href="titlepage-conf.html#l207">207</a> or
+<a class="reference external" href="titlepage-conf.html#l312">312</a>). In the case where one of the
+attributes of <code class="docutils literal notranslate"><span class="pre">att2</span></code> has the value <code class="docutils literal notranslate"><span class="pre">'only</span> <span class="pre">title</span> <span class="pre">page'</span></code>, the
+translation stops. Note that the string above contains two spaces and
+two single quotes. If you really want this string to appear in the XML,
+replace the quote by <code class="docutils literal notranslate"><span class="pre">&amp;apos;</span></code>. Any other value has the following
+meaning: compilation stops if an error was signaled, continues
+otherwise. By default, the configuration file has precedence.</p>
+<p>If translation stops after the titlepage, the bibliography is not
+inserted. Exception: if ‘translate also bibliography’ (with the quotes),
+appears in the attribute list, then the equivalent of <code class="docutils literal notranslate"><span class="pre">\nocite{*}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\bibliography{\jobname}</span></code> is executed. This has as side effect to
+insert the bibliography at the end of the document.</p>
+<p>Lines <a class="reference external" href="titlepage-conf.html#l244">244</a>,
+<a class="reference external" href="titlepage-conf.html#l245">245</a>, <a class="reference external" href="titlepage-conf.html#l246">246</a>
+of the configuration file contain the magic command <code class="docutils literal notranslate"><span class="pre">\&#64;reeavaluate</span></code>.
+When you say <code class="docutils literal notranslate"><span class="pre">\&#64;reevaluate\foo\bar{gee}</span></code>, then commands <code class="docutils literal notranslate"><span class="pre">\foo</span></code> and
+<code class="docutils literal notranslate"><span class="pre">\bar</span></code> are called with <code class="docutils literal notranslate"><span class="pre">gee</span></code> as argument, as in
+<code class="docutils literal notranslate"><span class="pre">\def\&#64;reevaluate#1#2#3{#1{#3}#2{#3}}</span></code>, but the command can change the
+category codes. A star is allowed, and the behaviour is as in
+<code class="docutils literal notranslate"><span class="pre">\def\&#64;reevaluate*#1#2#3{\begin{#1}#3\end{#1}\begin{#2}#3\end{#2}}</span></code>,
+There is an example in the transcript file line
+<a class="reference external" href="titlepage-ex3.html#l375">375</a>. We say
+<code class="docutils literal notranslate"><span class="pre">\def</span> <span class="pre">\title</span> <span class="pre">{\&#64;reevaluate</span> <span class="pre">\Atitle</span> <span class="pre">\Btitle}</span></code>. On line
+<a class="reference external" href="titlepage-ex3.html#l378">378</a> there is
+<code class="docutils literal notranslate"><span class="pre">\def\abstract</span> <span class="pre">{\&#64;reevaluate*</span> <span class="pre">{Aabstract}</span> <span class="pre">{Babstract}}</span></code>. The star form
+of the command says that we consider environments. You can see the first
+use on line <a class="reference external" href="titlepage-ex3.html#l529">529</a>.</p>
+<p>First, <em>Tralics</em> reads the optional star, then two arguments. After
+that, it reads all characters up to a closing brace, or (in the case of
+a star) the end of the environment. It can happen that some characters
+have already been read and tokenized. In this case, the token is
+converted into a character string (with a leading backslash, and a
+trailing space if the token has at least two characters, or has a single
+character that is a letter (this is independent of the category code).
+When characters are read from the buffer, the backslash character is
+considered specially: the character that follows it is normal. Otherwise
+an open brace increases the brace counter, a closing brace decreases the
+brace counter. In the case of <code class="docutils literal notranslate"><span class="pre">\&#64;reevaluate*</span></code>, parsing ends when the
+end of the environment is seen; this means that <em>Tralics</em> counts the
+number of <code class="docutils literal notranslate"><span class="pre">\begin</span></code> and <code class="docutils literal notranslate"><span class="pre">\end</span></code> at brace-level zero (the command name
+must be followed by a non-letter), and stops when there is one more
+<code class="docutils literal notranslate"><span class="pre">\end</span></code> than <code class="docutils literal notranslate"><span class="pre">\begin</span></code> (the characters in this <code class="docutils literal notranslate"><span class="pre">\end</span></code> token are not
+read).</p>
+<p>On line <a class="reference external" href="titlepage-ex3.html#l530">530</a> and following, you can see see
+the list of all these characters; they are put in a local file that has
+a two lines, first is read at <a class="reference external" href="titlepage-ex3.html#l534">l.534</a>,
+second is read at <a class="reference external" href="titlepage-ex3.html#l551">l.551</a>, end of file
+detected at <a class="reference external" href="titlepage-ex3.html#l574">l.574</a> The interesting part
+starts on line <a class="reference external" href="titlepage-ex3.html#l558">l.558</a>. Originaly, we had
+<code class="docutils literal notranslate"><span class="pre">\catcode</span> <span class="pre">`$=12</span> <span class="pre">&#64;nomathml=1</span></code>, its effect is to replace the
+math formula <code class="docutils literal notranslate"><span class="pre">$L^\infy$</span></code> by <code class="docutils literal notranslate"><span class="pre">$L^\infty</span> <span class="pre">$</span></code>. Translation is <a class="reference external" href="titlepage-ex2.html#ex2">given
+here</a>. A better solution would be to use
+<code class="docutils literal notranslate"><span class="pre">\&#64;nomathml=-1</span></code> (not category code changes!). Then the translation of
+the math formula will be <code class="docutils literal notranslate"><span class="pre">&lt;texmath</span> <span class="pre">type='inline'&gt;L^\infty</span> <span class="pre">&lt;/texmath&gt;</span></code>.
+The translation of the whole document is <a class="reference external" href="titlepage-ex2.html#ex2new">given
+here</a>.</p>
+<p>In the case where <code class="docutils literal notranslate"><span class="pre">\&#64;nomathml</span></code> is zero (normal case) or negative (as
+above), parsing a math formula produces lines like
+<a class="reference external" href="titlepage-ex3.html#l543">l.543</a> (or
+<a class="reference external" href="titlepage-ex3.html#l564">l.564</a>) because a math formula is a group,
+maybe other lines that increase of decrease the grouping level, maybe
+lines that show expansion of all local macros, followed by the
+end-of-group line, followed by the list of all tokens read (see line
+<a class="reference external" href="titlepage-ex3.html#l827">l.827</a> for a more complicated example).
+After that, the math formula is translated. You may see lines of the for
+<a class="reference external" href="titlepage-ex3.html#l829">l.829</a> whenever some tables are
+reallocated.</p>
+<p>Consider now line <a class="reference external" href="titlepage-ex3.html#l781">l.781</a> in the transcript
+file. We have the start of some environment. A new grouping level is
+created (<a class="reference external" href="titlepage-ex3.html#l784">line 784</a>), and the command
+associated to the environment is executed (<a class="reference external" href="titlepage-ex3.html#l785">line
+785</a>), and this calls the magic command
+<code class="docutils literal notranslate"><span class="pre">\&#64;reevaluate</span></code>. All sources lines, from 24 to 27 are read (only the
+first four characters of line 27 are consulted, none of them is read).
+But <em>Tralics</em> reads one token (this should be the <code class="docutils literal notranslate"><span class="pre">\end</span></code> token) and a
+sequence of characters (in the same way as the <code class="docutils literal notranslate"><span class="pre">\end</span></code> command reads is
+argument); it does not test that this sequence is the current
+environment. It closes the current environment (see lines
+<a class="reference external" href="titlepage-ex3.html#l791">791</a>, <a class="reference external" href="titlepage-ex3.html#l792">792</a>).
+After that, Tralics inserts the set of lines, of the form
+<code class="docutils literal notranslate"><span class="pre">\begin</span> <span class="pre">{cmd1}</span> <span class="pre">text</span> <span class="pre">\end{cmd1}%</span> <span class="pre">\begin{cmd2}</span>&#160; <span class="pre">text</span> <span class="pre">\end</span> <span class="pre">{cmd2}%</span></code>. As
+above, a virtual file is created. It starts at line
+<a class="reference external" href="titlepage-ex3.html#l802">802</a> and lasts until
+<a class="reference external" href="titlepage-ex3.html#l893">893</a>.</p>
+</section>
+</section>
+<section id="classes-and-packages">
+<span id="cls-clo"></span><h2>5. Classes and packages<a class="headerlink" href="#classes-and-packages" title="Link to this heading"></a></h2>
+<section id="user-configuration-file">
+<span id="insert"></span><h3>5.1 User configuration file<a class="headerlink" href="#user-configuration-file" title="Link to this heading"></a></h3>
+<p>If you compile file <code class="docutils literal notranslate"><span class="pre">foo.tex</span></code>, then <em>Tralics</em> will insert the line
+<code class="docutils literal notranslate"><span class="pre">\InputIfFileExists*{foo.ult}{}{}</span></code> just near the line with the
+documentclass declaration, if there is any. As mentioned above, there
+are other insertions, and in the transcript file, they are all <em>after</em>
+the line containing the <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code> declaration. This is wrong in
+the case where an optional argument follows the declaration on the
+following line: we cannot insert text between the command and its
+argument.</p>
+<p>In the current version, all insertions are <em>before</em> the line containing
+the <code class="docutils literal notranslate"><span class="pre">\documentclass</span></code>. The order if the following: all commands from a
+BeginCommand block in a configuration file (as Insert 2 above), then
+insertions from the titlepage (as Insert 1 above) then the
+InputIfFileExists line.</p>
+<p>The semantics of <code class="docutils literal notranslate"><span class="pre">\InputIfFileExists</span></code> is the following. an argument is
+read, here, <code class="docutils literal notranslate"><span class="pre">foo.ult</span></code>. If the file exists, it is input; moreover the
+first token list is added to the current stream, otherwise the second
+list is inserted. Here both lists are empty, so that nothing special
+happens. The star after the command has a special meaning: it says that
+the &#64; character should be of category code 11 (letter) while reading the
+file. The old category code is saved on a special stack.</p>
+<p>If the file uses the document class ‘bar’, then <code class="docutils literal notranslate"><span class="pre">bar.clt</span></code> will be
+used, and if package ‘gee’ is required, <code class="docutils literal notranslate"><span class="pre">gee.plt</span></code> will be used. The
+files <code class="docutils literal notranslate"><span class="pre">bar.clt</span></code> and <code class="docutils literal notranslate"><span class="pre">gee.plt</span></code> are looked at it the current
+directory, then in the directories specified by the <code class="docutils literal notranslate"><span class="pre">confdir</span></code> options
+to the program, then in a default directory, in the same way as tcf
+files, <a class="reference external" href="tcfpath">described here</a>. No error is signalled if one of
+these files is missing. The &#64; character has always category code 11
+(letter) while loading these files. Normally, <code class="docutils literal notranslate"><span class="pre">bar.clt</span></code> contains the
+same code as <code class="docutils literal notranslate"><span class="pre">bar.cls</span></code> (we shall explain later what is in the standard
+classes), and <code class="docutils literal notranslate"><span class="pre">gee.plt</span></code> contains the same code as <code class="docutils literal notranslate"><span class="pre">gee.sty</span></code>.</p>
+<p>In order to implement commands like <code class="docutils literal notranslate"><span class="pre">\LoadClassWithOptions</span></code>, a table
+of all packages or classes, loaded not not, is maintained somewhere. A
+global variable contains the current position in the table, it is saved
+on the stack mentioned above, set to zero when a file opens, restored
+when a file closes. A command like <code class="docutils literal notranslate"><span class="pre">\DeclareOption</span></code> adds an option to
+the current class or package. If you say <code class="docutils literal notranslate"><span class="pre">\input{baraux}</span></code>, the content
+of the file `baraux’ does not belong to the current class or package.
+In order to share options between standard classes, <em>Tralics</em> provides
+<code class="docutils literal notranslate"><span class="pre">\InputClass{baraux}</span></code>. This loads the file <code class="docutils literal notranslate"><span class="pre">baraux.clt</span></code> (found in
+the same way as <code class="docutils literal notranslate"><span class="pre">aux.clt</span></code>), but the content is added to the current
+class.</p>
+<p>The following shows a bit what happens. The transcript file has a line
+for every file whose existence is tested. The file ‘article.clt’
+identifies itself via <code class="docutils literal notranslate"><span class="pre">\ProvidesClass</span></code> line, it loads std.clt, that
+identifies itself with a <code class="docutils literal notranslate"><span class="pre">\ProvidesFile</span></code>. You can see how the integer
+cur_file_pos is restored to zero (outside class or package, or to one,
+the class). You can also see the options that are executed (in verbose
+mode, you would see the code of the options as well). The first list
+corresponds to the <code class="docutils literal notranslate"><span class="pre">\ExecuteOptions</span></code> command of the class file, the
+second to the <code class="docutils literal notranslate"><span class="pre">\ProcessOptions</span></code></p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">++</span> <span class="n">file</span> <span class="n">article</span><span class="o">.</span><span class="n">clt</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span>
+<span class="o">++</span> <span class="n">file</span> <span class="o">../</span><span class="n">confdir</span><span class="o">/</span><span class="n">article</span><span class="o">.</span><span class="n">clt</span> <span class="n">exists</span>
+<span class="o">++</span> <span class="n">Made</span> <span class="o">@</span> <span class="n">a</span> <span class="n">letter</span>
+<span class="o">++</span>  <span class="n">Opened</span> <span class="n">file</span> <span class="o">../</span><span class="n">confdir</span><span class="o">/</span><span class="n">article</span><span class="o">.</span><span class="n">clt</span><span class="p">;</span> <span class="n">it</span> <span class="n">has</span> <span class="mi">25</span> <span class="n">lines</span>
+<span class="n">Document</span> <span class="n">class</span><span class="p">:</span> <span class="n">article</span> <span class="mi">2006</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">19</span> <span class="n">v1</span><span class="mf">.0</span> <span class="n">article</span> <span class="n">document</span> <span class="k">class</span><span class="w"> </span><span class="nc">for</span> <span class="n">Tralics</span>
+<span class="o">++</span> <span class="n">file</span> <span class="n">std</span><span class="o">.</span><span class="n">clt</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span>
+<span class="o">++</span> <span class="n">file</span> <span class="o">../</span><span class="n">confdir</span><span class="o">/</span><span class="n">std</span><span class="o">.</span><span class="n">clt</span> <span class="n">exists</span>
+<span class="o">++</span> <span class="n">Made</span> <span class="o">@</span> <span class="n">a</span> <span class="n">letter</span>
+<span class="o">++</span>  <span class="n">Opened</span> <span class="n">file</span> <span class="o">../</span><span class="n">confdir</span><span class="o">/</span><span class="n">std</span><span class="o">.</span><span class="n">clt</span><span class="p">;</span> <span class="n">it</span> <span class="n">has</span> <span class="mi">51</span> <span class="n">lines</span>
+<span class="n">File</span><span class="p">:</span> <span class="n">std</span> <span class="mi">2006</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">19</span> <span class="n">v1</span><span class="mf">.0</span> <span class="n">Standard</span> <span class="n">LaTeX</span> <span class="n">document</span> <span class="n">class</span><span class="p">,</span> <span class="k">for</span> <span class="n">Tralics</span>
+<span class="o">++</span> <span class="n">End</span> <span class="n">of</span> <span class="n">file</span> <span class="o">../</span><span class="n">confdir</span><span class="o">/</span><span class="n">std</span><span class="o">.</span><span class="n">clt</span>
+<span class="o">++</span> <span class="n">cur_file_pos</span> <span class="n">restored</span> <span class="n">to</span> <span class="mi">1</span>
+<span class="p">{</span><span class="n">Options</span> <span class="n">to</span> <span class="n">execute</span><span class="o">-&gt;</span><span class="n">letterpaper</span><span class="p">,</span><span class="mi">10</span><span class="n">pt</span><span class="p">,</span><span class="n">oneside</span><span class="p">,</span><span class="n">onecolumn</span><span class="p">,</span><span class="n">final</span><span class="p">}</span>
+<span class="p">{</span><span class="n">Options</span> <span class="n">to</span> <span class="n">execute</span><span class="o">-&gt;</span><span class="p">}</span>
+<span class="o">++</span> <span class="n">End</span> <span class="n">of</span> <span class="n">file</span> <span class="o">../</span><span class="n">confdir</span><span class="o">/</span><span class="n">article</span><span class="o">.</span><span class="n">clt</span>
+<span class="o">++</span> <span class="n">cur_file_pos</span> <span class="n">restored</span> <span class="n">to</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

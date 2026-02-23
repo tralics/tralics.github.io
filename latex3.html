@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Implementation of the LaTeX3 Bundle in Tralics &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Example of the \loop command in Tralics" href="loop.html" />
+    <link rel="prev" title="Error recovery in Tralics" href="err.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Implementation of the LaTeX3 Bundle in Tralics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Implementation of the LaTeX3 Bundle in Tralics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="implementation-of-the-latex3-bundle-in-tralics">
+<h1>Implementation of the LaTeX3 Bundle in Tralics<a class="headerlink" href="#implementation-of-the-latex3-bundle-in-tralics" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This document explains the implementation of the LaTeX3 expl3.sty
+package. This consists in an extension of the C++ code, a style file
+(using normal latex syntax) and a big tex file (using latex3 syntax)
+which is expl3-code.tex minus the C++ code.</p>
+<p>A partial implementation is available in Tralics version 2.15.4.</p>
+<p>The most evident feature of LaTeX3 is that command names contain
+underscore and colon characters (no atsign) and are much more explicit.
+For instance <code class="docutils literal notranslate"><span class="pre">\&#64;ne</span></code> and <code class="docutils literal notranslate"><span class="pre">\thr&#64;&#64;</span></code> are LaTeX constants, with value one
+and three; in LaTeX3, they are named <code class="docutils literal notranslate"><span class="pre">\c_one</span></code> and <code class="docutils literal notranslate"><span class="pre">\c_three</span></code>.
+instead of <code class="docutils literal notranslate"><span class="pre">\&#64;tempboxa</span></code> and <code class="docutils literal notranslate"><span class="pre">\&#64;tempcnta</span></code> there will be
+<code class="docutils literal notranslate"><span class="pre">\l_tmpa_box</span></code> and <code class="docutils literal notranslate"><span class="pre">\g_tmpa_int</span></code>; the first one should be used for
+local assignment, the second one for global assignment. A variable of
+the form <code class="docutils literal notranslate"><span class="pre">\l_module_foo_tl</span></code> is local, defined in the module “module”,
+named “foo” and contains a token list, while <code class="docutils literal notranslate"><span class="pre">\l__module_foo_tl</span></code> is a
+private variable of that module. In the case of the kernel, the module
+part is omitted from the name.</p>
+<p>The two commands <code class="docutils literal notranslate"><span class="pre">\module_foo:nnn</span></code> and <code class="docutils literal notranslate"><span class="pre">\__module_foo:nnn</span></code> are macro
+names, respectively public and private, defined in the module; they take
+three arguments (there are three letters after the colon). The meaning
+of these letters is the following</p>
+<ul class="simple">
+<li><p>None. A command whose name ends with a colon takes no argument.
+Example: <code class="docutils literal notranslate"><span class="pre">\prg_do_nothing:</span></code> (corresponds to <code class="docutils literal notranslate"><span class="pre">\&#64;empty</span></code>, is a
+command whose expansion is void, while <code class="docutils literal notranslate"><span class="pre">\scan_stop:</span></code> is the sames
+as <code class="docutils literal notranslate"><span class="pre">\relax</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code>: Unexpanded token or braced token list. Example <code class="docutils literal notranslate"><span class="pre">\use:nn</span></code>.
+This is a command that takes two arguments, whose expansion is formed
+of these arguments. For instance <code class="docutils literal notranslate"><span class="pre">\use:nn</span> <span class="pre">{a</span> <span class="pre">b}{{c</span> <span class="pre">d}}</span></code> expands to
+<code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">b{c</span> <span class="pre">d}</span></code> (one pair of braces disappears), while <code class="docutils literal notranslate"><span class="pre">\use:nn</span> <span class="pre">a</span> <span class="pre">b</span></code>
+expands to <code class="docutils literal notranslate"><span class="pre">ab</span></code> (an argument can be preceded by an optional space).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">N</span></code>: Single token (unlike <code class="docutils literal notranslate"><span class="pre">n</span></code>, the argument must not be
+surrounded by braces). Example <code class="docutils literal notranslate"><span class="pre">\cs_if_eq:NNTF</span></code> takes for
+arguments, compares the first two, and expands to the third if the
+test is true, to the fourth otherwise. The test is done by
+<code class="docutils literal notranslate"><span class="pre">\if_meaning:w</span></code> (aka <code class="docutils literal notranslate"><span class="pre">\ifx</span></code>) that compares two tokens. It is very
+complicated to grab a single token in TeX, so, generally, all that
+matters is that the arguments consists in a single token; so
+<code class="docutils literal notranslate"><span class="pre">\cs_if_eq:NNTF</span> <span class="pre">{a}{a}</span> <span class="pre">{ok}{\bad}</span></code> expands to ok. If the first
+argument is <code class="docutils literal notranslate"><span class="pre">{ab}</span></code>, LaTeX compares a and b, and the test is false;
+if the first argument is empty, you could be in trouble. An error is
+signaled in such cases by <em>Tralics</em>. On the other hand
+<code class="docutils literal notranslate"><span class="pre">\cs_gset_eq:NN</span></code> behaves like <code class="docutils literal notranslate"><span class="pre">\global\let</span></code>. So
+<code class="docutils literal notranslate"><span class="pre">\cs_set_eq:NN</span>&#160;&#160;&#160; <span class="pre">{=}</span></code> tries to redefine the opening brace, which
+is an error (unless the opening brace is an active character, an
+unusual situation).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code>, <code class="docutils literal notranslate"><span class="pre">F</span></code>: These are special cases of <code class="docutils literal notranslate"><span class="pre">n</span></code> arguments. Example:
+<code class="docutils literal notranslate"><span class="pre">\cs_if_eq:NNTF</span></code>, <code class="docutils literal notranslate"><span class="pre">\cs_if_eq:NNT</span></code>, <code class="docutils literal notranslate"><span class="pre">\cs_if_eq:NNF</span></code> and
+<code class="docutils literal notranslate"><span class="pre">\cs_if_eq_p:NN</span></code>, are four commands that process the first two
+arguments in the same way. The command that takes only two parameters
+expand to true or false (this will be explained later on), the first
+one (with four arguments) is explained aove; the other one take three
+argument; the expansion is this argument (if the truth value matches
+the extension) and is empty otherwise. So both
+<code class="docutils literal notranslate"><span class="pre">\cs_if_eq:NNT</span> <span class="pre">aa</span> <span class="pre">{ok}</span></code> and <code class="docutils literal notranslate"><span class="pre">\cs_if_eq:NNF</span> <span class="pre">ab</span> <span class="pre">{ok}</span></code> expand to
+<code class="docutils literal notranslate"><span class="pre">ok</span></code>. The letters T and F are only used in this case.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code>: Primitive TeX parameter specification. This is used in command
+that define other commands whose arguments are not specified by a
+suffix. Example: <code class="docutils literal notranslate"><span class="pre">\cs_set_nopar:Npn</span></code> is <code class="docutils literal notranslate"><span class="pre">\def</span></code> and
+<code class="docutils literal notranslate"><span class="pre">\cs_set:Npn</span></code> behaves like <code class="docutils literal notranslate"><span class="pre">\long\def</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code>: This means that the argument syntaxis “weird” in that it does
+not follow any standard rule. Example <code class="docutils literal notranslate"><span class="pre">\if_meaning:w</span></code> cited above;
+this command reads two argument and compares them. It this executes
+the true or false code and skips the other one; this is the “weird”
+part of the syntax. LaTeX3 never defines commands with such a syntax:
+see T and F above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">D</span></code>: This means <strong>Do not use</strong>. Example <code class="docutils literal notranslate"><span class="pre">\tex_ifx:D</span></code> and
+<code class="docutils literal notranslate"><span class="pre">\tex_let:D</span></code>; these are alternate names for <code class="docutils literal notranslate"><span class="pre">\ifx</span></code> and <code class="docutils literal notranslate"><span class="pre">\let</span></code>;
+the idea is to always use macros with a colon in their name in the
+package files. The first macro is also known as <code class="docutils literal notranslate"><span class="pre">\if_meaning:w</span></code>,
+and the second is like <code class="docutils literal notranslate"><span class="pre">\cs_set_eq:NN</span></code> (the difference is that you
+can say <code class="docutils literal notranslate"><span class="pre">\let\foo=</span> <span class="pre">3</span></code> where the equals sign and the space that
+follows it are optional, and <code class="docutils literal notranslate"><span class="pre">\cs_set_eq:NN~</span> <span class="pre">3</span></code> makes the active
+character tilde behave like a space and typesets 3.</p></li>
+<li><p>Variants. For instance <code class="docutils literal notranslate"><span class="pre">\cs_set_eq:cN</span> <span class="pre">{foo}\bar</span></code> is equivalent to
+<code class="docutils literal notranslate"><span class="pre">\exp_after:wN</span> <span class="pre">\cs_set_eq:cN</span> <span class="pre">\cs:w</span> <span class="pre">foo\cs_end:\bar</span></code> or, with TeX
+syntax: <code class="docutils literal notranslate"><span class="pre">\expandafter</span> <span class="pre">\let</span> <span class="pre">\csname</span>&#160;&#160; <span class="pre">foo\endcsname=</span> <span class="pre">\bar</span></code>. In
+general a variant calls the base function (here <code class="docutils literal notranslate"><span class="pre">\cs_set_eq:NN</span></code>,
+unless optimiseed for speed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code> variant. As explained above, this means that the argument is
+processed by <code class="docutils literal notranslate"><span class="pre">\csname</span></code> (so is a command name). Example <code class="docutils literal notranslate"><span class="pre">\use:c</span></code>
+is the same as <code class="docutils literal notranslate"><span class="pre">\&#64;nameuse</span></code> it reads a sequence of tokens, fully
+expands them, converts the resulting characters into a control
+sequence name (which is the result of the expansion). If the
+expansion contains <code class="docutils literal notranslate"><span class="pre">\par</span></code>, an error is signaled; note that
+<code class="docutils literal notranslate"><span class="pre">\&#64;nameuse</span></code> signals an error is <code class="docutils literal notranslate"><span class="pre">\par</span></code> is part of the argument.
+The command <code class="docutils literal notranslate"><span class="pre">\cs_if_exist:cTF</span></code> is like <code class="docutils literal notranslate"><span class="pre">\cs_if_exist:NTF</span></code> but
+uses <code class="docutils literal notranslate"><span class="pre">\if_cs_exist:w</span></code> rather than <code class="docutils literal notranslate"><span class="pre">\if_cs_exist:N</span></code> (i.e.,
+<code class="docutils literal notranslate"><span class="pre">\ifcsname</span></code> or <code class="docutils literal notranslate"><span class="pre">\ifdefined</span></code>); the idea is to avoid filling the
+hash table with an undefined token.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> variant. Fully-expanded token or braced token list. Example
+<code class="docutils literal notranslate"><span class="pre">\iow_log:x</span></code>, which is the same as <code class="docutils literal notranslate"><span class="pre">\wlog</span></code>; it prints its
+argument in the transcript file; the expansion is done by TeX. Other
+example <code class="docutils literal notranslate"><span class="pre">\cs_set_nopar:Npx</span></code> (aka <code class="docutils literal notranslate"><span class="pre">\edef</span></code>) is the base function
+for doing full expansion. Now <code class="docutils literal notranslate"><span class="pre">\use:x{foo}</span></code> is the same as
+<code class="docutils literal notranslate"><span class="pre">\edef\tmp{foo}\tmp</span></code>. For this reason, the command is not
+expandable, and x-type arguments cannot be nested. Note that
+<code class="docutils literal notranslate"><span class="pre">\str_if_eq_x:nnTF</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">\str_if_eq:nnTF</span></code>. The idea
+here is that the pdftex function that compares two string fully
+expands them; and you have to use <code class="docutils literal notranslate"><span class="pre">\unexpanded</span></code> in order to avoid
+this expansion.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

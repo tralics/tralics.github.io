@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two examples for the Titlepage mechanism of Tralics &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Two examples for the Titlepage mechanism of Tralics" href="titlepage-ex2.html" />
+    <link rel="prev" title="Configuration of the title page" href="titlepage-conf.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Two examples for the Titlepage mechanism of Tralics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="two-examples-for-the-titlepage-mechanism-of-tralics">
+<h1>Two examples for the Titlepage mechanism of Tralics<a class="headerlink" href="#two-examples-for-the-titlepage-mechanism-of-tralics" title="Link to this heading"></a></h1>
+<p>We give here two examples of the use of a configuration file:
+<a class="reference external" href="titlepage-conf.html">config_tpa</a>. First example: put it in the file
+<code class="docutils literal notranslate"><span class="pre">tpa.tex</span></code>, and run it via <code class="docutils literal notranslate"><span class="pre">tralics</span> <span class="pre">tpa</span> <span class="pre">-configfile</span> <span class="pre">config_tpa</span></code>.
+Explanations can be found <a class="reference external" href="titlepage.html">here</a>.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\def\cmdAval{CMDA}
+\def\cmdBval{\invalid}
+\def\cmdCval{\invalid}
+\documentclass{tpa}
+\def\cmdAval{\invalid}
+\def\Title{Titlepage customisation in Tralics}
+
+
+\title{\Title}
+\author{Jos� Grimm}
+\author{Knuth}
+\myself
+\autk
+
+\Paris \URsop
+\waddress
+
+\sParis \sURsop \sURlor
+
+\begin{Eabstract}
+This is an abstract with \par some paragraphs in it\par ok ?
+\end{Eabstract}
+
+\begin{eabstract}
+This is an abstract without paragraphs in it
+\end{eabstract}
+\pabstract{Another abstract \par with \par in it}
+\abstractalias{Another abstract without par}
+
+\def\cmdBval{CMDB}
+\begin{document}
+\def\cmdBval{\invalidagain}
+
+\def\cmdCval{CMDC}
+\InsertTitlepage
+
+\end{document}
+</pre></div>
+</div>
+</div>
+<p>Second example file for the titlepage command.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\documentclass[AIF]{cedram}
+
+\begin{document}
+
+\title{Fourier coefficients for simple $L^\infty$ functions}
+\alttitle{Coefficients Fourier pour fonctions  $L^\infty$ simples}
+\author{\firstname{Donald} \middlename{E.} \lastname{Knuth}}
+
+\address{\TeX\ Users Group \\P.O. Box 869\\
+Santa Barbara, CA 93102-0869 USA}
+
+\email{d.e.knuth@somewhere.on.the.net}
+
+\subjclass{11M26,  11M36, 11S40}
+
+\keywords{simple $L^\infty$ functions, lambda function}
+
+\altkeywords{fonctions  $L^\infty$ simples, fonction lambda}
+
+\daterecieved{2004-06-14}%{14 juin 2004}
+\dateaccepted{2004-12-09}%{9 d�cembre 2004}
+
+\begin{abstract}
+  This is an abstract with a beautiful inline formula % Comment!
+  $\lambda_n(\pi) = \frac{N}{2} n \log n + C_1(\pi) n +
+   O(\sqrt{n}\log{n})$, where $C_1(\pi)$ is a real-valued constant.
+\end{abstract}
+
+
+\begin{altabstract}
+  Mon r�sum� avec ma formule
+  $\lambda_n(\pi) = \frac{N}{2} n \log n + C_1(\pi) n +
+   O(\sqrt{n}\log{n})$, o� $C_1(\pi)$ est une constante r�elle.
+\end{altabstract}
+
+\maketitle
+
+\section{Introduction}
+
+The content of the document is unimportant.
+We have a simple math formula $\alpha=\beta$
+and two references \cite{Ba03} and \cite{BPY1}
+
+
+\bibliography{bo}
+
+\end{document}
+</pre></div>
+</div>
+</div>
+<p>Bibtex file for the second example:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@Article{Ba03,
+  author =   {Barnes, E. W.},
+  title =    {On the expression of {E}uler&#39;s constant as a
+                  definite integral},
+  journal =  {Messenger of Math.},
+  year =     1903,
+  volume =   33,
+  pages =    {59--61}
+}
+
+
+@Article{BPY01,
+  author =   {P. Biane and J. Pitman and M. Yor},
+  title =    {Probability laws related to the {J}acobi $\theta$ and
+                  {R}iemann $\zeta$ functions, and {B}rownian excursions},
+  journal =  {Bull. Amer. Math. Soc.},
+  year =     2001,
+  volume =   38,
+  pages =    {435--465}
+}
+
+
+@Article{Bo99,
+  author =   {E. Bombieri},
+  title =    {Remarks on {W}eil&#39;s quadratic functional in the
+                  theory of prime numbers~{I}},
+  journal =  {Rend. Mat. Acc. Lincei, Ser.~IX},
+  year =     2000,
+  volume =   11,
+  pages =    {183--233}
+}
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
