@@ -1,0 +1,1252 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All commands, alphabetic order; letter B &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=05624691" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f416c36"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="../_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="../_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="All commands, alphabetic order; letter C" href="doc-c.html" />
+    <link rel="prev" title="All commands, alphabetic order; letter A" href="doc-a.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auxdoc.html">Font test</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">All commands, alphabetic order</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doc-a.html">All commands, alphabetic order; letter A</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">All commands, alphabetic order; letter B</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#b">\b</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backepsilon-math-symbol">\backepsilon (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backmatter">\backmatter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backprime-math-symbol">\backprime (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backsim-math-symbol">\backsim (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backsimeq-math-symbol">\backsimeq (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#backslash-math-symbol">\backslash (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#badness">\badness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bar">\bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baro-math-symbol">\baro (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#barwedge-math-symbol">\barwedge (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#barnodeconnect">\barnodeconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baselineskip-rubber-length">\baselineskip (rubber length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#baselinestretch">\baselinestretch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#batchmode">\batchmode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bauthors-beditors-tralics-command">\bauthors, \beditors (Tralics command)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bbbk">\Bbbk</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#because-math-symbol">\because (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#begin">\begin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#begintheorem">\&#64;begintheorem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beginl-beginr">\beginL, \beginR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#begingroup">\begingroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#belowdisplayshortskip-rubber-length">\belowdisplayshortskip (rubber length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#belowdisplayskip-rubber-length">\belowdisplayskip (rubber length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beqnarray-beqnarray-environments">Beqnarray, Beqnarray* (environments)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beta-math-character">\beta (math character)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beth-math-character">\beth (math character)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#between-math-symbol">\between (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bezier">\bezier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bf">\bf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bfseries">\bfseries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bgroup">\bgroup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibitem">\bibitem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibitem-empty-tralics-command">\bibitem&#64;empty (Tralics command)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibliography">\bibliography</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bibliographystyle">\bibliographystyle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#big-big-bigg-bigg">\big, \Big, \bigg, \Bigg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigl-bigl-biggl-biggl">\bigl, \Bigl, \biggl, \Biggl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigr-bigr-biggr-biggr">\bigr, \Bigr, \biggr, \Biggr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigm-bigm-biggm-biggm">\bigm, \Bigm, \biggm, \Biggm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigbox-math-symbol">\bigbox (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigbreak">\bigbreak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigcap-math-symbol">\bigcap (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigcirc-math-symbol">\bigcirc (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigcircle">\bigcircle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigcup-math-symbol">\bigcup (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigcurlyvee-math-symbol">\bigcurlyvee (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigcurlywedge-math-symbol">\bigcurlywedge (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bignplus-math-symbol">\bignplus (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#biginterleave-math-symbol">\biginterleave (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigodot-math-symbol">\bigodot (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigoplus-math-symbol">\bigoplus (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigotimes-math-symbol">\bigotimes (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigparallel-math-symbol">\bigparallel (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigskip">\bigskip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigskipamount-rubber-length">\bigskipamount (rubber length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigsqcap-math-symbol">\bigsqcap (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigsqcup-math-symbol">\bigsqcup (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigstar-math-symbol">\bigstar (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigtriangledown-math-symbol">\bigtriangledown (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigtriangleup-math-symbol">\bigtriangleup (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#biguplus-math-symbol">\biguplus (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigvee-math-symbol">\bigvee (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigwedge-math-symbol">\bigwedge (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binampersand-math-symbol">\binampersand (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bindnasrepma-math-symbol">\bindnasrepma (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binom">\binom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binoppenalty-integer-parameter">\binoppenalty (integer parameter)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blacklozenge-math-symbol">\blacklozenge (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blacksquare-math-symbol">\blacksquare (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blacktriangle-math-symbol">\blacktriangle (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blacktriangledown-math-symbol">\blacktriangledown (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blacktriangleleft-math-symbol">\blacktriangleleft (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blacktriangleright-math-symbol">\blacktriangleright (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bmod">\bmod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#body-tralics-environment">body (Tralics environment)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boolean">\boolean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bot-math-symbol">\bot (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#botfigrule">\botfigrule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#botmark">\botmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#botmarks">\botmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bottom-math-symbol">\bottom (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bottomfraction">\bottomfraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bottomnumber-counter">bottomnumber (counter)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bowtie-math-symbol">\bowtie (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#box-math-symbol">\Box (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#box">\box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxast-math-symbol">\boxast (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxbox-math-symbol">\boxbox (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxbslash-math-symbol">\boxbslash (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxcircle-math-symbol">\boxcircle (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxdot-math-symbol">\boxdot (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxed">\boxed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxempty-math-symbol">\boxempty (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxmaxdepth-rigid-length">\boxmaxdepth (rigid length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxminus-math-symbol">\boxminus (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxplus-math-symbol">\boxplus (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxslash-math-symbol">boxslash\ (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#boxtimes-math-symbol">\boxtimes (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bpers-tralics-command">\bpers (Tralics command)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bprime-math-symbol">\bprime (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brace-brack-math-construction">\brace, \brack (math construction)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bracevert-math-symbol">\bracevert (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#break">\break</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#breve">\breve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#brokenpenalty-internal-integer">\brokenpenalty (internal integer)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bumpeq-math-character">\Bumpeq (math character)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bullet-math-character">\bullet (math character)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bye">\bye</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="doc-c.html">All commands, alphabetic order; letter C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-d.html">All commands, alphabetic order; letter D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-e.html">All commands, alphabetic order; letter E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-f.html">All commands, alphabetic order; letter F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-g.html">All commands, alphabetic order; letter G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-h.html">All commands, alphabetic order; letter H</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-i.html">All commands, alphabetic order; letter I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-j.html">All commands, alphabetic order; letter J</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-k.html">All commands, alphabetic order; letter K</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-l.html">All commands, alphabetic order; letter L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-m.html">All commands, alphabetic order; letter M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-n.html">All commands, alphabetic order; letter N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-o.html">All commands, alphabetic order; letter O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-p.html">All commands, alphabetic order; letter P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-q.html">All commands, alphabetic order; letter Q</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-r.html">All commands, alphabetic order; letter R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-s.html">All commands, alphabetic order; letter S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-t.html">All commands, alphabetic order; letter T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-u.html">All commands, alphabetic order; letter U</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-v.html">All commands, alphabetic order; letter V</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-w.html">All commands, alphabetic order; letter W</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-x.html">All commands, alphabetic order; letter X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-y.html">All commands, alphabetic order; letter Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-z.html">All commands, alphabetic order; letter Z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-symbols.html">Tralics: All commands, non-letters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-unimplemented.html">All commands, alphabetic order; unimplemented</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">All commands, alphabetic order</a></li>
+      <li class="breadcrumb-item active">All commands, alphabetic order; letter B</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="all-commands-alphabetic-order-letter-b">
+<h1>All commands, alphabetic order; letter B<a class="headerlink" href="#all-commands-alphabetic-order-letter-b" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line">This page contains the description of the following commands
+<a class="reference external" href="#cmd-b">\b</a>, <a class="reference external" href="#cmd-backepsilon">\backepsilon</a>,
+<a class="reference external" href="#cmd-backmatter">\backmatter</a>, <a class="reference external" href="#cmd-backprime">\backprime</a>,
+<a class="reference external" href="#cmd-backsim">\backsim</a>, <a class="reference external" href="#cmd-backsimeq">\backsimeq</a>,
+<a class="reference external" href="#cmd-backslash">\backslash</a>, <a class="reference external" href="#cmd-badness">\badness</a>,
+<a class="reference external" href="#cmd-bar">\bar</a>, <a class="reference external" href="#cmd-barnodeconnect">\barnodeconnect</a>,
+<a class="reference external" href="#cmd-baro">\baro</a>, <a class="reference external" href="#cmd-barwedge">\barwedge</a>,
+<a class="reference external" href="#cmd-baselineskip">\baselineskip</a>,
+<a class="reference external" href="#cmd-batchmode">\batchmode</a>, <a class="reference external" href="#cmd-bauthors">\bauthors</a>,
+<a class="reference external" href="#cmd-bbbk">\Bbbk</a>, <a class="reference external" href="#cmd-because">\because</a>,
+<a class="reference external" href="#cmd-bauthors">\beditors</a>, <a class="reference external" href="#cmd-begin">\begin</a>,
+<a class="reference external" href="#cmd-begingroup">\begingroup</a>, <a class="reference external" href="#cmd-beginL">\beginL</a>,
+<a class="reference external" href="#cmd-beginL">\beginR</a>, <a class="reference external" href="#cmd-begintheorem">\&#64;begintheorem</a>,
+<a class="reference external" href="#cmd-belowdisplayskip">\belowdisplayskip</a>,
+<a class="reference external" href="#cmd-belowdisplayshortskip">\belowdisplayshortskip</a>,
+<a class="reference external" href="#cmd-beta">\beta</a>, <a class="reference external" href="#cmd-beth">\beth</a>,
+<a class="reference external" href="#cmd-between">\between</a>, <a class="reference external" href="#cmd-bezier">\bezier</a>,
+<a class="reference external" href="#cmd-bf">\bf</a>, <a class="reference external" href="#cmd-bfseries">\bfseries</a>,
+<a class="reference external" href="#cmd-bgroup">\bgroup</a>, <a class="reference external" href="#cmd-bibitem">\bibitem</a>,
+<a class="reference external" href="#cmd-bibitem-empty">\bibitem&#64;empty</a>,
+<a class="reference external" href="#cmd-bibliography">\bibliography</a>,
+<a class="reference external" href="#cmd-bibliographystyle">\bibliographystyle</a>,
+<a class="reference external" href="#cmd-big">\big</a>, <a class="reference external" href="#cmd-big">\Big</a>,
+<a class="reference external" href="#cmd-bigbox">\bigbox</a>, <a class="reference external" href="#cmd-bigbreak">\bigbreak</a>,
+<a class="reference external" href="#cmd-bigcap">\bigcap</a>, <a class="reference external" href="#cmd-bigcirc">\bigcirc</a>,
+<a class="reference external" href="#cmd-bigcircle">\bigcircle</a>, <a class="reference external" href="#cmd-bigcup">\bigcup</a>,
+<a class="reference external" href="#cmd-bigcurlyvee">\bigcurlyvee</a>,
+<a class="reference external" href="#cmd-bigcurlywedge">\bigcurlywedge</a>, <a class="reference external" href="#cmd-big">\Bigg</a>,
+<a class="reference external" href="#cmd-big">\bigg</a>, <a class="reference external" href="#cmd-bigl">\Biggl</a>,
+<a class="reference external" href="#cmd-bigl">\biggl</a>, <a class="reference external" href="#cmd-bigm">\Biggm</a>,
+<a class="reference external" href="#cmd-bigm">\biggm</a>, <a class="reference external" href="#cmd-bigr">\Biggr</a>,
+<a class="reference external" href="#cmd-bigr">\biggr</a>, <a class="reference external" href="#cmd-biginterleave">\biginterleave</a>,
+<a class="reference external" href="#cmd-bigl">\Bigl</a>, <a class="reference external" href="#cmd-bigl">\bigl</a>,
+<a class="reference external" href="#cmd-bigm">\Bigm</a>, <a class="reference external" href="#cmd-bigm">\bigm</a>,
+<a class="reference external" href="#cmd-bignplus">\bignplus</a>, <a class="reference external" href="#cmd-bigodot">\bigodot</a>,
+<a class="reference external" href="#cmd-bigoplus">\bigoplus</a>, <a class="reference external" href="#cmd-bigotimes">\bigotimes</a>,
+<a class="reference external" href="#cmd-bigparallel">\bigparallel</a>, <a class="reference external" href="#cmd-bigr">\Bigr</a>,
+<a class="reference external" href="#cmd-bigr">\bigr</a>, <a class="reference external" href="#cmd-bigskip">\bigskip</a>,
+<a class="reference external" href="#cmd-bigskipamount">\bigskipamount</a>,
+<a class="reference external" href="#cmd-bigsqcap">\bigsqcap</a>, <a class="reference external" href="#cmd-bigsqcup">\bigsqcup</a>,
+<a class="reference external" href="#cmd-bigstar">\bigstar</a>,
+<a class="reference external" href="#cmd-bigtriangledown">\bigtriangledown</a>,
+<a class="reference external" href="#cmd-bigtriangleup">\bigtriangleup</a>,
+<a class="reference external" href="#cmd-biguplus">\biguplus</a>, <a class="reference external" href="#cmd-bigvee">\bigvee</a>,
+<a class="reference external" href="#cmd-bigwedge">\bigwedge</a>,
+<a class="reference external" href="#cmd-binampersand">\binampersand</a>,
+<a class="reference external" href="#cmd-bindnasrepma">\bindnasrepma</a>, <a class="reference external" href="#cmd-binom">\binom</a>,
+<a class="reference external" href="#cmd-binoppenalty">\binoppenalty</a>,
+<a class="reference external" href="#cmd-blacklozenge">\blacklozenge</a>,
+<a class="reference external" href="#cmd-blacksquare">\blacksquare</a>,
+<a class="reference external" href="#cmd-blacktriangle">\blacktriangle</a>,
+<a class="reference external" href="#cmd-blacktriangledown">\blacktriangledown</a>,
+<a class="reference external" href="#cmd-blacktriangleleft">\blacktriangleleft</a>,
+<a class="reference external" href="#cmd-blacktriangleright">\blacktriangleright</a>,
+<a class="reference external" href="#cmd-bmod">\bmod</a>, <a class="reference external" href="doc-h.html#cmd-html">\bodytext</a>,
+<a class="reference external" href="#cmd-boolean">\boolean</a>, <a class="reference external" href="#cmd-bot">\bot</a>,
+<a class="reference external" href="#cmd-botfigrule">\botfigrule</a>, <a class="reference external" href="#cmd-botmark">\botmark</a>,
+<a class="reference external" href="#cmd-botmarks">\botmarks</a>, <a class="reference external" href="#cmd-bottom">\bottom</a>,
+<a class="reference external" href="#cmd-bottomfraction">\bottomfraction</a>,
+<a class="reference external" href="#cmd-bottomnumber">bottomnumber</a>, <a class="reference external" href="#cmd-bowtie">\bowtie</a>,
+<a class="reference external" href="#cmd-Cbox">\Box</a>, <a class="reference external" href="#cmd-box">\box</a>,
+<a class="reference external" href="#cmd-boxast">\boxast</a>, <a class="reference external" href="#cmd-boxbox">\boxbox</a>,
+<a class="reference external" href="#cmd-boxbslash">\boxbslash</a>, <a class="reference external" href="#cmd-boxcircle">\boxcircle</a>,
+<a class="reference external" href="#cmd-boxdot">\boxdot</a>, <a class="reference external" href="#cmd-boxed">\boxed</a>,
+<a class="reference external" href="#cmd-boxempty">\boxempty</a>, <a class="reference external" href="#cmd-boxmaxdepth">\boxmaxdepth</a>,
+<a class="reference external" href="#cmd-boxminus">\boxminus</a>, <a class="reference external" href="#cmd-boxplus">\boxplus</a>,
+<a class="reference external" href="#cmd-boxslash">\boxslash</a>, <a class="reference external" href="#cmd-boxtimes">\boxtimes</a>,
+<a class="reference external" href="#cmd-bpers">\bpers</a>, <a class="reference external" href="#cmd-bprime">\bprime</a>,
+<a class="reference external" href="#cmd-brace">\brace</a>, <a class="reference external" href="#cmd-bracevert">\bracevert</a>,
+<a class="reference external" href="#cmd-brace">\brack</a>, <a class="reference external" href="#cmd-break">\break</a>,
+<a class="reference external" href="#cmd-breve">\breve</a>, <a class="reference external" href="#cmd-brokenpenalty">\brokenpenalty</a>,
+<a class="reference external" href="#cmd-bullet">\bullet</a>, <a class="reference external" href="#cmd-Bumpeq">\Bumpeq</a>,
+<a class="reference external" href="#cmd-bye">\bye</a>,</div>
+<div class="line">and environments <a class="reference external" href="#env-Beqnarray">Beqnarray</a>, <a class="reference external" href="#env-body">body</a>.</div>
+</div>
+<hr class="docutils" />
+<section id="b">
+<span id="cmd-b"></span><h2>\b<a class="headerlink" href="#b" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\b</span></code> command generates a bar-under accent. The translation of</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">b</span> <span class="n">B</span> \<span class="n">b</span> <span class="n">b</span> \<span class="n">b</span> <span class="n">D</span> \<span class="n">b</span> <span class="n">d</span> \<span class="n">b</span> <span class="n">h</span> \<span class="n">b</span> <span class="n">K</span> \<span class="n">b</span> <span class="n">k</span> \<span class="n">b</span> <span class="n">L</span> \<span class="n">b</span> <span class="n">l</span>
+\<span class="n">b</span> <span class="n">N</span> \<span class="n">b</span> <span class="n">n</span> \<span class="n">b</span> <span class="n">R</span> \<span class="n">b</span> <span class="n">r</span> \<span class="n">b</span> <span class="n">T</span> \<span class="n">b</span> <span class="n">t</span> \<span class="n">b</span> <span class="n">Z</span> \<span class="n">b</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<p>is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="c1">#7686; &amp;#7687; &amp;#7694; &amp;#7695; &amp;#7830; &amp;#7732; &amp;#7733; &amp;#7738; &amp;#7739;</span>
+<span class="o">&amp;</span><span class="c1">#7752; &amp;#7753; &amp;#7774; &amp;#7775; &amp;#7790; &amp;#7791; &amp;#7828; &amp;#7829;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview: <img alt="ring below accent" class="vc" src="../_images/img_97.png" /> HTML characters Ḇ ḇ Ḏ ḏ ẖ Ḵ ḵ Ḻ ḻ Ṉ ṉ Ṟ ṟ Ṯ
+ṯ Ẕ ẕ</p>
+</section>
+<section id="backepsilon-math-symbol">
+<span id="cmd-backepsilon"></span><h2>\backepsilon (math symbol)<a class="headerlink" href="#backepsilon-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\backepsilon</span></code> command is valid only in math mode. It generates
+the reversed epsilon character <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;backepsilon;&lt;/mo&gt;</span></code> (Unicode 3F6,
+϶).</p>
+</section>
+<section id="backmatter">
+<span id="cmd-backmatter"></span><h2>\backmatter<a class="headerlink" href="#backmatter" title="Link to this heading"></a></h2>
+<p>A command to be used after the main matter in a book. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\mainmatter</span></code> &lt;doc-m.html#cmd-mainmatter&gt;`__ command.</p>
+</section>
+<section id="backprime-math-symbol">
+<span id="cmd-backprime"></span><h2>\backprime (math symbol)<a class="headerlink" href="#backprime-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\backprime</span></code> command is valid only in math mode. It generates the
+reversed prime character <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;backprime;&lt;/mo&gt;</span></code> (Unicode 2035, ‵).</p>
+</section>
+<section id="backsim-math-symbol">
+<span id="cmd-backsim"></span><h2>\backsim (math symbol)<a class="headerlink" href="#backsim-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\backsim</span></code> command is valid only in math mode. It generates the
+reversed tilde character <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;backsim;&lt;/mo&gt;</span></code> (Unicode 223D, ∽).</p>
+</section>
+<section id="backsimeq-math-symbol">
+<span id="cmd-backsimeq"></span><h2>\backsimeq (math symbol)<a class="headerlink" href="#backsimeq-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\backsimeq</span></code> command is valid only in math mode. It generates the
+reversed tilde with equals character <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;backsimeq;&lt;/mo&gt;</span></code> (Unicode
+22CD, ⋍).</p>
+</section>
+<section id="backslash-math-symbol">
+<span id="cmd-backslash"></span><h2>\backslash (math symbol)<a class="headerlink" href="#backslash-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\backslash</span></code> command gives a backslash. It is valid only in math
+mode. Use <code class="docutils literal notranslate"><span class="pre">\textbackslash</span></code> for a backslash in text mode. Translation
+is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;Backslash;&lt;/mo&gt;</span></code> (Unicode 2216, ∖). See also description of
+the <code class="docutils literal notranslate"><span class="pre">`\smallint</span></code> &lt;doc-s.html#cmd-smallint&gt;`__ command.</p>
+</section>
+<section id="badness">
+<span id="cmd-badness"></span><h2>\badness<a class="headerlink" href="#badness" title="Link to this heading"></a></h2>
+<p>In TeX, the variable <code class="docutils literal notranslate"><span class="pre">\badness</span></code> contains the badness of the last box.
+In <em>Tralics</em>, you can say <code class="docutils literal notranslate"><span class="pre">\count25=\badness</span></code> if you want to put zero
+into count register 25, or you can say <code class="docutils literal notranslate"><span class="pre">\the\badness</span></code> if you want a
+zero digit.</p>
+</section>
+<section id="bar">
+<span id="cmd-bar"></span><h2>\bar<a class="headerlink" href="#bar" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bar</span></code> command puts a bar accent over a kernel. It works only in
+math mode; use the <code class="docutils literal notranslate"><span class="pre">`\=</span></code> &lt;doc-symbols.html&gt;`__ command outside math
+mode. See also the <code class="docutils literal notranslate"><span class="pre">`\acute</span></code> &lt;doc-a.html#cmd-acute&gt;`__ command.</p>
+</section>
+<section id="baro-math-symbol">
+<span id="cmd-baro"></span><h2>\baro (math symbol)<a class="headerlink" href="#baro-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\baro</span></code> command is valid in math mode only, it translates to
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;ovbar;&lt;/mo&gt;</span></code> (Unicode 233D, ⌽), it is a vertical bar in a
+circle.</p>
+</section>
+<section id="barwedge-math-symbol">
+<span id="cmd-barwedge"></span><h2>\barwedge (math symbol)<a class="headerlink" href="#barwedge-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\barwedge</span></code> command is valid in math mode only, it translates to
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;#x22BC;&lt;/mo&gt;</span></code> (Unicode 22BC, ⊼).</p>
+</section>
+<section id="barnodeconnect">
+<span id="cmd-barnodeconnect"></span><h2>\barnodeconnect<a class="headerlink" href="#barnodeconnect" title="Link to this heading"></a></h2>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\barnodeconnect[d]{F}{T}</span></code> connects nodes F and T using a
+bar of depth d. See
+<code class="docutils literal notranslate"><span class="pre">`\abarnodeconnect</span></code> &lt;doc-a.html#cmd-abarnodeconnect&gt;`__ command for
+syntax and usage.</p>
+</section>
+<section id="baselineskip-rubber-length">
+<span id="cmd-baselineskip"></span><h2>\baselineskip (rubber length)<a class="headerlink" href="#baselineskip-rubber-length" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\baselineskip=10pt</span> <span class="pre">plus</span> <span class="pre">2pt</span> <span class="pre">minus</span> <span class="pre">3pt</span></code>. This explains to
+TeX that it should put 10pt (maybe up to 2pt more, maybe up to 3pt less)
+of glue between the baselines of two consecutive lines in a paragraph
+(this may depend on <code class="docutils literal notranslate"><span class="pre">\lineskiplimit</span></code>). Unused by <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scanglue">scanglue</a> for details of argument
+scanning).</p>
+</section>
+<section id="baselinestretch">
+<span id="cmd-baselinestretch"></span><h2>\baselinestretch<a class="headerlink" href="#baselinestretch" title="Link to this heading"></a></h2>
+<p>This commands expands to 1. (See TLC2, section 3.1.13).</p>
+</section>
+<section id="batchmode">
+<span id="cmd-batchmode"></span><h2>\batchmode<a class="headerlink" href="#batchmode" title="Link to this heading"></a></h2>
+<p>You can prefix the command <code class="docutils literal notranslate"><span class="pre">\batchmode</span></code> with <code class="docutils literal notranslate"><span class="pre">\global</span></code>. Nothing
+happens, since batch-mode is the only interaction mode.</p>
+</section>
+<section id="bauthors-beditors-tralics-command">
+<span id="cmd-bauthors"></span><h2>\bauthors, \beditors (Tralics command)<a class="headerlink" href="#bauthors-beditors-tralics-command" title="Link to this heading"></a></h2>
+<p>The two commands <code class="docutils literal notranslate"><span class="pre">\bauthors</span></code> and <code class="docutils literal notranslate"><span class="pre">\beditors</span></code> translate their
+argument, and put the result is a element of the same name. See
+<code class="docutils literal notranslate"><span class="pre">`\citation</span></code> &lt;doc-c.html#cmd-citation&gt;`__ for details. These commands
+are produced when translating the bibliography, in this case the
+argument is a list of <code class="docutils literal notranslate"><span class="pre">\bpers</span></code> commands.</p>
+</section>
+<section id="bbbk">
+<span id="cmd-bbbk"></span><h2>\Bbbk<a class="headerlink" href="#bbbk" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\Bbbk</span></code> command produces a blackboard k, it is the same as
+<code class="docutils literal notranslate"><span class="pre">\mathbb{k}</span></code>.</p>
+</section>
+<section id="because-math-symbol">
+<span id="cmd-because"></span><h2>\because (math symbol)<a class="headerlink" href="#because-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\because</span></code> command is valid in math mode only, it translates to
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;because;&lt;/mo&gt;</span></code> (Unicode U+2235, ∵).</p>
+</section>
+<section id="begin">
+<span id="cmd-begin"></span><h2>\begin<a class="headerlink" href="#begin" title="Link to this heading"></a></h2>
+<p>You can say something like
+<code class="docutils literal notranslate"><span class="pre">\begin{something}</span> <span class="pre">some</span> <span class="pre">code</span> <span class="pre">\end{thesame}</span></code>. The result of this is to
+translate the code inside a group. Moreover, some specific action is
+done at the beginning and the end of the environment. For instance
+<code class="docutils literal notranslate"><span class="pre">\something</span></code> is called first, and <code class="docutils literal notranslate"><span class="pre">\endthesame</span></code> is called at the
+end.</p>
+<p>The documentation says that <code class="docutils literal notranslate"><span class="pre">\begin{em}</span> <span class="pre">some</span> <span class="pre">code</span> <span class="pre">\end{em}</span></code> is the
+same as <code class="docutils literal notranslate"><span class="pre">{\em</span> <span class="pre">some</span> <span class="pre">code}</span></code>. Practically, this means that
+<code class="docutils literal notranslate"><span class="pre">\end{thesame}</span></code> produces nothing (in particular no error), if
+<code class="docutils literal notranslate"><span class="pre">\endthesame</span></code> is not defined.</p>
+<p>The argument to <code class="docutils literal notranslate"><span class="pre">\begin</span></code> and <code class="docutils literal notranslate"><span class="pre">\end</span></code> is converted to a command name
+via <code class="docutils literal notranslate"><span class="pre">\csname</span></code>, hence macros are expanded. If you say
+<code class="docutils literal notranslate"><span class="pre">\def\xx#1{}\begin{\xx}</span></code>, you get the following LateX error: <em>!
+Missing \endcsname inserted. &lt;to be read again&gt; \relax</em>. This is
+because the command <code class="docutils literal notranslate"><span class="pre">\xx</span></code> reads the <code class="docutils literal notranslate"><span class="pre">\endcsname</span></code> marker, and
+checking whether the environment is defined inserts a <code class="docutils literal notranslate"><span class="pre">\relax</span></code>. For
+the same example <em>Tralics</em> says <em>End of data reached while expecting
+\endcsname</em>, and in the case of <code class="docutils literal notranslate"><span class="pre">\begin{abc\par</span> <span class="pre">cde}</span></code>, the error
+reads <em>Invalid token \par found while scanning \begin</em>. No error is
+signaled in the case <code class="docutils literal notranslate"><span class="pre">\begin{abc\endcsname</span> <span class="pre">cde}</span></code>. In both these cases,
+the environment is named “abc” and the superfluous tokens <code class="docutils literal notranslate"><span class="pre">cde</span></code> are
+ignored.</p>
+<p>If you say: <code class="docutils literal notranslate"><span class="pre">\begin{\em}</span> <span class="pre">...</span> <span class="pre">\end{\em}</span></code>, LaTeX complains with <em>!
+Missing \endcsname inserted.</em> This is because <code class="docutils literal notranslate"><span class="pre">\em</span></code> is a robust
+command (one for which expansion can be delayed); it expands to
+<code class="docutils literal notranslate"><span class="pre">\protect</span></code> which cannot be expanded (the meaning of <code class="docutils literal notranslate"><span class="pre">\protect</span></code>
+depends on the context).</p>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\def\FOO{foo}</span> <span class="pre">\begin{\FOO}\end{foo}</span></code> you get the following
+error: <em>! LaTeX Error: \begin{foo} on input line 22 ended by
+\end{foo}.</em> This is because the names are different <code class="docutils literal notranslate"><span class="pre">\FOO</span></code> versus
+<code class="docutils literal notranslate"><span class="pre">foo</span></code>, and the error message is printed via <code class="docutils literal notranslate"><span class="pre">\errmessage</span></code> that
+expands everything. No error is signaled by <em>Tralics</em> in this case. Note
+the funny error for <code class="docutils literal notranslate"><span class="pre">\begin{a}\end{a}</span></code>, because <code class="docutils literal notranslate"><span class="pre">\a</span></code> tries to fetch
+an accent: <em>! LaTeX Error: Command \end unavailable in encoding T1.</em>
+Note that <code class="docutils literal notranslate"><span class="pre">\begin{}\end{}</span></code> gives infinite recursion in LaTeX, this is
+a special case in <em>Tralics</em>. The commands <code class="docutils literal notranslate"><span class="pre">\begin{group}</span> <span class="pre">\end{group}</span></code>
+give two errors: first <em>Undefined environment group</em> then <em>Extra
+\endgroup found in unclosed environment group</em>.</p>
+<p>Historical note. Before 2.13.3, only characters were allowed in an
+environment name (nothing is expanded). Since version 2.10, spaces are
+allowed in an environment name. Since version 2.14, environment names
+can have less than two letters.</p>
+<p>Environments should nest properly. What this means is unclear to me. You
+may say <code class="docutils literal notranslate"><span class="pre">\newenvironment{foo}</span> <span class="pre">{\begin{bar}}</span> <span class="pre">{\end{bar}}</span></code> followed by
+<code class="docutils literal notranslate"><span class="pre">\begin{foo}</span> <span class="pre">...</span> <span class="pre">\end{foo}</span></code>. When the <code class="docutils literal notranslate"><span class="pre">\end</span></code> command is seen, the
+current environment is `bar’ and the argument is `foo’: these names
+are not the same. However <code class="docutils literal notranslate"><span class="pre">\endfoo</span></code> will call <code class="docutils literal notranslate"><span class="pre">\end{bar}</span></code> and close
+the other environment. As a consequence, only a posteriori tests can be
+made. This makes error recovery unclear.</p>
+</section>
+<section id="begintheorem">
+<span id="cmd-begintheorem"></span><h2>\&#64;begintheorem<a class="headerlink" href="#begintheorem" title="Link to this heading"></a></h2>
+<p>Private Tralics command.</p>
+</section>
+<section id="beginl-beginr">
+<span id="cmd-beginl"></span><h2>\beginL, \beginR<a class="headerlink" href="#beginl-beginr" title="Link to this heading"></a></h2>
+<p>These commands are ε-TeX extensions that indicate the start of a
+left-to-right or right-to-left region; they are ignored by <em>Tralics</em>.</p>
+</section>
+<section id="begingroup">
+<span id="cmd-begingroup"></span><h2>\begingroup<a class="headerlink" href="#begingroup" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\begingroup</span></code> command defines a semi-simple group, that must be
+terminated by <code class="docutils literal notranslate"><span class="pre">\endgroup</span></code>. In some cases a construct like
+<code class="docutils literal notranslate"><span class="pre">\begingroup\it</span> <span class="pre">x\endgroup</span></code> is exactly the same as <code class="docutils literal notranslate"><span class="pre">{\it</span> <span class="pre">x}</span></code>, or as
+<code class="docutils literal notranslate"><span class="pre">\bgroup\it</span> <span class="pre">x\egroup</span></code>.</p>
+</section>
+<section id="belowdisplayshortskip-rubber-length">
+<span id="cmd-belowdisplayshortskip"></span><h2>\belowdisplayshortskip (rubber length)<a class="headerlink" href="#belowdisplayshortskip-rubber-length" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\belowdisplayshortskip=10pt</span> <span class="pre">plus</span> <span class="pre">2pt</span> <span class="pre">minus</span> <span class="pre">3pt</span></code>. The
+<code class="docutils literal notranslate"><span class="pre">\belowdisplayshortskip</span></code> register contains a skip value that TeX puts
+after a short display. The value is unused by <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scanglue">scanglue</a> for details of argument
+scanning). (See <code class="docutils literal notranslate"><span class="pre">`\predisplaysize</span></code> &lt;doc-p.html#cmd-predisplaysize&gt;`__
+for further details).</p>
+</section>
+<section id="belowdisplayskip-rubber-length">
+<span id="cmd-belowdisplayskip"></span><h2>\belowdisplayskip (rubber length)<a class="headerlink" href="#belowdisplayskip-rubber-length" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\belowdisplayskip=10pt</span> <span class="pre">plus</span> <span class="pre">2pt</span> <span class="pre">minus</span> <span class="pre">3pt</span></code>. The
+<code class="docutils literal notranslate"><span class="pre">\belowdisplayskip</span></code> register contains a skip value that TeX puts after
+a display. The value is unused by <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scanglue">scanglue</a> for details of argument
+scanning). (See <code class="docutils literal notranslate"><span class="pre">`\predisplaysize</span></code> &lt;doc-p.html#cmd-predisplaysize&gt;`__
+for further details).</p>
+</section>
+<section id="beqnarray-beqnarray-environments">
+<span id="env-beqnarray"></span><h2>Beqnarray, Beqnarray* (environments)<a class="headerlink" href="#beqnarray-beqnarray-environments" title="Link to this heading"></a></h2>
+<p>The fancybox package provides a variant of the <code class="docutils literal notranslate"><span class="pre">eqnarray</span></code> environment
+that can be used inside a box; the documentation provides this example:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">fbox</span><span class="p">{</span><span class="o">%</span>
+  \<span class="n">begin</span><span class="p">{</span><span class="n">Beqnarray</span><span class="o">*</span><span class="p">}</span>
+    <span class="n">x</span> <span class="o">&amp;=&amp;</span><span class="n">y</span>\\
+    <span class="n">y</span><span class="o">&amp;</span> <span class="o">&gt;&amp;</span> <span class="n">x</span>\\
+    \<span class="n">int_4</span><span class="o">^</span><span class="mi">5</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="n">dx</span> <span class="o">&amp;=&amp;</span>\<span class="n">sum_</span><span class="p">{</span><span class="n">i</span>\<span class="ow">in</span> <span class="n">F</span><span class="p">}</span> <span class="n">x_i</span>
+  \<span class="n">end</span><span class="p">{</span><span class="n">Beqnarray</span><span class="o">*</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Here is the translation. The math formula consists in a table with three
+rows, omitted here.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fbox</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;boxed&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">formula</span> <span class="n">textype</span><span class="o">=</span><span class="s1">&#39;Beqnarray*&#39;</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;display&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">math</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;display&#39;</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mtable</span> <span class="n">displaystyle</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;...&lt;/</span><span class="n">mtr</span><span class="o">&gt;&lt;</span><span class="n">mtr</span><span class="o">&gt;...&lt;/</span><span class="n">mtr</span><span class="o">&gt;&lt;</span><span class="n">mtr</span><span class="o">&gt;...&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+     <span class="o">&lt;/</span><span class="n">mtable</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">math</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">formula</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">fbox</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="beta-math-character">
+<span id="cmd-beta"></span><h2>\beta (math character)<a class="headerlink" href="#beta-math-character" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\beta</span></code> command is valid only in math mode. It generates a Greek
+letter: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;beta;&lt;/mi&gt;</span></code> (Unicode U+3B2, β) that renders like
+<img alt="$beta$" class="vc" src="../_images/img_beta.png" />. See description of the <code class="docutils literal notranslate"><span class="pre">`\alpha</span></code> &lt;doc-a.html#cmd-alpha&gt;`__
+command.</p>
+</section>
+<section id="beth-math-character">
+<span id="cmd-beth"></span><h2>\beth (math character)<a class="headerlink" href="#beth-math-character" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\beth</span></code> command is valid only in math mode. It generates a Hebrew
+letter: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;beth;&lt;/mi&gt;</span></code> (Unicode U+2136, ℶ).</p>
+</section>
+<section id="between-math-symbol">
+<span id="cmd-between"></span><h2>\between (math symbol)<a class="headerlink" href="#between-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\between</span></code> command is valid only in math mode. It generates a
+symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;between;&lt;/mi&gt;</span></code> (Unicode U+226C, ≬).</p>
+</section>
+<section id="bezier">
+<span id="cmd-bezier"></span><h2>\bezier<a class="headerlink" href="#bezier" title="Link to this heading"></a></h2>
+<p>This is like <code class="docutils literal notranslate"><span class="pre">\qbezier</span></code> but it has a first required argument instead
+of optional. See the <code class="docutils literal notranslate"><span class="pre">`\qbezier</span></code> &lt;doc-q.html#cmd-qbezier&gt;`__ command.</p>
+</section>
+<section id="bf">
+<span id="cmd-bf"></span><h2>\bf<a class="headerlink" href="#bf" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bf</span></code> command is equivalent to <code class="docutils literal notranslate"><span class="pre">\normalfont\bfseries</span></code>. In other
+words, it selects a font of roman family, bold series and upright shape.
+For an example of fonts, see <code class="docutils literal notranslate"><span class="pre">`\rm</span></code> &lt;doc-r.html#cmd-rm&gt;`__.</p>
+</section>
+<section id="bfseries">
+<span id="cmd-bfseries"></span><h2>\bfseries<a class="headerlink" href="#bfseries" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bfseries</span></code> command changes the series of the current font to a
+bold face series. For an example of fonts, see
+<code class="docutils literal notranslate"><span class="pre">`\rm</span></code> &lt;doc-r.html#cmd-rm&gt;`__.</p>
+</section>
+<section id="bgroup">
+<span id="cmd-bgroup"></span><h2>\bgroup<a class="headerlink" href="#bgroup" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bgroup</span></code> command is an open brace of catcode 1. For an example
+see <a class="reference external" href="doc-symbols.html#catcode1">catcode1</a>.</p>
+</section>
+<section id="bibitem">
+<span id="cmd-bibitem"></span><h2>\bibitem<a class="headerlink" href="#bibitem" title="Link to this heading"></a></h2>
+<p>This command takes two arguments, the first being optional. Translation
+of <code class="docutils literal notranslate"><span class="pre">\bibitem</span> <span class="pre">[toto]</span> <span class="pre">{titi}</span></code> is
+<code class="docutils literal notranslate"><span class="pre">&lt;bibitem</span> <span class="pre">id='bid17'</span> <span class="pre">bib-key='toto'/&gt;</span></code>. The element will have an id
+and a bib-key attribute that comes from the optional argument. If you
+say <code class="docutils literal notranslate"><span class="pre">\cite{titi}</span></code>, this will create a reference to this bibitem
+element. (See <code class="docutils literal notranslate"><span class="pre">`\XMLsolvecite</span></code> &lt;doc-x.html#cmd-XMLsolvecite&gt;`__ for
+more details). Note that the equivalent of <code class="docutils literal notranslate"><span class="pre">\noindent</span></code> is executed;
+this implies that a new paragraph is started. [Translation changed in
+version 2.12.1]</p>
+</section>
+<section id="bibitem-empty-tralics-command">
+<span id="cmd-bibitem-empty"></span><h2>\bibitem&#64;empty (Tralics command)<a class="headerlink" href="#bibitem-empty-tralics-command" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\bibitem&#64;empty{foo}</span></code>, this will signal an error because
+the command has been withdrawn.</p>
+</section>
+<section id="bibliography">
+<span id="cmd-bibliography"></span><h2>\bibliography<a class="headerlink" href="#bibliography" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bibliography</span></code> command takes as argument a list of file-names
+from which bibtex takes the bibliographical entries. In <em>Tralics</em>, this
+command has as side-effect to load the bibliography, i.e. the bbl file.
+In the current version, this file is created by <em>Tralics</em> and not by an
+external program.</p>
+</section>
+<section id="bibliographystyle">
+<span id="cmd-bibliographystyle"></span><h2>\bibliographystyle<a class="headerlink" href="#bibliographystyle" title="Link to this heading"></a></h2>
+<p>When you say <code class="docutils literal notranslate"><span class="pre">\bibliographystyle{alpha}</span></code>, this tells bibtex to use the
+alpha.bst file. In the current version, <em>Tralics</em> does not call bibtex,
+and the bibliography is handled, independently of the argument of this
+command. In a future version, something will be done.</p>
+</section>
+<section id="big-big-bigg-bigg">
+<span id="cmd-big"></span><h2>\big, \Big, \bigg, \Bigg<a class="headerlink" href="#big-big-bigg-bigg" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\big</span></code> declaration is valid only in math mode. It is ignored
+unless what follows is a character that can become bigger in the
+vertical dimension. In some cases, <code class="docutils literal notranslate"><span class="pre">\big</span></code> is replaced by a <code class="docutils literal notranslate"><span class="pre">\left</span></code>
+or <code class="docutils literal notranslate"><span class="pre">\right</span></code> command. Hence all four commands <code class="docutils literal notranslate"><span class="pre">\big</span> <span class="pre">\Big</span> <span class="pre">\bigg</span> <span class="pre">\Bigg</span></code>
+produce the same result. If you say <code class="docutils literal notranslate"><span class="pre">\big(</span></code>, the result is an opening
+delimiter, that can be converted into <code class="docutils literal notranslate"><span class="pre">\left(</span></code>; if you say <code class="docutils literal notranslate"><span class="pre">\bigl)</span></code>,
+the result is also an opening delimiter, because the command says so. If
+you say <code class="docutils literal notranslate"><span class="pre">\bigm)</span></code>, you get a middle delimiter, that can produce a
+<code class="docutils literal notranslate"><span class="pre">\middle(</span></code> (the <code class="docutils literal notranslate"><span class="pre">\middle</span></code> command is not yet implemented). For an
+example, see <code class="docutils literal notranslate"><span class="pre">`\mathord</span></code> &lt;doc-m.html#cmd-mathord&gt;`__.</p>
+</section>
+<section id="bigl-bigl-biggl-biggl">
+<span id="cmd-bigl"></span><h2>\bigl, \Bigl, \biggl, \Biggl<a class="headerlink" href="#bigl-bigl-biggl-biggl" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">\big</span></code> above. This is a left (opening) delimiter.</p>
+</section>
+<section id="bigr-bigr-biggr-biggr">
+<span id="cmd-bigr"></span><h2>\bigr, \Bigr, \biggr, \Biggr<a class="headerlink" href="#bigr-bigr-biggr-biggr" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">\big</span></code> above. This is a right (closing) delimiter.</p>
+</section>
+<section id="bigm-bigm-biggm-biggm">
+<span id="cmd-bigm"></span><h2>\bigm, \Bigm, \biggm, \Biggm<a class="headerlink" href="#bigm-bigm-biggm-biggm" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">\big</span></code> above. This is a middle (neither opening nor closing)
+delimiter.</p>
+</section>
+<section id="bigbox-math-symbol">
+<span id="cmd-bigbox"></span><h2>\bigbox (math symbol)<a class="headerlink" href="#bigbox-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigbox</span></code> command is valid only in math mode. It is an alias for
+<code class="docutils literal notranslate"><span class="pre">`\square</span></code> &lt;doc-s.html#cmd-square&gt;`__. Translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;square;&lt;/mo&gt;</span></code> (Unicode U+25A1, □)</p>
+</section>
+<section id="bigbreak">
+<span id="cmd-bigbreak"></span><h2>\bigbreak<a class="headerlink" href="#bigbreak" title="Link to this heading"></a></h2>
+<p>In <em>Tralics</em>, the <code class="docutils literal notranslate"><span class="pre">\bigbreak</span></code> command is the same as <code class="docutils literal notranslate"><span class="pre">\par</span></code>. In
+LaTeX, it makes also sure that the space between the two paragraphs is
+at least <code class="docutils literal notranslate"><span class="pre">\bigskipamount</span></code>, by calling <code class="docutils literal notranslate"><span class="pre">\bigskip</span></code> if necessary; not
+implemented in <em>Tralics</em>.</p>
+</section>
+<section id="bigcap-math-symbol">
+<span id="cmd-bigcap"></span><h2>\bigcap (math symbol)<a class="headerlink" href="#bigcap-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigcap</span></code> command is valid only in math mode. Its translation is a
+variable-sized symbol (used for set intersection): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigcap;&lt;/mo&gt;</span></code>
+(Unicode U+22C2, ⋂) that renders like <img alt="$bigcap$" src="../_images/img_t_bigcap.png" />. For an example see
+the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__ command.</p>
+</section>
+<section id="bigcirc-math-symbol">
+<span id="cmd-bigcirc"></span><h2>\bigcirc (math symbol)<a class="headerlink" href="#bigcirc-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigcirc</span></code> command is valid only in math mode. It generates a
+binary operator (big circle): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigcirc;&lt;/mo&gt;</span></code> (Unicode U+25EF, ◯)
+that renders like <img alt="$bigcirc$" src="../_images/img_t_bigcirc.png" />. See description of the
+<code class="docutils literal notranslate"><span class="pre">`\pm</span></code> &lt;doc-p.html#cmd-pm&gt;`__ command.</p>
+</section>
+<section id="bigcircle">
+<span id="cmd-bigcircle"></span><h2>\bigcircle<a class="headerlink" href="#bigcircle" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigcircle</span></code> command is defined by the curves package. See
+<code class="docutils literal notranslate"><span class="pre">`\arc</span></code> &lt;doc-a.html#cmd-arc&gt;`__.</p>
+</section>
+<section id="bigcup-math-symbol">
+<span id="cmd-bigcup"></span><h2>\bigcup (math symbol)<a class="headerlink" href="#bigcup-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigcup</span></code> command is valid only in math mode. Its translation is a
+variable-sized symbol (used for set union): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigcup;&lt;/mo&gt;</span></code>
+(Unicode U+22C3, ⋃) that renders like <img alt="$bigcup$" src="../_images/img_t_bigcup.png" />. For an example see
+the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__ command.</p>
+</section>
+<section id="bigcurlyvee-math-symbol">
+<span id="cmd-bigcurlyvee"></span><h2>\bigcurlyvee (math symbol)<a class="headerlink" href="#bigcurlyvee-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigcurlywedge</span></code> command is valid only in math mode. It is an
+alias to <code class="docutils literal notranslate"><span class="pre">`\curlyvee</span></code> &lt;doc-c.html#cmd-curlyvee&gt;`__.</p>
+</section>
+<section id="bigcurlywedge-math-symbol">
+<span id="cmd-bigcurlywedge"></span><h2>\bigcurlywedge (math symbol)<a class="headerlink" href="#bigcurlywedge-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigcurlywedge</span></code> command is valid only in math mode. It is an
+alias to <code class="docutils literal notranslate"><span class="pre">`\curlywedge</span></code> &lt;doc-c.html#cmd-curlywedge&gt;`__.</p>
+</section>
+<section id="bignplus-math-symbol">
+<span id="cmd-bignplus"></span><h2>\bignplus (math symbol)<a class="headerlink" href="#bignplus-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bignplus</span></code> command is valid only in math mode. It is an alias to
+<code class="docutils literal notranslate"><span class="pre">\nplus</span></code>. <strong>Note</strong> these two commands are described but not
+implemented.</p>
+</section>
+<section id="biginterleave-math-symbol">
+<span id="cmd-biginterleave"></span><h2>\biginterleave (math symbol)<a class="headerlink" href="#biginterleave-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\biginterleave</span></code> command is valid only in math mode. It is an
+alias to <code class="docutils literal notranslate"><span class="pre">`\interleave</span></code> &lt;doc-i.html#cmd-interleave&gt;`__.</p>
+</section>
+<section id="bigodot-math-symbol">
+<span id="cmd-bigodot"></span><h2>\bigodot (math symbol)<a class="headerlink" href="#bigodot-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigodot</span></code> command is valid only in math mode. Its translation is
+a variable-sized symbol (dot in a circle): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigodot;&lt;/mo&gt;</span></code>
+(Unicode U+2A00, ⨀) that renders like <img alt="$bigodot$" src="../_images/img_t_bigodot.png" />. For an example see
+the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__ command.</p>
+</section>
+<section id="bigoplus-math-symbol">
+<span id="cmd-bigoplus"></span><h2>\bigoplus (math symbol)<a class="headerlink" href="#bigoplus-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigoplus</span></code> command is valid only in math mode. Its translation is
+a variable-sized symbol (plus in a circle): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigoplus;&lt;/mo&gt;</span></code>
+(Unicode U+2A01, ⨁) that renders like <img alt="$bigoplus$" src="../_images/img_t_bigoplus.png" />. For an example see
+the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__ command.</p>
+</section>
+<section id="bigotimes-math-symbol">
+<span id="cmd-bigotimes"></span><h2>\bigotimes (math symbol)<a class="headerlink" href="#bigotimes-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigotimes</span></code> command is valid only in math mode. Its translation
+is a variable-sized symbol (times in a circle): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigotimes;&lt;/mo&gt;</span></code>
+(Unicode U+2A02, ⨂) that renders like <img alt="$bigotimes$" src="../_images/img_t_bigotimes.png" />. For an example see
+the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__ command.</p>
+</section>
+<section id="bigparallel-math-symbol">
+<span id="cmd-bigparallel"></span><h2>\bigparallel (math symbol)<a class="headerlink" href="#bigparallel-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigparallel</span></code> command is valid only in math mode. It is an alias
+to <code class="docutils literal notranslate"><span class="pre">`\parallel</span></code> &lt;doc-p.html#cmd-parallel&gt;`__.</p>
+</section>
+<section id="bigskip">
+<span id="cmd-bigskip"></span><h2>\bigskip<a class="headerlink" href="#bigskip" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigskip</span></code> command is like the
+<code class="docutils literal notranslate"><span class="pre">`\smallskip</span></code> &lt;doc-s.html#cmd-smallskip&gt;`__ command. (see also the
+<code class="docutils literal notranslate"><span class="pre">`\vskip</span></code> &lt;doc-v.html#cmd-vskip&gt;`__ command).</p>
+</section>
+<section id="bigskipamount-rubber-length">
+<span id="cmd-bigskipamount"></span><h2>\bigskipamount (rubber length)<a class="headerlink" href="#bigskipamount-rubber-length" title="Link to this heading"></a></h2>
+<p>This is defined by <em>Tralics</em> in the same way as in LaTeX, but is unused,
+see <code class="docutils literal notranslate"><span class="pre">`\smallskip</span></code> &lt;doc-s.html#cmd-small-skip&gt;`__</p>
+</section>
+<section id="bigsqcap-math-symbol">
+<span id="cmd-bigsqcap"></span><h2>\bigsqcap (math symbol)<a class="headerlink" href="#bigsqcap-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigsqcap</span></code> command is valid only in math mode. Its translation is
+a variable-sized symbol (square cap): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;sqcap;&lt;/mo&gt;</span></code> (Unicode
+U+2293, ⊓). For an example see the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__
+command.</p>
+</section>
+<section id="bigsqcup-math-symbol">
+<span id="cmd-bigsqcup"></span><h2>\bigsqcup (math symbol)<a class="headerlink" href="#bigsqcup-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigsqcup</span></code> command is valid only in math mode. Its translation is
+a variable-sized symbol (square cup): <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigsqcup;&lt;/mo&gt;</span></code> (Unicode
+U+2A06, ⨆). For an example see the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__
+command.</p>
+</section>
+<section id="bigstar-math-symbol">
+<span id="cmd-bigstar"></span><h2>\bigstar (math symbol)<a class="headerlink" href="#bigstar-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigstar</span></code> command is valid only in math mode. Its translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigstar;&lt;/mo&gt;</span></code> (Unicode U+2605, ★).</p>
+</section>
+<section id="bigtriangledown-math-symbol">
+<span id="cmd-bigtriangledown"></span><h2>\bigtriangledown (math symbol)<a class="headerlink" href="#bigtriangledown-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigtriangledown</span></code> command is valid only in math mode. It
+generates a binary operator. Looks like a reversed <code class="docutils literal notranslate"><span class="pre">\Delta</span></code>:
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigtriangledown;&lt;/mo&gt;</span></code> (Unicode U+25BD, ▽) that renders like
+<img alt="$bigtriangledown$" src="../_images/img_t_bigtriangledown.png" />. See description of the
+<code class="docutils literal notranslate"><span class="pre">`\pm</span></code> &lt;doc-p.html#cmd-pm&gt;`__ command.</p>
+</section>
+<section id="bigtriangleup-math-symbol">
+<span id="cmd-bigtriangleup"></span><h2>\bigtriangleup (math symbol)<a class="headerlink" href="#bigtriangleup-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigtriangleup</span></code> command is valid only in math mode. It generates
+a binary operator. Looks like a <code class="docutils literal notranslate"><span class="pre">\Delta</span></code>: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigtriangleup;&lt;/mo&gt;</span></code>
+(Unicode U+25B3, △) that renders like <img alt="$bigtriangleup$" src="../_images/img_t_bigtriangleup.png" />. See
+description of the <code class="docutils literal notranslate"><span class="pre">`\pm</span></code> &lt;doc-p.html#cmd-pm&gt;`__ command.</p>
+</section>
+<section id="biguplus-math-symbol">
+<span id="cmd-biguplus"></span><h2>\biguplus (math symbol)<a class="headerlink" href="#biguplus-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\biguplus</span></code> command is valid only in math mode. Its translation is
+a variable-sized symbol. It is like a plus in a cup:
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;biguplus;&lt;/mo&gt;</span></code> (Unicode U+228E, ⊎) that renders like
+<img alt="$biguplus$" src="../_images/img_t_biguplus.png" />. For an example see the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__
+command.</p>
+</section>
+<section id="bigvee-math-symbol">
+<span id="cmd-bigvee"></span><h2>\bigvee (math symbol)<a class="headerlink" href="#bigvee-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigvee</span></code> command is valid only in math mode. Its translation is a
+variable-sized symbol. It looks like a big V: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigvee;&lt;/mo&gt;</span></code>
+(Unicode U+22C1, ⋁) that renders like <img alt="$bigvee$" src="../_images/img_t_bigvee.png" />. For an example see
+the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__ command.</p>
+</section>
+<section id="bigwedge-math-symbol">
+<span id="cmd-bigwedge"></span><h2>\bigwedge (math symbol)<a class="headerlink" href="#bigwedge-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bigwedge</span></code> command is valid only in math mode. Its translation is
+a variable-sized symbol. It looks like a big reversed V:
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bigwedge;&lt;/mo&gt;</span></code> (Unicode U+22C0, ⋀) that renders like
+<img alt="bigwedge" src="../_images/img_t_bigwedge.png" />. For an example see the <code class="docutils literal notranslate"><span class="pre">`\sum</span></code> &lt;doc-s.html#cmd-sum&gt;`__
+command.</p>
+</section>
+<section id="binampersand-math-symbol">
+<span id="cmd-binampersand"></span><h2>\binampersand (math symbol)<a class="headerlink" href="#binampersand-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\binampersand</span></code> command is valid only in math mode. Its
+translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;amp;&lt;/mo&gt;</span></code>.</p>
+</section>
+<section id="bindnasrepma-math-symbol">
+<span id="cmd-bindnasrepma"></span><h2>\bindnasrepma (math symbol)<a class="headerlink" href="#bindnasrepma-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bindnasrepma</span></code> command is valid only in math mode. Its
+translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;#x214B;&lt;/mo&gt;</span></code> ⅋</p>
+</section>
+<section id="binom">
+<span id="cmd-binom"></span><h2>\binom<a class="headerlink" href="#binom" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\binom</span></code> command is valid in math mode only. It could be defined
+as <code class="docutils literal notranslate"><span class="pre">\def\binom{\genfrac()\z&#64;{}}</span></code>. The translation is a <code class="docutils literal notranslate"><span class="pre">&lt;mfence&gt;</span></code>
+element, containing a <code class="docutils literal notranslate"><span class="pre">&lt;mfrac&gt;</span></code> element. The two arguments of the
+<code class="docutils literal notranslate"><span class="pre">\binom</span></code> command are typeset one above the other, with parentheses
+around. There are two variants <code class="docutils literal notranslate"><span class="pre">\dbinom</span></code> <code class="docutils literal notranslate"><span class="pre">\tbinom</span></code> that control the
+size of the arguments. Note that <code class="docutils literal notranslate"><span class="pre">\left(\right)</span></code> produces bigger
+parentheses than <code class="docutils literal notranslate"><span class="pre">\genfrac</span></code>. Example.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\def\n{\mathchoice{a}{b}{c}{d}}
+$$\binom{\frac{\n+m}{2}} \n \quad
+\tbinom{\frac{\n+m}{2}} \n \quad
+\dbinom{\frac{\n+m}{2}} \n\qquad
+{}^{\binom{\frac{\n+m}{2}} \n \quad
+\tbinom{\frac{\n+m}{2}} \n \quad
+\dbinom{\frac{\n+m}{2}} \n}$$
+</pre></div>
+</div>
+</div>
+<p>This is the translation. Comments were not generated by <em>Tralics</em></p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;formula type=&#39;display&#39;&gt;
+ &lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+  &lt;mrow&gt;&lt;mfenced open=&#39;(&#39; close=&#39;)&#39;&gt;
+   &lt;!--\binom{\frac{\n+m}{2}} \n --&gt;
+   &lt;mfrac linethickness=&#39;0.0pt&#39;&gt;
+    &lt;mfrac&gt;
+     &lt;mrow&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+     &lt;mi&gt;b&lt;/mi&gt;
+    &lt;/mfrac&gt;
+   &lt;/mfenced&gt;
+   &lt;mspace width=&#39;1.em&#39;/&gt;
+   &lt;!--\tbinom{\frac{\n+m}{2}} \n --&gt;
+   &lt;mfenced open=&#39;(&#39; close=&#39;)&#39;&gt;
+    &lt;mstyle scriptlevel=&#39;0&#39; displaystyle=&#39;false&#39;&gt;
+     &lt;mfrac linethickness=&#39;0.0pt&#39;&gt;
+      &lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+      &lt;mi&gt;c&lt;/mi&gt;
+     &lt;/mfrac&gt;
+    &lt;/mstyle&gt;
+   &lt;/mfenced&gt;
+   &lt;mspace width=&#39;1.em&#39;/&gt;
+   &lt;!--\dbinom{\frac{\n+m}{2}} \n --&gt;
+   &lt;mfenced open=&#39;(&#39; close=&#39;)&#39;&gt;
+    &lt;mstyle scriptlevel=&#39;0&#39; displaystyle=&#39;true&#39;&gt;
+     &lt;mfrac linethickness=&#39;0.0pt&#39;&gt;
+      &lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+      &lt;mi&gt;b&lt;/mi&gt;
+     &lt;/mfrac&gt;
+    &lt;/mstyle&gt;
+   &lt;/mfenced&gt;
+   &lt;mspace width=&#39;2.em&#39;/&gt;
+   &lt;msup&gt;
+    &lt;mrow&gt;&lt;/mrow&gt;
+    &lt;mrow&gt;
+     &lt;!-- {}^\binom{\frac{\n+m}{2}} \n --&gt;
+     &lt;mfenced open=&#39;(&#39; close=&#39;)&#39;&gt;
+      &lt;mfrac linethickness=&#39;0.0pt&#39;&gt;
+       &lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+       &lt;mi&gt;d&lt;/mi&gt;
+      &lt;/mfrac&gt;
+     &lt;/mfenced&gt;
+     &lt;mspace width=&#39;1.em&#39;/&gt;
+     &lt;!-- {}^\tbinom{\frac{\n+m}{2}} \n --&gt;
+     &lt;mfenced open=&#39;(&#39; close=&#39;)&#39;&gt;
+      &lt;mstyle scriptlevel=&#39;0&#39; displaystyle=&#39;false&#39;&gt;
+       &lt;mfrac linethickness=&#39;0.0pt&#39;&gt;
+        &lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+        &lt;mi&gt;c&lt;/mi&gt;
+       &lt;/mfrac&gt;
+      &lt;/mstyle&gt;
+     &lt;/mfenced&gt;
+     &lt;mspace width=&#39;1.em&#39;/&gt;
+     &lt;!--{}^\dbinom{\frac{\n+m}{2}} \n --&gt;
+     &lt;mfenced open=&#39;(&#39; close=&#39;)&#39;&gt;
+      &lt;mstyle scriptlevel=&#39;0&#39; displaystyle=&#39;true&#39;&gt;
+       &lt;mfrac linethickness=&#39;0.0pt&#39;&gt;
+        &lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/mrow&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+        &lt;mi&gt;b&lt;/mi&gt;
+       &lt;/mfrac&gt;
+      &lt;/mstyle&gt;
+     &lt;/mfenced&gt;
+    &lt;/mrow&gt;
+   &lt;/msup&gt;
+  &lt;/mrow&gt;
+ &lt;/math&gt;
+&lt;/formula&gt;
+</pre></div>
+</div>
+</div>
+<p>Preview: <img alt="three variants of binom" src="../_images/img_55.png" /> (See also
+<a class="reference external" href="mml_ex.html#binom">here</a>).</p>
+</section>
+<section id="binoppenalty-integer-parameter">
+<span id="cmd-binoppenalty"></span><h2>\binoppenalty (integer parameter)<a class="headerlink" href="#binoppenalty-integer-parameter" title="Link to this heading"></a></h2>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\binoppenalty=26</span></code>, then TeX will use 26 as penalty for
+line break in a math formula after a binary operator (like +). This
+parameter is ignored by <em>Tralics</em> (note that, in the current
+implementation, <code class="docutils literal notranslate"><span class="pre">$a+b$</span></code> and <code class="docutils literal notranslate"><span class="pre">$a\mathrel+b$</span></code> are identically
+translated; it is hence impossible to decide whether the plus is binary
+or not). (See <a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details of
+argument scanning).</p>
+</section>
+<section id="blacklozenge-math-symbol">
+<span id="cmd-blacklozenge"></span><h2>\blacklozenge (math symbol)<a class="headerlink" href="#blacklozenge-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\blacklozenge</span></code> command is valid only in math mode. Its
+translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;blacklozenge&lt;/mo&gt;</span></code> (Unicode U+29EB, ⧫).</p>
+</section>
+<section id="blacksquare-math-symbol">
+<span id="cmd-blacksquare"></span><h2>\blacksquare (math symbol)<a class="headerlink" href="#blacksquare-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\blacksquare</span></code> command is valid only in math mode. Its translation
+is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;blacksquare;&lt;/mo&gt;</span></code> (Unicode U+25AA, ▪).</p>
+</section>
+<section id="blacktriangle-math-symbol">
+<span id="cmd-blacktriangle"></span><h2>\blacktriangle (math symbol)<a class="headerlink" href="#blacktriangle-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\blacktriangle</span></code> command is valid only in math mode. Its
+translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;blacktriangle;&lt;/mo&gt;</span></code> (Unicode U+25B4, ▴)</p>
+</section>
+<section id="blacktriangledown-math-symbol">
+<span id="cmd-blacktriangledown"></span><h2>\blacktriangledown (math symbol)<a class="headerlink" href="#blacktriangledown-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\blacktriangledown</span></code> command is valid only in math mode. Its
+translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;blacktriangledown;&lt;/mo&gt;</span></code> (Unicode U+25BE, ▾).</p>
+</section>
+<section id="blacktriangleleft-math-symbol">
+<span id="cmd-blacktriangleleft"></span><h2>\blacktriangleleft (math symbol)<a class="headerlink" href="#blacktriangleleft-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\blacktriangleleft</span></code> command is valid only in math mode. Its
+translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;blacktriangleleft;&lt;/mo&gt;</span></code> (Unicode +U25C2, ◂).</p>
+</section>
+<section id="blacktriangleright-math-symbol">
+<span id="cmd-blacktriangleright"></span><h2>\blacktriangleright (math symbol)<a class="headerlink" href="#blacktriangleright-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\blacktriangleright</span></code> command is valid only in math mode. Its
+translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;blacktriangleright;&lt;/mo&gt;</span></code> (Unicode U+25B8, ▸).</p>
+</section>
+<section id="bmod">
+<span id="cmd-bmod"></span><h2>\bmod<a class="headerlink" href="#bmod" title="Link to this heading"></a></h2>
+<p>This command is one the 4 modulo commands. Here is an example (TLC2,
+8-4-7, first half).</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
+<span class="n">u</span><span class="o">&amp;</span> \<span class="n">equiv</span> <span class="n">v</span><span class="o">+</span><span class="mi">1</span> \<span class="n">mod</span><span class="p">{</span><span class="n">n</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \\
+<span class="n">u</span><span class="o">&amp;</span> \<span class="n">equiv</span> <span class="n">v</span><span class="o">+</span><span class="mi">1</span> \<span class="n">bmod</span><span class="p">{</span><span class="n">n</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \\
+<span class="n">u</span><span class="o">&amp;</span>   <span class="o">=</span>    <span class="n">v</span><span class="o">+</span><span class="mi">1</span> \<span class="n">pmod</span><span class="p">{</span><span class="n">n</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \\
+<span class="n">u</span><span class="o">&amp;</span>   <span class="o">=</span>    <span class="n">v</span><span class="o">+</span><span class="mi">1</span> \<span class="n">pod</span><span class="p">{</span><span class="n">n</span><span class="o">^</span><span class="mi">2</span><span class="p">}</span> \\
+\<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is the translation</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">formula</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;mid1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid1&#39;</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;display&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">math</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;display&#39;</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">mtable</span> <span class="n">displaystyle</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">u</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">equiv</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">v</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;+&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;3.33333pt&#39;</span><span class="o">/&gt;&lt;</span><span class="n">mo</span> <span class="n">form</span><span class="o">=</span><span class="s1">&#39;prefix&#39;</span><span class="o">&gt;</span><span class="n">mod</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;0.277778em&#39;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">n</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">msup</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">u</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">equiv</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">v</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;+&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;0.277778em&#39;</span><span class="o">/&gt;&lt;</span><span class="n">mo</span> <span class="n">form</span><span class="o">=</span><span class="s1">&#39;prefix&#39;</span><span class="o">&gt;</span><span class="n">mod</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;0.277778em&#39;</span><span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">n</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">msup</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">u</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;=&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">v</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;+&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;10.0pt&#39;</span><span class="o">/&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mo</span> <span class="n">form</span><span class="o">=</span><span class="s1">&#39;prefix&#39;</span><span class="o">&gt;</span><span class="n">mod</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;0.277778em&#39;</span><span class="o">/&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">n</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">u</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;=&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">v</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;+&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;10.0pt&#39;</span><span class="o">/&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">n</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">mtable</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">math</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">formula</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="bmod example" src="../_images/img_121.png" />. (See also <a class="reference external" href="mml_ex.html#binom">here</a>).</p>
+</section>
+<section id="body-tralics-environment">
+<span id="env-body"></span><h2>body (Tralics environment)<a class="headerlink" href="#body-tralics-environment" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">body</span></code> environment is defined as <code class="docutils literal notranslate"><span class="pre">\newenvironment{body}{}{}</span></code> in
+versions up to 2.3 for compatibility reasons. It is now a user-defined
+environment for the raweb only. It is undefined otherwise.</p>
+</section>
+<section id="boolean">
+<span id="cmd-boolean"></span><h2>\boolean<a class="headerlink" href="#boolean" title="Link to this heading"></a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">`\newboolean</span></code> &lt;doc-n.html#cmd-newboolean&gt;`__ for how to create a
+boolean and <code class="docutils literal notranslate"><span class="pre">`\ifthenelse</span></code> &lt;doc-i.html#cmd-ifthenelse&gt;`__ for how to
+use it with the <code class="docutils literal notranslate"><span class="pre">\boolean{some-name}</span></code> command.</p>
+</section>
+<section id="bot-math-symbol">
+<span id="cmd-bot"></span><h2>\bot (math symbol)<a class="headerlink" href="#bot-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bot</span></code> command is valid only in math mode. It generates a
+miscellaneous symbol. It is like <code class="docutils literal notranslate"><span class="pre">\perp</span></code>: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bottom;&lt;/mo&gt;</span></code>
+(Unicode U+22A5, ⊥) that renders like <img alt="$bot$" src="../_images/img_other_bottom.png" />. See description of the
+<code class="docutils literal notranslate"><span class="pre">`\ldots</span></code> &lt;doc-l.html#cmd-ldots&gt;`__ command.</p>
+</section>
+<section id="botfigrule">
+<span id="cmd-botfigrule"></span><h2>\botfigrule<a class="headerlink" href="#botfigrule" title="Link to this heading"></a></h2>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\botfigrule</span></code> behaves like <code class="docutils literal notranslate"><span class="pre">\relax</span></code>, in LaTeX it can be
+redefined to produce a rule between a float and text that precedes.</p>
+</section>
+<section id="botmark">
+<span id="cmd-botmark"></span><h2>\botmark<a class="headerlink" href="#botmark" title="Link to this heading"></a></h2>
+<p>In <code class="docutils literal notranslate"><span class="pre">\botmark</span></code> is the mark text most recently encountered on the page
+that was just boxed. Since <em>Tralics</em> does not box pages, the expansion
+of <code class="docutils literal notranslate"><span class="pre">\botmark</span></code> is always empty.</p>
+</section>
+<section id="botmarks">
+<span id="cmd-botmarks"></span><h2>\botmarks<a class="headerlink" href="#botmarks" title="Link to this heading"></a></h2>
+<p>This is an extension introduced by ε-TeX; an integer is read, expansion
+is empty. See <code class="docutils literal notranslate"><span class="pre">`\splitbotmark</span></code> &lt;doc-s.html#cmd-splitbotmark&gt;`__.</p>
+</section>
+<section id="bottom-math-symbol">
+<span id="cmd-bottom"></span><h2>\bottom (math symbol)<a class="headerlink" href="#bottom-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bottom</span></code> command is an alias for <code class="docutils literal notranslate"><span class="pre">\bot</span></code> <img alt="$bottom$" src="../_images/img_other_bottom.png" />.</p>
+</section>
+<section id="bottomfraction">
+<span id="cmd-bottomfraction"></span><h2>\bottomfraction<a class="headerlink" href="#bottomfraction" title="Link to this heading"></a></h2>
+<p>Maximum fraction of a page that can be occupied by floats at the bottom.
+Unused by <em>Tralics</em>. See <code class="docutils literal notranslate"><span class="pre">`\intextsep</span></code> &lt;doc-i.html#cmd-intextsep&gt;`__.</p>
+</section>
+<section id="bottomnumber-counter">
+<span id="cmd-bottomnumber"></span><h2>bottomnumber (counter)<a class="headerlink" href="#bottomnumber-counter" title="Link to this heading"></a></h2>
+<p>Maximum number of floats at the bottom of a page. Unused by <em>Tralics</em>.
+See <code class="docutils literal notranslate"><span class="pre">`\intextsep</span></code> &lt;doc-i.html#cmd-intextsep&gt;`__.</p>
+</section>
+<section id="bowtie-math-symbol">
+<span id="cmd-bowtie"></span><h2>\bowtie (math symbol)<a class="headerlink" href="#bowtie-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bowtie</span></code> command is valid only in math mode. It generates a
+relation symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bowtie;&lt;/mo&gt;</span></code> (Unicode U+22C8,⋈) that renders
+like See description of the <code class="docutils literal notranslate"><span class="pre">`\le</span></code> &lt;doc-l.html#cmd-le&gt;`__ command.
+<img alt="$bowtie$" src="../_images/img_t_bowtie.png" /></p>
+</section>
+<section id="box-math-symbol">
+<span id="cmd-cbox"></span><h2>\Box (math symbol)<a class="headerlink" href="#box-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\Box</span></code> command is valid only in math mode. It generates a square
+box <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;25A1;&lt;/mo&gt;</span></code>. There is the image of <code class="docutils literal notranslate"><span class="pre">x\Box</span></code> <img alt="$xBox$" src="../_images/img_119.png" />.</p>
+</section>
+<section id="box">
+<span id="cmd-box"></span><h2>\box<a class="headerlink" href="#box" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\box</span></code> command reads an integer N (a small number between 0 and
+255, see <a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details), and returns
+the content of the box number N. After that, the box is emptied (the
+<code class="docutils literal notranslate"><span class="pre">\copy</span></code> command behaves in the same fashion, but leaves the box
+unchanged). Example</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\setbox12=\xbox{foo}{ok}
+\count3=12
+\copy12 , and \copy 12 , and \box \count3 , and \box 12!
+</pre></div>
+</div>
+</div>
+<p>Translation</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;foo&gt;ok&lt;/foo&gt;, and &lt;foo&gt;ok&lt;/foo&gt;, and &lt;foo&gt;ok&lt;/foo&gt;, and !
+</pre></div>
+</div>
+</div>
+</section>
+<section id="boxast-math-symbol">
+<span id="cmd-boxast"></span><h2>\boxast (math symbol)<a class="headerlink" href="#boxast-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxast</span></code> command is valid only in math mode. It generates a box
+with asterisk <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;#x29C6;&lt;/mo&gt;</span></code> (Unicode U+29C6, ⧆).</p>
+</section>
+<section id="boxbox-math-symbol">
+<span id="cmd-boxbox"></span><h2>\boxbox (math symbol)<a class="headerlink" href="#boxbox-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxbox</span></code> command is valid only in math mode. It generates a box
+with a box <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;29C8;&lt;/mo&gt;</span></code> (Unicode U+29C8, ⧈).</p>
+</section>
+<section id="boxbslash-math-symbol">
+<span id="cmd-boxbslash"></span><h2>\boxbslash (math symbol)<a class="headerlink" href="#boxbslash-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxbslash</span></code> command is valid only in math mode. It generates a
+box with a backslash <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bsolb;&lt;/mo&gt;</span></code> (Unicode U+29C5, ⧅).</p>
+</section>
+<section id="boxcircle-math-symbol">
+<span id="cmd-boxcircle"></span><h2>\boxcircle (math symbol)<a class="headerlink" href="#boxcircle-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxcircle</span></code> command is valid only in math mode. It generates a
+box with <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;#x29C7;&lt;/mo&gt;</span></code> (Unicode U+29C7, ⧇).</p>
+</section>
+<section id="boxdot-math-symbol">
+<span id="cmd-boxdot"></span><h2>\boxdot (math symbol)<a class="headerlink" href="#boxdot-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxdot</span></code> command is valid only in math mode. It generates a box
+with a dot <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;dotsquare;&lt;/mo&gt;</span></code> (Unicode U+22A1, ⊡).</p>
+</section>
+<section id="boxed">
+<span id="cmd-boxed"></span><h2>\boxed<a class="headerlink" href="#boxed" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxed</span></code> command is valid only in math mode. It takes an argument,
+and puts a frame around it (like <code class="docutils literal notranslate"><span class="pre">fbox</span></code> in text mode); as the example
+below shows, the argument is put in a cell of a table, and the table has
+a frame attribute. (See also <a class="reference external" href="mml_ex.html#binom">here</a>).</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">mtable</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="o">&gt;&lt;</span><span class="n">mtr</span><span class="o">&gt;&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;&lt;/</span><span class="n">mtr</span><span class="o">&gt;&lt;/</span><span class="n">mtable</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="boxempty-math-symbol">
+<span id="cmd-boxempty"></span><h2>\boxempty (math symbol)<a class="headerlink" href="#boxempty-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxempty</span></code> command is valid only in math mode. It generates an
+empty box. It is an alias for <code class="docutils literal notranslate"><span class="pre">`\square</span></code> &lt;doc-s.html#cmd-square&gt;`__.
+Translation is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;square;&lt;/mo&gt;</span></code> (Unicode U+25A1, □).</p>
+</section>
+<section id="boxmaxdepth-rigid-length">
+<span id="cmd-boxmaxdepth"></span><h2>\boxmaxdepth (rigid length)<a class="headerlink" href="#boxmaxdepth-rigid-length" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\boxmaxdepth=1.5in</span></code>, as a result TeX will make sure that
+each vbox on a page has a depth not exceeding 1.5in (by shifting it up
+if necessary). Ignored by <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scandimen">scandimen</a> for details of argument
+scanning).</p>
+</section>
+<section id="boxminus-math-symbol">
+<span id="cmd-boxminus"></span><h2>\boxminus (math symbol)<a class="headerlink" href="#boxminus-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxminus</span></code> command is valid only in math mode. It generates a box
+with a minus sign <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;boxminus;&lt;/mo&gt;</span></code> (Unicode U+229F, ⊟).</p>
+</section>
+<section id="boxplus-math-symbol">
+<span id="cmd-boxplus"></span><h2>\boxplus (math symbol)<a class="headerlink" href="#boxplus-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxplus</span></code> command is valid only in math mode. It generates a box
+with a plus sign <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;boxplus;&lt;/mo&gt;</span></code> (Unicode U+229E, ⊞).</p>
+</section>
+<section id="boxslash-math-symbol">
+<span id="cmd-boxslash"></span><h2>boxslash\ (math symbol)<a class="headerlink" href="#boxslash-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxslash</span></code> command is valid only in math mode. It generates a box
+with slash <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;solb;&lt;/mo&gt;</span></code> (Unicode U+29C4, ⧄).</p>
+</section>
+<section id="boxtimes-math-symbol">
+<span id="cmd-boxtimes"></span><h2>\boxtimes (math symbol)<a class="headerlink" href="#boxtimes-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\boxtimes</span></code> command is valid only in math mode. It generates a box
+with product sign <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;boxtimes;&lt;/mo&gt;</span></code> (Unicode U+22A0, ⊠).</p>
+</section>
+<section id="bpers-tralics-command">
+<span id="cmd-bpers"></span><h2>\bpers (Tralics command)<a class="headerlink" href="#bpers-tralics-command" title="Link to this heading"></a></h2>
+<p>This command is used for an author or editor in a bibliography. It takes
+one optional and four required arguments (first name, initials,
+particle, last name, junior name). For an example, see
+<code class="docutils literal notranslate"><span class="pre">`\citation</span></code> &lt;doc-c.html#cmd-citation&gt;`__. Here the arguments of the
+command are <code class="docutils literal notranslate"><span class="pre">\bpers[David]{D.}{}{Carlisle}{}</span></code>, from the database value
+‘David Carlisle’. The translation is a <code class="docutils literal notranslate"><span class="pre">&lt;bpers&gt;</span></code> element, with five
+attributes (in the case of particle and junior, no attribute is created
+if the field is empty, so that the effective number of attributes is
+between three and five). An example is
+<code class="docutils literal notranslate"><span class="pre">&lt;bpers</span> <span class="pre">prenom='D.'</span>&#160; <span class="pre">nom='Carlisle'</span> <span class="pre">prenomcomplet='David'/&gt;</span></code>.</p>
+</section>
+<section id="bprime-math-symbol">
+<span id="cmd-bprime"></span><h2>\bprime (math symbol)<a class="headerlink" href="#bprime-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bprime</span></code> command is valid only in math mode. It generates
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bprime;&lt;/mo&gt;</span></code> (Unicode U+2035).</p>
+</section>
+<section id="brace-brack-math-construction">
+<span id="cmd-brace"></span><h2>\brace, \brack (math construction)<a class="headerlink" href="#brace-brack-math-construction" title="Link to this heading"></a></h2>
+<p>Instead of <code class="docutils literal notranslate"><span class="pre">{a\brace</span> <span class="pre">b}</span></code> or <code class="docutils literal notranslate"><span class="pre">{a\brack</span> <span class="pre">b}</span></code> you should use
+<code class="docutils literal notranslate"><span class="pre">\genfrac\{\}{0pt}{}{a}{b}</span></code> and <code class="docutils literal notranslate"><span class="pre">\genfrac[]{0pt}{}{a}{b}</span></code>.</p>
+</section>
+<section id="bracevert-math-symbol">
+<span id="cmd-bracevert"></span><h2>\bracevert (math symbol)<a class="headerlink" href="#bracevert-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bracevert</span></code> command is valid only in math mode. It is an alias
+for <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__.</p>
+</section>
+<section id="break">
+<span id="cmd-break"></span><h2>\break<a class="headerlink" href="#break" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\break</span></code> command is ignored. It is <code class="docutils literal notranslate"><span class="pre">\penalty-10000</span></code> in LaTeX.</p>
+</section>
+<section id="breve">
+<span id="cmd-breve"></span><h2>\breve<a class="headerlink" href="#breve" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\breve</span></code> command puts a breve accent over a kernel. It works only
+in math mode. See also the <code class="docutils literal notranslate"><span class="pre">`\acute</span></code> &lt;doc-a.html#cmd-acute&gt;`__
+command.</p>
+</section>
+<section id="brokenpenalty-internal-integer">
+<span id="cmd-brokenpenalty"></span><h2>\brokenpenalty (internal integer)<a class="headerlink" href="#brokenpenalty-internal-integer" title="Link to this heading"></a></h2>
+<p>When you say <code class="docutils literal notranslate"><span class="pre">\brokenpenalty=98</span></code>, then TeX will use 98 as penalty for
+a page break at a discretionary break (case where a word is broken, the
+two parts being on two different pages). Unused by <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details of argument scanning).</p>
+</section>
+<section id="bumpeq-math-character">
+<span id="cmd-bumpeq"></span><h2>\Bumpeq (math character)<a class="headerlink" href="#bumpeq-math-character" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\Bumpeq</span></code> command is valid only in math mode. It generates
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;Bumpeq;&lt;/mo&gt;</span></code> (Unicode U+224E, ≎).</p>
+</section>
+<section id="bullet-math-character">
+<span id="cmd-bullet"></span><h2>\bullet (math character)<a class="headerlink" href="#bullet-math-character" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\bullet</span></code> command is valid only in math mode. It generates a
+binary operator: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;bullet;&lt;/mo&gt;</span></code> (Unicde U+2022, •) See
+description of the <code class="docutils literal notranslate"><span class="pre">`\pm</span></code> &lt;doc-p.html#cmd-pm&gt;`__ command.</p>
+</section>
+<section id="bye">
+<span id="cmd-bye"></span><h2>\bye<a class="headerlink" href="#bye" title="Link to this heading"></a></h2>
+<p>This is defined in PlainTeX as : <code class="docutils literal notranslate"><span class="pre">\par</span> <span class="pre">\vfill</span> <span class="pre">\supereject</span> <span class="pre">\end</span></code>. In
+<em>Tralics</em>, we make it equivalent to <code class="docutils literal notranslate"><span class="pre">\endinput</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

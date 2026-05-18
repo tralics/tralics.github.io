@@ -1,0 +1,1018 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parts of the raweb-cfg file &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Font test" href="auxdoc.html" />
+    <link rel="prev" title="RAWeb examples" href="raweb_examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Parts of the raweb-cfg file</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ampersand-hacks">Ampersand hacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands-added-for-efficiency">Commands added for efficiency.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands-modified-for-efficiency">Commands modified for efficiency.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#string-declarations-of-the-form-jg-xxx">String declarations (of the form jg&#64;xxx)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#string-declarations-of-the-form-att-xxx">String declarations (of the form att&#64;xxx)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hacking-function-for-accent-over">Hacking function for accent-over</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hacking-function-for-accent-under">Hacking function for accent-under</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unused-implementatin-of-frac">Unused implementatin of frac.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hack-item">hack \item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hack-fonormalblock">hack \FONormalBlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hack-open-fence">hack open fence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hack-close-fence">hack close fence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#all-chars">All chars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#more-chars">More chars</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Parts of the raweb-cfg file</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parts-of-the-raweb-cfg-file">
+<h1>Parts of the raweb-cfg file<a class="headerlink" href="#parts-of-the-raweb-cfg-file" title="Link to this heading"></a></h1>
+<section id="ampersand-hacks">
+<h2>Ampersand hacks<a class="headerlink" href="#ampersand-hacks" title="Link to this heading"></a></h2>
+<p>The intend of this code is for insertion of &amp; in an URL. Only the x260A
+line is used.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">expandafter</span>\<span class="n">def</span>\<span class="n">csname</span> <span class="n">grimmentitiesx26</span>\<span class="n">endcsname</span><span class="p">{</span>\<span class="n">string</span><span class="o">&amp;</span><span class="p">}</span>
+\<span class="n">expandafter</span>\<span class="n">def</span>\<span class="n">csname</span> <span class="n">grimmentities38</span>\<span class="n">endcsname</span><span class="p">{</span>\<span class="n">string</span><span class="o">&amp;</span><span class="p">}</span>
+\<span class="n">expandafter</span>\<span class="n">def</span>\<span class="n">csname</span> <span class="n">grimmentities9738</span>\<span class="n">endcsname</span><span class="p">{</span>\<span class="n">string</span><span class="o">&amp;</span><span class="p">}</span>
+\<span class="n">expandafter</span>\<span class="n">def</span>\<span class="n">csname</span> <span class="n">grimmentitiesx260A</span>\<span class="n">endcsname</span><span class="p">{</span>\<span class="n">string</span><span class="o">&amp;</span><span class="p">}</span>
+\<span class="n">expandafter</span>\<span class="n">def</span>\<span class="n">csname</span> <span class="n">grimmentities</span> <span class="n">amp</span>\<span class="n">endcsname</span><span class="p">{</span>\<span class="n">string</span><span class="o">&amp;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="commands-added-for-efficiency">
+<h2>Commands added for efficiency.<a class="headerlink" href="#commands-added-for-efficiency" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">utfeightaz</span><span class="nd">@jg@int</span><span class="p">{</span>\<span class="n">noexpand</span>\<span class="n">utfeightaz</span>\<span class="n">noexpand</span><span class="p">}</span>
+\<span class="n">def</span>\<span class="n">utfeightb</span><span class="nd">@jg@int</span><span class="c1">#1#2{\noexpand\utfeightb#1\string#2}</span>
+\<span class="n">def</span>\<span class="n">utfeightc</span><span class="nd">@jg@int</span><span class="c1">#1#2#3{\noexpand\utfeightc#1\string#2\string#3}</span>
+\<span class="n">def</span>\<span class="n">utfeightd</span><span class="nd">@jg@int</span><span class="c1">#1#2#3#4{\noexpand\utfeightd#1\string#2\string#3\string#4}</span>
+\<span class="n">def</span>\<span class="n">utfeightb</span><span class="nd">@jg</span><span class="o">@</span><span class="c1">#1#2{#1\string#2}</span>
+\<span class="n">def</span>\<span class="n">utfeightc</span><span class="nd">@jg</span><span class="o">@</span><span class="c1">#1#2#3{#1\string#2\string#3}</span>
+\<span class="n">def</span>\<span class="n">utfeightd</span><span class="nd">@jg</span><span class="o">@</span><span class="c1">#1#2#3#4{#1\string#2\string#3\string#4}</span>
+\<span class="n">def</span>\<span class="n">utfeightaz</span><span class="nd">@jg@int</span><span class="p">{</span>\<span class="n">noexpand</span>\<span class="n">utfeightaz</span>\<span class="n">noexpand</span><span class="p">}</span>
+\<span class="n">def</span>\<span class="n">utfeightb</span><span class="nd">@jg@int</span><span class="c1">#1#2{\noexpand\utfeightb#1\string#2}</span>
+\<span class="n">def</span>\<span class="n">utfeightc</span><span class="nd">@jg@int</span><span class="c1">#1#2#3{\noexpand\utfeightc#1\string#2\string#3}</span>
+\<span class="n">def</span>\<span class="n">utfeightd</span><span class="nd">@jg@int</span><span class="c1">#1#2#3#4{\noexpand\utfeightd#1\string#2\string#3\string#4}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="commands-modified-for-efficiency">
+<h2>Commands modified for efficiency.<a class="headerlink" href="#commands-modified-for-efficiency" title="Link to this heading"></a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">\let\foo\bar</span></code> instead of <code class="docutils literal notranslate"><span class="pre">\def\foo{...}</span></code>, because it is more
+efficient.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">utfeight</span><span class="nd">@protect@chars</span><span class="p">{</span><span class="o">%</span>
+  \<span class="n">let</span>\<span class="n">utfeightax</span>\<span class="n">string</span>
+  \<span class="n">let</span>\<span class="n">utfeightay</span>\<span class="n">string</span>
+  \<span class="n">let</span>\<span class="n">utfeightaz</span>\<span class="n">string</span>
+  \<span class="n">let</span>\<span class="n">utfeightb</span>\<span class="n">utfeightb</span><span class="nd">@jg</span><span class="o">@</span>
+  \<span class="n">let</span>\<span class="n">utfeightc</span>\<span class="n">utfeightc</span><span class="nd">@jg</span><span class="o">@</span>
+  \<span class="n">let</span>\<span class="n">utfeightd</span>\<span class="n">utfeightd</span><span class="nd">@jg</span><span class="o">@</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>We are here in a group where ampersand and less-than are active chars.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">gdef</span>\<span class="n">utfeight</span><span class="nd">@protect@internal</span><span class="p">{</span><span class="o">%</span>
+  \<span class="n">let</span>\<span class="n">utfeightax</span>\<span class="n">noexpand</span>
+  \<span class="n">let</span>\<span class="n">utfeightay</span>\<span class="n">noexpand</span>
+  \<span class="n">let</span>\<span class="n">utfeightaz</span>\<span class="n">utfeightaz</span><span class="nd">@jg@int</span>
+  \<span class="n">let</span><span class="o">&lt;</span>\<span class="n">relax</span>\<span class="n">let</span><span class="o">&amp;</span>\<span class="n">relax</span>
+  \<span class="n">let</span>\<span class="n">utfeightb</span>\<span class="n">utfeightb</span><span class="nd">@jg@int</span>
+  \<span class="n">let</span>\<span class="n">utfeightc</span>\<span class="n">utfeightc</span><span class="nd">@jg@int</span>
+  \<span class="n">let</span>\<span class="n">utfeightd</span>\<span class="n">utfeightd</span><span class="nd">@jg@int</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="string-declarations-of-the-form-jg-xxx">
+<h2>String declarations (of the form <a class="reference external" href="mailto:jg&#37;&#52;&#48;xxx">jg<span>&#64;</span>xxx</a>)<a class="headerlink" href="#string-declarations-of-the-form-jg-xxx" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\XMLstring\jg@lt&lt;&gt;&amp;lt;&lt;/&gt;
+\XMLstring\jg@gt&lt;&gt;&amp;gt;&lt;/&gt;
+\XMLstring\jg@accgrave&lt;&gt;`&lt;/&gt;
+\XMLstring\jg@accdddot&lt;&gt;&amp;#x20DB;&lt;/&gt;
+\XMLstring\jg@accddddot&lt;&gt;&amp;#x20DC;&lt;/&gt;
+\XMLstring\jg@lbra&lt;&gt;&amp;#x2329;&lt;/&gt;
+\XMLstring\jg@rbra&lt;&gt;&amp;#x232A;&lt;/&gt;
+\XMLstring\jg@verbar&lt;&gt;&amp;#x2016;&lt;/&gt;
+\XMLstring\jg@Verbar&lt;&gt;&amp;#8214;&lt;/&gt;
+\XMLstring\jg@lfloor&lt;&gt;&amp;#x230A;&lt;/&gt;
+\XMLstring\jg@rfloor&lt;&gt;&amp;#x230B;&lt;/&gt;
+\XMLstring\jg@lceil&lt;&gt;&amp;#x2308;&lt;/&gt;
+\XMLstring\jg@rceil&lt;&gt;&amp;#x2309;&lt;/&gt;
+\XMLstring\jg@lmoustache&lt;&gt;&amp;#x23B0;&lt;/&gt;
+\XMLstring\jg@rmoustache&lt;&gt;&amp;#x23B1;&lt;/&gt;
+\XMLstring\jg@lgroup&lt;&gt;&amp;#x3014;&lt;/&gt;
+\XMLstring\jg@rgroup&lt;&gt;&amp;#x3015;&lt;/&gt;
+\XMLstring\jg@uparrow&lt;&gt;&amp;#x2191;&lt;/&gt;
+\XMLstring\jg@Uparrow&lt;&gt;&amp;#x21D1;&lt;/&gt;
+\XMLstring\jg@downarrow&lt;&gt;&amp;#x2193;&lt;/&gt;
+\XMLstring\jg@Downarrow&lt;&gt;&amp;#x21D3;&lt;/&gt;
+\XMLstring\jg@updownarrow&lt;&gt;&amp;#x2195;&lt;/&gt;
+\XMLstring\jg@Updownarrow&lt;&gt;&amp;#x21D5;&lt;/&gt;
+\XMLstring\jg@OverBrace&lt;&gt;&amp;#xFE37;&lt;/&gt;
+\XMLstring\jg@UnderBrace&lt;&gt;&amp;#xFE38;&lt;/&gt;
+\XMLstring\jg@OverBar&lt;&gt;&amp;#xAF;&lt;/&gt;
+\XMLstring\jg@UnderBAr&lt;&gt;&amp;#x332;&lt;/&gt;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="string-declarations-of-the-form-att-xxx">
+<h2>String declarations (of the form <a class="reference external" href="mailto:att&#37;&#52;&#48;xxx">att<span>&#64;</span>xxx</a>)<a class="headerlink" href="#string-declarations-of-the-form-att-xxx" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@true</span><span class="o">&lt;&gt;</span><span class="n">true</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@false</span><span class="o">&lt;&gt;</span><span class="n">false</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@mtd@left</span><span class="o">&lt;&gt;</span><span class="n">left</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@mtd@right</span><span class="o">&lt;&gt;</span><span class="n">right</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@mtd@center</span><span class="o">&lt;&gt;</span><span class="n">center</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@none</span><span class="o">&lt;&gt;</span><span class="n">none</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@dzero</span><span class="o">&lt;&gt;</span><span class="mi">0</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@done</span><span class="o">&lt;&gt;</span><span class="mi">1</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@dtwo</span><span class="o">&lt;&gt;</span><span class="mi">2</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@l</span><span class="o">&lt;&gt;</span><span class="n">l</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@r</span><span class="o">&lt;&gt;</span><span class="n">r</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@t</span><span class="o">&lt;&gt;</span><span class="n">t</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@b</span><span class="o">&lt;&gt;</span><span class="n">b</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@lt</span><span class="o">&lt;&gt;</span><span class="n">lt</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@lb</span><span class="o">&lt;&gt;</span><span class="n">lb</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@rt</span><span class="o">&lt;&gt;</span><span class="n">rt</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@rb</span><span class="o">&lt;&gt;</span><span class="n">rb</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@tl</span><span class="o">&lt;&gt;</span><span class="n">tl</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@bl</span><span class="o">&lt;&gt;</span><span class="n">bl</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@tr</span><span class="o">&lt;&gt;</span><span class="n">tr</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@br</span><span class="o">&lt;&gt;</span><span class="n">br</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@mathml@bold</span><span class="o">&lt;&gt;</span><span class="n">bold</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@mathml@sansserif</span><span class="o">&lt;&gt;</span><span class="n">sans</span><span class="o">-</span><span class="n">serif</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@mathml@tt</span><span class="o">&lt;&gt;</span><span class="n">monospace</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@mathml@rm</span><span class="o">&lt;&gt;</span><span class="n">rm</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@BLOCK</span><span class="o">&lt;&gt;</span><span class="n">block</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@PREFIX</span><span class="o">&lt;&gt;</span><span class="n">prefix</span><span class="o">&lt;/&gt;</span>
+\<span class="n">XMLstring</span>\<span class="n">att</span><span class="nd">@EQUATION</span><span class="o">&lt;&gt;</span><span class="n">equation</span><span class="o">&lt;/&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hacking-function-for-accent-over">
+<h2>Hacking function for accent-over<a class="headerlink" href="#hacking-function-for-accent-over" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">jg</span><span class="nd">@bindings</span><span class="p">{</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">texttildelow</span> <span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@tilde@acc</span><span class="p">}</span><span class="o">%</span>
+<span class="o">%</span>   \<span class="n">def</span>\<span class="n">textasciimacron</span> <span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@cur@accB</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">textasciicaron</span> <span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@check@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">u</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@breve@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">hat</span><span class="c1">##1{\global\let\jg@cur@acc\jg@hat@acc}%</span>
+   \<span class="n">def</span>\<span class="n">dot</span><span class="c1">##1{\global\let\jg@cur@acc\jg@dot@acc}%</span>
+   \<span class="n">def</span>\<span class="n">mathring</span><span class="c1">##1{\global\let\jg@cur@acc\jg@ring@acc}%</span>
+   \<span class="n">def</span>\<span class="n">textasciidieresis</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@ddot@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">let</span>\<span class="n">JGG</span><span class="nd">@orig@rarrow</span>\<span class="n">rightarrow</span>
+   \<span class="n">let</span>\<span class="n">JGG</span><span class="nd">@orig@larrow</span>\<span class="n">leftarrow</span>
+   \<span class="n">def</span>\<span class="n">rightarrow</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@overRarrow@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">leftarrow</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@overLarrow@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">textoverbrace</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">overbrace</span><span class="p">}</span>
+   \<span class="n">def</span>\<span class="n">textunderbrace</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">underbrace</span><span class="p">}</span>
+   \<span class="n">def</span>\<span class="n">textasciiacute</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">acute</span><span class="p">}</span>
+   \<span class="n">def</span>\<span class="n">textasciimacron</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">overline</span><span class="p">}</span>
+   \<span class="n">def</span>\<span class="n">ring</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">mathring</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hacking-function-for-accent-under">
+<h2>Hacking function for accent-under<a class="headerlink" href="#hacking-function-for-accent-under" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">jg</span><span class="nd">@ubindings</span><span class="p">{</span><span class="o">%</span>
+\<span class="n">let</span>\<span class="n">JGG</span><span class="nd">@orig@rarrow</span>\<span class="n">rightarrow</span>
+\<span class="n">let</span>\<span class="n">JGG</span><span class="nd">@orig@larrow</span>\<span class="n">leftarrow</span>
+   \<span class="n">def</span>\<span class="n">texttildelow</span> <span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@tilde@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">textasciimacron</span> <span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">underline</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">textasciicaron</span> <span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@check@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">u</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@breve@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">hat</span><span class="c1">##1{\global\let\jg@cur@acc\jg@hat@acc}%</span>
+   \<span class="n">def</span>\<span class="n">dot</span><span class="c1">##1{\global\let\jg@cur@acc\jg@dot@acc}%</span>
+   \<span class="n">def</span>\<span class="n">textasciidieresis</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@ddot@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">let</span>\<span class="n">JGG</span><span class="nd">@orig@rarrow</span>\<span class="n">rightarrow</span>
+   \<span class="n">let</span>\<span class="n">JGG</span><span class="nd">@orig@larrow</span>\<span class="n">leftarrow</span>
+   \<span class="n">def</span>\<span class="n">rightarrow</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@underRarrow@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">leftarrow</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">jg</span><span class="nd">@underLarrow@acc</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">def</span>\<span class="n">textoverbrace</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">overbrace</span><span class="p">}</span>
+   \<span class="n">def</span>\<span class="n">textunderbrace</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">underbrace</span><span class="p">}</span>
+   \<span class="n">def</span>\<span class="n">jgunderline</span><span class="p">{</span>\<span class="k">global</span>\<span class="n">let</span>\<span class="n">jg</span><span class="nd">@cur@acc</span>\<span class="n">underline</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="unused-implementatin-of-frac">
+<h2>Unused implementatin of frac.<a class="headerlink" href="#unused-implementatin-of-frac" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">s</span><span class="nd">@frac</span><span class="c1">#1#2{\frac{\scriptstyle#1}{\scriptstyle#2}}</span>
+\<span class="n">def</span>\<span class="n">ss</span><span class="nd">@frac</span><span class="c1">#1#2{\frac{\scriptscriptstyle#1}{\scriptscriptstyle#2}}</span>
+
+\<span class="n">def</span>\<span class="n">unusedxml</span><span class="nd">@implement@frac</span><span class="c1">#1#2{%</span>
+ \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@scriptlevel</span>\<span class="n">att</span><span class="nd">@none</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@linethickness</span>\<span class="n">att</span><span class="nd">@true</span>\<span class="n">frac</span><span class="p">{</span><span class="c1">#1}{#2}%</span>
+  \<span class="k">else</span> \<span class="n">genfrac</span><span class="p">{}{}</span>\<span class="n">XML</span><span class="nd">@linethickness</span><span class="p">{}{</span><span class="c1">#1}{#2}\fi</span>
+ \<span class="k">else</span>
+    \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@scriptlevel</span>\<span class="n">att</span><span class="nd">@dzero</span>
+      \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@linethickness</span>\<span class="n">att</span><span class="nd">@true</span>\<span class="n">dfrac</span><span class="p">{</span><span class="c1">#1}{#2}%</span>
+      \<span class="k">else</span> \<span class="n">genfrac</span><span class="p">{}{}</span>\<span class="n">XML</span><span class="nd">@linethickness</span><span class="p">{</span><span class="mi">0</span><span class="p">}{</span><span class="c1">#1}{#2}\fi</span>
+    \<span class="k">else</span>
+      \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@scriptlevel</span>\<span class="n">att</span><span class="nd">@done</span>
+         \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@linethickness</span>\<span class="n">att</span><span class="nd">@true</span>\<span class="n">tfrac</span><span class="p">{</span><span class="c1">#1}{#2}%</span>
+         \<span class="k">else</span> \<span class="n">genfrac</span><span class="p">{}{}</span>\<span class="n">XML</span><span class="nd">@linethickness</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="c1">#1}{#2}\fi</span>
+      \<span class="k">else</span>
+       \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@linethickness</span>\<span class="n">att</span><span class="nd">@true</span>\<span class="n">ss</span><span class="nd">@frac</span><span class="p">{</span><span class="c1">#1}{#2}%</span>
+       \<span class="k">else</span> \<span class="n">genfrac</span><span class="p">{}{}</span>\<span class="n">XML</span><span class="nd">@linethickness</span><span class="p">{</span><span class="mi">2</span><span class="p">}{</span><span class="c1">#1}{#2}\fi</span>
+      \<span class="n">fi</span>
+    \<span class="n">fi</span>
+ \<span class="n">fi</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hack-item">
+<h2>hack \item<a class="headerlink" href="#hack-item" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">jg</span><span class="nd">@item</span><span class="p">[</span><span class="c1">#1]{%</span>
+  \<span class="k">if</span><span class="nd">@noparitem</span>
+    \<span class="nd">@donoparitem</span>
+  \<span class="k">else</span>
+    \<span class="k">if</span><span class="nd">@inlabel</span>
+      \<span class="n">indent</span> \<span class="n">par</span>
+    \<span class="n">fi</span>
+    \<span class="n">ifhmode</span>
+      \<span class="n">unskip</span>\<span class="n">unskip</span> \<span class="n">par</span>
+    \<span class="n">fi</span>
+    \<span class="k">if</span><span class="nd">@newlist</span>
+<span class="o">%</span> <span class="n">removed</span> <span class="n">this</span> <span class="n">test</span> <span class="mi">2000</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mf">05.</span> <span class="n">always</span> <span class="n">put</span> <span class="ow">in</span> <span class="n">topsep</span><span class="o">.</span>
+<span class="o">%</span>      \<span class="k">if</span><span class="nd">@nobreak</span>
+<span class="o">%</span>        \<span class="nd">@nbitem</span>
+<span class="o">%</span>      \<span class="k">else</span>
+        \<span class="n">addpenalty</span>\<span class="nd">@beginparpenalty</span>
+        \<span class="n">addvspace</span>\<span class="nd">@topsep</span>
+        \<span class="n">addvspace</span><span class="p">{</span><span class="o">-</span>\<span class="n">parskip</span><span class="p">}</span><span class="o">%</span>
+<span class="o">%</span>      \<span class="n">fi</span>
+    \<span class="k">else</span>
+      \<span class="n">addpenalty</span>\<span class="nd">@itempenalty</span>
+      \<span class="n">addvspace</span>\<span class="n">itemsep</span>
+    \<span class="n">fi</span>
+    \<span class="k">global</span>\<span class="nd">@inlabeltrue</span>
+  \<span class="n">fi</span>
+  \<span class="k">global</span>\<span class="n">everypar</span><span class="p">{</span><span class="o">%</span>
+    \<span class="nd">@minipagefalse</span>
+    \<span class="k">global</span>\<span class="nd">@newlistfalse</span>
+    \<span class="k">if</span><span class="nd">@inlabel</span>
+      \<span class="k">global</span>\<span class="nd">@inlabelfalse</span>
+      <span class="p">{</span>\<span class="n">setbox</span>\<span class="n">z</span><span class="o">@</span>\<span class="n">lastbox</span>
+       \<span class="n">ifvoid</span>\<span class="n">z</span><span class="o">@</span>
+         \<span class="n">kern</span><span class="o">-</span>\<span class="n">itemindent</span>
+       \<span class="n">fi</span><span class="p">}</span><span class="o">%</span>
+      \<span class="n">box</span>\<span class="nd">@labels</span>
+      \<span class="n">penalty</span>\<span class="n">z</span><span class="o">@</span>
+    \<span class="n">fi</span>
+    \<span class="k">if</span><span class="nd">@nobreak</span>
+      \<span class="k">global</span>\<span class="nd">@nobreakfalse</span>
+      \<span class="n">clubpenalty</span> \<span class="nd">@M</span>
+    \<span class="k">else</span>
+      \<span class="n">clubpenalty</span> \<span class="nd">@clubpenalty</span>
+      \<span class="k">global</span>\<span class="n">everypar</span><span class="p">{}</span><span class="o">%</span>
+    \<span class="n">fi</span><span class="p">}</span><span class="o">%</span>
+  \<span class="k">if</span><span class="nd">@noitemarg</span>
+    \<span class="nd">@noitemargfalse</span>
+    \<span class="k">if</span><span class="nd">@nmbrlist</span>
+      \<span class="n">refstepcounter</span>\<span class="nd">@listctr</span>
+    \<span class="n">fi</span>
+  \<span class="n">fi</span>
+ \<span class="n">savebox</span><span class="p">{</span>\<span class="n">ItemBox</span><span class="p">}{</span><span class="c1">#1}% Added JG</span>
+  \<span class="n">sbox</span>\<span class="nd">@tempboxa</span><span class="p">{</span>\<span class="n">makelabel</span><span class="p">{</span><span class="c1">#1}}%</span>
+  \<span class="k">global</span>\<span class="n">setbox</span>\<span class="nd">@labels</span>\<span class="n">hbox</span><span class="p">{</span><span class="o">%</span>
+    \<span class="n">unhbox</span>\<span class="nd">@labels</span>
+    \<span class="n">hskip</span> \<span class="n">itemindent</span>
+    \<span class="n">hskip</span> <span class="o">-</span>\<span class="n">labelwidth</span>
+    \<span class="n">hskip</span> <span class="o">-</span>\<span class="n">labelsep</span>
+    \<span class="n">ifdim</span> \<span class="n">wd</span>\<span class="nd">@tempboxa</span> <span class="o">&gt;</span>\<span class="n">labelwidth</span>
+      \<span class="n">box</span>\<span class="nd">@tempboxa</span>
+    \<span class="k">else</span>
+      \<span class="n">hbox</span> <span class="n">to</span>\<span class="n">labelwidth</span> <span class="p">{</span>\<span class="n">unhbox</span>\<span class="nd">@tempboxa</span><span class="p">}</span><span class="o">%</span>
+    \<span class="n">fi</span>
+    \<span class="n">hskip</span> \<span class="n">labelsep</span><span class="p">}</span><span class="o">%</span>
+  \<span class="n">ignorespaces</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hack-fonormalblock">
+<h2>hack \FONormalBlock<a class="headerlink" href="#hack-fonormalblock" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">AtBeginDocument</span><span class="p">{</span><span class="o">%</span>
+\<span class="n">def</span>\<span class="n">FONormalBlock</span><span class="p">{</span><span class="o">%</span>
+  \<span class="n">let</span>\<span class="nd">@x</span>\<span class="n">relax</span>
+  \<span class="n">ifnum</span>\<span class="n">FOTableNesting</span><span class="o">&gt;</span><span class="mi">0</span>
+   \<span class="n">ifx</span>\<span class="n">FOtextalign</span>\<span class="n">att</span><span class="nd">@centered</span>
+       \<span class="n">centering</span>
+   \<span class="n">fi</span>
+   \<span class="n">let</span>\<span class="nd">@x</span>\<span class="n">relax</span>
+   \<span class="n">FOSetFont</span><span class="p">{</span><span class="n">normalblock</span><span class="p">}</span><span class="o">%</span>
+   \<span class="n">vrule</span> <span class="n">height</span> \<span class="n">f</span><span class="nd">@baselineskip</span> <span class="n">depth</span> \<span class="n">z</span><span class="o">@</span> <span class="n">width</span> \<span class="n">z</span><span class="o">@</span>
+  \<span class="k">else</span>
+    \<span class="n">ifnum</span>\<span class="n">FOinList</span><span class="o">&gt;</span><span class="mi">0</span>
+      \<span class="n">FOlabel</span>
+      \<span class="n">ifFOListInnerPar</span>\<span class="n">par</span>\<span class="n">FOvspacebefore</span>\<span class="n">fi</span>
+      \<span class="n">ifx</span>\<span class="n">FOwhitespace</span>\<span class="n">att</span><span class="nd">@pre</span>\<span class="n">obeyspaces</span>\<span class="n">obeylines</span>\<span class="n">fi</span>
+      \<span class="n">ifx</span>\<span class="n">FOwhitespacecollapse</span>\<span class="n">att</span><span class="nd">@false</span>\<span class="n">obeyspaces</span>\<span class="n">fi</span>
+      \<span class="n">ifx</span>\<span class="n">FOwrapoption</span>\<span class="n">att</span><span class="nd">@nowrap</span>\<span class="n">obeylines</span>\<span class="n">fi</span>
+    \<span class="k">else</span>
+      \<span class="n">ifx</span>\<span class="n">FObreakbefore</span>\<span class="n">att</span><span class="nd">@page</span>
+        \<span class="n">let</span>\<span class="n">tempID</span>\<span class="n">FOid</span>
+        \<span class="n">penalty</span> <span class="o">-</span>\<span class="nd">@M</span>
+        \<span class="n">let</span>\<span class="n">FOid</span>\<span class="n">tempID</span>
+      \<span class="k">else</span>
+        \<span class="n">ifx</span>\<span class="n">FObreakbefore</span>\<span class="n">att</span><span class="nd">@oddpage</span>
+        \<span class="n">let</span>\<span class="n">tempID</span>\<span class="n">FOid</span>
+        \<span class="n">penalty</span> <span class="o">-</span>\<span class="nd">@M</span>
+        \<span class="n">ifodd</span>\<span class="n">c</span><span class="nd">@page</span>\<span class="k">else</span>\<span class="n">BlankPage</span>\<span class="n">newpage</span>\<span class="n">fi</span>
+        \<span class="n">let</span>\<span class="n">FOid</span>\<span class="n">tempID</span>
+        \<span class="n">fi</span>
+      \<span class="n">fi</span>
+      \<span class="n">par</span>
+       <span class="o">%</span>      \<span class="n">FOlabel</span> <span class="p">(</span><span class="n">deleted</span><span class="p">)</span>
+      \<span class="n">Quadding</span>
+      \<span class="n">ifFOBlockGrab</span>
+        \<span class="n">FOBoxedBlock</span><span class="p">{</span>\<span class="n">linewidth</span><span class="p">}</span><span class="o">%</span>
+      \<span class="k">else</span>
+        \<span class="n">FOBorderTop</span>
+        \<span class="n">ifdim</span>\<span class="n">FOpaddingbefore</span><span class="o">&gt;</span>\<span class="n">z</span><span class="o">@</span>
+         \<span class="n">vskip</span>\<span class="n">FOpaddingbefore</span>
+        \<span class="n">fi</span>
+        \<span class="n">FOvspacebefore</span>
+        \<span class="n">parindent</span>\<span class="n">FOtextindent</span>
+        \<span class="n">advance</span>\<span class="n">leftskip</span> <span class="n">by</span>  \<span class="n">FOpaddingstart</span>
+        \<span class="n">advance</span>\<span class="n">leftskip</span> <span class="n">by</span>  \<span class="n">FOmarginleft</span>
+        \<span class="n">advance</span>\<span class="n">rightskip</span> <span class="n">by</span> \<span class="n">FOpaddingend</span>
+        \<span class="n">advance</span>\<span class="n">rightskip</span> <span class="n">by</span> \<span class="n">FOmarginright</span>
+      \<span class="n">fi</span>
+<span class="o">%</span>      \<span class="n">par</span>
+      \<span class="n">ifx</span>\<span class="n">FOwhitespace</span>\<span class="n">att</span><span class="nd">@pre</span>\<span class="n">obeyspaces</span>\<span class="n">obeylines</span>\<span class="n">fi</span>
+      \<span class="n">ifx</span>\<span class="n">FOwhitespacecollapse</span>\<span class="n">att</span><span class="nd">@false</span>\<span class="n">obeyspaces</span>\<span class="n">fi</span>
+      \<span class="n">ifx</span>\<span class="n">FOwrapoption</span>\<span class="n">att</span><span class="nd">@nowrap</span>\<span class="n">obeylines</span>\<span class="n">fi</span>
+    \<span class="n">fi</span>
+      \<span class="n">FOlabel</span> <span class="o">%</span><span class="n">moved</span> <span class="n">this</span> <span class="p">[</span><span class="n">jg</span><span class="p">]</span>
+    \<span class="n">FOSetFont</span><span class="p">{</span><span class="n">normal</span><span class="p">}</span><span class="o">%</span>
+  \<span class="n">fi</span>
+\<span class="nd">@x</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hack-open-fence">
+<h2>hack open fence<a class="headerlink" href="#hack-open-fence" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">jg</span><span class="nd">@hacko</span><span class="p">{</span><span class="o">%</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@lt</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">langle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@lbra</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">langle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@gt</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">rangle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@rbra</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">rangle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@verbar</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="o">|</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@Verbar</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="o">|</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@lfloor</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">lfloor</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@rfloor</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">rfloor</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@lceil</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">lceil</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@rceil</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">rceil</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@lmoustache</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">lmoustache</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@rmoustache</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">rmoustache</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@lgroup</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">lgroup</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@rgroup</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">rgroup</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@uparrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">uparrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@downarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">downarrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@Uparrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">Uparrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@Downarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">Downarrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@updownarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">updownarrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">jg</span><span class="nd">@Updownarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceopen</span>\<span class="n">Updownarrow</span>\<span class="n">fi</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hack-close-fence">
+<h2>hack close fence<a class="headerlink" href="#hack-close-fence" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">jg</span><span class="nd">@hackc</span><span class="p">{</span><span class="o">%</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@gt</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">rangle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@rbra</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">rangle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@lt</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">langle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@lbra</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">langle</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@verbar</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="o">|</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@Verbar</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="o">|</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@lfloor</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">lfloor</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@rfloor</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">rfloor</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@lceil</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">lceil</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@rceil</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">rceil</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@lmoustache</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">lmoustache</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@rmoustache</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">rmoustache</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@lgroup</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">lgroup</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@rgroup</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">rgroup</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@uparrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">uparrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@downarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">downarrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@Uparrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">Uparrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@Downarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">Downarrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@updownarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">updownarrow</span>\<span class="n">fi</span>
+  \<span class="n">ifx</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">jg</span><span class="nd">@Updownarrow</span>\<span class="n">let</span>\<span class="n">XML</span><span class="nd">@fenceclose</span>\<span class="n">Updownarrow</span>\<span class="n">fi</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="all-chars">
+<h2>All chars<a class="headerlink" href="#all-chars" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\def\pxrfont{\fontencoding{TS1}\fontfamily{pxr}\selectfont}
+\def\cyrfont{\fontencoding{T2A}\fontfamily{cmr}\selectfont}
+\UnicodeCharacter{x1F4}{\ifmmode \acute{G}\else \&#39;{G}\fi}
+\UnicodeCharacter{x1CD}{\ifmmode \check{A}\else \v{A}\fi}
+\UnicodeCharacter{x1CE}{\ifmmode \check{a}\else \v{a}\fi}
+\UnicodeCharacter{x1CF}{\ifmmode \check{I}\else \v{I}\fi}
+\UnicodeCharacter{x1D0}{\ifmmode \check{\imath}\else \v{\i}\fi}
+\UnicodeCharacter{x1D1}{\ifmmode \check{O}\else \v{O}\fi}
+\UnicodeCharacter{x1D2}{\ifmmode \check{o}\else \v{o}\fi}
+\UnicodeCharacter{x1D3}{\ifmmode \check{U}\else \v{U}\fi}
+\UnicodeCharacter{x1D4}{\ifmmode \check{u}\else \v{u}\fi}
+\UnicodeCharacter{x1D5}{\ifmmode \mbox{\={\&quot;{U}}}\else \={\&quot;{U}}\fi}
+\UnicodeCharacter{x1D6}{\ifmmode \mbox{\={\&quot;{u}}}\else \={\&quot;u}\fi}
+\UnicodeCharacter{x1D7}{\ifmmode \mbox{\&#39;{\&quot;{U}}}\else \&#39;{\&quot;{U}}\fi}
+\UnicodeCharacter{x1D8}{\ifmmode \mbox{\&#39;{\&quot;{u}}}\else \&#39;{\&quot;u}\fi}
+\UnicodeCharacter{x1D9}{\ifmmode \mbox{\v{\&quot;{U}}}\else \v{\&quot;{U}}\fi}
+\UnicodeCharacter{x1DA}{\ifmmode \mbox{\v{\&quot;{u}}}\else \v{\&quot;u}\fi}
+\UnicodeCharacter{x1DB}{\ifmmode \mbox{\`{\&quot;{U}}}\else \`{\&quot;{U}}\fi}
+\UnicodeCharacter{x1DC}{\ifmmode \mbox{\`{\&quot;{u}}}\else \`{\&quot;u}\fi}
+\UnicodeCharacter{x1DE}{\ifmmode \mbox{\={\&quot;{A}}}\else \={\&quot;A}\fi}
+\UnicodeCharacter{x1DF}{\ifmmode \mbox{\={\&quot;{a}}}\else \={\&quot;a}\fi}
+\UnicodeCharacter{x1E0}{\ensuremath{\bar{\dot{\mbox{A}}}}}
+\UnicodeCharacter{x1E1}{\ensuremath{\bar{\dot{\mbox{a}}}}}
+\UnicodeCharacter{x1E2}{\ifmmode \mbox{\=\AE}\else \={\AE}\fi}
+\UnicodeCharacter{x1E3}{\ifmmode \mbox{\=\ae}\else \={\ae}\fi}
+\UnicodeCharacter{x1E6}{\ifmmode \check{G}\else \v{G}\fi}
+\UnicodeCharacter{x1E7}{\ifmmode \check{g}\else \v{g}\fi}
+\UnicodeCharacter{x1E8}{\ifmmode \check{K}\else \v{K}\fi}
+\UnicodeCharacter{x1E9}{\ifmmode \check{k}\else \v{k}\fi}
+\UnicodeCharacter{x1EA}{\ifmmode \k{O}\else \k{O}\fi}
+\UnicodeCharacter{x1EB}{\ifmmode \k{o}\else \k{o}\fi}
+\UnicodeCharacter{x1EC}{\ifmmode \bar{\k{O}}\else $\bar{\mbox{\k{O}}}$\fi}
+\UnicodeCharacter{x1ED}{\ifmmode \bar{\k{o}}\else $\bar{\mbox{\k{o}}}$\fi}
+\UnicodeCharacter{x1F0}{\ifmmode \check{j}\else \v{j}\fi}
+\UnicodeCharacter{x1F8}{\`{N}}
+\UnicodeCharacter{x1F9}{\`{n}}
+\UnicodeCharacter{x1FA}{\&#39;{\AA}}
+\UnicodeCharacter{x1FB}{\&#39;{\aa}}
+\UnicodeCharacter{x1FC}{\&#39;{\AE}}
+\UnicodeCharacter{x1FD}{\&#39;{\ae}}
+\UnicodeCharacter{x1FE}{\&#39;{\O}}
+\UnicodeCharacter{x1FF}{\&#39;{\o}}
+
+\UnicodeCharacter{x200}{{\cyrfont\C A}}
+\UnicodeCharacter{x201}{{\cyrfont\C a}}
+\UnicodeCharacter{x202}{{\cyrfont\f A}}
+\UnicodeCharacter{x203}{{\cyrfont\f a}}
+\UnicodeCharacter{x204}{{\cyrfont\C E}}
+\UnicodeCharacter{x205}{{\cyrfont\C e}}
+\UnicodeCharacter{x206}{{\cyrfont\f E}}
+\UnicodeCharacter{x207}{{\cyrfont\f e}}
+\UnicodeCharacter{x208}{{\cyrfont\C I}}
+\UnicodeCharacter{x209}{{\cyrfont\C \i}}
+\UnicodeCharacter{x20A}{{\cyrfont\f I}}
+\UnicodeCharacter{x20B}{{\cyrfont\f \i}}
+\UnicodeCharacter{x20C}{{\cyrfont\C O}}
+\UnicodeCharacter{x20D}{{\cyrfont\C o}}
+\UnicodeCharacter{x20E}{{\cyrfont\f O}}
+\UnicodeCharacter{x20F}{{\cyrfont\f o}}
+\UnicodeCharacter{x210}{{\cyrfont\C R}}
+\UnicodeCharacter{x211}{{\cyrfont\C r}}
+\UnicodeCharacter{x212}{{\cyrfont\f R}}
+\UnicodeCharacter{x213}{{\cyrfont\f r}}
+\UnicodeCharacter{x214}{{\cyrfont\C U}}
+\UnicodeCharacter{x215}{{\cyrfont\C u}}
+\UnicodeCharacter{x216}{{\cyrfont\f U}}
+\UnicodeCharacter{x217}{{\cyrfont\f u}}
+\UnicodeCharacter{x21E}{\ifmmode \check{K}\else \v{H}\fi}
+\UnicodeCharacter{x21F}{\ifmmode \check{k}\else \v{h}\fi}
+\UnicodeCharacter{x226}{\.A}
+\UnicodeCharacter{x227}{\.a}
+\UnicodeCharacter{x228}{\c E}
+\UnicodeCharacter{x229}{\c e}
+\UnicodeCharacter{x22a}{\={\&quot;O}}
+\UnicodeCharacter{x22b}{\={\&quot;o}}
+\UnicodeCharacter{x22c}{\={\~O}}
+\UnicodeCharacter{x22d}{\={\~o}}
+\UnicodeCharacter{x22e}{\.O}
+\UnicodeCharacter{x22f}{\.o}
+\UnicodeCharacter{x230}{\ensuremath{\bar{\mbox{\.O}}}}
+\UnicodeCharacter{x231}{\ensuremath{\bar{\mbox{\.o}}}}
+\UnicodeCharacter{x232}{\=Y}
+\UnicodeCharacter{x233}{\=y}
+
+%\UnicodeCharacter{x25A1}{\ensuremath{\Box}}
+
+\def\CAB#1{\leavevmode\setbox0\hbox{#1}\dimen@\ht0 \advance\dimen@.5ex
+\rlap{\raise\dimen@\hbox{\kern2pt\char11}}#1}
+\def\Ohorn{\mbox{\rlap{\raise1.3ex\hbox{\kern0.55em,}}O}}
+\def\Uhorn{\mbox{\rlap{\raise1.7ex\hbox{\kern0.55em,}}U}}
+\def\ohorn{\mbox{\rlap{\raise1.ex\hbox{\kern0.35em,}}o}}
+\def\uhorn{\mbox{\rlap{\raise1.2ex\hbox{\kern0.33em,}}u}}
+
+\def\circlebelow#1{\hmode@bgroup \o@lign
+{\relax #1\crcr \hidewidth \sh@ft {10}\char 6 \hidewidth }\egroup}
+\def\cirbelow#1{\hmode@bgroup \o@lign
+{\relax #1\crcr \hidewidth \sh@ft {10}\char 2 \hidewidth }\egroup}
+\def\tildebelow#1{\hmode@bgroup \o@lign
+{\relax #1\crcr \hidewidth \sh@ft {10}\char 3 \hidewidth }\egroup}
+\def\somethingbelow#1#2{\hmode@bgroup \o@lign
+{\relax #1\crcr \hidewidth \sh@ft {10}\char #2 \hidewidth }\egroup}
+
+\UnicodeCharacter{x400}{\cyrchar{\`\CYRE}}
+\UnicodeCharacter{x40D}{\cyrchar{\`\CYRI}}
+\UnicodeCharacter{x450}{\cyrchar{\`\cyre}}
+\UnicodeCharacter{x45D}{\cyrchar{\`\cyri}}
+\UnicodeCharacter{x4D0}{\cyrchar{\U\CYRA}}
+\UnicodeCharacter{x4D1}{\cyrchar{\U\cyra}}
+\UnicodeCharacter{x4D2}{\cyrchar{\&quot;\CYRA}}
+\UnicodeCharacter{x4D3}{\cyrchar{\&quot;\cyra}}
+\UnicodeCharacter{x4D6}{\cyrchar{\U\CYRE}}
+\UnicodeCharacter{x4D7}{\cyrchar{\U\cyre}}
+\UnicodeCharacter{x4DA}{\cyrchar{\&quot;\CYRSCHWA}}
+\UnicodeCharacter{x4DB}{\cyrchar{\&quot;\cyrschwa}}
+\UnicodeCharacter{x4DC}{\cyrchar{\&quot;\CYRZH}}
+\UnicodeCharacter{x4DD}{\cyrchar{\&quot;\cyrzh}}
+\UnicodeCharacter{x4DE}{\cyrchar{\&quot;\CYRZ}}
+\UnicodeCharacter{x4DF}{\cyrchar{\&quot;\cyrz}}
+\UnicodeCharacter{x4E2}{\cyrchar{\=\CYRI}}
+\UnicodeCharacter{x4E3}{\cyrchar{\=\cyri}}
+\UnicodeCharacter{x4E4}{\cyrchar{\&quot;\CYRI}}
+\UnicodeCharacter{x4E5}{\cyrchar{\&quot;\cyri}}
+\UnicodeCharacter{x4E6}{\cyrchar{\&quot;\CYRO}}
+\UnicodeCharacter{x4E7}{\cyrchar{\&quot;\cyro}}
+\UnicodeCharacter{x4EA}{\cyrchar{\&quot;\CYROTLD}}
+\UnicodeCharacter{x4EB}{\cyrchar{\&quot;\cyrotld}}
+\UnicodeCharacter{x4EC}{\cyrchar{\&quot;\CYREREV}}
+\UnicodeCharacter{x4ED}{\cyrchar{\&quot;\cyrerev}}
+\UnicodeCharacter{x4EE}{\cyrchar{\=\CYRU}}
+\UnicodeCharacter{x4EF}{\cyrchar{\=\cyru}}
+\UnicodeCharacter{x4F0}{\cyrchar{\&quot;\CYRU}}
+\UnicodeCharacter{x4F1}{\cyrchar{\&quot;\cyru}}
+\UnicodeCharacter{x4F2}{\cyrchar{\H\CYRU}}
+\UnicodeCharacter{x4F3}{\cyrchar{\H\cyru}}
+\UnicodeCharacter{x4F4}{\cyrchar{\&quot;\CYRCH}}
+\UnicodeCharacter{x4F5}{\cyrchar{\&quot;\cyrch}}
+\UnicodeCharacter{x4F8}{\cyrchar{\&quot;\CYRERY}}
+\UnicodeCharacter{x4F9}{\cyrchar{\&quot;\cyrery}}
+
+
+\UnicodeCharacter{x1E00}{\circlebelow{A}}
+\UnicodeCharacter{x1E01}{\circlebelow{a}}
+\UnicodeCharacter{x1E02}{\.B}
+\UnicodeCharacter{x1E03}{\.b}
+\UnicodeCharacter{x1E04}{\d B}
+\UnicodeCharacter{x1E05}{\d b}
+\UnicodeCharacter{x1E06}{\b B}
+\UnicodeCharacter{x1E07}{\b b}
+\UnicodeCharacter{x1E08}{\&#39;{\c C}}
+\UnicodeCharacter{x1E09}{\&#39;{\c c}}
+\UnicodeCharacter{x1E0A}{\.D}
+\UnicodeCharacter{x1E0B}{\.d}
+\UnicodeCharacter{x1E0C}{\d D}
+\UnicodeCharacter{x1E0D}{\d d}
+\UnicodeCharacter{x1E0E}{\b D}
+\UnicodeCharacter{x1E0F}{\b d}
+\UnicodeCharacter{x1E10}{\c D}
+\UnicodeCharacter{x1E11}{\c d}
+\UnicodeCharacter{x1E12}{\cirbelow D}
+\UnicodeCharacter{x1E13}{\cirbelow d}
+\UnicodeCharacter{x1E14}{\ensuremath{\grave{\mbox{\=E}}}}
+\UnicodeCharacter{x1E15}{\ensuremath{\grave{\mbox{\=e}}}}
+\UnicodeCharacter{x1E16}{\ensuremath{\acute{\mbox{\=E}}}}
+\UnicodeCharacter{x1E17}{\ensuremath{\acute{\mbox{\=e}}}}
+\UnicodeCharacter{x1E18}{\cirbelow E}
+\UnicodeCharacter{x1E19}{\cirbelow e}
+\UnicodeCharacter{x1E1A}{\tildebelow E}
+\UnicodeCharacter{x1E1B}{\tildebelow e}
+\UnicodeCharacter{x1E1C}{\c{\u E}}
+\UnicodeCharacter{x1E1D}{\c{\u e}}
+\UnicodeCharacter{x1E1E}{\.F}
+\UnicodeCharacter{x1E1F}{\.f}
+\UnicodeCharacter{x1E20}{\=G}
+\UnicodeCharacter{x1E21}{\=g}
+\UnicodeCharacter{x1E22}{\.H}
+\UnicodeCharacter{x1E23}{\.h}
+\UnicodeCharacter{x1E24}{\d H}
+\UnicodeCharacter{x1E25}{\d h}
+\UnicodeCharacter{x1E26}{\&quot; H}
+\UnicodeCharacter{x1E27}{\&quot; h}
+\UnicodeCharacter{x1E28}{\c H}
+\UnicodeCharacter{x1E29}{\c h}
+\UnicodeCharacter{x1E2A}{\somethingbelow H{8}}
+\UnicodeCharacter{x1E2B}{\somethingbelow h{8}}
+\UnicodeCharacter{x1E2C}{\tildebelow I}
+\UnicodeCharacter{x1E2D}{\tildebelow i}
+\UnicodeCharacter{x1E2E}{\&#39;{\&quot;I}}
+\UnicodeCharacter{x1E2F}{\&#39;{\&quot;\i}}
+\UnicodeCharacter{x1E30}{\&#39;K}
+\UnicodeCharacter{x1E31}{\&#39;k}
+\UnicodeCharacter{x1E32}{\d K}
+\UnicodeCharacter{x1E33}{\d k}
+\UnicodeCharacter{x1E34}{\b K}
+\UnicodeCharacter{x1E35}{\b k}
+\UnicodeCharacter{x1E36}{\d L}
+\UnicodeCharacter{x1E37}{\d l}
+\UnicodeCharacter{x1E38}{\d {\=L}}
+\UnicodeCharacter{x1E39}{\d {\=l}}
+\UnicodeCharacter{x1E3A}{\b L}
+\UnicodeCharacter{x1E3B}{\b l}
+\UnicodeCharacter{x1E3C}{\cirbelow L}
+\UnicodeCharacter{x1E3D}{\cirbelow l}
+\UnicodeCharacter{x1E3E}{\&#39;M}
+\UnicodeCharacter{x1E3F}{\&#39;m}
+\UnicodeCharacter{x1E40}{\.M}
+\UnicodeCharacter{x1E41}{\.m}
+\UnicodeCharacter{x1E42}{\d M}
+\UnicodeCharacter{x1E43}{\d m}
+\UnicodeCharacter{x1E44}{\.N}
+\UnicodeCharacter{x1E45}{\.n}
+\UnicodeCharacter{x1E46}{\d N}
+\UnicodeCharacter{x1E47}{\d n}
+\UnicodeCharacter{x1E48}{\b N}
+\UnicodeCharacter{x1E49}{\b n}
+\UnicodeCharacter{x1E4A}{\cirbelow N}
+\UnicodeCharacter{x1E4B}{\cirbelow n}
+\UnicodeCharacter{x1E4C}{\&#39;{\~O}}
+\UnicodeCharacter{x1E4D}{\&#39;{\~o}}
+\UnicodeCharacter{x1E4E}{\&quot;{\~O}}
+\UnicodeCharacter{x1E4F}{\&quot;{\~o}}
+\UnicodeCharacter{x1E50}{\ensuremath{\grave{\mbox{\=O}}}}
+\UnicodeCharacter{x1E51}{\ensuremath{\grave{\mbox{\=o}}}}
+\UnicodeCharacter{x1E52}{\ensuremath{\acute{\mbox{\=O}}}}
+\UnicodeCharacter{x1E53}{\ensuremath{\acute{\mbox{\=o}}}}
+\UnicodeCharacter{x1E54}{\&#39;P}
+\UnicodeCharacter{x1E55}{\&#39;p}
+\UnicodeCharacter{x1E56}{\.P}
+\UnicodeCharacter{x1E57}{\.p}
+\UnicodeCharacter{x1E58}{\.R}
+\UnicodeCharacter{x1E59}{\.r}
+\UnicodeCharacter{x1E5A}{\d R}
+\UnicodeCharacter{x1E5B}{\d r}
+\UnicodeCharacter{x1E5C}{\d{\= R}}
+\UnicodeCharacter{x1E5D}{\d{\= r}}
+\UnicodeCharacter{x1E5E}{\b R}
+\UnicodeCharacter{x1E5F}{\b r}
+\UnicodeCharacter{x1E60}{\.S}
+\UnicodeCharacter{x1E61}{\.s}
+\UnicodeCharacter{x1E62}{\d S}
+\UnicodeCharacter{x1E63}{\d s}
+\UnicodeCharacter{x1E64}{\.{\&#39;S}}
+\UnicodeCharacter{x1E65}{\.{\&#39;s}}
+\UnicodeCharacter{x1E66}{\.{\v S}}
+\UnicodeCharacter{x1E67}{\.{\v s}}
+\UnicodeCharacter{x1E68}{\d{\. S}}
+\UnicodeCharacter{x1E69}{\d{\. s}}
+\UnicodeCharacter{x1E6A}{\.T}
+\UnicodeCharacter{x1E6B}{\.t}
+\UnicodeCharacter{x1E6C}{\d T}
+\UnicodeCharacter{x1E6D}{\d t}
+\UnicodeCharacter{x1E6E}{\b T}
+\UnicodeCharacter{x1E6F}{\b t}
+\UnicodeCharacter{x1E70}{\cirbelow T}
+\UnicodeCharacter{x1E71}{\cirbelow t}
+\UnicodeCharacter{x1E72}{\somethingbelow U{4}}
+\UnicodeCharacter{x1E73}{\somethingbelow u{4}}
+\UnicodeCharacter{x1E74}{\tildebelow U}
+\UnicodeCharacter{x1E75}{\tildebelow u}
+\UnicodeCharacter{x1E76}{\cirbelow U}
+\UnicodeCharacter{x1E77}{\cirbelow u}
+\UnicodeCharacter{x1E78}{\ensuremath{\acute{\mbox{\~U}}}}
+\UnicodeCharacter{x1E79}{\ensuremath{\acute{\mbox{\~u}}}}
+\UnicodeCharacter{x1E7A}{\ensuremath{\ddot{\mbox{\=U}}}}
+\UnicodeCharacter{x1E7B}{\ensuremath{\ddot{\mbox{\=u}}}}
+\UnicodeCharacter{x1E7C}{\~ V}
+\UnicodeCharacter{x1E7D}{\~ v}
+\UnicodeCharacter{x1E7E}{\d V}
+\UnicodeCharacter{x1E7F}{\d v}
+\UnicodeCharacter{x1E80}{\`W}
+\UnicodeCharacter{x1E81}{\`w}
+\UnicodeCharacter{x1E82}{\&#39;W}
+\UnicodeCharacter{x1E83}{\&#39;w}
+\UnicodeCharacter{x1E84}{\&quot;W}
+\UnicodeCharacter{x1E85}{\&quot;w}
+\UnicodeCharacter{x1E86}{\.W}
+\UnicodeCharacter{x1E87}{\.w}
+\UnicodeCharacter{x1E88}{\d W}
+\UnicodeCharacter{x1E89}{\d w}
+\UnicodeCharacter{x1E8A}{\.X}
+\UnicodeCharacter{x1E8B}{\.x}
+\UnicodeCharacter{x1E8C}{\&quot;X}
+\UnicodeCharacter{x1E8D}{\&quot;x}
+\UnicodeCharacter{x1E8E}{\.Y}
+\UnicodeCharacter{x1E8F}{\.y}
+\UnicodeCharacter{x1E90}{\^Z}
+\UnicodeCharacter{x1E91}{\^z}
+\UnicodeCharacter{x1E92}{\d Z}
+\UnicodeCharacter{x1E93}{\d z}
+\UnicodeCharacter{x1E94}{\b Z}
+\UnicodeCharacter{x1E95}{\b z}
+\UnicodeCharacter{x1E96}{\b h}
+\UnicodeCharacter{x1E97}{\&quot; t}
+\UnicodeCharacter{x1E98}{\r w}
+\UnicodeCharacter{x1E99}{\r y}
+\UnicodeCharacter{x1E9B}{\. {\fontencoding{LELA}\selectfont\char&#39;173 }}
+\UnicodeCharacter{x1EA0}{\d A}
+\UnicodeCharacter{x1EA1}{\d a}
+\UnicodeCharacter{x1EA2}{\CAB A}
+\UnicodeCharacter{x1EA3}{\CAB a}
+\UnicodeCharacter{x1EA4}{\&#39;{\^A}}
+\UnicodeCharacter{x1EA5}{\&#39;{\^a}}
+\UnicodeCharacter{x1EA6}{\`{\^A}}
+\UnicodeCharacter{x1EA7}{\`{\^a}}
+\UnicodeCharacter{x1EA8}{\CAB{\^A}}
+\UnicodeCharacter{x1EA9}{\CAB{\^a}}
+\UnicodeCharacter{x1EAA}{\~{\^A}}
+\UnicodeCharacter{x1EAB}{\~{\^a}}
+\UnicodeCharacter{x1EAC}{\d{\^A}}
+\UnicodeCharacter{x1EAD}{\d{\^a}}
+\UnicodeCharacter{x1EAE}{\&#39;{\u A}}
+\UnicodeCharacter{x1EAF}{\&#39;{\u a}}
+\UnicodeCharacter{x1EB0}{\`{\u A}}
+\UnicodeCharacter{x1EB1}{\`{\u a}}
+\UnicodeCharacter{x1EB2}{\CAB{\u A}}
+\UnicodeCharacter{x1EB3}{\CAB{\u a}}
+\UnicodeCharacter{x1EB4}{\~{\u A}}
+\UnicodeCharacter{x1EB5}{\~{\u a}}
+\UnicodeCharacter{x1EB6}{\d{\u A}}
+\UnicodeCharacter{x1EB7}{\d{\u a}}
+\UnicodeCharacter{x1EB8}{\d E}
+\UnicodeCharacter{x1EB9}{\d e}
+\UnicodeCharacter{x1EBA}{\CAB E}
+\UnicodeCharacter{x1EBB}{\CAB e}
+\UnicodeCharacter{x1EBC}{\~E}
+\UnicodeCharacter{x1EBD}{\~e}
+\UnicodeCharacter{x1EBE}{\&#39;{\^E}}
+\UnicodeCharacter{x1EBF}{\&#39;{\^e}}
+\UnicodeCharacter{x1EC0}{\`{\^E}}
+\UnicodeCharacter{x1EC1}{\`{\^e}}
+\UnicodeCharacter{x1EC2}{\CAB{\^E}}
+\UnicodeCharacter{x1EC3}{\CAB{\^e}}
+\UnicodeCharacter{x1EC4}{\~{\^E}}
+\UnicodeCharacter{x1EC5}{\~{\^e}}
+\UnicodeCharacter{x1EC6}{\d {\^E}}
+\UnicodeCharacter{x1EC7}{\d {\^e}}
+\UnicodeCharacter{x1EC8}{\CAB I}
+\UnicodeCharacter{x1EC9}{\CAB \i}
+\UnicodeCharacter{x1ECA}{\d I}
+\UnicodeCharacter{x1ECB}{\d i}
+\UnicodeCharacter{x1ECC}{\d O}
+\UnicodeCharacter{x1ECD}{\d o}
+\UnicodeCharacter{x1ECE}{\CAB O}
+\UnicodeCharacter{x1ECF}{\CAB o}
+\UnicodeCharacter{x1ED0}{\&#39;{\^O}}
+\UnicodeCharacter{x1ED1}{\&#39;{\^o}}
+\UnicodeCharacter{x1ED2}{\`{\^O}}
+\UnicodeCharacter{x1ED3}{\`{\^o}}
+\UnicodeCharacter{x1ED4}{\CAB{\^O}}
+\UnicodeCharacter{x1ED5}{\CAB{\^o}}
+\UnicodeCharacter{x1ED6}{\~{\^O}}
+\UnicodeCharacter{x1ED7}{\~{\^o}}
+\UnicodeCharacter{x1ED8}{\d{\^O}}
+\UnicodeCharacter{x1ED9}{\d{\^o}}
+\UnicodeCharacter{x1EDA}{\ensuremath{\acute{\Ohorn}}}
+\UnicodeCharacter{x1EDB}{\ensuremath{\acute{\ohorn}}}
+\UnicodeCharacter{x1EDC}{\ensuremath{\grave{\Ohorn}}}
+\UnicodeCharacter{x1EDD}{\ensuremath{\grave{\ohorn}}}
+\UnicodeCharacter{x1EDE}{\CAB{\Ohorn}}
+\UnicodeCharacter{x1EDF}{\CAB{\ohorn}}
+\UnicodeCharacter{x1EE0}{\ensuremath{\tilde{\Ohorn}}}
+\UnicodeCharacter{x1EE1}{\ensuremath{\tilde{\ohorn}}}
+\UnicodeCharacter{x1EE2}{\d{\Ohorn}}
+\UnicodeCharacter{x1EE3}{\d{\ohorn}}
+\UnicodeCharacter{x1EE4}{\d U}
+\UnicodeCharacter{x1EE5}{\d u}
+\UnicodeCharacter{x1EE6}{\CAB U}
+\UnicodeCharacter{x1EE7}{\CAB u}
+\UnicodeCharacter{x1EE8}{\ensuremath{\acute{\Uhorn}}}
+\UnicodeCharacter{x1EE9}{\ensuremath{\acute{\uhorn}}}
+\UnicodeCharacter{x1EEA}{\ensuremath{\grave{\Uhorn}}}
+\UnicodeCharacter{x1EEB}{\ensuremath{\grave{\uhorn}}}
+\UnicodeCharacter{x1EEC}{\CAB{\Uhorn}}
+\UnicodeCharacter{x1EED}{\CAB{\uhorn}}
+\UnicodeCharacter{x1EEE}{\ensuremath{\tilde{\Uhorn}}}
+\UnicodeCharacter{x1EEF}{\ensuremath{\tilde{\uhorn}}}
+\UnicodeCharacter{x1EF0}{\d{\Uhorn}}
+\UnicodeCharacter{x1EF1}{\d{\uhorn}}
+\UnicodeCharacter{x1EF2}{\`Y}
+\UnicodeCharacter{x1EF3}{\`y}
+\UnicodeCharacter{x1EF4}{\d Y}
+\UnicodeCharacter{x1EF5}{\d y}
+\UnicodeCharacter{x1EF6}{\CAB Y}
+\UnicodeCharacter{x1EF7}{\CAB y}
+\UnicodeCharacter{x1EF8}{\~ Y}
+\UnicodeCharacter{x1EF9}{\~ y}
+\UnicodeCharacter{x23B0}{\lmoustache}
+\UnicodeCharacter{x23B1}{\rmoustache}
+\UnicodeCharacter{x3014}{\lgroup}
+\UnicodeCharacter{x3015}{\rgroup}
+\UnicodeCharacter{xfe37}{\textoverbrace}
+\UnicodeCharacter{xfe38}{\textunderbrace}
+</pre></div>
+</div>
+</div>
+</section>
+<section id="more-chars">
+<h2>More chars<a class="headerlink" href="#more-chars" title="Link to this heading"></a></h2>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xE3F</span><span class="p">}{{</span>\<span class="n">pxrfont</span>\<span class="n">textbaht</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x20A9</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textwon</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x20A6</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textnaira</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x20A4</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textlira</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x20AB</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textdong</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2036</span><span class="p">}</span> <span class="p">{</span>\<span class="n">textgravedbl</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2033</span><span class="p">}</span> <span class="p">{</span>\<span class="n">textacutedbl</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2035</span><span class="p">}</span> <span class="p">{</span>\<span class="n">textasciigrave</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2032</span><span class="p">}</span> <span class="p">{</span>\<span class="n">ifmmode</span> <span class="s1">&#39;\else </span><span class="se">\t</span><span class="s1">extasciiacute</span><span class="se">\f</span><span class="s1">i}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2103</span><span class="p">}</span> <span class="p">{</span>\<span class="n">textcelsius</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2020</span><span class="p">}</span> <span class="p">{</span>\<span class="n">ifmmode</span> \<span class="n">dagger</span> \<span class="k">else</span> \<span class="n">textdagger</span>\<span class="n">fi</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2021</span><span class="p">}</span> <span class="p">{</span>\<span class="n">ifmmode</span> \<span class="n">ddagger</span> \<span class="k">else</span> \<span class="n">textdaggerdbl</span>\<span class="n">fi</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2030</span><span class="p">}</span> <span class="p">{</span>\<span class="n">textperthousand</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2031</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textpertenthousand</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x203B</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textreferencemark</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2045</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textlquill</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2046</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textrquill</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x211E</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textrecipe</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2117</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span>\<span class="n">textcircledP</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2120</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span> \<span class="n">textservicemark</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x212E</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span> \<span class="n">textestimated</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x203D</span><span class="p">}</span> <span class="p">{{</span>\<span class="n">pxrfont</span> \<span class="n">textinterrobang</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2190</span><span class="p">}{</span>\<span class="n">leftarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2192</span><span class="p">}{</span>\<span class="n">ensuremath</span><span class="p">{</span>\<span class="n">rightarrow</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2194</span><span class="p">}{</span>\<span class="n">ensuremath</span><span class="p">{</span>\<span class="n">leftrightarrow</span><span class="p">}}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x21D0</span><span class="p">}{</span>\<span class="n">Leftarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x21D2</span><span class="p">}{</span>\<span class="n">Rightarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF576</span><span class="p">}{</span>\<span class="n">longleftarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF577</span><span class="p">}{</span>\<span class="n">longrightarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF579</span><span class="p">}{</span>\<span class="n">Longleftarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF57A</span><span class="p">}{</span>\<span class="n">Longrightarrow</span><span class="p">}</span>
+
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF57A</span><span class="p">}{</span>\<span class="n">Longrightarrow</span><span class="p">}</span>
+
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF57D</span><span class="p">}{</span>\<span class="n">longmapsto</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x21A6</span><span class="p">}{</span>\<span class="n">mapsto</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF578</span><span class="p">}{</span>\<span class="n">longleftrightarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xF57B</span><span class="p">}{</span>\<span class="n">Longleftrightarrow</span><span class="p">}</span>
+<span class="o">%</span>  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">xE365</span><span class="p">}{</span>\<span class="n">Longleftrightarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x21D4</span><span class="p">}{</span>\<span class="n">Leftrightarrow</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2113</span><span class="p">}{</span>\<span class="n">ell</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x332</span><span class="p">}{</span>\<span class="n">jgunderline</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2663</span><span class="p">}{</span>\<span class="n">relax</span>\<span class="n">ifmmode</span>\<span class="n">clubsuit</span>\<span class="k">else</span>\<span class="n">ding</span><span class="p">{</span><span class="mi">168</span><span class="p">}</span>\<span class="n">fi</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2661</span><span class="p">}{</span>\<span class="n">heartsuit</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2660</span><span class="p">}{</span>\<span class="n">relax</span>\<span class="n">ifmmode</span>\<span class="n">spadesuit</span>\<span class="k">else</span>\<span class="n">ding</span><span class="p">{</span><span class="mi">171</span><span class="p">}</span>\<span class="n">fi</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x2666</span><span class="p">}{</span>\<span class="n">relax</span>\<span class="n">ifmmode</span>\<span class="n">diamondsuit</span>\<span class="k">else</span>\<span class="n">ding</span><span class="p">{</span><span class="mi">169</span><span class="p">}</span>\<span class="n">fi</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x22C1</span><span class="p">}{</span>\<span class="n">bigvee</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x22C0</span><span class="p">}{</span>\<span class="n">bigwedge</span><span class="p">}</span>
+
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x230B</span><span class="p">}{</span>\<span class="n">rfloor</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x260A</span><span class="p">}{</span>\<span class="o">&amp;</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x127</span><span class="p">}{{</span>\<span class="n">fontencoding</span><span class="p">{</span><span class="n">LELA</span><span class="p">}</span>\<span class="n">selectfont</span>\<span class="n">char</span><span class="s1">&#39;070 }}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x14A</span><span class="p">}{{</span>\<span class="n">fontencoding</span><span class="p">{</span><span class="n">LELA</span><span class="p">}</span>\<span class="n">selectfont</span>\<span class="n">char</span><span class="s1">&#39;055  }}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x14B</span><span class="p">}{{</span>\<span class="n">fontencoding</span><span class="p">{</span><span class="n">LELA</span><span class="p">}</span>\<span class="n">selectfont</span>\<span class="n">char</span><span class="s1">&#39;075  }}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x135</span><span class="p">}{{</span>\<span class="n">fontencoding</span><span class="p">{</span><span class="n">LELA</span><span class="p">}</span>\<span class="n">selectfont</span>\<span class="o">^</span><span class="p">{</span>\<span class="n">char</span><span class="s1">&#39;072 } }}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x17F</span><span class="p">}{{</span>\<span class="n">fontencoding</span><span class="p">{</span><span class="n">LELA</span><span class="p">}</span>\<span class="n">selectfont</span>\<span class="n">char</span><span class="s1">&#39;173 }}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x260B</span><span class="p">}{</span>\<span class="n">bindnasrepma</span><span class="p">}</span>
+  \<span class="n">UnicodeCharacter</span><span class="p">{</span><span class="n">x5C</span><span class="p">}{</span>\<span class="n">relax</span>\<span class="n">ifmmode</span>\<span class="n">setminus</span>\<span class="k">else</span>\<span class="n">textbackslash</span>\<span class="n">fi</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

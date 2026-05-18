@@ -1,0 +1,703 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All commands, alphabetic order; letter G &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=05624691" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f416c36"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="../_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="../_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="All commands, alphabetic order; letter H" href="doc-h.html" />
+    <link rel="prev" title="All commands, alphabetic order; letter F" href="doc-f.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auxdoc.html">Font test</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">All commands, alphabetic order</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doc-a.html">All commands, alphabetic order; letter A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-b.html">All commands, alphabetic order; letter B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-c.html">All commands, alphabetic order; letter C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-d.html">All commands, alphabetic order; letter D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-e.html">All commands, alphabetic order; letter E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-f.html">All commands, alphabetic order; letter F</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">All commands, alphabetic order; letter G</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#g-addto-macro">\g&#64;addto&#64;macro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#game-math-symbol">\Game (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gamma-math-symbol">\gamma (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmd-cgamma">\Gamma (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gather-environment">gather (environment)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gcd-math-symbol">\gcd (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gdef">\gdef</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ge-geq-math-symbol">\ge, \geq (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#genfrac">\genfrac</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geqq-math-symbol">\geqq (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geqslant-math-symbol">\geqslant (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gets-math-symbol">\gets (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gg-math-symbol">\gg (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ggg-math-symbol">\ggg (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gggtr-math-symbol">\gggtr (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gimel-math-symbol">\gimel (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#global">\global</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#globaldefs">\globaldefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glo-raweb-command">\glo (Raweb command)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glossaire-raweb-environment">glossaire (Raweb environment)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glueexpr-e-tex-extension">\glueexpr (e-TeX extension)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glueshrink-e-tex-extension">\glueshrink (e-TeX extension)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#glueshrinkorder-e-tex-extension">\glueshrinkorder (e-TeX extension)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gluestretch-e-tex-extension">\gluestretch (e-TeX extension)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gluestretchorder-e-tex-extension">\gluestretchorder (e-TeX extension)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gluetomu-e-tex-extension">\gluetomu (e-TeX extension)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnapprox-math-symbol">\gnapprox (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gneq-math-symbol">\gneq (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gneqq-math-symbol">\gneqq (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gnsim-math-symbol">\gnsim (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gobble-gobbletwo-gobblefour">\&#64;gobble, \&#64;gobbletwo, \&#64;gobblefour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#goodbreak">\goodbreak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grabenv-tralics-command">\grabenv (Tralics command)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grave">\grave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gtrapprox-math-symbol">\gtrapprox (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gtrdot-math-symbol">\gtrdot (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gtreqless-math-symbol">\gtreqless (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gtreqqless-math-symbol">\gtreqqless (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gtrless-math-symbol">\gtrless (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gtrsim-math-symbol">\gtrsim (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guillemets-environment">guillemets (environment)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guillemotleft">\guillemotleft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guillemotright">\guillemotright</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gsavekeys-gdelsavekeys-gunsavekeys">\gsavekeys, \gdelsavekeys, \gunsavekeys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gpresetkeys-gdelpresetkeys-gunpresetkeys">\gpresetkeys, \gdelpresetkeys, \gunpresetkeys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="doc-h.html">All commands, alphabetic order; letter H</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-i.html">All commands, alphabetic order; letter I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-j.html">All commands, alphabetic order; letter J</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-k.html">All commands, alphabetic order; letter K</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-l.html">All commands, alphabetic order; letter L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-m.html">All commands, alphabetic order; letter M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-n.html">All commands, alphabetic order; letter N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-o.html">All commands, alphabetic order; letter O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-p.html">All commands, alphabetic order; letter P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-q.html">All commands, alphabetic order; letter Q</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-r.html">All commands, alphabetic order; letter R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-s.html">All commands, alphabetic order; letter S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-t.html">All commands, alphabetic order; letter T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-u.html">All commands, alphabetic order; letter U</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-v.html">All commands, alphabetic order; letter V</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-w.html">All commands, alphabetic order; letter W</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-x.html">All commands, alphabetic order; letter X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-y.html">All commands, alphabetic order; letter Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-z.html">All commands, alphabetic order; letter Z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-symbols.html">Tralics: All commands, non-letters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-unimplemented.html">All commands, alphabetic order; unimplemented</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">All commands, alphabetic order</a></li>
+      <li class="breadcrumb-item active">All commands, alphabetic order; letter G</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="all-commands-alphabetic-order-letter-g">
+<h1>All commands, alphabetic order; letter G<a class="headerlink" href="#all-commands-alphabetic-order-letter-g" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line">This page contains the description of the following commands
+<a class="reference external" href="#cmd-g-addto-macro">\g&#64;addto&#64;macro</a>, <a class="reference external" href="#cmd-Game">\Game</a>,
+<a class="reference external" href="#cmd-gamma">\gamma</a>, <a class="reference external" href="#cmd-cgamma">\Gamma</a>,
+<a class="reference external" href="#cmd-gcd">\gcd</a>, <a class="reference external" href="#cmd-gdef">\gdef</a>,
+<a class="reference external" href="#cmd-gpresetkeys">\gdelpresetkeys</a>,
+<a class="reference external" href="#cmd-gsavekeys">\gdelsavekeys</a>, <a class="reference external" href="#cmd-ge">\ge</a>,
+<a class="reference external" href="#cmd-genfrac">\genfrac</a>, <a class="reference external" href="#cmd-ge">\geq</a>,
+<a class="reference external" href="#cmd-geqq">\geqq</a>, <a class="reference external" href="#cmd-geqslant">\geqslant</a>,
+<a class="reference external" href="#cmd-gets">\gets</a>, <a class="reference external" href="#cmd-gg">\gg</a>, <a class="reference external" href="#cmd-ggg">\ggg</a>,
+<a class="reference external" href="#cmd-gggtr">\gggtr</a>, <a class="reference external" href="#cmd-gimel">\gimel</a>,
+<a class="reference external" href="#cmd-glo">\glo</a>, <a class="reference external" href="#cmd-global">\global</a>,
+<a class="reference external" href="#cmd-globaldefs">\globaldefs</a>,
+<a class="reference external" href="doc-i.html#cmd-index">\glossary</a>, <a class="reference external" href="#cmd-glueexpr">\glueexpr</a>,
+<a class="reference external" href="#cmd-glueshrink">\glueshrink</a>,
+<a class="reference external" href="#cmd-glueshrinkorder">\glueshrinkorder</a>,
+<a class="reference external" href="#cmd-gluestretch">\gluestretch</a>,
+<a class="reference external" href="#cmd-gluestretchorder">\gluestretchorder</a>,
+<a class="reference external" href="#cmd-gluetomu">\gluetomu</a>, <a class="reference external" href="#cmd-gnapprox">\gnapprox</a>,
+<a class="reference external" href="#cmd-gneq">\gneq</a>, <a class="reference external" href="#cmd-gneqq">\gneqq</a>,
+<a class="reference external" href="#cmd-gnsim">\gnsim</a>, <a class="reference external" href="#cmd-gobble">\&#64;gobble</a>,
+<a class="reference external" href="#cmd-gobble">\&#64;gobblefour</a>, <a class="reference external" href="#cmd-gobble">\&#64;gobbletwo</a>,
+<a class="reference external" href="#cmd-goodbreak">\goodbreak</a>, <a class="reference external" href="#cmd-gpresetkeys">\gpresetkeys</a>,
+<a class="reference external" href="#cmd-grabenv">\grabenv</a>, <a class="reference external" href="#cmd-grave">\grave</a>,
+<a class="reference external" href="#cmd-gsavekeys">\gsavekeys</a>, <a class="reference external" href="#cmd-gtrapprox">\gtrapprox</a>,
+<a class="reference external" href="#cmd-gtrdot">\gtrdot</a>, <a class="reference external" href="#cmd-gtreqless">\gtreqless</a>,
+<a class="reference external" href="#cmd-gtreqqless">\gtreqqless</a>, <a class="reference external" href="#cmd-gtrless">\gtrless</a>,
+<a class="reference external" href="#cmd-gtrsim">\gtrsim</a>, <a class="reference external" href="#cmd-guillemotleft">\guillemotleft</a>,
+<a class="reference external" href="#cmd-guillemotright">\guillemotright</a>,
+<a class="reference external" href="#cmd-gpresetkeys">\gunpresetkeys</a>,
+<a class="reference external" href="#cmd-gsavekeys">\gunsavekeys</a>,</div>
+<div class="line">and environments <a class="reference external" href="#env-gather">gather</a>,
+<a class="reference external" href="#env-glossaire">glossaire</a>, <a class="reference external" href="#cmd-guillemets">guillemets</a>.</div>
+</div>
+<hr class="docutils" />
+<section id="g-addto-macro">
+<span id="cmd-g-addto-macro"></span><h2>\g&#64;addto&#64;macro<a class="headerlink" href="#g-addto-macro" title="Link to this heading"></a></h2>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\g&#64;addto&#64;macro\foo{bar}</span></code>, this will have as effect to
+globally change the macro <code class="docutils literal notranslate"><span class="pre">\foo</span></code>, by appending to its right the tokens
+<code class="docutils literal notranslate"><span class="pre">bar</span></code>. This is similar to <code class="docutils literal notranslate"><span class="pre">\addto&#64;hook</span></code>, but is more widely used
+because there is only a small number of token list registers. See also
+<a class="reference external" href="doc-c.html#cmd-car">\&#64;cons</a>.</p>
+</section>
+<section id="game-math-symbol">
+<span id="cmd-game"></span><h2>\Game (math symbol)<a class="headerlink" href="#game-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\Game</span></code> command is valid only in math mode. It generates
+<code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;#x2141;&lt;/mi&gt;</span></code> (Unicode U+2141, ⅁).</p>
+</section>
+<section id="gamma-math-symbol">
+<span id="cmd-gamma"></span><h2>\gamma (math symbol)<a class="headerlink" href="#gamma-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gamma</span></code> command is valid only in math mode. It generates a Greek
+letter: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;gamma;&lt;/mi&gt;</span></code> (Unicode U+3B3, γ). See description of the
+<code class="docutils literal notranslate"><span class="pre">`\alpha</span></code> &lt;doc-a.html#cmd-alpha&gt;`__ command.</p>
+</section>
+<section id="cmd-cgamma">
+<span id="id1"></span><h2>\Gamma (math symbol)<a class="headerlink" href="#cmd-cgamma" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\Gamma</span></code> command is valid only in math mode. It generates an
+uppercase Greek letter: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;Gamma;&lt;/mi&gt;</span></code> (Unicode U+393, Γ). See
+description of the <code class="docutils literal notranslate"><span class="pre">`\alpha</span></code> &lt;doc-a.html#cmd-alpha&gt;`__ command.</p>
+</section>
+<section id="gather-environment">
+<span id="env-gather"></span><h2>gather (environment)<a class="headerlink" href="#gather-environment" title="Link to this heading"></a></h2>
+<p>This environment has to be used outside math mode, it contains equations
+separated by <code class="docutils literal notranslate"><span class="pre">\\</span></code> commands. If the counter
+<a class="reference external" href="doc-m.html#cmd-multimathlabel">\multi&#64;math&#64;label</a> is non-zero, or
+if <em>Tralics</em> is called with option -multi_math_label then an anchor is
+added to every row, its <code class="docutils literal notranslate"><span class="pre">id-text</span></code> is obtained by incrementing the
+equation counter. In the example shown, the anchor is attached to the
+formula and no counter is incremented. (See also
+<a class="reference external" href="mml_ex.html#gather">here</a>)</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">gather</span><span class="p">}</span><span class="mi">1</span><span class="o">&lt;</span><span class="mi">2</span>\\<span class="mi">3</span><span class="o">&lt;</span><span class="mi">4</span>\<span class="n">end</span><span class="p">{</span><span class="n">gather</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Translation</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">formula</span> <span class="nb">id</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;mid1&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid1&#39;</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;display&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">math</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;display&#39;</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">mtable</span> <span class="n">displaystyle</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">mtable</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">math</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">formula</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="gcd-math-symbol">
+<span id="cmd-gcd"></span><h2>\gcd (math symbol)<a class="headerlink" href="#gcd-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gcd</span></code> command is valid only in math mode. Its translation is a
+math operator of the same name:
+<code class="docutils literal notranslate"><span class="pre">&lt;mo</span> <span class="pre">form='prefix'</span> <span class="pre">movablelimits='true'&gt;gcd&lt;/mo&gt;</span></code>. For an example see
+the <code class="docutils literal notranslate"><span class="pre">`\log</span></code> &lt;doc-l.html#cmd-log&gt;`__ command.</p>
+</section>
+<section id="gdef">
+<span id="cmd-gdef"></span><h2>\gdef<a class="headerlink" href="#gdef" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\gdef\foo{bar}</span></code>. The syntax is the same as
+<code class="docutils literal notranslate"><span class="pre">`\def</span></code> &lt;doc-d.html#cmd-def&gt;`__, but the definition is global.</p>
+<p>You can put the prefix <code class="docutils literal notranslate"><span class="pre">\global</span></code> before <code class="docutils literal notranslate"><span class="pre">\gdef</span></code>, but this is
+useless.</p>
+</section>
+<section id="ge-geq-math-symbol">
+<span id="cmd-ge"></span><h2>\ge, \geq (math symbol)<a class="headerlink" href="#ge-geq-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\ge</span></code> command (and is variant <code class="docutils literal notranslate"><span class="pre">\geq</span></code>) is valid only in math
+mode. It generates a relation symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;ge;&lt;/mo&gt;</span></code> (Unicode U+2265,
+≥). See description of the <code class="docutils literal notranslate"><span class="pre">`\le</span></code> &lt;doc-l.html#cmd-le&gt;`__ command.</p>
+</section>
+<section id="genfrac">
+<span id="cmd-genfrac"></span><h2>\genfrac<a class="headerlink" href="#genfrac" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\genfrac</span></code> command is valid only in math mode. It takes six
+arguments, say L, R, w, s, N, D. The translation is a fraction N over D,
+with left and right delimiters L and R. The parameter w specifies the
+width of the fraction rule. It can be omitted. The parameter s specifies
+the style, it is a number between 0 and 3, interpreted as
+<code class="docutils literal notranslate"><span class="pre">\displaystyle</span></code>, <code class="docutils literal notranslate"><span class="pre">\textstyle</span></code>, <code class="docutils literal notranslate"><span class="pre">scriptstyle</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\scriptscriptstyle</span></code>. It can be empty.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$\genfrac{}{}{}{}12 % this is \frac
+\genfrac[]{2pt}{2}{aaa}{bbb} % brackets, small, thick
+\genfrac(){0cm}{0}nm % this is \dbinom
+$$
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;formula type=&#39;display&#39;&gt;
+ &lt;math mode=&#39;display&#39; xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+  &lt;mrow&gt;
+   &lt;!-- \genfrac{}{}{}{}12 --&gt;
+   &lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;
+   &lt;!-- \genfrac[]{2pt}{2}{aaa}{bbb} --&gt;
+   &lt;mfenced open=&#39;[&#39; close=&#39;]&#39;&gt;
+    &lt;mstyle scriptlevel=&#39;1&#39; displaystyle=&#39;false&#39;&gt;
+     &lt;mfrac linethickness=&#39;2.0pt&#39;&gt;
+      &lt;mrow&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;
+      &lt;mrow&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;/mrow&gt;
+     &lt;/mfrac&gt;
+    &lt;/mstyle&gt;
+   &lt;/mfenced&gt;
+   &lt;!--\genfrac(){0cm}{0}nm --&gt;
+   &lt;mfenced open=&#39;(&#39; close=&#39;)&#39;&gt;
+    &lt;mstyle scriptlevel=&#39;0&#39; displaystyle=&#39;true&#39;&gt;
+     &lt;mfrac linethickness=&#39;0.0pt&#39;&gt;&lt;mi&gt;n&lt;/mi&gt; &lt;mi&gt;m&lt;/mi&gt;&lt;/mfrac&gt;
+    &lt;/mstyle&gt;
+   &lt;/mfenced&gt;
+  &lt;/mrow&gt;
+ &lt;/math&gt;
+&lt;/formula&gt;
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="genfrac" src="../_images/img_58.png" /></p>
+</section>
+<section id="geqq-math-symbol">
+<span id="cmd-geqq"></span><h2>\geqq (math symbol)<a class="headerlink" href="#geqq-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\geqq</span></code> command is valid only in math mode; it is a variant of the
+greater-or-equal symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;geqq;&lt;/mo&gt;</span></code> (Unicode U+2267, ≧).</p>
+</section>
+<section id="geqslant-math-symbol">
+<span id="cmd-geqslant"></span><h2>\geqslant (math symbol)<a class="headerlink" href="#geqslant-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\geqslant</span></code> command is valid only in math mode; it is a variant of
+the greater-or-equal symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;geqslant;&lt;/mo&gt;</span></code> (Unicode U+2A7E,
+⩾). See also description of the
+<code class="docutils literal notranslate"><span class="pre">`\smallint</span></code> &lt;doc-s.html#cmd-smallint&gt;`__ command.</p>
+</section>
+<section id="gets-math-symbol">
+<span id="cmd-gets"></span><h2>\gets (math symbol)<a class="headerlink" href="#gets-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gets</span></code> command is equivalent to the <code class="docutils literal notranslate"><span class="pre">\leftarrow</span></code> command:
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;leftarrow;&lt;/mo&gt;</span></code> (Unicode U+2190, ←). See also description of
+the <code class="docutils literal notranslate"><span class="pre">`\smallint</span></code> &lt;doc-s.html#cmd-smallint&gt;`__ command.</p>
+</section>
+<section id="gg-math-symbol">
+<span id="cmd-gg"></span><h2>\gg (math symbol)<a class="headerlink" href="#gg-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gg</span></code> command is valid only in math mode. It generates a relation
+symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gg;&lt;/mo&gt;</span></code> (Unicode U+226B, ≫). See description of the
+<code class="docutils literal notranslate"><span class="pre">`\le</span></code> &lt;doc-l.html#cmd-le&gt;`__ command.</p>
+</section>
+<section id="ggg-math-symbol">
+<span id="cmd-ggg"></span><h2>\ggg (math symbol)<a class="headerlink" href="#ggg-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\ggg</span></code> command is valid only in math mode. It generates a relation
+symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;ggg;&lt;/mo&gt;</span></code> (Unicode U+22D9, ⋙).</p>
+</section>
+<section id="gggtr-math-symbol">
+<span id="cmd-gggtr"></span><h2>\gggtr (math symbol)<a class="headerlink" href="#gggtr-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gggtr</span></code> command is valid only in math mode. It generates a
+relation symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;ggg;&lt;/mo&gt;</span></code> (Unicode U+22D9, ⋙).</p>
+</section>
+<section id="gimel-math-symbol">
+<span id="cmd-gimel"></span><h2>\gimel (math symbol)<a class="headerlink" href="#gimel-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gimel</span></code> command is valid only in math mode. It generates
+<code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;gimel;&lt;/mi&gt;</span></code> (Unicode U+2137, ℷ).</p>
+</section>
+<section id="global">
+<span id="cmd-global"></span><h2>\global<a class="headerlink" href="#global" title="Link to this heading"></a></h2>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\global\def...</span></code> then the definition will be global, unless
+<code class="docutils literal notranslate"><span class="pre">\globaldefs</span></code> is negative. The prefix can be used before any
+assignment, like <code class="docutils literal notranslate"><span class="pre">\let</span></code>, or <code class="docutils literal notranslate"><span class="pre">\catcode25=</span></code> <code class="docutils literal notranslate"><span class="pre">\advance\count0</span></code>. Note
+that <code class="docutils literal notranslate"><span class="pre">\global\def</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">\gdef</span></code> and <code class="docutils literal notranslate"><span class="pre">\global\edef</span></code> is
+the same as <code class="docutils literal notranslate"><span class="pre">\xdef</span></code>.</p>
+</section>
+<section id="globaldefs">
+<span id="cmd-globaldefs"></span><h2>\globaldefs<a class="headerlink" href="#globaldefs" title="Link to this heading"></a></h2>
+<p>When you say <code class="docutils literal notranslate"><span class="pre">\globaldefs=75</span></code> (or any positive value), then all
+following assignments are global. If <code class="docutils literal notranslate"><span class="pre">\globaldefs</span></code> is negative, then
+all following assignments are local, even those prefixed with
+<code class="docutils literal notranslate"><span class="pre">\global</span></code>. If the value is zero, only those prefixed with <code class="docutils literal notranslate"><span class="pre">\global</span></code>
+are global. (See <a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details of
+argument scanning).</p>
+<p>Example. The following code translates to 023400. Note that the second
+assignment to <code class="docutils literal notranslate"><span class="pre">\globaldefs</span></code> is global, so that this variable is
+negative outside the group.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">count0</span><span class="o">=</span><span class="mi">0</span> \<span class="n">count1</span><span class="o">=</span><span class="mi">0</span> \<span class="n">count10</span><span class="o">=</span><span class="mi">0</span> \<span class="n">count11</span><span class="o">=</span><span class="mi">0</span> \<span class="n">count20</span><span class="o">=</span><span class="mi">0</span>  \<span class="n">count21</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">{</span>
+  \<span class="n">count0</span><span class="o">=</span><span class="mi">1</span> \<span class="k">global</span>\<span class="n">count1</span><span class="o">=</span><span class="mi">2</span>
+  \<span class="n">globaldefs</span><span class="o">=</span><span class="mi">1</span>
+  \<span class="n">count10</span><span class="o">=</span><span class="mi">3</span> \<span class="k">global</span>\<span class="n">count11</span><span class="o">=</span><span class="mi">4</span>
+  \<span class="n">globaldefs</span><span class="o">=-</span><span class="mi">1</span>
+  \<span class="n">count20</span><span class="o">=</span><span class="mi">5</span> \<span class="k">global</span>\<span class="n">count21</span><span class="o">=</span><span class="mi">6</span>
+<span class="p">}</span>
+\<span class="n">the</span>\<span class="n">count0</span> \<span class="n">the</span>\<span class="n">count1</span> \<span class="n">the</span>\<span class="n">count10</span> \<span class="n">the</span>\<span class="n">count11</span> \<span class="n">the</span>\<span class="n">count20</span> \<span class="n">the</span>\<span class="n">count21</span>
+\<span class="n">globaldefs</span><span class="o">=</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="glo-raweb-command">
+<span id="cmd-glo"></span><h2>\glo (Raweb command)<a class="headerlink" href="#glo-raweb-command" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\glo</span></code> command takes two arguments. The translation of
+<code class="docutils literal notranslate"><span class="pre">\glo{a}{b}</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">\item[a]{b}</span></code>, namely
+<code class="docutils literal notranslate"><span class="pre">&lt;label&gt;a&lt;/label&gt;&lt;item&gt;</span> <span class="pre">&lt;p&gt;b&lt;/p&gt;&lt;/item&gt;</span></code></p>
+</section>
+<section id="glossaire-raweb-environment">
+<span id="env-glossaire"></span><h2>glossaire (Raweb environment)<a class="headerlink" href="#glossaire-raweb-environment" title="Link to this heading"></a></h2>
+<p>This is an environment in which you can put <code class="docutils literal notranslate"><span class="pre">\glo</span></code> commands. (do not
+confuse with the <a class="reference external" href="doc-i.html#cmd-index">\glossary</a> command).
+Example.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">glossaire</span><span class="p">}</span> \<span class="n">glo</span><span class="p">{</span><span class="n">x1</span><span class="p">}{</span><span class="n">y1</span><span class="p">}</span>\<span class="n">glo</span><span class="p">{</span><span class="n">x2</span><span class="p">}{</span><span class="n">y2</span><span class="p">}</span>\<span class="n">end</span><span class="p">{</span><span class="n">glossaire</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The translation will be:</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nb">list</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;gloss&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">Glossary</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="n">x1</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">y1</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">item</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="n">x2</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">item</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">y2</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">item</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nb">list</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Note that names are not hard-coded. If the configuration file contains
+the following</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att_gloss_type</span> <span class="o">=</span> <span class="s2">&quot;Gloss&quot;</span>
+<span class="n">xml_gloitem_name</span> <span class="o">=</span> <span class="s2">&quot;Glolabel&quot;</span>
+<span class="n">xml_item_name</span> <span class="o">=</span> <span class="s2">&quot;Item&quot;</span>
+<span class="n">xml_labelitem_name</span> <span class="o">=</span> <span class="s2">&quot;Label&quot;</span>
+<span class="n">xml_list_name</span> <span class="o">=</span> <span class="s2">&quot;List&quot;</span>
+<span class="n">xml_head_name</span> <span class="o">=</span> <span class="s2">&quot;Head&quot;</span>
+<span class="n">xml_glo_name</span> <span class="o">=</span> <span class="s2">&quot;The famous glossary&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>then the translation will be:</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">List</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;Gloss&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">Head</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">famous</span> <span class="n">glossary</span><span class="o">&lt;/</span><span class="n">Head</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">Glolabel</span><span class="o">&gt;</span><span class="n">x1</span><span class="o">&lt;/</span><span class="n">Glolabel</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">Item</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">y1</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">Item</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">Glolabel</span><span class="o">&gt;</span><span class="n">x2</span><span class="o">&lt;/</span><span class="n">Glolabel</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">Item</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">y2</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">Item</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">List</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="glueexpr-e-tex-extension">
+<span id="cmd-glueexpr"></span><h2>\glueexpr (e-TeX extension)<a class="headerlink" href="#glueexpr-e-tex-extension" title="Link to this heading"></a></h2>
+<p>Like <code class="docutils literal notranslate"><span class="pre">`\numexpr</span></code> &lt;doc-n.html#cmd-numexpr&gt;`__, but scans glue.</p>
+</section>
+<section id="glueshrink-e-tex-extension">
+<span id="cmd-glueshrink"></span><h2>\glueshrink (e-TeX extension)<a class="headerlink" href="#glueshrink-e-tex-extension" title="Link to this heading"></a></h2>
+</section>
+<section id="glueshrinkorder-e-tex-extension">
+<span id="cmd-glueshrinkorder"></span><h2>\glueshrinkorder (e-TeX extension)<a class="headerlink" href="#glueshrinkorder-e-tex-extension" title="Link to this heading"></a></h2>
+</section>
+<section id="gluestretch-e-tex-extension">
+<span id="cmd-gluestretch"></span><h2>\gluestretch (e-TeX extension)<a class="headerlink" href="#gluestretch-e-tex-extension" title="Link to this heading"></a></h2>
+</section>
+<section id="gluestretchorder-e-tex-extension">
+<span id="cmd-gluestretchorder"></span><h2>\gluestretchorder (e-TeX extension)<a class="headerlink" href="#gluestretchorder-e-tex-extension" title="Link to this heading"></a></h2>
+<p>The commands <code class="docutils literal notranslate"><span class="pre">\gluestretchorder</span></code>, <code class="docutils literal notranslate"><span class="pre">\glueshrinkorder</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\gluestretch</span></code>, <code class="docutils literal notranslate"><span class="pre">\glueshrink</span></code> can be used when some internal
+quantity is scanned, for instance after <code class="docutils literal notranslate"><span class="pre">\the</span></code>. They read some glue
+and return one part of the glue, it can be the stretch order or the
+shrink order (an integer between 0 and 3), or the stretch or shrink
+value (as a dimension). In the case of <code class="docutils literal notranslate"><span class="pre">3pt</span> <span class="pre">plus</span> <span class="pre">4pt</span> <span class="pre">minus</span> <span class="pre">5pt</span></code>, the
+stretch value is 4pt, the shrink value is 5pt, the strech and shrink
+orders are zero. The value 3pt can be obtained by converting the glue to
+a dimension. In the case of <code class="docutils literal notranslate"><span class="pre">3pt</span> <span class="pre">plus</span> <span class="pre">4fil</span> <span class="pre">minus</span> <span class="pre">5fill</span></code>, the values
+are the same the stretch order is one, the shrink order is 2. Order 3 is
+obtained when filll is used.</p>
+<p>The commands <code class="docutils literal notranslate"><span class="pre">\gluetomu</span></code>, <code class="docutils literal notranslate"><span class="pre">\mutoglue</span></code> read and return some glue. The
+eTeX manual says: glue is converted into muglue and vice versa by simply
+equating 1pt with 1mu. In the example here we use the commands described
+above, and store them somewhere.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">muskip0</span> <span class="o">=</span> <span class="mi">18</span><span class="n">mu</span> <span class="n">plus</span> <span class="mi">36</span><span class="n">mu</span> <span class="n">minus</span> <span class="mi">1</span> <span class="n">fill</span>
+\<span class="n">skip0</span> <span class="o">=</span> <span class="mi">10</span><span class="n">pt</span> <span class="n">plus</span> <span class="mi">20</span><span class="n">pt</span> <span class="n">minus</span> <span class="mi">1</span> <span class="n">fil</span>
+\<span class="n">edef</span>\<span class="n">uselater</span><span class="p">{</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">muskip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">mutoglue</span>\<span class="n">muskip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">skip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">gluetomu</span>\<span class="n">skip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">mutoglue</span>\<span class="n">gluetomu</span>\<span class="n">skip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">glueshrink</span>\<span class="n">skip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">gluestretch</span>\<span class="n">skip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">glueshrinkorder</span>\<span class="n">skip0</span><span class="p">,</span><span class="o">%</span>
+\<span class="n">the</span>\<span class="n">gluestretchorder</span>\<span class="n">skip0</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\xoo</span></code> defined here contains the same characters as
+<code class="docutils literal notranslate"><span class="pre">\uselater</span></code>. The non-trivial point is that all characters produced by
+<code class="docutils literal notranslate"><span class="pre">\the</span></code> are of category code 12.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\let\GDEF\gdef\let\XDEF\xdef\def\S{ }
+ \catcode`m=12 \catcode`u=12 \catcode`p=12 \catcode`f=12
+ \catcode`i=12  \catcode`l=12 \catcode`n=12 \catcode`i=12 \catcode`s=12
+ \catcode`t=12
+ \GDEF\MU{mu}\GDEF\PT{pt}\GDEF\FIL{fil}\GDEF\FILL{fill}%
+ \GDEF\PLUS{plus}\GDEF\MINUS{minus}
+\XDEF\xoo{18.0\MU\S \PLUS\S 36.0\MU\S \MINUS\S 1.0\FILL,%
+18.0\PT\S \PLUS\S 36.0\PT\S \MINUS\S 1.0\FILL,%
+10.0\PT\S \PLUS\S 20.0\PT\S \MINUS\S 1.0\FIL,%
+10.0\MU\S \PLUS\S 20.0\MU\S \MINUS\S 1.0\FIL,%
+10.0\PT\S \PLUS\S 20.0\PT\S \MINUS\S 1.0\FIL,%
+1.0\PT,20.0\PT,1,0}}
+</pre></div>
+</div>
+</div>
+<p>The command <code class="docutils literal notranslate"><span class="pre">\yoo</span></code> defined here contains the same characters and same
+category codes as <code class="docutils literal notranslate"><span class="pre">\uselater</span></code>.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">edef</span>\<span class="n">yoo</span><span class="p">{</span>\<span class="n">detokenize</span><span class="p">{</span><span class="mf">18.0</span><span class="n">mu</span> <span class="n">plus</span> <span class="mf">36.0</span><span class="n">mu</span> <span class="n">minus</span> <span class="mf">1.0</span><span class="n">fill</span><span class="p">,</span><span class="o">%</span>
+<span class="mf">18.0</span><span class="n">pt</span> <span class="n">plus</span> <span class="mf">36.0</span><span class="n">pt</span> <span class="n">minus</span> <span class="mf">1.0</span><span class="n">fill</span><span class="p">,</span><span class="o">%</span>
+<span class="mf">10.0</span><span class="n">pt</span> <span class="n">plus</span> <span class="mf">20.0</span><span class="n">pt</span> <span class="n">minus</span> <span class="mf">1.0</span><span class="n">fil</span><span class="p">,</span><span class="o">%</span>
+<span class="mf">10.0</span><span class="n">mu</span> <span class="n">plus</span> <span class="mf">20.0</span><span class="n">mu</span> <span class="n">minus</span> <span class="mf">1.0</span><span class="n">fil</span><span class="p">,</span><span class="o">%</span>
+<span class="mf">10.0</span><span class="n">pt</span> <span class="n">plus</span> <span class="mf">20.0</span><span class="n">pt</span> <span class="n">minus</span> <span class="mf">1.0</span><span class="n">fil</span><span class="p">,</span><span class="o">%</span>
+<span class="mf">1.0</span><span class="n">pt</span><span class="p">,</span><span class="mf">20.0</span><span class="n">pt</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">}}</span>
+\<span class="n">ifx</span>\<span class="n">yoo</span>\<span class="n">xoo</span>\<span class="k">else</span>\<span class="n">bad</span>\<span class="n">fi</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="gluetomu-e-tex-extension">
+<span id="cmd-gluetomu"></span><h2>\gluetomu (e-TeX extension)<a class="headerlink" href="#gluetomu-e-tex-extension" title="Link to this heading"></a></h2>
+<p>Inverse function of <code class="docutils literal notranslate"><span class="pre">`\mutoglue</span></code> &lt;doc-m.html#cmd-mutoglue&gt;`__ (See
+above for an example).</p>
+</section>
+<section id="gnapprox-math-symbol">
+<span id="cmd-gnapprox"></span><h2>\gnapprox (math symbol)<a class="headerlink" href="#gnapprox-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gnapprox</span></code> command is valid only in math mode; it is a variant of
+the greater-or-equal symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gnapprox;&lt;/mo&gt;</span></code> (Unicode U+2A8A,
+⪊).</p>
+</section>
+<section id="gneq-math-symbol">
+<span id="cmd-gneq"></span><h2>\gneq (math symbol)<a class="headerlink" href="#gneq-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gneq</span></code> command is valid only in math mode; it is a variant of the
+greater-or-equal symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gneq;&lt;/mo&gt;</span></code> (Unicode U+2A88, ⪈).</p>
+</section>
+<section id="gneqq-math-symbol">
+<span id="cmd-gneqq"></span><h2>\gneqq (math symbol)<a class="headerlink" href="#gneqq-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\geqq</span></code> command is valid only in math mode; it is a variant of the
+greater-or-equal symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gneqq;&lt;/mo&gt;</span></code> (Unicode U+2269, ≩).</p>
+</section>
+<section id="gnsim-math-symbol">
+<span id="cmd-gnsim"></span><h2>\gnsim (math symbol)<a class="headerlink" href="#gnsim-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gnsim</span></code> command is valid only in math mode; it is a variant of
+the greater-or-equal symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gnsim;&lt;/mo&gt;</span></code> (Unicode U+22E7, ⋧).</p>
+</section>
+<section id="gobble-gobbletwo-gobblefour">
+<span id="cmd-gobble"></span><h2>\&#64;gobble, \&#64;gobbletwo, \&#64;gobblefour<a class="headerlink" href="#gobble-gobbletwo-gobblefour" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\&#64;gobble</span></code> command reads one argument and does nothing with it. In
+the same fashion <code class="docutils literal notranslate"><span class="pre">\&#64;gobbletwo</span></code> and <code class="docutils literal notranslate"><span class="pre">\&#64;gobblefour</span></code> read two and four
+arguments.</p>
+</section>
+<section id="goodbreak">
+<span id="cmd-goodbreak"></span><h2>\goodbreak<a class="headerlink" href="#goodbreak" title="Link to this heading"></a></h2>
+<p>In <em>Tralics</em>, the <code class="docutils literal notranslate"><span class="pre">\goodbreak</span></code> command is the same as <code class="docutils literal notranslate"><span class="pre">\par</span></code>. In
+LaTeX, it adds also some penalty (value -500).</p>
+</section>
+<section id="grabenv-tralics-command">
+<span id="cmd-grabenv"></span><h2>\grabenv (Tralics command)<a class="headerlink" href="#grabenv-tralics-command" title="Link to this heading"></a></h2>
+<p>Inside an environment, you can say <code class="docutils literal notranslate"><span class="pre">\grabenv\foo</span></code>; in this case,
+<em>Tralics</em> will collect all tokens until finding the end of the
+environment, and put them (globally) in the command <code class="docutils literal notranslate"><span class="pre">\foo</span></code>. In the
+following example, the last line produces two errors, because because
+<code class="docutils literal notranslate"><span class="pre">\grabenv</span></code> is not followed by a valid command name and is outside an
+environment.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">newenvironment</span> <span class="p">{</span><span class="n">simple</span><span class="p">}{</span><span class="n">A</span><span class="p">}{</span><span class="n">B</span><span class="p">}</span>
+\<span class="n">newenvironment</span> <span class="p">{</span><span class="n">grab</span><span class="p">}{</span><span class="n">C</span><span class="p">}{</span><span class="n">D</span>\<span class="n">grabbed</span><span class="p">}</span>
+
+<span class="n">Test</span> <span class="n">grabenv</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">grab</span><span class="p">}</span><span class="n">x</span>\<span class="n">grabenv</span>\<span class="n">grabbed</span> \<span class="n">begin</span><span class="p">{</span><span class="n">simple</span><span class="p">}</span><span class="n">yz</span>\<span class="n">end</span><span class="p">{</span><span class="n">simple</span><span class="p">}</span><span class="n">t</span>\<span class="n">end</span><span class="p">{</span><span class="n">grab</span><span class="p">}</span>
+\<span class="n">grabbed</span><span class="o">=</span>\<span class="n">grabenv</span><span class="o">.</span><span class="n">OK</span>
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Test</span> <span class="n">grabenv</span>
+<span class="n">CxDAyzBt</span>
+<span class="n">AyzBt</span><span class="o">=&lt;</span><span class="n">error</span> <span class="n">n</span><span class="o">=</span><span class="s1">&#39;\grabenv&#39;</span> <span class="n">l</span><span class="o">=</span><span class="s1">&#39;180&#39;</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;bad definition&#39;</span><span class="o">/&gt;&lt;</span><span class="n">error</span> <span class="n">n</span><span class="o">=</span><span class="s1">&#39;\grabenv&#39;</span> <span class="n">l</span><span class="o">=</span><span class="s1">&#39;180&#39;</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;\grabenv must be used in an environment&#39;</span><span class="o">/&gt;</span><span class="n">OK</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="grave">
+<span id="cmd-grave"></span><h2>\grave<a class="headerlink" href="#grave" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\grave</span></code> command puts a grave accent over a kernel. It works only
+in math mode. See also the <code class="docutils literal notranslate"><span class="pre">`\acute</span></code> &lt;doc-a.html#cmd-acute&gt;`__
+command.</p>
+</section>
+<section id="gtrapprox-math-symbol">
+<span id="cmd-gtrapprox"></span><h2>\gtrapprox (math symbol)<a class="headerlink" href="#gtrapprox-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gtrapprox</span></code> is valid in math mode only; translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gtrapprox;&lt;/mo&gt;</span></code> (Unicode U+2A86, ⪆).</p>
+</section>
+<section id="gtrdot-math-symbol">
+<span id="cmd-gtrdot"></span><h2>\gtrdot (math symbol)<a class="headerlink" href="#gtrdot-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gtrdot</span></code> is valid in math mode only; translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gtrdot;&lt;/mo&gt;</span></code> (Unicode U+22D7, ⋗).</p>
+</section>
+<section id="gtreqless-math-symbol">
+<span id="cmd-gtreqless"></span><h2>\gtreqless (math symbol)<a class="headerlink" href="#gtreqless-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gtreqless</span></code> is valid in math mode only; translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gtreqless;&lt;/mo&gt;</span></code> (Unicode U+22DB, ⋛).</p>
+</section>
+<section id="gtreqqless-math-symbol">
+<span id="cmd-gtreqqless"></span><h2>\gtreqqless (math symbol)<a class="headerlink" href="#gtreqqless-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gtreqqless</span></code> is valid in math mode only; translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gtreqqless;&lt;/mo&gt;</span></code> (Unicode U+2A8C, ⪌).</p>
+</section>
+<section id="gtrless-math-symbol">
+<span id="cmd-gtrless"></span><h2>\gtrless (math symbol)<a class="headerlink" href="#gtrless-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gtrless</span></code> command gives a greater/less than symbol. It works only
+in math mode: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gtrless;&lt;/mo&gt;</span></code> (Unicode U+2277, ≷). See also
+description of the <code class="docutils literal notranslate"><span class="pre">`\smallint</span></code> &lt;doc-s.html#cmd-smallint&gt;`__ command.</p>
+</section>
+<section id="gtrsim-math-symbol">
+<span id="cmd-gtrsim"></span><h2>\gtrsim (math symbol)<a class="headerlink" href="#gtrsim-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\gtrsim</span></code> is valid in math mode only; translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;gtrsim;&lt;/mo&gt;</span></code> (Unicode U+2273, ≳).</p>
+</section>
+<section id="guillemets-environment">
+<span id="cmd-guillemets"></span><h2>guillemets (environment)<a class="headerlink" href="#guillemets-environment" title="Link to this heading"></a></h2>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\begin{guillemets}xxx\end{guillemets}</span></code>, it is the same as
+if you had said <code class="docutils literal notranslate"><span class="pre">«xxx»</span></code>. But in a future version of the software the
+environment may produce much nicer results.</p>
+</section>
+<section id="guillemotleft">
+<span id="cmd-guillemotleft"></span><h2>\guillemotleft<a class="headerlink" href="#guillemotleft" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\guillemotleft</span></code> command translates into <code class="docutils literal notranslate"><span class="pre">«</span></code> or <code class="docutils literal notranslate"><span class="pre">&amp;#xAB;</span></code>. For
+more info see the <a class="reference external" href="doc-chars.html#latin">latin supplement
+characters</a>.</p>
+</section>
+<section id="guillemotright">
+<span id="cmd-guillemotright"></span><h2>\guillemotright<a class="headerlink" href="#guillemotright" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\guillemotright</span></code> command translates into <code class="docutils literal notranslate"><span class="pre">»</span></code> or <code class="docutils literal notranslate"><span class="pre">&amp;#xBB;</span></code>. For
+more info see the <a class="reference external" href="doc-chars.html#latin">latin supplement
+characters</a>.</p>
+</section>
+<section id="gsavekeys-gdelsavekeys-gunsavekeys">
+<span id="cmd-gsavekeys"></span><h2>\gsavekeys, \gdelsavekeys, \gunsavekeys<a class="headerlink" href="#gsavekeys-gdelsavekeys-gunsavekeys" title="Link to this heading"></a></h2>
+<p>These commands are provided by the <a class="reference external" href="doc-k.html#cmd-keyval">xkeyval</a>
+package.</p>
+</section>
+<section id="gpresetkeys-gdelpresetkeys-gunpresetkeys">
+<span id="cmd-gpresetkeys"></span><h2>\gpresetkeys, \gdelpresetkeys, \gunpresetkeys<a class="headerlink" href="#gpresetkeys-gdelpresetkeys-gunpresetkeys" title="Link to this heading"></a></h2>
+<p>These commands are provided by the <a class="reference external" href="doc-k.html#cmd-keyval">xkeyval</a>
+package.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

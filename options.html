@@ -1,0 +1,536 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command-line options &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuration files of Tralics: syntax and usage" href="titlepage.html" />
+    <link rel="prev" title="Tralics: a LaTeX to XML translator" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Command-line options</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="command-line-options">
+<h1>Command-line options<a class="headerlink" href="#command-line-options" title="Link to this heading"></a></h1>
+<p><em>Tralics</em> knows about many options, that start with a single or double
+hyphen. Some options take an argument, that is placed just after the
+option, the syntax option=argument, without spaces is allowed. You can
+also use spaces (option, space, equals, space, argument). Some options
+are shown with an underscore, it is optional. They are the following, in
+alphabetic order:</p>
+<dl class="simple">
+<dt>-confdir=<em>prefix</em></dt><dd><p>This is a prefix for an alternate location of tcf, ult, plt, and clt
+files. More than one prefix can be given, all will be used (latest
+first). Since version 2.11.4, the configuration file .tralics_rc is
+searched in this list, if not found in the current directory.</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-c<var>ompatibility</var></span></kbd></dt>
+<dd><p>Keeps compatibility with older versions.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-config=<em>FILE</em></dt><dd><p>Use FILE instead of default configuration file. This can be an
+absolute or relative pathname.</p>
+</dd>
+<dt>-config_file=<em>FILE</em></dt><dd><p>Same as -config=FILE.</p>
+</dd>
+<dt>-default_class=<em>CLASS</em></dt><dd><p>Assume that you compile a file that has <code class="docutils literal notranslate"><span class="pre">\documentclass{foo}</span></code>; in
+this case, <em>Tralics</em> tries to read the file foo.clt. No error is
+signaled if the file cannot be opened. If you call <em>Tralics</em> with
+option -default_class=bar, then bar.clt is loaded in the case foo.clt
+does not exists; the command <code class="docutils literal notranslate"><span class="pre">\CurrentClass</span></code> will hold the name of
+the document class (here “foo”), so that bar.clt knows how it was
+called.</p>
+</dd>
+<dt>-distinguish_refer_in_rabib=true/false</dt><dd><p>This indicates whether, for the raweb, the “refer” bibliography
+database should be considered a normal file, or a subfile for the
+year database. Values other than yes, no, true, false, are ignored.
+Default is yes. The configuration may also specify
+distinguish_refer_in_rabib=xx. In case of conflit, the parameter is
+used. Values other than yes, no, true and false are ignored. Details
+are explained in section <a class="reference external" href="raweb.html#rabib">2.8 Bibliography</a>.</p>
+</dd>
+<dt>-doctype=<em>A-B</em></dt><dd><p>This specifies the DOCTYPE of the resulting XML document. Here A is
+the name of the root element, B is the name of the DTD file. The two
+quantities A and B are separated by a dash or a space (in this case,
+quotes are needed, so that “A B” read as a single argument).</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-d<var>ualmath</var></span></kbd></dt>
+<dd><p>The LaTeX source of math formulas is added to the MathML expression.
+This is the same as using <code class="docutils literal notranslate"><span class="pre">\&#64;nomathml=-3</span></code> in the document (see
+<a class="reference external" href="doc-n.html#cmd-nomathml">documentation</a>)</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-entnames=yes/no</dt><dd><p>This tells <em>Tralics</em> to put <code class="docutils literal notranslate"><span class="pre">&amp;alpha;</span></code> or <code class="docutils literal notranslate"><span class="pre">&amp;#x3B1;</span></code> in the XML
+output. If entity names are used, the resulting XML file can be used
+only if the DTD explains how they are defined. Since version 2.9,
+this option applies only to math characters, that are described in
+the MathMM DTD.</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-e<var>tex</var></span></kbd></dt>
+<dd><p>This option enables e-TeX extensions. Options are enabled by default.</p>
+</dd>
+<dt><kbd><span class="option">-f<var>ind_words</var></span></kbd></dt>
+<dd><p>The list of all words of the XML tree will be printed on the file
+words, after translation is complete.</p>
+</dd>
+<dt><kbd><span class="option">-h<var>elp</var></span></kbd></dt>
+<dd><p>The list of main options are printed, and the program stops.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-input_data =<em>VALUE</em></dt><dd><p>In this case <em>Tralics</em> translates the content of the argument VALUE
+and prints the translation of all math formulas it sees (and nothing
+else). No XML file is generated. No error is printed. The transcript
+file is texput.log.</p>
+</dd>
+<dt>-input_dir =<em>DIR</em></dt><dd><p>Specifies where source files are to be found. This is a colon
+separated list of directories; current directory is defined by an
+empty slot, or a single dot. It will be added to the end of the list,
+unless present.</p>
+</dd>
+<dt>-input_path = <em>DIR</em></dt><dd><p>Same as input-dir=DIR</p>
+</dd>
+<dt>-input_file =<em>FILE</em></dt><dd><p>This tells <em>Tralics</em> to compile file FILE (.tex suffix added if
+needed)</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-i<var>nteractivemath</var></span>, <span class="option">-i</span></kbd></dt>
+<dd><p>Special interactive mode, in which characters are read from the
+terminal, instead a file, and math formulas are printed on the
+screen. Input encoding is UTF-8 (it will be latin1 if option -latin1
+comes after option -i).</p>
+</dd>
+<dt><kbd><span class="option">-l<var>atin1</var></span></kbd></dt>
+<dd><p>This option means that input files are by default encoded in
+iso-8859-1 mode (if the first line of the file contains
+<code class="docutils literal notranslate"><span class="pre">-*-</span>&#160; <span class="pre">coding:</span> <span class="pre">utf-8</span></code> it is read in UTF-8 mode).</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-leftquote=<em>xxx</em></dt><dd><p>Defines translation of left quote (or backquote); see below under
+rightquote.</p>
+</dd>
+<dt>-log_file =<em>FILE</em></dt><dd><p>This tells <em>Tralics</em> to put all messages and warnings in FILE
+(extension .log added if not given); the file is locate in the
+directory specified by output_dir. Defaut value is the name of the
+input file.</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-m<var>ath_variant</var></span></kbd></dt>
+<dd><p>If you say -math_variant then <code class="docutils literal notranslate"><span class="pre">$\mathfrak</span> <span class="pre">B$</span></code> translates into
+<code class="docutils literal notranslate"><span class="pre">&lt;mi</span> <span class="pre">mathvariant='fraktur'</span> <span class="pre">&gt;B&lt;/mi&gt;</span></code>. If you say -no_math_variant
+then <code class="docutils literal notranslate"><span class="pre">$\mathcal</span> <span class="pre">A$</span></code> translates into <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;#x1D49C;&lt;/mi&gt;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;Ascr;&lt;/mi&gt;</span></code>. Before version 2.9.4, the result depended on the
+font. The default is to use Unicode characters rather than
+attributes.</p>
+</dd>
+<dt><kbd><span class="option">-m<var>ulti_math_label</var></span></kbd></dt>
+<dd><p>This option sets the counter <code class="docutils literal notranslate"><span class="pre">\multi&#64;math&#64;label</span></code> to 1. By default
+the counter is zero, and a math formula has at most one equation
+number, so at most one label, anchored to the <code class="docutils literal notranslate"><span class="pre">&lt;formula&gt;</span></code> element.
+If the counter is 1, then a math formula , for instance defined by
+the <code class="docutils literal notranslate"><span class="pre">split</span></code> environment, has an equation number per row, and one
+label is allowed for each <code class="docutils literal notranslate"><span class="pre">&lt;mrow&gt;</span></code> element. New in version 2.15.4</p>
+</dd>
+<dt><kbd><span class="option">-n<var>oconfig</var></span></kbd></dt>
+<dd><p>No configuration file will be used.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>oentnames</var></span></kbd></dt>
+<dd><p>This is the same as entnames=no. This tells <em>Tralics</em> to put
+<code class="docutils literal notranslate"><span class="pre">&amp;#x3B1;</span></code> rather than <code class="docutils literal notranslate"><span class="pre">&amp;alpha;</span></code> in the XML output. See option
+-entnames above.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>oetex</var></span></kbd></dt>
+<dd><p>This option disables e-TeX extensions. Options are enabled by
+default.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>o_float_hack</var></span></kbd></dt>
+<dd><p>This option disables the postprocessor for tables and figures.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>omathml</var></span></kbd></dt>
+<dd><p>Math formulas are output à la TeX, rather than using MathML. This is
+the same as using <code class="docutils literal notranslate"><span class="pre">\&#64;nomathml=-1</span></code> in the document. (see
+<a class="reference external" href="doc-n.html#cmd-nomathml">documentation</a>)</p>
+</dd>
+<dt><kbd><span class="option">-n<var>o_math_variant</var></span></kbd></dt>
+<dd><p>This is the converse of -math_variant described above.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>o_multi_math_label</var></span></kbd></dt>
+<dd><p>This is the converse of -multi_math_label described above.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>otrivialmath</var></span></kbd></dt>
+<dd><p>Inhibits trivial math hacks; see option trivialmath below. Since
+version 2.8.5 the default is trivialmath=1.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>oundefmac</var></span></kbd></dt>
+<dd><p>If you issue this option, all commands will be magically defined
+after the first error message saying that the command is undefined.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>ostraightquotes</var></span></kbd></dt>
+<dd><p>If you issue this option, the apostrophe translates into character
+U+B4, as <code class="docutils literal notranslate"><span class="pre">\textasciiacute</span></code>. However, the normal value is used in
+verbatim mode, when reading a file name, in an URL, or in a construct
+like <code class="docutils literal notranslate"><span class="pre">\char'</span></code>.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>oxmlerror</var></span></kbd></dt>
+<dd><p>This option inhibits creation of <code class="docutils literal notranslate"><span class="pre">&lt;error/&gt;</span></code> elements in case of
+error. These elements can be useful for debugging, since they
+indicate the current position in the tree; on the other hand, they
+could generate a second error, of the form: <em>expected element error</em>.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>ozerowidthelt</var></span></kbd></dt>
+<dd><p>In order to inhibit ligatures when converting XML to Pdf some action
+is required: a special character (zero width space) is added. This
+character appears sometimes as a normal-width-space. As a
+consequence, the <code class="docutils literal notranslate"><span class="pre">&lt;zws/&gt;</span></code> is used (and the style sheet that
+converts XML to HTML can ignore this element); If this switch is
+used, character entity <code class="docutils literal notranslate"><span class="pre">#x200B;</span></code> is used instead of an element.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>ozerowidthspace</var></span></kbd></dt>
+<dd><p>Translation of <code class="docutils literal notranslate"><span class="pre">\verb=--=</span></code> is
+<code class="docutils literal notranslate"><span class="pre">&lt;hi</span> <span class="pre">rend='xml_in'&gt;-&amp;#x200B;-&amp;#x200B;&lt;/hi&gt;</span></code>. The ZeroWidthSpace
+character (or some element, see above) is added so that, in case the
+XML file is interpreted by a software like TeX, no en-dash ligature
+is created. This behavior is inhibited by the switch.</p>
+</dd>
+<dt><kbd><span class="option">-o<var>e8</var></span>, <span class="option">-o<var>e1</var></span>, <span class="option">-o<var>e8a</var></span>, <span class="option">-o<var>e1a</var></span></kbd></dt>
+<dd><p>This specifies output encoding, one of UTF8 or latin1. Interpretation
+of the XML file is independent of the encoding. If the letter a is
+given, then all non-7 bits characters are printed as character
+references. Thus, the only difference between option e8a and oe1a is
+the XML header line. Defaut encoding is UTF8.</p>
+</dd>
+<dt><kbd><span class="option">-o<var>ldphi</var></span></kbd></dt>
+<dd><p>This is a compatiblity option, which gives a wrong translation for
+<code class="docutils literal notranslate"><span class="pre">\phi</span> <span class="pre">\varphi</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-output_dir =<em>DIR</em></dt><dd><p>Specifies the directory in which output files are to be stored (this
+concerns the main XML file, the transcript file, and other files). By
+default, this is the directory containing the input file.</p>
+</dd>
+<dt>-output_file =<em>FILE</em></dt><dd><p>This tells <em>Tralics</em> to put the result in FILE (extension .xml added
+if not given). [In the case of the raweb, this option is ignored]</p>
+</dd>
+<dt>-param=<em>FOO=BAR</em></dt><dd><p>The effect is the same as if FOO=”BAR” were in the configuration
+file, after all other values. Syntax is a bit special: both equal
+signs can be replaced by a space.</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-r<var>aw-bib</var></span></kbd></dt>
+<dd><p>If this option is givem, <em>Tralics</em> considers all bibtex entry types
+alike. Otherwise, it may ignore irrelevant fields (for instance,
+editor for a phdthesis).</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-rightquote= <em>xxx</em></dt><dd><p>Defines translation of right quote (or apostrophe). Characters
+`(left quote) and ‘ (right quote) must have category code 12 (other)
+otherwise some constructions fail. In verbatim mode, (as well as in
+Urls) these characters behave normally; if doubled, translation is
+U+201C and U+201D (“ and ”). Otherwise you can change. If you say
+-leftquote=2018 and -rightquote=2019 then characters U+2018 and
+U+2019 are used (‘ and ’). Only base16 digits are allowed; the value
+should be a number between 1 and 2^16 (otherwise default value is
+used).</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-s<var>hell-escape</var></span></kbd></dt>
+<dd><p>If you issue this command, <code class="docutils literal notranslate"><span class="pre">\write18{pwd}</span></code> will execute the `pwd’
+command.</p>
+</dd>
+<dt><kbd><span class="option">-s<var>ilent</var></span></kbd></dt>
+<dd><p>This makes <em>Tralics</em> less verbose (prints the title of a `div0’
+instead of `div0’ or `div1’; prints less statistics; omits image
+info).</p>
+</dd>
+<dt><kbd><span class="option">-t<var>e8</var></span>, <span class="option">-t<var>e1</var></span>, <span class="option">-t<var>e8a</var></span>, <span class="option">-t<var>e1a</var></span></kbd></dt>
+<dd><p>This specifies encoding used in transcript files. In the case of te8
+or te8a, characters are printed using UTF-8 format; in the case of
+te1 ot te1a, characters are printed using latin1 encoding. Characters
+are printed using the ^^^^abcd notation in case: the value if greater
+than 255, and one of -te8a, -te1a is given, or the character is not
+in proper range (32-126 plus 160-155) and te1 is given, the character
+is smaller then 32. Note: horizontal tabulation, line-feed and
+carriage return do not use the ^^ notation. Default: same as output
+encoding.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-tpa_status=<em>XX</em></dt><dd><p>This flags controls what is to be translated if the configuration
+file specifies a titlepage (see <a class="reference external" href="titlepage.html">description</a>). If
+the value is `all’, then the whole document is translated; if the
+value is `title’, only the titlepage is translated; if the value is
+`config’, action depends on the configuration file (details can be
+found <a class="reference external" href="titlepage.html#titlepage-action">here</a>). Otherwise,
+translation stops in case of an error, continues otherwise. Only the
+first character of the value is tested. Capital letters are allowed.</p>
+</dd>
+<dt>-trivialmath=<em>N</em></dt><dd><p>This sets the counter <code class="docutils literal notranslate"><span class="pre">notrivialmath</span></code> to N. If N is 7, <em>Tralics</em>
+replaces <code class="docutils literal notranslate"><span class="pre">$12^{th}$</span></code> by <code class="docutils literal notranslate"><span class="pre">12\textsuperscript{th}</span></code>, and handles
+formulas like <code class="docutils literal notranslate"><span class="pre">$x$</span></code> as `trivial math’ formulas. Translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;formula</span> <span class="pre">type='inline'&gt;</span>&#160; <span class="pre">&lt;simplemath&gt;x&lt;/simplemath&gt;</span> <span class="pre">&lt;/formula&gt;</span></code>
+instead of a more complicated MathML expression. No MathML expression
+is created in the case of <code class="docutils literal notranslate"><span class="pre">$\alpha$</span></code> or <code class="docutils literal notranslate"><span class="pre">$_{foo}$</span></code>. Default value
+of the counter is 1.</p>
+</dd>
+<dt>-type=<em>FOO</em></dt><dd><p>Uses FOO instead of the \documentclass value for the document type.
+If you say tralics -type ra hello, this will read the ra.tcf file,
+enter Raweb mode and fail; on the other hand, if miaou2003.tex is a
+raweb file, tralics -type ra2007 miaou2003 may fail because the
+configuration file for year 2007 may be incompatible with that of
+2003.</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-u<var>sequotes</var></span></kbd></dt>
+<dd><p>This option converts double quotes into a pair of single quotes,
+either left quotes, or right quotes.</p>
+</dd>
+<dt><kbd><span class="option">-u<var>tf8</var></span></kbd></dt>
+<dd><p>This option means that input files are by default encoded in UTF-8 mode (if
+the first line of the file contains <code class="docutils literal notranslate"><span class="pre">-*-</span> <span class="pre">coding:</span> <span class="pre">iso-8859-1</span></code> it is read in
+latin1 mode).</p>
+</dd>
+<dt><kbd><span class="option">-u<var>tf8output</var></span></kbd></dt>
+<dd><p>Same as option -oe8 -te8.</p>
+</dd>
+<dt><kbd><span class="option">-v<var>erbose</var></span>, <span class="option">-v</span></kbd></dt>
+<dd><p>This makes <em>Tralics</em> more verbose. In particular, you will see how
+<em>Tralics</em> determines the DTD. It executes <code class="docutils literal notranslate"><span class="pre">\tracingall</span></code> (in the
+example of miaou, this prints 9233 lines instead of 142 in the
+transcript file).</p>
+</dd>
+<dt><kbd><span class="option">-v<var>erbose-doc</var></span>, <span class="option">-V</span></kbd></dt>
+<dd><p>The effect of this switch is to execute <code class="docutils literal notranslate"><span class="pre">\tracingall</span></code> when
+<code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code> is seen; this is like the <code class="docutils literal notranslate"><span class="pre">verbose</span></code> switch,
+but you won’t see all details of classes and packages.</p>
+</dd>
+<dt><kbd><span class="option">-v<var>ersion</var></span></kbd></dt>
+<dd><p>Version number is printed; program stops.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-year=<em>XXXX</em></dt><dd><p>This option sets an internal count register, accessible via the
+command <code class="docutils literal notranslate"><span class="pre">`ra&#64;year</span></code> &lt;doc-r.html#cmd-rayear&gt;`__. The default value is
+the current year, with an offset: (for this purpose year 2005 starts
+at May, 1st, and terminates at the last of April 2006). You cannot
+use the option when compiling the Raweb, and the year is extracted
+from the file name.</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>The following options were once used for the Raweb; they have been
+removed in version 2.13.</p>
+<dl class="option-list">
+<dt><kbd><span class="option">-a<var>ll</var></span></kbd></dt>
+<dd><p>Is the same as -xml -xmlfo -xmlhtml -xmltex -xmllint.</p>
+</dd>
+<dt><kbd><span class="option">-c<var>heck</var></span></kbd></dt>
+<dd><p>This checks the syntax, but produces nothing (no XML, no LaTeX). Does
+nothing outside Raweb mode.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-dir=<em>RADIR</em></dt><dd><p>This explains that RADIR is the directory containing lots of stuff
+for the Raweb mode. In particular, it contains a subdirectory confdir
+with the configuration file. If this option is not used, the value of
+the shell variable <code class="docutils literal notranslate"><span class="pre">TRALICSDIR</span></code> will be used instead.</p>
+</dd>
+<dt>-external_prog=<em>XXX</em></dt><dd><p>In this case XXX will be used instead of rahandler.pl as interpreter
+for the raweb actions defined by the xmlXXX switches.</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-h<var>acknotitle</var></span></kbd></dt>
+<dd><p>If you give this option, <em>Tralics</em> may replace <code class="docutils literal notranslate"><span class="pre">\section{}</span></code> by
+<code class="docutils literal notranslate"><span class="pre">\section{Introduction}</span></code>. This is implied in raweb mode until 2006.
+The option was withdrawn in 2007: using it has no effect on the
+translation.</p>
+</dd>
+<dt><kbd><span class="option">-i<var>nteractivebib</var></span></kbd></dt>
+<dd><p>Withdrawn option.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>obibyearerror</var></span></kbd></dt>
+<dd><p>Useful in Raweb mode only. No error is signaled if you cite a paper
+of year X in year Y when X and Y are not the same.</p>
+</dd>
+<dt><kbd><span class="option">-n<var>obibyearmodify</var></span></kbd></dt>
+<dd><p>Useful in Raweb mode only. No modification done if an entry is in the
+refer section instead of being in the year section. Details are
+explained in section <a class="reference external" href="raweb.html#rabib">2.8 Bibliography</a>.</p>
+</dd>
+<dt><kbd><span class="option">-p<var>s</var></span></kbd></dt>
+<dd><p>This checks the syntax, creates a TeX file instead of XML, and calls
+an external program to convert the TeX into PostScript. Does nothing
+outside Raweb mode.</p>
+</dd>
+<dt><kbd><span class="option">-r<var>adebug</var></span></kbd></dt>
+<dd><p>This option tells the Raweb checker to continue checking after the
+first error instead of stopping immediately; note that the translator
+is not called if the Raweb checker sees an error.</p>
+</dd>
+<dt><kbd><span class="option">-x<var>ml</var></span></kbd></dt>
+<dd><p>This option asks <em>Tralics</em> to convert the TeX source into an XML
+result. Is incompatible with options -check or -ps. Is selected, when
+compiling the Raweb, if neither -ps nor -check is given.</p>
+</dd>
+<dt><kbd><span class="option">-x<var>mlall</var></span></kbd></dt>
+<dd><p>Is the same as -xml -xmlfo -xmlhtml -xmltex -xmllint.</p>
+</dd>
+<dt><kbd><span class="option">-x<var>mlfo</var></span></kbd></dt>
+<dd><p>This asks for the creation, via an external program, of a xsl-fo
+file. It implies the -xml option. Is meaningful only in Raweb mode,
+where an external program is launched.</p>
+</dd>
+<dt><kbd><span class="option">-x<var>mlhtml</var></span></kbd></dt>
+<dd><p>This asks for the creation, via an external program, of a set of HTML
+files. It implies the -xml option. Is meaningful only in Raweb mode,
+where an external program is launched.</p>
+</dd>
+<dt><kbd><span class="option">-x<var>mllint</var></span></kbd></dt>
+<dd><p>This checks, via an external program, the validity of the XML against
+the DTD. It implies the -xml option. Is meaningful only in Raweb
+mode, where an external program is launched.</p>
+</dd>
+<dt><kbd><span class="option">-x<var>mltex</var></span></kbd></dt>
+<dd><p>This asks for the conversion, via an external program, of the xsl-fo
+file to a Pdf file. Implies -xml and -xmlfo. Is meaningful only in
+Raweb mode, where an external program is launched.</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

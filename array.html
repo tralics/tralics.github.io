@@ -1,0 +1,899 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arrays in Tralics &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/katex-math.css?v=05624691" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f416c36"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Characters in Tralics" href="chars.html" />
+    <link rel="prev" title="All packages known by Tralics, alphabetic order" href="packages.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Arrays in Tralics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-tabular-environment">The tabular environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interpreting-the-preamble">Interpreting the preamble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#math-shift-characters-in-a-preamble">Math shift characters in a preamble</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#new-column-types">New column types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#another-example">Another example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-booktabs-extension">The booktabs extension</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auxdoc.html">Font test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cmds/index.html">All commands, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Arrays in Tralics</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="arrays-in-tralics">
+<h1>Arrays in Tralics<a class="headerlink" href="#arrays-in-tralics" title="Link to this heading"></a></h1>
+<p>We describe here the implementation of the arrays in <em>Tralics</em>. One has
+to distinguish between <code class="docutils literal notranslate"><span class="pre">table</span></code> which is an environment in which you
+can put some objects (in general tables) with a caption; like the
+<code class="docutils literal notranslate"><span class="pre">figure</span></code> environment, this generates a floating object. On the other
+hand, the <code class="docutils literal notranslate"><span class="pre">array</span></code> and <code class="docutils literal notranslate"><span class="pre">tabular</span></code> environments can be used to create
+table: the first one is designed for math only, the second for non-math
+material.</p>
+<section id="the-tabular-environment">
+<span id="tabular"></span><h2>The tabular environment<a class="headerlink" href="#the-tabular-environment" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\begin{tabular}</span></code> followed by pos, cols, tabular material
+and <code class="docutils literal notranslate"><span class="pre">\end{tabular}</span></code> or: <code class="docutils literal notranslate"><span class="pre">\begin{tabular*}</span></code> followed by size, pos,
+cols, tabular material and <code class="docutils literal notranslate"><span class="pre">\end{tabular*}</span></code>.</p>
+<p>In both cases, the result is a <code class="docutils literal notranslate"><span class="pre">&lt;table&gt;</span></code> element, with attribute
+<code class="docutils literal notranslate"><span class="pre">rend='inline'</span></code>. In the second case, size has to be a dimension, for
+instance <code class="docutils literal notranslate"><span class="pre">{.3pt}</span></code>, whose effect is to add the attribute pair
+<code class="docutils literal notranslate"><span class="pre">width='0.3pt'</span></code> to the table. The pos argument should be one of
+<code class="docutils literal notranslate"><span class="pre">[t]</span></code>, <code class="docutils literal notranslate"><span class="pre">[b]</span></code>, <code class="docutils literal notranslate"><span class="pre">[c]</span></code>, or omitted. (No error is signaled otherwise;
+in particular, macros are neither expanded not evaluated). If not
+omitted, the element has a <code class="docutils literal notranslate"><span class="pre">vpos</span></code> attribute whose value is <code class="docutils literal notranslate"><span class="pre">t</span></code>,
+<code class="docutils literal notranslate"><span class="pre">b</span></code> or <code class="docutils literal notranslate"><span class="pre">c</span></code>. The translation of tabular material fills the element
+with some <code class="docutils literal notranslate"><span class="pre">&lt;row&gt;</span></code> elements, each of which contains some <code class="docutils literal notranslate"><span class="pre">&lt;cell&gt;</span></code>
+elements. Each cell has a position in the row; its translation depends
+on the position and the cols specification. Example</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="o">*</span><span class="p">}{</span><span class="mi">10</span><span class="n">pc</span><span class="p">}[</span><span class="n">b</span><span class="p">]{</span><span class="n">lrc</span><span class="p">}</span>
+\<span class="n">hline</span>
+<span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="o">&amp;</span><span class="n">c</span>\\<span class="p">[</span><span class="mi">2</span><span class="n">pt</span><span class="p">]</span>
+\<span class="n">multicolumn</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">l</span><span class="p">}{</span><span class="n">A</span><span class="p">}</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C</span>\\\<span class="n">hline</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="o">*</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The translation is the following.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">vpos</span><span class="o">=</span><span class="s1">&#39;b&#39;</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;120.0pt&#39;</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span>  <span class="n">spaceafter</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="some table" src="_images/img_73.png" /></p>
+<p>Not all names are hard-coded. If the configuration file contains the
+following lines,</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att_vpos</span> <span class="o">=</span> <span class="s2">&quot;Vpos&quot;</span>
+<span class="n">att_halign</span> <span class="o">=</span> <span class="s2">&quot;Halign&quot;</span>
+<span class="n">att_cols</span> <span class="o">=</span> <span class="s2">&quot;Cols&quot;</span>
+<span class="n">att_table_width</span> <span class="o">=</span> <span class="s2">&quot;Width&quot;</span>
+<span class="n">xml_table_name</span> <span class="o">=</span> <span class="s2">&quot;Table&quot;</span>
+<span class="n">xml_row_name</span> <span class="o">=</span> <span class="s2">&quot;Row&quot;</span>
+<span class="n">att_row_spaceafter</span> <span class="o">=</span> <span class="s2">&quot;Spaceafter&quot;</span>
+<span class="n">xml_cell_name</span> <span class="o">=</span> <span class="s2">&quot;Cell&quot;</span>
+<span class="n">att_cell_left</span> <span class="o">=</span>  <span class="s2">&quot;Left&quot;</span>
+<span class="n">att_cell_right</span> <span class="o">=</span>  <span class="s2">&quot;Right&quot;</span>
+<span class="n">att_cell_center</span> <span class="o">=</span>  <span class="s2">&quot;Center&quot;</span>
+<span class="n">att_cell_leftborder</span> <span class="o">=</span> <span class="s2">&quot;Leftborder&quot;</span>
+<span class="n">att_cell_rightborder</span> <span class="o">=</span> <span class="s2">&quot;Rightborder&quot;</span>
+<span class="n">att_cell_topborder</span> <span class="o">=</span> <span class="s2">&quot;Topborder&quot;</span>
+<span class="n">att_cell_bottomborder</span> <span class="o">=</span> <span class="s2">&quot;Bottomborder&quot;</span>
+<span class="n">att_rend</span> <span class="o">=</span> <span class="s2">&quot;Rend&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>then the translation is the following.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Table</span> <span class="n">Vpos</span><span class="o">=</span><span class="s1">&#39;b&#39;</span> <span class="n">Width</span><span class="o">=</span><span class="s1">&#39;120.0pt&#39;</span> <span class="n">Rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">Row</span> <span class="n">Spaceafter</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">Topborder</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">Cell</span> <span class="n">Halign</span><span class="o">=</span><span class="s1">&#39;Left&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">Cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">Cell</span> <span class="n">Halign</span><span class="o">=</span><span class="s1">&#39;Right&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">Cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">Cell</span> <span class="n">Halign</span><span class="o">=</span><span class="s1">&#39;Center&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">Cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">Row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">Row</span> <span class="n">Bottomborder</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">Cell</span> <span class="n">Halign</span><span class="o">=</span><span class="s1">&#39;Left&#39;</span> <span class="n">Cols</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">Cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">Cell</span> <span class="n">Halign</span><span class="o">=</span><span class="s1">&#39;Right&#39;</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">Cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">Cell</span> <span class="n">Halign</span><span class="o">=</span><span class="s1">&#39;Center&#39;</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">Cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">Row</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">Table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="interpreting-the-preamble">
+<span id="preamble"></span><h2>Interpreting the preamble<a class="headerlink" href="#interpreting-the-preamble" title="Link to this heading"></a></h2>
+<p>The preamble of the array is the quantity marked cols in the description
+above. This is a specification for columns. It specifies how the columns
+should be formatted. In standard LaTeX, you cannot use more columns than
+specified; in <em>Tralics</em>, this is not relevant.</p>
+<p>As the previous example shows, there are three standard column types:
+<code class="docutils literal notranslate"><span class="pre">c</span></code>, <code class="docutils literal notranslate"><span class="pre">l</span></code> and <code class="docutils literal notranslate"><span class="pre">r</span></code>, (centered, left-aligned, right-aligned). The
+effect is to add an attribute pair of the form <code class="docutils literal notranslate"><span class="pre">halign='center'</span></code>. If a
+row contains more cells than in the specification, these extra cells
+have no <code class="docutils literal notranslate"><span class="pre">halign</span></code> attribute. You can also say <code class="docutils literal notranslate"><span class="pre">p{dim}</span></code>. This should
+typeset the column in a <code class="docutils literal notranslate"><span class="pre">\parbox[t]{dim}</span></code>. This feature is not
+implemented: the argument is ignored, and <code class="docutils literal notranslate"><span class="pre">p</span></code> is replaced by <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<p>The array.sty package adds two options: <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. The <code class="docutils literal notranslate"><span class="pre">b</span></code>
+option is like the <code class="docutils literal notranslate"><span class="pre">p</span></code> option, but bottom-aligned. The <code class="docutils literal notranslate"><span class="pre">m</span></code> option
+should be used only in math mode (i.e. for the <code class="docutils literal notranslate"><span class="pre">array</span></code> environment,
+and not <code class="docutils literal notranslate"><span class="pre">tabular</span></code>). In <em>Tralics</em>, there is no difference between
+<code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<p>There is an <code class="docutils literal notranslate"><span class="pre">&#64;{text}</span></code> option. It inserts <em>text</em> in every row, where
+<em>text</em> is processed in math mode in the <code class="docutils literal notranslate"><span class="pre">array</span></code> environment and in LR
+mode in the <code class="docutils literal notranslate"><span class="pre">tabular</span></code> and <code class="docutils literal notranslate"><span class="pre">tabular*</span></code> environments. Such an
+expression suppresses the space that LaTeX normally inserts between
+columns. For instance, an array specification like
+<code class="docutils literal notranslate"><span class="pre">{l&#64;{\hspace{1cm}}l}</span></code> says that the two columns of text should be
+separated by exactly one centimeter. A specification like <code class="docutils literal notranslate"><span class="pre">{&#64;{}c&#64;{}}</span></code>
+says that no additional space should be added neither of the left not
+the right of the column. An <code class="docutils literal notranslate"><span class="pre">\extracolsep{wd}</span></code> command can be used
+inside such an expression. It causes an extra space to appear to the
+left of all subsequent columns. Note that <code class="docutils literal notranslate"><span class="pre">\extracolsep</span></code> expands to
+<code class="docutils literal notranslate"><span class="pre">\tabskip</span></code>; this TeX primitive is not implemented in <em>Tralics</em>. In
+fact, <em>Tralics</em> ignores an <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> and its argument.</p>
+<p>You can use a <code class="docutils literal notranslate"><span class="pre">|</span></code> for specifying a vertical rule. However, in
+<em>Tralics</em> you cannot use double or triple rules. Sorry. There is also a
+<code class="docutils literal notranslate"><span class="pre">!{...}</span></code> option that is not implemented.</p>
+<p>Every specification (<code class="docutils literal notranslate"><span class="pre">l</span></code>, <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>) can be
+preceded by a <code class="docutils literal notranslate"><span class="pre">&gt;{xx}</span></code> declaration and followed by a <code class="docutils literal notranslate"><span class="pre">&lt;{yy}</span></code>
+declaration, where xx and yy are arbitrary (see comments below),
+respectively called the <em>u</em>-part and <em>v</em>-part of the template. In case
+of multiple declarations, the last will be executed first. Said
+otherwise, <code class="docutils literal notranslate"><span class="pre">&gt;{3}&gt;{b}c&lt;{a}&lt;{z}</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">&gt;{b3}c&lt;{za}</span></code>. The
+effect is to insert <code class="docutils literal notranslate"><span class="pre">b3</span></code> before the cell in the current position, and
+<code class="docutils literal notranslate"><span class="pre">za</span></code> after the cell. Note that the cell is finished when a token is
+sensed that indicates either a new cell, a new row or the end of the
+array. Technically, this means a <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, a <code class="docutils literal notranslate"><span class="pre">\\</span></code>, or an <code class="docutils literal notranslate"><span class="pre">\end</span></code> (the
+end of the environment) after “full” expansion. A special marker is
+pushed back after the <em>v</em>-part. This is <code class="docutils literal notranslate"><span class="pre">\endtemplate</span></code> in the case of
+a cell, and <code class="docutils literal notranslate"><span class="pre">\cr</span></code> in the case of <code class="docutils literal notranslate"><span class="pre">\\</span></code>. You should not use <code class="docutils literal notranslate"><span class="pre">\cr</span></code> or
+<code class="docutils literal notranslate"><span class="pre">\crcr</span></code> outside an array defined by <code class="docutils literal notranslate"><span class="pre">\halign</span></code> (this is not yet
+implemented). You must be careful that the <em>v</em>-part does not contain
+something that reads the special end marker. For instance
+<code class="docutils literal notranslate"><span class="pre">\def\x#1{}\halign{#\x&amp;#\cr</span> <span class="pre">1&amp;2\cr}</span></code> is an error.</p>
+<p>Finally, <code class="docutils literal notranslate"><span class="pre">*{N}{text}</span></code> can be used instead of N occurrences of
+<code class="docutils literal notranslate"><span class="pre">text</span></code>.</p>
+<p>Note. At the end of Chapter 22 of the <a class="reference external" href="index.html#texbook">TeXbook</a>,
+Knuth gives an example of a table where the preamble is
+<code class="docutils literal notranslate"><span class="pre">\centerline{#}</span></code>. Such a construction cannot be done in <em>Tralics</em>,
+since <code class="docutils literal notranslate"><span class="pre">&gt;{\centerline?}c&lt;{?}</span></code> would transform into <code class="docutils literal notranslate"><span class="pre">\centerline?#?</span></code>
+and question marks cannot be replaced by braces; you could try
+<code class="docutils literal notranslate"><span class="pre">&gt;{\expandafter\centerline?}</span></code> and replace the question mark by
+something that expands to an open brace but contains as many open braces
+as closing ones, for instance <code class="docutils literal notranslate"><span class="pre">\expandafter{\iffalse}\fi</span></code>. This fails
+as <em>Tralics</em> finds some invalid command; it also fails without the
+<code class="docutils literal notranslate"><span class="pre">\expandafter</span></code>, (the closing <code class="docutils literal notranslate"><span class="pre">\fi</span></code> is not found). Finally, this
+fails also: <code class="docutils literal notranslate"><span class="pre">&gt;{\centerline\bgroup}c&lt;{\egroup}</span></code>.</p>
+<p>Knuth says that an entry of the form <code class="docutils literal notranslate"><span class="pre">a}b{c</span></code> is legitimate, with
+respect to this template. This cannot be the case in <em>Tralics</em>, but it
+would be valid for a template like <code class="docutils literal notranslate"><span class="pre">&gt;{\bgroup\bf}c&lt;{\egroup}</span></code>. This
+justifies that a table has to be terminated by <code class="docutils literal notranslate"><span class="pre">\cr</span></code> or <code class="docutils literal notranslate"><span class="pre">\crcr</span></code>. In
+the case of <em>Tralics</em>, this is not needed.</p>
+</section>
+<section id="math-shift-characters-in-a-preamble">
+<span id="mathpreamble"></span><h2>Math shift characters in a preamble<a class="headerlink" href="#math-shift-characters-in-a-preamble" title="Link to this heading"></a></h2>
+<p>Inserting the <em>v</em>-part of the template at the right moment is not a
+trivial task, and before November 2015, <em>Tralics</em> failed to do it in
+math mode. The following example now compiles.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\newenvironment{tab}{Table \begin{tabular}{&gt;{\before} c&lt;{\after}c}}{\end{tabular}}
+\def\before{Before}\def\after{After}%
+\begin{tab}x\end{tab}%
+\def\before{$\bgroup}\def\after{\egroup$}%
+\tracingall
+\begin{tab}c&amp;math before amp brace \end{tab}
+\begin{tab}x\end{tab}
+\newenvironment{xtab}{\begin{tabular}{&gt;{\before} cc}}{\after\end{tabular}}
+\begin{xtab}ww\end{xtab}
+</pre></div>
+</div>
+</div>
+<p>We give here part of the trace for the second array. When the line
+marked “Hack1” is sensed, the situation is the following. The save stack
+holds: the <code class="docutils literal notranslate"><span class="pre">document</span></code> environment, the <code class="docutils literal notranslate"><span class="pre">tab</span></code> environment, the
+<code class="docutils literal notranslate"><span class="pre">tabular</span></code> environment, a cell group, a math group, and a brace group
+(watch for stack: level). The XML stack holds the document, the table, a
+row, a cell (watch for Push and Pop); note that the current paragraph
+was ended, and another one will be started after the array. <em>Tralics</em>
+sees an ampersand character whose meaning is: finish the current cell
+and start a new one. This is not possible, since a closing brace is
+expected. The hack is the following: if <em>Tralics</em> is scanning a math
+formula and sees <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> or <code class="docutils literal notranslate"><span class="pre">\\</span></code>, if the save stack holds a cell below
+the math (ignoring brace groups), if the top of the XML stack holds a
+cell, with a non-empty <em>v</em>-part, then the <em>v</em>-part is inserted, and the
+<code class="docutils literal notranslate"><span class="pre">&amp;</span></code> or <code class="docutils literal notranslate"><span class="pre">\\</span></code> is marked to be read again. If the first two conditions
+hold but not the last (no <em>v</em>-part to insert) an error is signaled and
+parsing of the math formula stops. In this example the conditions are
+fulfilled and <code class="docutils literal notranslate"><span class="pre">\after</span></code> is inserted. Expanding this yields the closing
+brace and the closing dollar. On line “Hack2”, you can see all tokens
+(after full expansion) that were read as part of the math formula; there
+is an &amp;, but it is not part of the formula. It is read again (as
+“alignment tab character” ) and evaluates to <code class="docutils literal notranslate"><span class="pre">\endtemplate</span></code>. This
+finishes the cell and starts a new one. Note: we have simplified the
+remaining of the trace by showing only the modifications to the save
+stack and XML stack.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[6] \begin{tab}c&amp;math before amp brace \end{tab}
+{\begin}
+{\begin tab}
++stack: level + 2 for environment entered on line 6
+\tab -&gt;Table \begin {tabular}{&gt;{\before } c&lt;{\after }c}
+Character sequence: Table .
+{\begin}
+{Text:Table }
+{\begin tabular}
++stack: level + 3 for environment entered on line 6
+{\tabular}
+{Pop 1: document_v p_v}
+{Push tabular 1}
+% Array preamble parsing omitted
+{Push row 2}
+{Push cell 3}
++stack: level + 4 for cell entered on line 6
+{template u-part \before }
+\before -&gt;$\bgroup
+{math shift character}
++stack: level + 5 for math entered on line 6
++stack: level + 6 for brace entered on line 6
+{template v-part \after }  % Hack1
+\after -&gt;\egroup $
++stack: level - 6 for brace from line 6
++stack: level - 5 for math from line 6
+Math: $\bgroup c&amp;\egroup$  % Hack2
+{Inline formula ...} % details omitted
+{alignment tab character}
+{\endtemplate}
+{Pop 3: document_v tabular_v row_a cell_a}
++stack: level - 4 for cell from line 6
+{Push cell 3}
+% more lines omitted
++stack: level + 4 for cell entered on line 6
+{Pop 3: document_v tabular_v row_a cell_a}
++stack: level - 4 for cell from line 6
+{Pop 2: document_v tabular_v row_a}
+{Pop 1: document_v tabular_v}
+{Push p 1}
++stack: level - 3 for environment from line 6
++stack: level - 2 for environment from line 6
+</pre></div>
+</div>
+</div>
+<p>The next example is similar to the previous one. When the line marked
+“Hack3” is seen we are in exactly the same situation as described above
+but instead of an ampersand character we have <code class="docutils literal notranslate"><span class="pre">\end</span></code>. The same
+algorithm is applied. However no error is signaled if there is no
+<em>v</em>-part on the stack (this is needed in order to make the last example
+work). After the formula has been translated, <em>Tralics</em> sees the
+<code class="docutils literal notranslate"><span class="pre">\end</span></code> command, and interprets it; it expands to <code class="docutils literal notranslate"><span class="pre">\end</span> <span class="pre">{tabular}</span></code>.
+At this moment (marked “Hack4”), the <em>v</em>-part of the template is
+inserted (as at was already inserted, nothing happens here), as well as
+the <code class="docutils literal notranslate"><span class="pre">\cr</span></code> token. Its effect is to pop the XML stack as well as the
+save stack: this finishes the current cell. The XML stack is popped
+again (there is nothing to pop on the save stack): this finishes the
+current row. Then <code class="docutils literal notranslate"><span class="pre">\end</span> <span class="pre">{tabular}</span></code> is evaluated again. This pops the
+XML stack and finishes the array. After that, the save stack is popped
+twice: once for each <code class="docutils literal notranslate"><span class="pre">\end</span></code> command.</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[7] \begin{tab}x\end{tab}
+% Some lines omitted (same as above)
+{Push row 2}
+{Push cell 3}
++stack: level + 4 for cell entered on line 7
++stack: level + 5 for math entered on line 7
++stack: level + 6 for brace entered on line 7
+{template v-part \after } % Hack3
+\after -&gt;\egroup $
++stack: level - 6 for brace from line 7
++stack: level - 5 for math from line 7
+Math: $\bgroup x\end\egroup$
+{Inline formula ...} % details omitted
+{\end}
+{\end tab}
+\endtab -&gt;\end {tabular}
+{\end}
+{\end tabular}  % Hack4
+{\cr}
+{Pop 3: document_v tabular_v row_a cell_a}
++stack: level - 4 for cell from line 7
+{Pop 2: document_v tabular_v row_a}
+{\end}
+{\end tabular}
+{\endtabular}
+{Pop 1: document_v tabular_v}
+{Push p 1}
+{\endenv}
++stack: restoring \par=\par.
++stack: ending environment tabular; resuming tab.
++stack: level - 3 for environment from line 7
+{\endenv}
++stack: ending environment tab; resuming document.
++stack: level - 2 for environment from line 7
+</pre></div>
+</div>
+</div>
+</section>
+<section id="new-column-types">
+<span id="columntypes"></span><h2>New column types<a class="headerlink" href="#new-column-types" title="Link to this heading"></a></h2>
+<p>You can say things like these</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\newcolumntype{C}{&gt;{$}c&lt;{$}}
+\newcolumntype{L}{&gt;{$}l&lt;{$}}
+\newcolumntype{R}{&gt;{$}r&lt;{$}}
+\newcolumntype{d}[1]{&gt;{\rightdots{#1}}r&lt;{\endrightdots}}
+\newcolumntype{X}{CLR}
+
+\begin{tabular}{*{3}{|c|}d{23}X}
+\end{tabular}
+</pre></div>
+</div>
+</div>
+<p>In this case, the transcript file will contains</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>array preamble at start: |c||c||c|d{23}X
+array preamble after X: |c||c||c|d{23}CLR
+array preamble after d: |c||c||c|&gt;{\rightdots {23}}r&lt;{\endrightdots }CLR
+array preamble after C: |c||c||c|&gt;{\rightdots {23}}r&lt;{\endrightdots }&gt;{$}c&lt;{$}LR
+array preamble after L: |c||c||c|&gt;{\rightdots {23}}r&lt;{\endrightdots }&gt;{$}c&lt;{$}&gt;{$}l&lt;{$}R
+array preamble after R: |c||c||c|&gt;{\rightdots {23}}r&lt;{\endrightdots }&gt;{$}c&lt;{$}&gt;{$}l&lt;{$}&gt;{$}r&lt;{$}
+array preamble parse: | c | | c 1| | c 2| &gt;3&gt;{} r &lt;&lt;{} &gt;4&gt;{} c &lt;&lt;{} &gt;5&gt;{} l &lt;&lt;{} &gt;6&gt;{} r &lt;&lt;{} 7
+</pre></div>
+</div>
+</div>
+<p>The first line is printed after evaluation of the <code class="docutils literal notranslate"><span class="pre">*</span></code> arguments.</p>
+<p>After that, the preamble contains, at toplevel (outside braces) two
+characters <code class="docutils literal notranslate"><span class="pre">d</span></code> and <code class="docutils literal notranslate"><span class="pre">X</span></code> that are defined to be new column types.
+These are evaluated one after the other (the order is irrelevant, here
+alphabetic order is used so that <code class="docutils literal notranslate"><span class="pre">X</span></code> is expanded first). Since the
+expansion was non trivial, a second try is made. Note that only a finite
+numbers of tries are executed. In case of recursion, strange things can
+happen. Note how you can use commands with arguments (here <code class="docutils literal notranslate"><span class="pre">d</span></code> takes
+one argument, it is <code class="docutils literal notranslate"><span class="pre">23</span></code>).</p>
+<p>The last line of the transcript indicates parsing of standard options.
+In the case of <code class="docutils literal notranslate"><span class="pre">p{...}</span></code>, you will see a <code class="docutils literal notranslate"><span class="pre">p</span></code> first, followed by a
+<code class="docutils literal notranslate"><span class="pre">p{}</span></code>. Whenever a new cell is started, a number is printed. Hence
+<code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">1</span></code> indicates that cell 0 was finished, cell 1 started, and cell is
+is centered; <code class="docutils literal notranslate"><span class="pre">&gt;5&gt;{}</span></code> means that cell 5 was started because of the &gt;
+sign. The final number just says that the seventh cell information were
+stored. [<strong>Note:</strong> these numbers are not printed anymore in the current
+version].</p>
+</section>
+<section id="another-example">
+<span id="example2"></span><h2>Another example<a class="headerlink" href="#another-example" title="Link to this heading"></a></h2>
+<p>We consider here the following new column types. As you can see, one of
+them is the character <code class="docutils literal notranslate"><span class="pre">+</span></code> , another is the character <code class="docutils literal notranslate"><span class="pre">_</span></code> . The fact
+that these characters have special catcodes is irrelevant (they cannot
+be of catcode 1 and 2, because this would interfere with brace matching,
+and they cannot be of catcode 10, because space characters should be
+ignored in the preamble).</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">newcolumntype</span><span class="p">{</span><span class="n">L</span><span class="p">}</span> <span class="p">{</span><span class="o">&gt;</span><span class="p">{</span>\<span class="n">large</span>\<span class="n">bfseries</span> <span class="mi">2</span><span class="p">}</span><span class="n">l</span> <span class="o">&lt;</span><span class="p">{</span><span class="n">y</span><span class="p">}</span><span class="o">|</span><span class="p">}</span>
+\<span class="n">newcolumntype</span><span class="p">{</span><span class="o">+</span><span class="p">}</span> <span class="p">{</span><span class="o">&gt;</span><span class="p">{</span><span class="n">B</span><span class="p">}</span><span class="n">l</span> <span class="o">&lt;</span><span class="p">{</span><span class="n">D</span><span class="p">}</span><span class="o">|</span><span class="p">}</span>
+\<span class="n">newcolumntype</span><span class="p">{</span><span class="n">_</span><span class="p">}{</span><span class="n">rlc</span><span class="o">&lt;</span><span class="p">{</span><span class="n">x</span><span class="p">}}</span>
+\<span class="n">newcolumntype</span><span class="p">{</span><span class="n">x</span><span class="p">}{</span><span class="o">&gt;</span><span class="p">{</span><span class="n">b</span><span class="p">}</span><span class="n">c</span><span class="o">&lt;</span><span class="p">{</span><span class="n">a</span><span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<p>Consider the four following tables</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="o">*</span><span class="p">}{</span><span class="mi">5</span><span class="n">cm</span><span class="p">}[</span><span class="n">b</span><span class="p">]{</span><span class="o">*</span><span class="p">{</span><span class="mi">4</span><span class="p">}{</span><span class="n">_c</span><span class="o">|</span><span class="p">}}</span>
+<span class="n">a1</span><span class="o">&amp;</span><span class="n">a2</span><span class="o">&amp;</span><span class="n">a3</span><span class="o">&amp;</span><span class="n">a4</span>  <span class="o">&amp;</span> <span class="n">b1</span><span class="o">&amp;</span><span class="n">b2</span><span class="o">&amp;</span><span class="n">b3</span><span class="o">&amp;</span><span class="n">b4</span> <span class="o">&amp;</span> <span class="n">c1</span><span class="o">&amp;</span><span class="n">c2</span><span class="o">&amp;</span><span class="n">c3</span><span class="o">&amp;</span><span class="n">c4</span><span class="o">&amp;</span> <span class="n">d1</span><span class="o">&amp;</span><span class="n">d2</span><span class="o">&amp;</span><span class="n">d3</span><span class="o">&amp;</span><span class="n">d4</span>\\
+<span class="n">Wa1</span><span class="o">&amp;</span><span class="n">Wa2</span><span class="o">&amp;</span><span class="n">Wa3</span><span class="o">&amp;</span><span class="n">Wa4</span>  <span class="o">&amp;</span> <span class="n">Wb1</span><span class="o">&amp;</span><span class="n">Wb2</span><span class="o">&amp;</span><span class="n">Wb3</span><span class="o">&amp;</span><span class="n">Wb4</span> <span class="o">&amp;</span> <span class="n">Wc1</span><span class="o">&amp;</span><span class="n">Wc2</span><span class="o">&amp;</span><span class="n">Wc3</span><span class="o">&amp;</span><span class="n">Wc4</span><span class="o">&amp;</span> <span class="n">Wd1</span><span class="o">&amp;</span><span class="n">Wd2</span><span class="o">&amp;</span><span class="n">Wd3</span><span class="o">&amp;</span><span class="n">Wd4</span>\\
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="o">*</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="o">|</span><span class="n">ll</span><span class="o">|</span><span class="n">rr</span><span class="o">|</span><span class="n">cc</span><span class="o">|</span><span class="p">}</span>
+\<span class="n">hline</span> <span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="o">&amp;</span><span class="n">c</span><span class="o">&amp;</span><span class="n">d</span><span class="o">&amp;</span><span class="n">e</span><span class="o">&amp;</span><span class="n">f</span>\\
+<span class="n">aaa</span><span class="o">&amp;</span><span class="n">bbb</span><span class="o">&amp;</span><span class="n">ccc</span><span class="o">&amp;</span><span class="n">ddd</span><span class="o">&amp;</span><span class="n">eee</span><span class="o">&amp;</span><span class="n">fff</span>\\
+\<span class="n">hline</span>
+<span class="n">A</span><span class="o">&amp;</span>\<span class="n">multicolumn</span><span class="p">{</span><span class="mi">3</span><span class="p">}{</span><span class="o">+</span><span class="p">}{</span><span class="n">C</span><span class="p">}</span><span class="o">&amp;</span><span class="n">E</span><span class="o">&amp;</span><span class="n">F</span>\\
+\<span class="n">multicolumn</span><span class="p">{</span><span class="mi">2</span><span class="p">}{</span><span class="o">|</span><span class="n">l</span><span class="p">}{</span><span class="n">ab</span><span class="p">}</span><span class="o">&amp;</span><span class="n">c</span><span class="o">&amp;</span><span class="n">d</span><span class="o">&amp;</span><span class="n">e</span><span class="o">&amp;</span><span class="n">f</span>\\
+\<span class="n">cline</span><span class="p">{</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>\<span class="n">cline</span><span class="p">{</span><span class="mi">6</span><span class="o">-</span><span class="mi">6</span><span class="p">}</span>
+<span class="n">aaa</span><span class="o">&amp;</span><span class="n">bbb</span><span class="o">&amp;</span><span class="n">ccc</span><span class="o">&amp;</span><span class="n">ddd</span>  <span class="o">&amp;</span><span class="n">eee</span><span class="o">&amp;</span><span class="n">fff</span>\\\<span class="n">hline</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span> <span class="p">{</span><span class="o">|</span> <span class="o">&gt;</span><span class="p">{</span>\<span class="n">large</span> <span class="mi">1</span><span class="p">}</span><span class="n">c</span> <span class="o">&lt;</span><span class="p">{</span><span class="n">x</span><span class="p">}</span><span class="o">|</span> <span class="n">L</span> <span class="o">&gt;</span> <span class="p">{</span>\<span class="n">large</span>\<span class="n">itshape</span> <span class="mi">3</span><span class="p">}</span><span class="n">c</span> <span class="o">&lt;</span><span class="p">{</span><span class="n">z</span><span class="p">}</span><span class="o">|</span><span class="p">}</span>
+\<span class="n">hline</span> <span class="n">A</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C</span>\\\<span class="n">hline</span> <span class="mi">100</span><span class="o">&amp;</span><span class="mi">10</span> <span class="o">&amp;</span><span class="mi">1</span>\\\<span class="n">hline</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span> <span class="p">{</span><span class="o">|</span> <span class="o">&gt;</span><span class="p">{</span>\<span class="n">large</span> <span class="mi">1</span><span class="p">}</span><span class="n">c</span> <span class="o">&lt;</span><span class="p">{</span><span class="n">x</span><span class="p">}</span><span class="o">|</span> <span class="n">L</span> <span class="o">&gt;</span> <span class="p">{</span>\<span class="n">large</span>\<span class="n">itshape</span> <span class="mi">3</span><span class="p">}</span><span class="n">x</span> <span class="o">&lt;</span><span class="p">{</span><span class="n">z</span><span class="p">}</span><span class="o">|</span><span class="p">}</span>
+\<span class="n">hline</span> <span class="n">A</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C</span>\\\<span class="n">hline</span> <span class="mi">100</span><span class="o">&amp;</span><span class="mi">10</span> <span class="o">&amp;</span><span class="mi">1</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Preview is below. Currently, each table is as wide as the current page.
+This is a bad thing, it should be arranged in a future version.</p>
+<p><img alt="four tables" src="_images/img_74.png" /></p>
+<p>This is the XML translation of the first table. Note how the first two
+arguments <code class="docutils literal notranslate"><span class="pre">{5cm}[b]</span></code> are translated. Note also the preamble:
+<code class="docutils literal notranslate"><span class="pre">*{4}{_c|}</span></code>. This means a sequence, repeated for times, of a
+right-aligned cell, a left-aligned cell, a centered cell and a cell with
+a vertical rule after it. The table is terminated by a <code class="docutils literal notranslate"><span class="pre">\\</span></code>, this one
+is not necessary.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">vpos</span><span class="o">=</span><span class="s1">&#39;b&#39;</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;142.26378pt&#39;</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">a1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">a2</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">a3x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">a4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">b1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">b2x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">b3</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">b4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">c1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">c2x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">c3</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">c4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">d1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">d2x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">d3</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span><span class="o">&gt;</span><span class="n">d4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;&lt;</span><span class="n">row</span><span class="o">&gt;&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">Wa1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">Wa2</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">Wa3x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">Wa4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">Wb1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">Wb2x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">Wb3</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">Wb4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">Wc1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">Wc2x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">Wc3</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">Wc4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">Wd1</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">Wd2x</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">Wd3</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span><span class="o">&gt;</span><span class="n">Wd4</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>This is the translation of the third table. The preamble of the table is
+something like <code class="docutils literal notranslate"><span class="pre">|c|l|c|</span></code>, indicating a centered row, a left-aligned
+row and a centered row. There are four vertical rules, the first two
+ones are attached to the first cell, and after that, there is a rule on
+the right of each cell. The specification of the second cell is <code class="docutils literal notranslate"><span class="pre">L</span></code>,
+and, after expansion, <code class="docutils literal notranslate"><span class="pre">&gt;{\large\bfseries</span> <span class="pre">2}l</span> <span class="pre">&lt;{y}</span></code>, so that a <code class="docutils literal notranslate"><span class="pre">B</span></code> is
+replaced by <code class="docutils literal notranslate"><span class="pre">\large\bfseries</span> <span class="pre">2By</span></code>. Remember that each cell is
+translated in a group, so that the scope of the <code class="docutils literal notranslate"><span class="pre">\large\bfseries</span></code> is
+limited to a single cell.</p>
+<p>In the example we can see that <code class="docutils literal notranslate"><span class="pre">\hline</span></code> produces an horizontal rule by
+adding an attribute to the row that precedes it (the <code class="docutils literal notranslate"><span class="pre">\hline</span></code> at the
+start of the table induces a second rule for the first row).</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="n">Ax</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="o">&gt;</span><span class="mi">2</span><span class="n">By</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;it&#39;</span><span class="o">&gt;</span><span class="mi">3</span><span class="n">Cz</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;</span><span class="mi">1100</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="o">&gt;</span><span class="mi">210</span><span class="n">y</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;it&#39;</span><span class="o">&gt;</span><span class="mi">31</span><span class="n">z</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>This is the fourth table. It is like the table above, without the final
+<code class="docutils literal notranslate"><span class="pre">\\\hline</span></code>. As you can see, the end of a cell is obtained when the
+next character is either <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> (and the cell is followed by another
+cell), or a <code class="docutils literal notranslate"><span class="pre">\\</span></code> command (and this means the end of a complete row),
+or, as in this case, a <code class="docutils literal notranslate"><span class="pre">\\end</span></code> command. In this case, we have to
+insert the <code class="docutils literal notranslate"><span class="pre">&lt;{}</span></code> material, and the <code class="docutils literal notranslate"><span class="pre">\end</span></code> token.</p>
+<p>The specifications of the last column are
+<code class="docutils literal notranslate"><span class="pre">&gt;{\large\itshape</span> <span class="pre">3}x</span> <span class="pre">&lt;{z}|</span></code>. If we replace <code class="docutils literal notranslate"><span class="pre">x</span></code> by its value, we get
+<code class="docutils literal notranslate"><span class="pre">&gt;{\large\itshape</span> <span class="pre">3}&gt;{b}c&lt;{a}&lt;{z}|</span></code> and this is the same as
+<code class="docutils literal notranslate"><span class="pre">&gt;{b\large\itshape</span> <span class="pre">3}c&lt;{za}|</span></code>. This strange behavior is explained in
+the array.sty documentation.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;</span><span class="mi">1</span><span class="n">Ax</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="o">&gt;</span><span class="mi">2</span><span class="n">By</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;it&#39;</span><span class="o">&gt;</span><span class="mi">3</span><span class="n">Cza</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;</span><span class="mi">1100</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="o">&gt;</span><span class="mi">210</span><span class="n">y</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;large1&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;it&#39;</span><span class="o">&gt;</span><span class="mi">31</span><span class="n">za</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>This is now the second table. Its preamble is<code class="docutils literal notranslate"><span class="pre">|ll|rr|cc|</span></code>, this
+means two left-align columns, two right-aligned columns, and two
+centered columns, with four vertical rules. The table contains three
+<code class="docutils literal notranslate"><span class="pre">\hline</span></code>, hence three horizontal rules.</p>
+<p>The table contains <code class="docutils literal notranslate"><span class="pre">\multicolumn{2}{|l}{ab}</span></code> at the start of row 4.
+This means that a cell spans two columns. The preamble <code class="docutils literal notranslate"><span class="pre">|ll|</span></code> is
+replaced by <code class="docutils literal notranslate"><span class="pre">|l</span></code>, this means an interruption of the second vertical
+rule. The quantity <code class="docutils literal notranslate"><span class="pre">ab</span></code> is translated (inside a group), an put in this
+cell.</p>
+<p>The table contains <code class="docutils literal notranslate"><span class="pre">\multicolumn{3}{+}{C}</span></code> in row 3. We have something
+that spans three rows, thus removing <code class="docutils literal notranslate"><span class="pre">l|rr|</span></code> from the preamble,
+replacing it by <code class="docutils literal notranslate"><span class="pre">+</span></code>. This is handled like a normal preamble (but for
+one column only), and here is <code class="docutils literal notranslate"><span class="pre">&gt;{B}l</span> <span class="pre">&lt;{D}|</span></code>. In fact, since the cell
+contains <code class="docutils literal notranslate"><span class="pre">C</span></code>, it is as if you said <code class="docutils literal notranslate"><span class="pre">\multicolumn{3}{l|}{BCD}</span></code>.
+Normally, the vertical rule implied by the bar should span the whole
+table. The hole is strange.</p>
+<p>The table contains also a <code class="docutils literal notranslate"><span class="pre">\cline{1-3}\cline{6-6}</span></code> instead of a
+<code class="docutils literal notranslate"><span class="pre">\hline</span></code>. This indicates a horizontal rule that spans columns 1, 2, 3
+and 6 (hence column 4 and 5 are omitted). In the translation, a
+<code class="docutils literal notranslate"><span class="pre">bottom-border</span></code> attribute is used for each cell, instead of a unique
+attribute for the row. Note that, in the example, there is a cell that
+spans columns 1 and 2, so that only three cells are marked.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">d</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">e</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">f</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">aaa</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">bbb</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">ccc</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">ddd</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">eee</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">fff</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="o">&gt;</span><span class="n">BCD</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">E</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">F</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="o">&gt;</span><span class="n">ab</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">d</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">e</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">f</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">aaa</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">bbb</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">ccc</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">ddd</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">eee</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">fff</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>The implementation of <code class="docutils literal notranslate"><span class="pre">\cline</span></code> is the following; assume that the
+arguments are <em>A</em> and <em>B</em>. If the command is placed after a row contains
+cells <em>c1</em>, <em>c2</em>, etc, if there are integers <em>i</em> and <em>j</em>, such that the
+total span of rows less than <em>i</em> is <em>A-1</em> and the total span of rows
+with index between <em>i</em> and <em>j</em> is <em>B-A+1</em> then a
+<code class="docutils literal notranslate"><span class="pre">bottom-border='true'</span></code> attribute is added to these cells. If the total
+span <em>c</em> of the row is at most <em>A-1</em>, then <em>Tralics</em> inserts an empty
+cell whose span is <em>A-1-c</em> (unless this quantity is zero), then an empty
+cell with span <em>B-A+1</em> and a <code class="docutils literal notranslate"><span class="pre">bottom-border='true'</span></code> attribute. If this
+fails, the current row is ignored if it contains an empty cell, followed
+by a possible newline marker; a new row is added, and the previous rule
+is applied, with <em>c=0</em>. The span attribute has the form <code class="docutils literal notranslate"><span class="pre">cols='3'</span></code>, it
+is omitted when the value is one. In the example that follows, the
+effect of the <code class="docutils literal notranslate"><span class="pre">\\</span></code> command between the two <code class="docutils literal notranslate"><span class="pre">\cline</span></code> is to start a
+new row, and a left aligned cell with a vertical rule on the left. Such
+a cell is considered empty, thus removed; as a consequence this <code class="docutils literal notranslate"><span class="pre">\\</span></code>
+has no effect at all.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="o">|</span><span class="n">ll</span><span class="o">|</span><span class="n">rr</span><span class="o">|</span><span class="n">cc</span><span class="o">|</span><span class="p">}</span>
+<span class="n">A</span><span class="o">&amp;</span>\<span class="n">multicolumn</span><span class="p">{</span><span class="mi">3</span><span class="p">}{</span><span class="n">l</span><span class="p">}{</span><span class="n">BCD</span><span class="p">}</span><span class="o">&amp;</span><span class="n">E</span><span class="o">&amp;</span><span class="n">F</span>\<span class="n">cline</span><span class="p">{</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>\\\<span class="n">cline</span><span class="p">{</span><span class="mi">6</span><span class="o">-</span><span class="mi">6</span><span class="p">}</span>
+<span class="n">A</span><span class="o">&amp;</span>\<span class="n">multicolumn</span><span class="p">{</span><span class="mi">3</span><span class="p">}{</span><span class="n">l</span><span class="p">}{</span><span class="n">BCD</span><span class="p">}</span><span class="o">&amp;</span><span class="n">E</span><span class="o">&amp;</span><span class="n">F</span>\\\<span class="n">cline</span><span class="p">{</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>\\\<span class="n">cline</span><span class="p">{</span><span class="mi">6</span><span class="o">-</span><span class="mi">6</span><span class="p">}</span>
+<span class="n">z</span><span class="o">&amp;</span><span class="n">t</span>\\ \<span class="n">cline</span><span class="p">{</span><span class="mi">3</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="o">&gt;</span><span class="n">BCD</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">E</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">F</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="o">&gt;</span><span class="n">BCD</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">E</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">F</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">z</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">t</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="the-booktabs-extension">
+<span id="booktab"></span><h2>The booktabs extension<a class="headerlink" href="#the-booktabs-extension" title="Link to this heading"></a></h2>
+<p>This package introduces some commands that control the width of
+horizontal rules in tables. Here is an example from the documentation</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\begin{tabular}{@{}llr@{}} \toprule
+\multicolumn{2}{c}{Item}\\ \cmidrule(r){1-2}
+Animal&amp; Description &amp; Price (\$) \\ \midrule
+Gnat &amp; per gram &amp; 13.63 \\
+        &amp; each &amp; 0.01\\
+Gnu  &amp; stuffed&amp; 92.50 \\
+Emu &amp; stuffed &amp; 33.33\\
+Armadillo&amp; frozen &amp;8.99 \\ \bottomrule
+\end{tabular}
+</pre></div>
+</div>
+</div>
+<p>The following three commands <code class="docutils literal notranslate"><span class="pre">\toprule</span></code>, <code class="docutils literal notranslate"><span class="pre">\midrule</span></code> and
+<code class="docutils literal notranslate"><span class="pre">\bottomrule</span></code> are assumed to be the first rule, an inner rule, or the
+last rule of the table. There effect is to add to the table some
+vertical space, a rule, and some other vertical space. The spaces are
+<code class="docutils literal notranslate"><span class="pre">\aboverulesep</span></code> and <code class="docutils literal notranslate"><span class="pre">\belowrulesep</span></code>, except that above the first
+rule there is <code class="docutils literal notranslate"><span class="pre">\abovetopsep</span></code>, and below the last rule there is
+<code class="docutils literal notranslate"><span class="pre">\belowbottomsep</span></code>. The thickness of a normal rule is
+<code class="docutils literal notranslate"><span class="pre">\lightrulewidth</span></code>, but the first and last rules have thickness
+<code class="docutils literal notranslate"><span class="pre">\heavyrulewidth</span></code>. The three commands take an optional parameter, the
+thickness of the rule. The command <code class="docutils literal notranslate"><span class="pre">\specialrule</span></code> take three
+arguments: width, space above, and space below. Below is the XML
+translation; you can see that the default space above the first rule and
+below the last rule are zero, such zero values are not indicated.</p>
+<p>The package provides also <code class="docutils literal notranslate"><span class="pre">\cmidrule</span></code>. This command takes an optional
+argument (a width; default is <code class="docutils literal notranslate"><span class="pre">\cmidrulewidth</span></code>), a trim argument and a
+column specification. The column specification is an interval, <code class="docutils literal notranslate"><span class="pre">1-2</span></code>,
+in the example above; it says that a rule spanning columns 1 to 2 should
+be used. The trim argument explains how this rule has to be trimmed on
+the left, or right, this argument is ignored by <em>Tralics</em>. We use the
+same algorithm as for <a class="reference external" href="doc-c.html#cmd-cline">\cline</a>. In the case of
+<code class="docutils literal notranslate"><span class="pre">\cmidrule[3pt](){1-3}\cmidrule[2pt](){3-4}</span></code>, cell number 3 has a
+width of 2pt. You can use the command <code class="docutils literal notranslate"><span class="pre">\morecmidrules</span></code> in order to
+avoid this. This is implemented as <code class="docutils literal notranslate"><span class="pre">\\</span></code>.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;table rend=&#39;inline&#39;&gt;
+  &lt;row top_rule_space_below=&#39;2.76247pt&#39; border-top-width=&#39;0.80002pt&#39; top-border=&#39;true&#39;&gt;
+    &lt;cell bottom_rule_space_below=&#39;2.76247pt&#39;
+     bottom_rule_space_above=&#39;1.69997pt&#39; border-bottom-width=&#39;0.29999pt&#39;
+    bottom-border=&#39;true&#39; halign=&#39;right&#39; cols=&#39;2&#39;&gt;Item
+    &lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row bottom_rule_space_below=&#39;2.76247pt&#39;
+    bottom_rule_space_above=&#39;1.69997pt&#39;  border-bottom-width=&#39;0.50003pt&#39;
+    bottom-border=&#39;true&#39;&gt;
+    &lt;cell halign=&#39;left&#39;&gt;Animal&lt;/cell&gt;
+    &lt;cell halign=&#39;left&#39;&gt;Description&lt;/cell&gt;
+    &lt;cell&gt;Price ($)&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row&gt;
+    &lt;cell halign=&#39;left&#39;&gt;Gnat&lt;/cell&gt;
+    &lt;cell halign=&#39;left&#39;&gt;per gram&lt;/cell&gt;
+    &lt;cell&gt;13.63&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row&gt;
+    &lt;cell halign=&#39;left&#39;/&gt;
+    &lt;cell halign=&#39;left&#39;&gt;each&lt;/cell&gt;
+    &lt;cell&gt;0.01&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row&gt;
+    &lt;cell halign=&#39;left&#39;&gt;Gnu&lt;/cell&gt;
+    &lt;cell halign=&#39;left&#39;&gt;stuffed&lt;/cell&gt;
+    &lt;cell&gt;92.50&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row&gt;
+    &lt;cell halign=&#39;left&#39;&gt;Emu&lt;/cell&gt;
+    &lt;cell halign=&#39;left&#39;&gt;stuffed&lt;/cell&gt;
+    &lt;cell&gt;33.33&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row bottom_rule_space_above=&#39;1.69997pt&#39;
+    border-bottom-width=&#39;0.80002pt&#39; bottom-border=&#39;true&#39;&gt;
+    &lt;cell halign=&#39;left&#39;&gt;Armadillo&lt;/cell&gt;
+   &lt;cell halign=&#39;left&#39;&gt;frozen&lt;/cell&gt;
+   &lt;cell&gt;8.99&lt;/cell&gt;
+  &lt;/row&gt;
+&lt;/table&gt;
+</pre></div>
+</div>
+</div>
+<p>An example that shows how <code class="docutils literal notranslate"><span class="pre">\morecmidrules</span></code> works.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">setlength</span>\<span class="n">aboverulesep</span><span class="p">{</span><span class="mi">6</span><span class="n">pt</span><span class="p">}</span>
+\<span class="n">setlength</span>\<span class="n">belowrulesep</span><span class="p">{</span><span class="mi">4</span><span class="n">pt</span><span class="p">}</span>
+\<span class="n">setlength</span>\<span class="n">cmidrulewidth</span><span class="p">{</span><span class="mi">5</span><span class="n">pt</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="n">llll</span><span class="p">}</span>
+<span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="o">&amp;</span><span class="n">c</span><span class="o">&amp;</span><span class="n">d</span>\\ \<span class="n">cmidrule</span><span class="p">[</span><span class="mi">3</span><span class="n">pt</span><span class="p">](</span><span class="n">rl</span><span class="p">){</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>\<span class="n">cmidrule</span><span class="p">[</span><span class="mi">2</span><span class="n">pt</span><span class="p">](</span><span class="n">lr</span><span class="p">){</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="p">}</span>
+<span class="n">A</span><span class="o">&amp;</span><span class="n">B</span><span class="o">&amp;</span><span class="n">C</span><span class="o">&amp;</span><span class="n">D</span>\\ \<span class="n">cmidrule</span><span class="p">[</span><span class="mi">3</span><span class="n">pt</span><span class="p">](){</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>\<span class="n">morecmidrules</span>\<span class="n">cmidrule</span><span class="p">[</span><span class="mi">2</span><span class="n">pt</span><span class="p">](){</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+      <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+      <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+      <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+      <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">d</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+      <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+      <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">B</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+      <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">D</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="n">cell</span> <span class="n">top_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span> <span class="n">top_rule_space_above</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+      <span class="n">border</span><span class="o">-</span><span class="n">top</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="o">/&gt;</span>
+  <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

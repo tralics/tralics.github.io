@@ -1,0 +1,825 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All commands, alphabetic order; letter H &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=05624691" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f416c36"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="../_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="../_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="All commands, alphabetic order; letter I" href="doc-i.html" />
+    <link rel="prev" title="All commands, alphabetic order; letter G" href="doc-g.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auxdoc.html">Font test</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">All commands, alphabetic order</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doc-a.html">All commands, alphabetic order; letter A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-b.html">All commands, alphabetic order; letter B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-c.html">All commands, alphabetic order; letter C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-d.html">All commands, alphabetic order; letter D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-e.html">All commands, alphabetic order; letter E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-f.html">All commands, alphabetic order; letter F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-g.html">All commands, alphabetic order; letter G</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">All commands, alphabetic order; letter H</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#h">\h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmd-ch">\H</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#halign">\halign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hangafter-internal-integer">\hangafter (internal integer)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hangindent-internal-integer">\hangindent (internal integer)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hat">\hat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hbadness-internal-integer">\hbadness (internal integer)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hbar-math-symbol">\hbar (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hbox">\hbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hb-xt">\hb&#64;xt&#64;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hdots-math-symbol">\hdots (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#headercr">\&#64;headercr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#headheight-headsep-rigid-length">\headheight, \headsep (rigid length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heartsuit-math-symbol">\heartsuit (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#height">\&#64;height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#heightof">\heightof</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hexnumber">\hexnumber&#64;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hfil">\hfil</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hfill">\hfill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hfilneg">\hfilneg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hfuzz-rigid-length">\hfuzz (rigid length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hideskip-rubber-length">\hideskip (rubber length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hl">\hl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hline">\hline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hlinee-tralics-command">\hlinee (Tralics command)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hoffset-rigid-length">\hoffset (rigid length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#holdinginserts-internal-integer">\holdinginserts (internal integer)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hom-math-symbol">\hom (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hookleftarrow-math-symbol">\hookleftarrow (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hookrightarrow-math-symbol">\hookrightarrow (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hphantom">\hphantom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#href-href">\href, \Href</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hrule">\hrule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hrulefill">\hrulefill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hsize-rigid-length">\hsize (rigid length)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hskip-hglue">\hskip, \hglue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hslash-math-symbol">\hslash (math symbol)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hspace">\hspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hss">\hss</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ht">\ht</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html-html-htmladdtonavigation-htmladdtostyle-htmlbase-htmlbody-htmlborder-htmlclear-htmlcode-htmlhead-htmlinfo-htmlimage-htmllanguagestyle-htmlnohead-htmlrule-htmlset-htmlsetenv-htmlsetstyle-from-html-pk">\html, \HTML, \htmladdtonavigation, \htmladdtostyle, \htmlbase, \htmlbody, \htmlborder, \htmlclear, \HTMLcode, \htmlhead, \htmlinfo, \htmlimage, \htmllanguagestyle, \htmlnohead, \htmlrule, \HTMLset, \HTMLsetenv, \htmlsetstyle, (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bodytext-externallabels-externalref-internal-segment-startdocument-strikeout-tableofchildlinks-from-html-pk">\bodytext, \externallabels, \externalref, \internal, \segment, \startdocument, \strikeout, \tableofchildlinks (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmladdimg-from-html-pk">\htmladdimg (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmladdnormallink-from-html-pk">\htmladdnormallink (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmladdnormallinkfoot-from-html-pk">\htmladdnormallinkfoot (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmlcite-from-html-pk">\htmlcite (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmlexcludecomments-htmlincludecomments-from-html-pk">\htmlexcludecomments, \htmlincludecomments (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmlonly-environment-from-html-pk">htmlonly (environment from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmlref-from-html-pk">\htmlref (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#htmlurl-from-html-pk">\htmlurl (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#huge">\huge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmd-chuge">\Huge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hypercite-from-html-pk">\hypercite (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hyperref-from-html-pk">\hyperref (from html pk)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hyphenchar">\hyphenchar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hyphenation">\hyphenation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hyphenpenalty">\hyphenpenalty</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="doc-i.html">All commands, alphabetic order; letter I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-j.html">All commands, alphabetic order; letter J</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-k.html">All commands, alphabetic order; letter K</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-l.html">All commands, alphabetic order; letter L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-m.html">All commands, alphabetic order; letter M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-n.html">All commands, alphabetic order; letter N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-o.html">All commands, alphabetic order; letter O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-p.html">All commands, alphabetic order; letter P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-q.html">All commands, alphabetic order; letter Q</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-r.html">All commands, alphabetic order; letter R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-s.html">All commands, alphabetic order; letter S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-t.html">All commands, alphabetic order; letter T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-u.html">All commands, alphabetic order; letter U</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-v.html">All commands, alphabetic order; letter V</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-w.html">All commands, alphabetic order; letter W</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-x.html">All commands, alphabetic order; letter X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-y.html">All commands, alphabetic order; letter Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-z.html">All commands, alphabetic order; letter Z</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-symbols.html">Tralics: All commands, non-letters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-unimplemented.html">All commands, alphabetic order; unimplemented</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">All commands, alphabetic order</a></li>
+      <li class="breadcrumb-item active">All commands, alphabetic order; letter H</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="all-commands-alphabetic-order-letter-h">
+<h1>All commands, alphabetic order; letter H<a class="headerlink" href="#all-commands-alphabetic-order-letter-h" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line">This page contains the description of the following commands
+<a class="reference external" href="#cmd-h">\h</a>, <a class="reference external" href="#cmd-ch">\H</a>, <a class="reference external" href="#cmd-halign">\halign</a>,
+<a class="reference external" href="#cmd-hangafter">\hangafter</a>, <a class="reference external" href="#cmd-hangindent">\hangindent</a>,
+<a class="reference external" href="#cmd-hat">\hat</a>, <a class="reference external" href="#cmd-hbadness">\hbadness</a>,
+<a class="reference external" href="#cmd-hbar">\hbar</a>, <a class="reference external" href="#cmd-hboxto">\hb&#64;xt&#64;</a>,
+<a class="reference external" href="#cmd-hdots">\hdots</a>, <a class="reference external" href="#cmd-headercr">\&#64;headercr</a>,
+<a class="reference external" href="#cmd-headsep">\headheight</a>, <a class="reference external" href="#cmd-headsep">\headsep</a>,
+<a class="reference external" href="#cmd-heartsuit">\heartsuit</a>, <a class="reference external" href="#cmd-height">\&#64;height</a>,
+<a class="reference external" href="#cmd-heightof">\heightof</a>, <a class="reference external" href="#cmd-hexnumber">\hexnumber&#64;</a>,
+<a class="reference external" href="#cmd-hfil">\hfil</a>, <a class="reference external" href="#cmd-hfill">\hfill</a>,
+<a class="reference external" href="#cmd-hfilneg">\hfilneg</a>, <a class="reference external" href="#cmd-hskip">\hglue</a>,
+<a class="reference external" href="#cmd-hl">\hl</a>, <a class="reference external" href="#cmd-hline">\hline</a>,
+<a class="reference external" href="#cmd-hlinee">\hlinee</a>, <a class="reference external" href="#cmd-hideskip">\hideskip</a>,
+<a class="reference external" href="#cmd-hoffset">\hoffset</a>,
+<a class="reference external" href="#cmd-holdinginserts">\holdinginserts</a>, <a class="reference external" href="#cmd-hom">\hom</a>,
+<a class="reference external" href="#cmd-hookleftarrow">\hookleftarrow</a>,
+<a class="reference external" href="#cmd-hphantom">\hphantom</a>, <a class="reference external" href="#cmd-href">\href</a>,
+<a class="reference external" href="#cmd-href">\Href</a>, <a class="reference external" href="#cmd-hrule">\hrule</a>,
+<a class="reference external" href="#cmd-hrulefill">\hrulefill</a>, <a class="reference external" href="#cmd-hsize">\hsize</a>,
+<a class="reference external" href="#cmd-hskip">\hskip</a>, <a class="reference external" href="#cmd-hslash">\hslash</a>,
+<a class="reference external" href="#cmd-hspace">\hspace</a>, <a class="reference external" href="#cmd-hss">\hss</a>, <a class="reference external" href="#cmd-ht">\ht</a>,
+<a class="reference external" href="#cmd-html">\html</a>, <a class="reference external" href="#cmd-html">\HTML</a>,
+<a class="reference external" href="#cmd-htmladdimg">\htmladdimg</a>,
+<a class="reference external" href="#cmd-htmladdnormallink">\htmladdnormallink</a>,
+<a class="reference external" href="#cmd-htmladdnormallinkfoot">\htmladdnormallinkfoot</a>,
+<a class="reference external" href="#cmd-html">\htmladdTOClink</a>,
+<a class="reference external" href="#cmd-html">\htmladdtonavigation</a>,
+<a class="reference external" href="#cmd-html">\htmladdtostyle</a>, <a class="reference external" href="#cmd-html">\htmlbase</a>,
+<a class="reference external" href="#cmd-html">\htmlbody</a>, <a class="reference external" href="#cmd-html">\htmlborder</a>,
+<a class="reference external" href="#cmd-htmlcite">\htmlcite</a>, <a class="reference external" href="#cmd-html">\htmlclear</a>,
+<a class="reference external" href="#cmd-html">\HTMLcode</a>,
+<a class="reference external" href="#cmd-htmlexcludecomments">\htmlexcludecomments</a>,
+<a class="reference external" href="#cmd-html">\htmlhead</a>, <a class="reference external" href="#cmd-html">\htmlimage</a>,
+<a class="reference external" href="#cmd-htmlexcludecomments">\htmlincludecomments</a>,
+<a class="reference external" href="#cmd-html">\htmlinfo</a>, <a class="reference external" href="#cmd-html">\htmllanguagestyle</a>,
+<a class="reference external" href="#cmd-html">\htmlnohead</a>, <a class="reference external" href="#cmd-htmlref">\htmlref</a>,
+<a class="reference external" href="#cmd-html">\htmlrule</a>, <a class="reference external" href="#cmd-html">\HTMLset</a>,
+<a class="reference external" href="#cmd-html">\HTMLsetenv</a>, <a class="reference external" href="#cmd-html">\htmlsetstyle</a>,
+<a class="reference external" href="#cmd-html">\htmltracenv</a>, <a class="reference external" href="#cmd-html">\htmltracing</a>,
+<a class="reference external" href="#cmd-htmlurl">\htmlurl</a>, <a class="reference external" href="#cmd-huge">\huge</a>,
+<a class="reference external" href="#cmd-chuge">\Huge</a>, <a class="reference external" href="#cmd-hypercite">\hyperref</a>,
+<a class="reference external" href="#cmd-hyperref">\hyperref</a>, <a class="reference external" href="#cmd-hyphenation">\hyphenation</a>,
+<a class="reference external" href="#cmd-hyphenchar">\hyphenchar</a>,
+<a class="reference external" href="#cmd-hyphenpenalty">\hyphenpenalty</a>,</div>
+<div class="line">and environment <a class="reference external" href="#env-htmlonly">htmlonly</a>.</div>
+</div>
+<hr class="docutils" />
+<section id="h">
+<span id="cmd-h"></span><h2>\h<a class="headerlink" href="#h" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\h</span></code> command puts a hook accent on some letters. These are the
+possibilities:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">h</span> <span class="n">A</span> \<span class="n">h</span> <span class="n">a</span> \<span class="n">h</span><span class="p">{</span>\<span class="o">^</span><span class="n">A</span><span class="p">}</span> \<span class="n">h</span><span class="p">{</span>\<span class="o">^</span><span class="n">a</span><span class="p">}</span> \<span class="n">h</span><span class="p">{</span>\<span class="n">u</span> <span class="n">A</span><span class="p">}</span> \<span class="n">h</span><span class="p">{</span>\<span class="n">u</span> <span class="n">a</span><span class="p">}</span> \<span class="n">h</span> <span class="n">E</span> \<span class="n">h</span> <span class="n">e</span>  \<span class="n">h</span><span class="p">{</span>\<span class="o">^</span><span class="n">E</span><span class="p">}</span> \<span class="n">h</span><span class="p">{</span>\<span class="o">^</span><span class="n">e</span><span class="p">}</span>  \<span class="n">h</span> <span class="n">I</span>
+\<span class="n">h</span> <span class="n">i</span> \<span class="n">h</span> <span class="n">O</span> \<span class="n">h</span> <span class="n">o</span>  \<span class="n">h</span><span class="p">{</span>\<span class="o">^</span><span class="n">O</span><span class="p">}</span> \<span class="n">h</span><span class="p">{</span>\<span class="o">^</span><span class="n">o</span><span class="p">}</span>  \<span class="n">h</span><span class="p">{</span>\<span class="n">H</span> <span class="n">O</span><span class="p">}</span> \<span class="n">h</span><span class="p">{</span>\<span class="n">H</span> <span class="n">o</span><span class="p">}</span>  \<span class="n">h</span> <span class="n">U</span> \<span class="n">h</span> <span class="n">u</span>
+\<span class="n">h</span><span class="p">{</span>\<span class="n">H</span> <span class="n">U</span><span class="p">}</span> \<span class="n">h</span><span class="p">{</span>\<span class="n">H</span> <span class="n">u</span><span class="p">}</span> \<span class="n">h</span> <span class="n">Y</span> \<span class="n">h</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<p>The XML result is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="c1">#x1EA2; &amp;#x1EA3; &amp;#x1EA8; &amp;#x1EA9; &amp;#x1EB2; &amp;#x1EB3; &amp;#x1EBA; &amp;#x1EBB; &amp;#x1EC2;</span>
+<span class="o">&amp;</span><span class="c1">#x1EC3; &amp;#x1EC8; &amp;#x1EC9; &amp;#x1ECE; &amp;#x1ECF; &amp;#x1ED4; &amp;#x1ED5; &amp;#x1EDE; &amp;#x1EDF;</span>
+<span class="o">&amp;</span><span class="c1">#x1EE6; &amp;#x1EE7; &amp;#x1EEC; &amp;#x1EED; &amp;#x1EF6; &amp;#x1EF7;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview (not wonderful) <img alt="hook accent" src="../_images/img_120.png" /></p>
+<p>The HTML characters Ả ả Ẩ ẩ Ẳ ẳ Ẻ ẻ Ể ể Ỉ ỉ Ỏ ỏ Ổ ổ Ở ở Ủ ủ Ử ử Ỷ ỷ</p>
+</section>
+<section id="cmd-ch">
+<span id="id1"></span><h2>\H<a class="headerlink" href="#cmd-ch" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\H</span></code> command puts a Hungarian accent on some letters. It puts also
+a horn on some letters (used with other accents). These are the
+possibilities:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">H</span> <span class="n">O</span> \<span class="n">H</span> <span class="n">o</span> \<span class="n">H</span> <span class="n">U</span> \<span class="n">H</span> <span class="n">u</span>\\
+\<span class="n">H</span><span class="p">{</span>\<span class="s1">&#39;O} \H{</span><span class="se">\&#39;</span><span class="s1">o}  \H{\`O} \H{\`o}  \H{\h O} \H{\h o}  \H{\~O} \H{\~o}</span>
+\<span class="n">H</span><span class="p">{</span>\<span class="n">d</span> <span class="n">O</span><span class="p">}</span> \<span class="n">H</span><span class="p">{</span>\<span class="n">d</span> <span class="n">o</span><span class="p">}</span>\\ \<span class="n">H</span><span class="p">{</span>\<span class="s1">&#39;U} \H{</span><span class="se">\&#39;</span><span class="s1">u} \H{\`U} \H{\`u} \H{\h U} \H{\h u} \H{\~U}</span>
+\<span class="n">H</span><span class="p">{</span>\<span class="o">~</span><span class="n">u</span><span class="p">}</span> \<span class="n">H</span><span class="p">{</span>\<span class="n">d</span> <span class="n">U</span><span class="p">}</span> \<span class="n">H</span><span class="p">{</span>\<span class="n">d</span> <span class="n">u</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>The XML result is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="c1">#336; &amp;#337; &amp;#368; &amp;#369;</span>
+<span class="o">&amp;</span><span class="c1">#7898; &amp;#7899; &amp;#7900; &amp;#7901; &amp;#7902; &amp;#7903; &amp;#7904; &amp;#7905;</span>
+<span class="o">&amp;</span><span class="c1">#7906; &amp;#7907;</span>
+<span class="o">&amp;</span><span class="c1">#7912; &amp;#7913; &amp;#7914; &amp;#7915; &amp;#7916; &amp;#7917; &amp;#7918;</span>
+<span class="o">&amp;</span><span class="c1">#7919; &amp;#7920; &amp;#7921;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="Horn accent" src="../_images/img_94.png" /></p>
+<p>The HTML characters Ő ő Ű ű Ớ ớ Ờ ờ Ở ở Ỡ ỡ Ợ ợ Ứ ứ Ừ ừ Ử ử Ữ ữ Ự ự</p>
+</section>
+<section id="halign">
+<span id="cmd-halign"></span><h2>\halign<a class="headerlink" href="#halign" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\halign</span></code> command is the TeX primitive for constructing arrays. It
+is not yet implemented in <em>Tralics</em>.</p>
+</section>
+<section id="hangafter-internal-integer">
+<span id="cmd-hangafter"></span><h2>\hangafter (internal integer)<a class="headerlink" href="#hangafter-internal-integer" title="Link to this heading"></a></h2>
+<p>The result of <code class="docutils literal notranslate"><span class="pre">\hangafter=70</span></code> is that TeX will change hanging
+indentation after 70 lines. <em>Tralics</em> does not implement hanging
+indentation. (See <a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details of
+argument scanning).</p>
+</section>
+<section id="hangindent-internal-integer">
+<span id="cmd-hangindent"></span><h2>\hangindent (internal integer)<a class="headerlink" href="#hangindent-internal-integer" title="Link to this heading"></a></h2>
+<p>The effect of <code class="docutils literal notranslate"><span class="pre">\hangindent=5mm</span></code> is to use 5mm for hanging indentation
+(see <code class="docutils literal notranslate"><span class="pre">\hangafter</span></code> above). No implemented in <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scandimen">scandimen</a> for details of argument
+scanning).</p>
+</section>
+<section id="hat">
+<span id="cmd-hat"></span><h2>\hat<a class="headerlink" href="#hat" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hat</span></code> command puts a hat accent over a kernel. It works only in
+math mode. See also the <code class="docutils literal notranslate"><span class="pre">`\acute</span></code> &lt;doc-a.html#cmd-acute&gt;`__ command.</p>
+</section>
+<section id="hbadness-internal-integer">
+<span id="cmd-hbadness"></span><h2>\hbadness (internal integer)<a class="headerlink" href="#hbadness-internal-integer" title="Link to this heading"></a></h2>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\hbadness=25</span></code>, then TeX will show all hboxes with badness
+greater than 25. This parameter is ignored by <em>Tralics</em>, since no
+badness is computed. (See <a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for
+details of argument scanning).</p>
+</section>
+<section id="hbar-math-symbol">
+<span id="cmd-hbar"></span><h2>\hbar (math symbol)<a class="headerlink" href="#hbar-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hbar</span></code> command is valid only in math mode. It generates a
+miscellaneous symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;#x127;&lt;/mi&gt;</span></code> (Unicode U+127, ħ). See
+description of the <code class="docutils literal notranslate"><span class="pre">`\ldots</span></code> &lt;doc-l.html#cmd-ldots&gt;`__ command.</p>
+</section>
+<section id="hbox">
+<span id="cmd-hbox"></span><h2>\hbox<a class="headerlink" href="#hbox" title="Link to this heading"></a></h2>
+<p>In <em>Tralics</em>, there is no difference between a vbox and an hbox. Hence
+<code class="docutils literal notranslate"><span class="pre">\hbox</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">\vbox</span></code> (however
+<code class="docutils literal notranslate"><span class="pre">`\everyhbox</span></code> &lt;doc-e.html#cmd-everyhbox&gt;`__ applies only to an hbox.)
+See <code class="docutils literal notranslate"><span class="pre">`\vbox</span></code> &lt;doc-v.html#cmd-vbox&gt;`__.</p>
+</section>
+<section id="hb-xt">
+<span id="cmd-hboxto"></span><h2>\hb&#64;xt&#64;<a class="headerlink" href="#hb-xt" title="Link to this heading"></a></h2>
+<p>This command expands to <code class="docutils literal notranslate"><span class="pre">\hbox</span> <span class="pre">to</span></code>. Do not modify it.</p>
+</section>
+<section id="hdots-math-symbol">
+<span id="cmd-hdots"></span><h2>\hdots (math symbol)<a class="headerlink" href="#hdots-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hdots</span></code> command is valid only in math mode. It generates a
+miscellaneous symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;ctdot;&lt;/mi&gt;</span></code> (Unicode U+22EF, ⋯)</p>
+</section>
+<section id="headercr">
+<span id="cmd-headercr"></span><h2>\&#64;headercr<a class="headerlink" href="#headercr" title="Link to this heading"></a></h2>
+<p>This command is used when <code class="docutils literal notranslate"><span class="pre">\\</span></code> is seen in a section title. You can
+redefine it at your leisure, the default value is a single space. In a
+construction like <code class="docutils literal notranslate"><span class="pre">\section{a\\[1cm]</span> <span class="pre">b}</span></code>, the optional argument is
+read, so that the result contains space. You can use
+<code class="docutils literal notranslate"><span class="pre">\def</span> <span class="pre">\&#64;headercr</span> <span class="pre">{\space</span> <span class="pre">\ignorespaces}</span></code> if it worries you.</p>
+</section>
+<section id="headheight-headsep-rigid-length">
+<span id="cmd-headsep"></span><h2>\headheight, \headsep (rigid length)<a class="headerlink" href="#headheight-headsep-rigid-length" title="Link to this heading"></a></h2>
+<p>These parameters contain the height of the header and the distance
+between the header and the text.</p>
+</section>
+<section id="heartsuit-math-symbol">
+<span id="cmd-heartsuit"></span><h2>\heartsuit (math symbol)<a class="headerlink" href="#heartsuit-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\heartsuit</span></code> command is valid only in math mode. It generates a
+miscellaneous symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;heartsuit;&lt;/mo&gt;</span></code> (Unicode U+2665, ♥). See
+description of the <code class="docutils literal notranslate"><span class="pre">`\ldots</span></code> &lt;doc-l.html#cmd-ldots&gt;`__ command.</p>
+</section>
+<section id="height">
+<span id="cmd-height"></span><h2>\&#64;height<a class="headerlink" href="#height" title="Link to this heading"></a></h2>
+<p>This command expands to <code class="docutils literal notranslate"><span class="pre">height</span></code>. Do not modify it.</p>
+</section>
+<section id="heightof">
+<span id="cmd-heightof"></span><h2>\heightof<a class="headerlink" href="#heightof" title="Link to this heading"></a></h2>
+<p>This command is defined by the calc package but not implemented in
+<em>Tralics</em>.</p>
+</section>
+<section id="hexnumber">
+<span id="cmd-hexnumber"></span><h2>\hexnumber&#64;<a class="headerlink" href="#hexnumber" title="Link to this heading"></a></h2>
+<p>Reads a number, that should be between 0 and 15, and converts it into a
+hex digit.</p>
+</section>
+<section id="hfil">
+<span id="cmd-hfil"></span><h2>\hfil<a class="headerlink" href="#hfil" title="Link to this heading"></a></h2>
+<p>According to Knuth, <code class="docutils literal notranslate"><span class="pre">\hfil</span></code> is essentially equivalent to
+<code class="docutils literal notranslate"><span class="pre">\hskip</span> <span class="pre">0pt</span> <span class="pre">plus</span> <span class="pre">1</span> <span class="pre">fil</span></code>. In <em>Tralics</em>, this command leaves vertical
+mode (may start a paragraph) and inserts a <code class="docutils literal notranslate"><span class="pre">&lt;hfil/&gt;</span></code> element. This
+element will be replaced by a space inside a figure environment.</p>
+</section>
+<section id="hfill">
+<span id="cmd-hfill"></span><h2>\hfill<a class="headerlink" href="#hfill" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hfill</span></code> command is like <code class="docutils literal notranslate"><span class="pre">`\hfil</span></code> &lt;#cmd-hfil&gt;`__, but inserts a
+<code class="docutils literal notranslate"><span class="pre">&lt;hfill/&gt;</span></code> element.</p>
+</section>
+<section id="hfilneg">
+<span id="cmd-hfilneg"></span><h2>\hfilneg<a class="headerlink" href="#hfilneg" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hfilneg</span></code> command is like <code class="docutils literal notranslate"><span class="pre">`\hfil</span></code> &lt;#cmd-hfil&gt;`__, but inserts
+a <code class="docutils literal notranslate"><span class="pre">&lt;hfilneg/&gt;</span></code> element.</p>
+</section>
+<section id="hfuzz-rigid-length">
+<span id="cmd-hfuzz"></span><h2>\hfuzz (rigid length)<a class="headerlink" href="#hfuzz-rigid-length" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\hfuzz=5pt</span></code>, as a result TeX will complain about overfull
+hboxes only if they are overfull by more than 5pt. This is set to 0.1pt
+by LaTeX, and to .5pt by <code class="docutils literal notranslate"><span class="pre">\sloppy</span></code>. Ignored by <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scandimen">scandimen</a> for details of argument
+scanning).</p>
+</section>
+<section id="hideskip-rubber-length">
+<span id="cmd-hideskip"></span><h2>\hideskip (rubber length)<a class="headerlink" href="#hideskip-rubber-length" title="Link to this heading"></a></h2>
+<p>Quantity set by TeX to -1000pt plus 1fill. Used for instance in the last
+exercise of Chapter 18 of the TeXbook.</p>
+</section>
+<section id="hl">
+<span id="cmd-hl"></span><h2>\hl<a class="headerlink" href="#hl" title="Link to this heading"></a></h2>
+<p>Command from the soul package, that takes an argument and behaves like
+<code class="docutils literal notranslate"><span class="pre">\textit</span></code>. For an example, see <code class="docutils literal notranslate"><span class="pre">`\ul</span></code> &lt;doc-u.html#cmd-ul&gt;`__.</p>
+</section>
+<section id="hline">
+<span id="cmd-hline"></span><h2>\hline<a class="headerlink" href="#hline" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hline</span></code> command is valid only inside a table, either at the very
+start, or after a <code class="docutils literal notranslate"><span class="pre">\\</span></code> command. Its effect is to add an horizontal
+rule over the current row, more precisely, it adds <code class="docutils literal notranslate"><span class="pre">top-border='true'</span></code>
+to the attribute list of the first row (if <code class="docutils literal notranslate"><span class="pre">\hline</span></code> starts an array)
+or <code class="docutils literal notranslate"><span class="pre">bottom-border='true'</span></code> to the previous row (the row ended by the
+<code class="docutils literal notranslate"><span class="pre">\\</span></code> command). See description of the
+<a class="reference external" href="doc-symbols.html#symbol-backslash">\\</a> command for an example. See
+also the <a class="reference external" href="doc-array.html">page on arrays</a>.</p>
+</section>
+<section id="hlinee-tralics-command">
+<span id="cmd-hlinee"></span><h2>\hlinee (Tralics command)<a class="headerlink" href="#hlinee-tralics-command" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hlinee</span></code> command is an extension of <code class="docutils literal notranslate"><span class="pre">\hline</span></code>, and <code class="docutils literal notranslate"><span class="pre">\cline</span></code>;
+it takes four arguments <code class="docutils literal notranslate"><span class="pre">spec</span></code>, <code class="docutils literal notranslate"><span class="pre">above</span></code>, <code class="docutils literal notranslate"><span class="pre">below</span></code> and <code class="docutils literal notranslate"><span class="pre">width</span></code>.
+The first first argument is empty or a range (from 3 to 4 in the example
+below); the other arguments are dimensions; the effect is to add a rule
+of the given width to the cells specified by the range on the current
+row (or to the row, if no range is given). The user may indicate that
+there is some space below or above the rule. The command should be given
+at the start of the table or after a <code class="docutils literal notranslate"><span class="pre">\\</span></code>, in which case there will be
+a top rule on the first row, or a bottom rule otherwise; moreover, there
+will be an attribute indicating the width, in the form
+<code class="docutils literal notranslate"><span class="pre">border-top-width='3pt'</span></code> or <code class="docutils literal notranslate"><span class="pre">border-bottom-width='3pt'</span></code>. Note the
+special hack; when looking for a rule, <em>Tralics</em> expands the next
+command; if it has the form <code class="docutils literal notranslate"><span class="pre">\&#64;ifnextchar</span> <span class="pre">wAB</span></code>, the command is
+evaluated, replaced by one of A and B, and the result is checked again.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="n">llll</span><span class="p">}</span>
+\<span class="n">hlinee</span><span class="p">{}{}{}{</span><span class="mi">5</span><span class="n">pt</span><span class="p">}</span> <span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="o">&amp;</span><span class="n">c</span><span class="o">&amp;</span><span class="n">d</span>\\\<span class="n">hlinee</span><span class="p">{}{}{}{</span><span class="mi">6</span><span class="n">pt</span><span class="p">}</span> \<span class="n">hlinee</span><span class="p">{</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="p">}{}{}{</span><span class="mi">7</span><span class="n">pt</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+
+\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="n">llll</span><span class="p">}</span>
+\<span class="n">hlinee</span><span class="p">{}{</span><span class="mi">1</span><span class="n">pt</span><span class="p">}{</span><span class="mi">2</span><span class="n">pt</span><span class="p">}{</span><span class="mi">5</span><span class="n">pt</span><span class="p">}</span> <span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="o">&amp;</span><span class="n">c</span><span class="o">&amp;</span><span class="n">d</span>\\\<span class="n">hlinee</span><span class="p">{}{</span><span class="mi">3</span><span class="n">pt</span><span class="p">}{</span><span class="mi">4</span><span class="n">pt</span><span class="p">}{</span><span class="mi">6</span><span class="n">pt</span><span class="p">}</span> \<span class="n">hlinee</span><span class="p">{</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="p">}{</span><span class="o">-</span><span class="mi">1</span><span class="n">pt</span><span class="p">}{</span><span class="o">-</span><span class="mi">2</span><span class="n">pt</span><span class="p">}{</span><span class="mi">7</span><span class="n">pt</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;&lt;</span><span class="n">row</span> <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">border</span><span class="o">-</span><span class="n">top</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;5.0pt&#39;</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;7.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;7.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">d</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;&lt;</span><span class="n">row</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;4.0pt&#39;</span>
+    <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span> <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;6.0pt&#39;</span>
+    <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">top_rule_space_below</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">top_rule_space_above</span><span class="o">=</span><span class="s1">&#39;1.0pt&#39;</span>
+    <span class="n">border</span><span class="o">-</span><span class="n">top</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;5.0pt&#39;</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;-2.0pt&#39;</span> <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;-1.0pt&#39;</span>
+    <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;7.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom_rule_space_below</span><span class="o">=</span><span class="s1">&#39;-2.0pt&#39;</span> <span class="n">bottom_rule_space_above</span><span class="o">=</span><span class="s1">&#39;-1.0pt&#39;</span>
+   <span class="n">border</span><span class="o">-</span><span class="n">bottom</span><span class="o">-</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;7.0pt&#39;</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span><span class="n">d</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hoffset-rigid-length">
+<span id="cmd-hoffset"></span><h2>\hoffset (rigid length)<a class="headerlink" href="#hoffset-rigid-length" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\hoffset=.5in</span></code>, as a result TeX will shift by .5in
+horizontally the box put by <code class="docutils literal notranslate"><span class="pre">\shipout</span></code> in the dvi file. Not used by
+<em>Tralics</em>. (See <a class="reference external" href="doc-s.html#fct-scandimen">scandimen</a> for details of
+argument scanning).</p>
+</section>
+<section id="holdinginserts-internal-integer">
+<span id="cmd-holdinginserts"></span><h2>\holdinginserts (internal integer)<a class="headerlink" href="#holdinginserts-internal-integer" title="Link to this heading"></a></h2>
+<p>When you say <code class="docutils literal notranslate"><span class="pre">\holdinginserts=88</span></code> (or any positive number) then
+insertions remain in place after a page break, otherwise TeX uses the
+algorithm described at the end of the Chapter 15 of the TeXbook.
+Unimplemented in <em>Tralics</em> (insertions are very complex objects). (See
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details of argument scanning).</p>
+</section>
+<section id="hom-math-symbol">
+<span id="cmd-hom"></span><h2>\hom (math symbol)<a class="headerlink" href="#hom-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hom</span></code> command is valid only in math mode. Its translation is a
+math operator of the same name: <code class="docutils literal notranslate"><span class="pre">&lt;mo</span> <span class="pre">form='prefix'&gt;hom&lt;/mo&gt;</span></code>. For an
+example see the <code class="docutils literal notranslate"><span class="pre">`\log</span></code> &lt;doc-l.html#cmd-log&gt;`__ command.</p>
+</section>
+<section id="hookleftarrow-math-symbol">
+<span id="cmd-hookleftarrow"></span><h2>\hookleftarrow (math symbol)<a class="headerlink" href="#hookleftarrow-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hookleftarrow</span></code> command is valid only in math mode. It generates
+an arrow pointing to the left with a hook: <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;hookleftarrow;&lt;/mo&gt;</span></code>
+(Unicode U+21A9, ↩). See description of the
+<code class="docutils literal notranslate"><span class="pre">`\leftarrow</span></code> &lt;doc-l.html#cmd-leftarrow&gt;`__ command.</p>
+</section>
+<section id="hookrightarrow-math-symbol">
+<span id="cmd-hookrightarrow"></span><h2>\hookrightarrow (math symbol)<a class="headerlink" href="#hookrightarrow-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hookrightarrow</span></code> command is valid only in math mode. It generates
+an arrow pointing to the right with a hook:
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;hookrightarrow;&lt;/mo&gt;</span></code> (Unicode U+21AA, ↪). See description of
+the <code class="docutils literal notranslate"><span class="pre">`\leftarrow</span></code> &lt;doc-l.html#cmd-leftarrow&gt;`__ command.</p>
+</section>
+<section id="hphantom">
+<span id="cmd-hphantom"></span><h2>\hphantom<a class="headerlink" href="#hphantom" title="Link to this heading"></a></h2>
+<p>The three commands <code class="docutils literal notranslate"><span class="pre">\phantom</span></code>, <code class="docutils literal notranslate"><span class="pre">\hphantom</span></code> and <code class="docutils literal notranslate"><span class="pre">\vphantom</span></code>, take
+an argument, say X, and produce a phantom, i.e., an invisible object
+that has the same dimension as X. In the case of <code class="docutils literal notranslate"><span class="pre">\hphantom</span></code>, the
+height and depth are set to zero, and the command behaves like
+horizontal space. In the case of <code class="docutils literal notranslate"><span class="pre">\vhphantom</span></code>, the width is set to
+zero; such a construct can be used to increase the space between rows in
+a table. Example:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$\phantom{x} \hphantom{x} \vphantom{x}$
+</pre></div>
+</div>
+</div>
+<p>is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">math</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mrow</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mphantom</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mphantom</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mphantom</span><span class="o">&gt;&lt;</span><span class="n">mpadded</span> <span class="n">depth</span><span class="o">=</span><span class="s1">&#39;0pt&#39;</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;0pt&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mpadded</span><span class="o">&gt;&lt;/</span><span class="n">mphantom</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mphantom</span><span class="o">&gt;&lt;</span><span class="n">mpadded</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;0pt&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mpadded</span><span class="o">&gt;&lt;/</span><span class="n">mphantom</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">math</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">formula</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="href-href">
+<span id="cmd-href"></span><h2>\href, \Href<a class="headerlink" href="#href-href" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\href</span></code> command takes two arguments, an URL and a text to be
+typeset; the semantics changed in version 2.2, and <code class="docutils literal notranslate"><span class="pre">\Href</span></code> was
+introduced: the effect is the same but the order of arguments changed.
+Example:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">Href</span><span class="p">{</span><span class="n">a</span><span class="p">}{</span><span class="n">b</span><span class="p">}</span> \<span class="n">Href</span><span class="p">{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">}{</span><span class="n">b</span><span class="p">}</span> \<span class="n">Href</span><span class="p">{</span><span class="n">b</span><span class="p">}{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">}</span>
+<span class="o">%</span>\<span class="n">href</span><span class="p">{</span><span class="n">b</span><span class="p">}{</span><span class="n">a</span><span class="p">}</span> \<span class="n">href</span><span class="p">{</span><span class="n">b</span><span class="p">}{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">}</span> \<span class="n">href</span><span class="p">{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">}{</span><span class="n">b</span><span class="p">}</span> <span class="n">alternate</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+</div>
+<p>this is translated into</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="o">&gt;</span><span class="n">añ</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;a~n&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>As this example shows, tilde, underscore and <code class="docutils literal notranslate"><span class="pre">\~</span></code> are handled in a
+special way. It is possible to change the font used for the url.
+Traditionally, people use the <code class="docutils literal notranslate"><span class="pre">\url</span></code> command; its effect is to typeset
+the first argument using the same rules as the second argument, using a
+tt font. In fact, <em>Tralics</em> puts the value of <code class="docutils literal notranslate"><span class="pre">\urlfont</span></code> before the
+argument of <code class="docutils literal notranslate"><span class="pre">\url</span></code>. This command does nothing, but the user can change
+its value. Example</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="mi">1</span>\<span class="n">Href</span><span class="p">{</span><span class="n">a</span><span class="p">}{</span><span class="n">b</span><span class="p">},</span> <span class="mi">2</span>\<span class="n">Href</span><span class="p">{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">}{</span><span class="n">b</span><span class="p">},</span> <span class="mi">3</span>\<span class="n">Href</span><span class="p">{</span><span class="n">b</span><span class="p">}{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">},</span>
+<span class="mi">4</span>\<span class="n">Href</span><span class="p">{</span>\<span class="n">url</span><span class="p">{</span><span class="n">a</span><span class="o">~</span><span class="n">b</span>\<span class="o">~</span><span class="n">n_d</span><span class="p">}}{</span><span class="n">a</span><span class="o">~</span><span class="n">b</span>\<span class="o">~</span><span class="n">n_d</span><span class="p">},</span>
+<span class="mi">5</span>\<span class="n">url</span><span class="p">{</span><span class="n">a</span><span class="o">~</span><span class="n">b</span>\<span class="o">~</span><span class="n">n_d</span><span class="p">},</span>
+\<span class="n">let</span>\<span class="n">urlfont</span>\<span class="n">tt</span>
+<span class="mi">1</span>\<span class="n">Href</span><span class="p">{</span><span class="n">a</span><span class="p">}{</span><span class="n">b</span><span class="p">},</span> <span class="mi">2</span>\<span class="n">Href</span><span class="p">{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">}{</span><span class="n">b</span><span class="p">},</span> <span class="mi">3</span>\<span class="n">Href</span><span class="p">{</span><span class="n">b</span><span class="p">}{</span><span class="n">a</span>\<span class="o">~</span><span class="n">n</span><span class="p">},</span>
+<span class="mi">4</span>\<span class="n">Href</span><span class="p">{</span>\<span class="n">url</span><span class="p">{</span><span class="n">a</span><span class="o">~</span><span class="n">b</span>\<span class="o">~</span><span class="n">n_d</span><span class="p">}}{</span><span class="n">a</span><span class="o">~</span><span class="n">b</span>\<span class="o">~</span><span class="n">n_d</span><span class="p">},</span>
+<span class="mi">5</span>\<span class="n">url</span><span class="p">{</span><span class="n">a</span><span class="o">~</span><span class="n">b</span>\<span class="o">~</span><span class="n">n_d</span><span class="p">}</span><span class="o">.</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is the result.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">2</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="o">&gt;</span><span class="n">añ</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">3</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;a~n&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="mi">4</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;a~b~n_d&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">~</span><span class="n">b</span><span class="o">~</span><span class="n">n_d</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="mi">5</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;a~b~n_d&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">~</span><span class="n">b</span><span class="o">~</span><span class="n">n_d</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="mi">1</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">2</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="o">&gt;</span><span class="n">añ</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">3</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;a~n&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="mi">4</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;a~b~n_d&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">~</span><span class="n">b</span><span class="o">~</span><span class="n">n_d</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">xref</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="mi">5</span><span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;a~b~n_d&#39;</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">~</span><span class="n">b</span><span class="o">~</span><span class="n">n_d</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;/</span><span class="n">xref</span><span class="o">&gt;.</span>
+</pre></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Preview. We have inserted a line break, in order to show the
+difference between the two cases. The red color indicates clickable
+text (of course, you cannot click on the image).</div>
+<div class="line"><img alt="example of URLs" src="../_images/img_54.png" /></div>
+</div>
+</section>
+<section id="hrule">
+<span id="cmd-hrule"></span><h2>\hrule<a class="headerlink" href="#hrule" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\hrule</span></code> or <code class="docutils literal notranslate"><span class="pre">\vrule</span></code> followed by a rule specification,
+that is, a width, a height, a depth. Each specification can be given
+more than once. For a <code class="docutils literal notranslate"><span class="pre">\hrule</span></code> the default height is 0.4pt and the
+depth is zero. For a <code class="docutils literal notranslate"><span class="pre">\vrule</span></code>, the default width is 0.4pt. The
+translation of</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">hrule</span> \<span class="n">vrule</span>
+\<span class="n">hrule</span> <span class="n">width</span> <span class="mi">1</span><span class="n">pt</span> <span class="n">depth</span> <span class="mi">2</span><span class="n">pt</span> <span class="n">height</span>  <span class="mi">3</span><span class="n">pt</span>
+\<span class="n">vrule</span> <span class="n">width</span> <span class="mi">1</span><span class="n">pt</span> <span class="n">depth</span> <span class="mi">2</span><span class="n">pt</span> <span class="n">height</span>  <span class="mi">3</span><span class="n">pt</span>
+</pre></div>
+</div>
+</div>
+<p>is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">rule</span> <span class="n">depth</span><span class="o">=</span><span class="s1">&#39;0.0pt&#39;</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;0.4pt&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">rule</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;0.4pt&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">rule</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;1.0pt&#39;</span> <span class="n">depth</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span><span class="o">/&gt;</span>
+<span class="o">&lt;</span><span class="n">rule</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;1.0pt&#39;</span> <span class="n">depth</span><span class="o">=</span><span class="s1">&#39;2.0pt&#39;</span> <span class="n">height</span><span class="o">=</span><span class="s1">&#39;3.0pt&#39;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="hrulefill">
+<span id="cmd-hrulefill"></span><h2>\hrulefill<a class="headerlink" href="#hrulefill" title="Link to this heading"></a></h2>
+<p>Translation of <code class="docutils literal notranslate"><span class="pre">\hrulefill</span></code> is <code class="docutils literal notranslate"><span class="pre">&lt;hrulefill/&gt;</span></code>.</p>
+</section>
+<section id="hsize-rigid-length">
+<span id="cmd-hsize"></span><h2>\hsize (rigid length)<a class="headerlink" href="#hsize-rigid-length" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\hsize=5in</span></code>, as a result TeX will use this quantity as
+the line width. Ignored by <em>Tralics</em>. In LaTeX, the document class
+should specify <code class="docutils literal notranslate"><span class="pre">\textwidth</span></code>, from which <code class="docutils literal notranslate"><span class="pre">\columnwidth</span></code> is deduced
+(in two column modes, the column width is a bit less than the half of
+the text width), and from this the <code class="docutils literal notranslate"><span class="pre">\linewidth</span></code> is deduced. After that
+<code class="docutils literal notranslate"><span class="pre">\hsize</span></code> is set equal to <code class="docutils literal notranslate"><span class="pre">\linewidth</span></code>. The <code class="docutils literal notranslate"><span class="pre">\linewidth</span></code> parameter
+can be modified by environments like <code class="docutils literal notranslate"><span class="pre">quote</span></code>. In two column modes, a
+float can occupy two columns so that <code class="docutils literal notranslate"><span class="pre">\linewidth</span></code> is changed to
+<code class="docutils literal notranslate"><span class="pre">\textwidth</span></code> and <code class="docutils literal notranslate"><span class="pre">\hsize</span></code> is changed accordingly. A LaTeX user
+should neither access nor modify the <code class="docutils literal notranslate"><span class="pre">\hsize</span></code> variable. (See
+<a class="reference external" href="doc-s.html#fct-scandimen">scandimen</a> for details of argument
+scanning).</p>
+</section>
+<section id="hskip-hglue">
+<span id="cmd-hskip"></span><h2>\hskip, \hglue<a class="headerlink" href="#hskip-hglue" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hskip</span></code> command scans some glue, for instance <code class="docutils literal notranslate"><span class="pre">\hskip-5cm</span></code> or
+<code class="docutils literal notranslate"><span class="pre">\hskip0pt</span> <span class="pre">plus</span> <span class="pre">2fil</span></code>. (for the syntax, see
+<a class="reference external" href="doc-s.html#fct-scanglue">scanglue</a>). In the current version, one
+<code class="docutils literal notranslate"><span class="pre">&amp;nbsp;</span></code> (Unicode U+A0) is printed every 4 pt (the glue is first
+transformed into a dimension, -5cm and 0pt in the example), and negative
+values are ignored. Thus both examples produce nothing. However, a new
+paragraph is started in any case. In LaTeX, <code class="docutils literal notranslate"><span class="pre">\hglue</span></code> is a bit more
+elaborate.</p>
+</section>
+<section id="hslash-math-symbol">
+<span id="cmd-hslash"></span><h2>\hslash (math symbol)<a class="headerlink" href="#hslash-math-symbol" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hslash</span></code> command is valid only in math mode. It generates a
+miscellaneous symbol: <code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;&amp;hbar;&lt;/mi&gt;</span></code> (Unicode U+210F, ℏ)</p>
+</section>
+<section id="hspace">
+<span id="cmd-hspace"></span><h2>\hspace<a class="headerlink" href="#hspace" title="Link to this heading"></a></h2>
+<p>The translation of <code class="docutils literal notranslate"><span class="pre">\hspace{xx}</span></code> or <code class="docutils literal notranslate"><span class="pre">\hspace*{xx}</span></code> is the same as
+<code class="docutils literal notranslate"><span class="pre">\hskip</span> <span class="pre">xx\relax</span></code>. See above.</p>
+<p>In math mode, <code class="docutils literal notranslate"><span class="pre">\hspace{50pt}</span></code> translates to
+<code class="docutils literal notranslate"><span class="pre">&lt;mspace</span> <span class="pre">width='50.0pt'/&gt;</span></code>.</p>
+</section>
+<section id="hss">
+<span id="cmd-hss"></span><h2>\hss<a class="headerlink" href="#hss" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\hss</span></code> command is like <code class="docutils literal notranslate"><span class="pre">`\hfil</span></code> &lt;#cmd-hfil&gt;`__, but inserts a
+<code class="docutils literal notranslate"><span class="pre">&lt;hss/&gt;</span></code> element.</p>
+</section>
+<section id="ht">
+<span id="cmd-ht"></span><h2>\ht<a class="headerlink" href="#ht" title="Link to this heading"></a></h2>
+<p>A command like <code class="docutils literal notranslate"><span class="pre">\ht0=2\ht1</span></code> says to replace the height of the box
+number 0 by twice the height of box number one. See
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for how integers are read (here the
+integer is zero, it should be a number between 0 and 255 or 1023). See
+<a class="reference external" href="doc-s.html#fct-scandimen">scandimen</a> for how dimensions are read
+(here <code class="docutils literal notranslate"><span class="pre">2\ht1</span></code> is the dimension).</p>
+<p><em>Tralics</em> does not use nor remember box dimensions. In the example above
+<code class="docutils literal notranslate"><span class="pre">2\ht1</span></code> evaluates to 0pt, and modifying <code class="docutils literal notranslate"><span class="pre">\ht0</span></code> does not modify the
+box.</p>
+</section>
+<section id="html-html-htmladdtonavigation-htmladdtostyle-htmlbase-htmlbody-htmlborder-htmlclear-htmlcode-htmlhead-htmlinfo-htmlimage-htmllanguagestyle-htmlnohead-htmlrule-htmlset-htmlsetenv-htmlsetstyle-from-html-pk">
+<span id="cmd-html"></span><h2>\html, \HTML, \htmladdtonavigation, \htmladdtostyle, \htmlbase, \htmlbody, \htmlborder, \htmlclear, \HTMLcode, \htmlhead, \htmlinfo, \htmlimage, \htmllanguagestyle, \htmlnohead, \htmlrule, \HTMLset, \HTMLsetenv, \htmlsetstyle, (from html pk)<a class="headerlink" href="#html-html-htmladdtonavigation-htmladdtostyle-htmlbase-htmlbody-htmlborder-htmlclear-htmlcode-htmlhead-htmlinfo-htmlimage-htmllanguagestyle-htmlnohead-htmlrule-htmlset-htmlsetenv-htmlsetstyle-from-html-pk" title="Link to this heading"></a></h2>
+</section>
+<section id="bodytext-externallabels-externalref-internal-segment-startdocument-strikeout-tableofchildlinks-from-html-pk">
+<h2>\bodytext, \externallabels, \externalref, \internal, \segment, \startdocument, \strikeout, \tableofchildlinks (from html pk)<a class="headerlink" href="#bodytext-externallabels-externalref-internal-segment-startdocument-strikeout-tableofchildlinks-from-html-pk" title="Link to this heading"></a></h2>
+<p>There are a number of commands defined by the html package that do
+nothing in LaTeX, and has no effect in <em>Tralics</em> either; they are the
+following <code class="docutils literal notranslate"><span class="pre">\html{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\HTML[x]{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmladdtonavigation{a}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\htmladdtostyle[x]{a}{b}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmladdTOClink[x]{a}{c}{c}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\htmlbase{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmlbody[x]</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmlborder[x]{a}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\htmlclear[x]</span></code>, <code class="docutils literal notranslate"><span class="pre">\HTMLcode[x]{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmlhead[x]{a}{b}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\htmlimage[x]{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmlinfo*[x]</span></code> <code class="docutils literal notranslate"><span class="pre">\htmlnohead</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\htmllanguagestyle[x]{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmlrule*[foo]</span></code> <code class="docutils literal notranslate"><span class="pre">\HTMLset[x]{a}{b}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\HTMLsetenv[x]{a}{b}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmlsetstyle[x]{a}{b}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\htmltracenv{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\htmltracing{a}</span></code>, These commands behave the
+same, although their name does not start with html. <code class="docutils literal notranslate"><span class="pre">\bodytext{a}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\externallabels[x]{a}{b}</span></code>, <code class="docutils literal notranslate"><span class="pre">\externalref[x]{a}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\internal[x]{a}</span></code>, <code class="docutils literal notranslate"><span class="pre">\segment*[x]</span></code> <code class="docutils literal notranslate"><span class="pre">\startdcument</span></code>
+<code class="docutils literal notranslate"><span class="pre">\strikeout{a}</span></code> <code class="docutils literal notranslate"><span class="pre">\tableofchildlinks*[x]</span></code></p>
+</section>
+<section id="htmladdimg-from-html-pk">
+<span id="cmd-htmladdimg"></span><h2>\htmladdimg (from html pk)<a class="headerlink" href="#htmladdimg-from-html-pk" title="Link to this heading"></a></h2>
+<p>The sequence <code class="docutils literal notranslate"><span class="pre">\htmladdimg[foo]{bar}</span></code> is translated as
+<code class="docutils literal notranslate"><span class="pre">\includeghraphics{bar}</span></code>.</p>
+</section>
+<section id="htmladdnormallink-from-html-pk">
+<span id="cmd-htmladdnormallink"></span><h2>\htmladdnormallink (from html pk)<a class="headerlink" href="#htmladdnormallink-from-html-pk" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\htmladdnormallink</span></code> command is the same as
+<code class="docutils literal notranslate"><span class="pre">`\Href</span></code> &lt;doc-h.html#cmd-href&gt;`__.</p>
+</section>
+<section id="htmladdnormallinkfoot-from-html-pk">
+<span id="cmd-htmladdnormallinkfoot"></span><h2>\htmladdnormallinkfoot (from html pk)<a class="headerlink" href="#htmladdnormallinkfoot-from-html-pk" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\htmladdnormallink</span></code> command is the same as
+<code class="docutils literal notranslate"><span class="pre">`\Href</span></code> &lt;doc-h.html#cmd-href&gt;`__.</p>
+</section>
+<section id="htmlcite-from-html-pk">
+<span id="cmd-htmlcite"></span><h2>\htmlcite (from html pk)<a class="headerlink" href="#htmlcite-from-html-pk" title="Link to this heading"></a></h2>
+<p>The construction <code class="docutils literal notranslate"><span class="pre">\htmlcite{a}{b}</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">\nocite{b}</span></code>.
+There may be optional arguments, like <code class="docutils literal notranslate"><span class="pre">\htmlcite[x]{a}{c}</span></code>,
+<code class="docutils literal notranslate"><span class="pre">\htmlcite[x]{a}[y]{c}</span></code>, that translate to <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</section>
+<section id="htmlexcludecomments-htmlincludecomments-from-html-pk">
+<span id="cmd-htmlexcludecomments"></span><h2>\htmlexcludecomments, \htmlincludecomments (from html pk)<a class="headerlink" href="#htmlexcludecomments-htmlincludecomments-from-html-pk" title="Link to this heading"></a></h2>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\htmlexcludecomments{foo}</span></code> <code class="docutils literal notranslate"><span class="pre">\htmlincludecomments{bar}</span></code>,
+this defines two environments foo and bar, the content of which is
+excluded or included in the document. The first instruction is the same
+as <code class="docutils literal notranslate"><span class="pre">\let\foo\comment</span></code>, and you should not redefine the <code class="docutils literal notranslate"><span class="pre">comment</span></code>
+environment.</p>
+</section>
+<section id="htmlonly-environment-from-html-pk">
+<span id="env-htmlonly"></span><h2>htmlonly (environment from html pk)<a class="headerlink" href="#htmlonly-environment-from-html-pk" title="Link to this heading"></a></h2>
+<p>This environment behaves like the <code class="docutils literal notranslate"><span class="pre">comment</span></code> environment, the content
+is ignored.</p>
+</section>
+<section id="htmlref-from-html-pk">
+<span id="cmd-htmlref"></span><h2>\htmlref (from html pk)<a class="headerlink" href="#htmlref-from-html-pk" title="Link to this heading"></a></h2>
+<p>The constructions <code class="docutils literal notranslate"><span class="pre">\htmlref{a}{b}</span></code> <code class="docutils literal notranslate"><span class="pre">\htmlref[b]{a}{c}</span></code>
+<code class="docutils literal notranslate"><span class="pre">\htmlref[b]{a}[d]{c}</span></code> translate to <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</section>
+<section id="htmlurl-from-html-pk">
+<span id="cmd-htmlurl"></span><h2>\htmlurl (from html pk)<a class="headerlink" href="#htmlurl-from-html-pk" title="Link to this heading"></a></h2>
+<p>The commmand <code class="docutils literal notranslate"><span class="pre">\htmlurl</span></code> is the same as <code class="docutils literal notranslate"><span class="pre">\url</span></code>.</p>
+</section>
+<section id="huge">
+<span id="cmd-huge"></span><h2>\huge<a class="headerlink" href="#huge" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\huge</span></code> command is a command that selects a very large font. For
+an example of fonts, see <code class="docutils literal notranslate"><span class="pre">`\rm</span></code> &lt;doc-r.html#cmd-rm&gt;`__.</p>
+</section>
+<section id="cmd-chuge">
+<span id="id2"></span><h2>\Huge<a class="headerlink" href="#cmd-chuge" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">\Huge</span></code> command is a command that selects a very large font. For
+an example of fonts, see <code class="docutils literal notranslate"><span class="pre">`\rm</span></code> &lt;doc-r.html#cmd-rm&gt;`__.</p>
+</section>
+<section id="hypercite-from-html-pk">
+<span id="cmd-hypercite"></span><h2>\hypercite (from html pk)<a class="headerlink" href="#hypercite-from-html-pk" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\hypercite[A]{B}{C}{D}{E}</span></code>. Optional argument must be
+empty or <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">cite</span></code>, <code class="docutils literal notranslate"><span class="pre">ext</span></code>, <code class="docutils literal notranslate"><span class="pre">nocite</span></code>, <code class="docutils literal notranslate"><span class="pre">no</span></code>. In the first
+three cases, the translation is the same as <code class="docutils literal notranslate"><span class="pre">C\cite[D]{E}</span></code> or
+<code class="docutils literal notranslate"><span class="pre">C\cite{E}</span></code> in the case where D is empty. In the last three cases, the
+syntax is different, D is an optional argument, translation is
+<code class="docutils literal notranslate"><span class="pre">C\nocite{E}</span></code>.</p>
+</section>
+<section id="hyperref-from-html-pk">
+<span id="cmd-hyperref"></span><h2>\hyperref (from html pk)<a class="headerlink" href="#hyperref-from-html-pk" title="Link to this heading"></a></h2>
+<p>You can say <code class="docutils literal notranslate"><span class="pre">\hyperref[A]{B}{C}{D}{E}</span></code>. Optional argument must be
+empty or <code class="docutils literal notranslate"><span class="pre">ref</span></code>, <code class="docutils literal notranslate"><span class="pre">pageref</span></code>, <code class="docutils literal notranslate"><span class="pre">page</span></code>, <code class="docutils literal notranslate"><span class="pre">noref</span></code>, <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">hyper</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">html</span></code>. In the first two cases, the translation is the same as
+<code class="docutils literal notranslate"><span class="pre">C\ref{D}E</span></code>, in the next two cases <code class="docutils literal notranslate"><span class="pre">C\pageref{D}E</span></code>, then C (but
+there are only 4 arguments), and in the last two cases, the translation
+is D.</p>
+</section>
+<section id="hyphenchar">
+<span id="cmd-hyphenchar"></span><h2>\hyphenchar<a class="headerlink" href="#hyphenchar" title="Link to this heading"></a></h2>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">\the\hyphenchar\foo</span></code>, you will get the hyphen char of the
+font <code class="docutils literal notranslate"><span class="pre">\foo</span></code>. This is an integer. If you say <code class="docutils literal notranslate"><span class="pre">\hyphenchar\foo=444</span></code>,
+you set this to 444. TeX will hyphenate a word (in a current font) only
+if the <code class="docutils literal notranslate"><span class="pre">\hyphenchar</span></code> of that font is an integer between 0 and 255, and
+is a valid reference to a character in that font. If hyphenation occurs,
+this character will be inserted. The TeXbook says that <code class="docutils literal notranslate"><span class="pre">\-</span></code> is the
+same as <code class="docutils literal notranslate"><span class="pre">\discretionary{XX}{}{}</span></code>, where XX is <code class="docutils literal notranslate"><span class="pre">\char</span> <span class="pre">f</span></code> where f is
+the <code class="docutils literal notranslate"><span class="pre">\hyphenchar</span></code> of the current font, if this is valid, and XX is
+empty otherwise. In <em>Tralics</em> <code class="docutils literal notranslate"><span class="pre">\-</span></code> is ignored and the hyphen char of a
+font is zero by default.</p>
+</section>
+<section id="hyphenation">
+<span id="cmd-hyphenation"></span><h2>\hyphenation<a class="headerlink" href="#hyphenation" title="Link to this heading"></a></h2>
+<p>You could say <code class="docutils literal notranslate"><span class="pre">\hyphenation{man-u-script</span> <span class="pre">man-u-scripts</span> <span class="pre">ap-pen-dix}</span></code> in
+order to explain how to hyphenate some words. But <em>Tralics</em> does no
+typesetting, hence no hyphenations. As a result, the command and its
+argument is ignored.</p>
+</section>
+<section id="hyphenpenalty">
+<span id="cmd-hyphenpenalty"></span><h2>\hyphenpenalty<a class="headerlink" href="#hyphenpenalty" title="Link to this heading"></a></h2>
+<p>When you say <code class="docutils literal notranslate"><span class="pre">\hyphenpenalty=100</span></code>, then TeX will use 100 as penalty
+for a line break that occurs at discretionary break where the pre-break
+text is not empty (for instance <code class="docutils literal notranslate"><span class="pre">\-</span></code>). Unused by <em>Tralics</em>. (See
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a> for details of argument scanning).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

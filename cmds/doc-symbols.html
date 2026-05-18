@@ -1,0 +1,1302 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tralics: All commands, non-letters &mdash; Tralics 2.16.0pre documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/tweak.css?v=86cf1cd6" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/katex-math.css?v=05624691" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=7f416c36"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/katex.min.js?v=5cc8ed51"></script>
+      <script src="../_static/auto-render.min.js?v=af98beb9"></script>
+      <script src="../_static/katex_autorenderer.js?v=f1cc15a7"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="All commands, alphabetic order; unimplemented" href="doc-unimplemented.html" />
+    <link rel="prev" title="All commands, alphabetic order; letter Z" href="doc-z.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Tralics
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Using tralics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../options.html">Command-line options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage.html">Configuration files of Tralics: syntax and usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages.html">All packages known by Tralics, alphabetic order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../array.html">Arrays in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chars.html">Characters in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../err.html">Error recovery in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../latex3.html">Implementation of the LaTeX3 Bundle in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loop.html">Example of the \loop command in Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start.html">Documentation of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../step.html">Getting started with Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mml_ex.html">MathML Examples for Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fp.html">Examples for the fp package.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../laux.html">XML source and translation of some math commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb.html">Tralics and the Raweb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_examples.html">RAWeb examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../raweb_cfg.html">Parts of the raweb-cfg file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auxdoc.html">Font test</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">All commands, alphabetic order</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="doc-a.html">All commands, alphabetic order; letter A</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-b.html">All commands, alphabetic order; letter B</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-c.html">All commands, alphabetic order; letter C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-d.html">All commands, alphabetic order; letter D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-e.html">All commands, alphabetic order; letter E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-f.html">All commands, alphabetic order; letter F</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-g.html">All commands, alphabetic order; letter G</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-h.html">All commands, alphabetic order; letter H</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-i.html">All commands, alphabetic order; letter I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-j.html">All commands, alphabetic order; letter J</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-k.html">All commands, alphabetic order; letter K</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-l.html">All commands, alphabetic order; letter L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-m.html">All commands, alphabetic order; letter M</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-n.html">All commands, alphabetic order; letter N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-o.html">All commands, alphabetic order; letter O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-p.html">All commands, alphabetic order; letter P</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-q.html">All commands, alphabetic order; letter Q</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-r.html">All commands, alphabetic order; letter R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-s.html">All commands, alphabetic order; letter S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-t.html">All commands, alphabetic order; letter T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-u.html">All commands, alphabetic order; letter U</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-v.html">All commands, alphabetic order; letter V</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-w.html">All commands, alphabetic order; letter W</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-x.html">All commands, alphabetic order; letter X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-y.html">All commands, alphabetic order; letter Y</a></li>
+<li class="toctree-l2"><a class="reference internal" href="doc-z.html">All commands, alphabetic order; letter Z</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tralics: All commands, non-letters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-symbols-by-catcode">The symbols, by catcode</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-0">Catcode 0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-1">Catcode 1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-2">Catcode 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-3">Catcode 3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-4">Catcode 4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-5">Catcode 5</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-6">Catcode 6</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-7">Catcode 7</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-8">Catcode 8</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-9">Catcode 9</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-10">Catcode 10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-11">Catcode 11</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-12">Catcode 12</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-13">Catcode 13</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-14">Catcode 14</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-15">Catcode 15</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#catcode-16">Catcode 16</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mono-letter-commands">Mono-letter commands</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">~</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-1">\~</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-2">\$</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-3">\%</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-4">\&amp;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-5">\!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-comma">\, (backslash comma)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-6">\&gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-7">\;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-8">\{</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-9">\}</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-plus">\+ (backslash plus)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-underscore">\_ (backslash underscore)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-minus">\- (backslash minus)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vertical-bar">| (vertical bar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-vertical-bar">\| (backslash vertical bar)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-10">\#</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-backslash">\\ (backslash backslash)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-11">[, \[</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-12">], \]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-13">(, \(</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-14">), \)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#less-than-sign">&lt; (less than sign)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#greater-than-sign">&gt; (greater than sign)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#single-quote-apostrophe-straight-quote">‘ (single quote, apostrophe, straight quote)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-left-quote">\’ (backslash left quote)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-double-quote">\” (backslash double quote)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-equals">\= (backslash equals)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-dot">\. (backslash dot)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-hat">\^ (backslash hat)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-backquote">\` (backslash backquote)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-space">\ (backslash space)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-slash">\/ (backslash slash)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#section-15">\*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backslash-atsign">\&#64; (backslash atsign)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="doc-unimplemented.html">All commands, alphabetic order; unimplemented</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-conf.html">Configuration of the title page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex1.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex2.html">Two examples for the Titlepage mechanism of Tralics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../titlepage-ex3.html">Examples of transcripts</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Tralics</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">All commands, alphabetic order</a></li>
+      <li class="breadcrumb-item active">Tralics: All commands, non-letters</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tralics-all-commands-non-letters">
+<h1>Tralics: All commands, non-letters<a class="headerlink" href="#tralics-all-commands-non-letters" title="Link to this heading"></a></h1>
+<p>This page contains the description characters of <a class="reference external" href="#catcode0">catcode
+0</a>, <a class="reference external" href="#catcode1">catcode 1</a>, <a class="reference external" href="#catcode2">catcode 2</a>,
+<a class="reference external" href="#catcode3">catcode 3</a>, <a class="reference external" href="#catcode4">catcode 4</a>, <a class="reference external" href="#catcode5">catcode
+5</a>, <a class="reference external" href="#catcode6">catcode 6</a>, <a class="reference external" href="#catcode7">catcode 7</a>,
+<a class="reference external" href="#catcode8">catcode 8</a>, <a class="reference external" href="#catcode9">catcode 9</a>, <a class="reference external" href="#catcode10">catcode
+10</a>, <a class="reference external" href="#catcode11">catcode 11</a>, <a class="reference external" href="#catcode12">catcode
+12</a>, <a class="reference external" href="#catcode13">catcode 13</a>, <a class="reference external" href="#catcode14">catcode
+14</a>, <a class="reference external" href="#catcode15">catcode 15</a>, <a class="reference external" href="#catcode16">catcode
+16</a>.</p>
+<p>It contains also the description of <a class="reference external" href="#tilde">~</a>,
+<a class="reference external" href="#cmd-tilde">\~</a>, <a class="reference external" href="#cmd-dollar">\$</a>, <a class="reference external" href="#cmd-percent">\%</a>,
+<a class="reference external" href="#cmd-amp">&amp;</a>, <a class="reference external" href="#cmd-amp">\&amp;</a>, <a class="reference external" href="#cmd-exclam">\!</a>,
+<a class="reference external" href="#cmd-comma">\,</a>, <a class="reference external" href="#cmd-greater">\&gt;</a>, <a class="reference external" href="#cmd-semicolon">\;</a>,
+<a class="reference external" href="#cmd-openbrace">\{</a>, <a class="reference external" href="#cmd-closebrace">\}</a>,
+<a class="reference external" href="#cmd-openparen">\(</a>, <a class="reference external" href="#cmd-closeparen">\)</a>,
+<a class="reference external" href="#cmd-underscore">\_</a>, <a class="reference external" href="#cmd-sharp">\#</a>, <a class="reference external" href="#cmd-bar">\|</a>,
+<a class="reference external" href="#symbol-backslash">\\</a>, <a class="reference external" href="#bar">|</a>, <a class="reference external" href="#openbra">[ \[</a>, <a class="reference external" href="#closebra">]
+\]</a>, <a class="reference external" href="#cmd-openparen">(</a>, <a class="reference external" href="#cmd-closeparen">)</a>,
+<a class="reference external" href="#ltsign">&lt;</a>, <a class="reference external" href="#gtsign">&gt;</a>, <a class="reference external" href="#quote">‘</a>, <a class="reference external" href="#cmd-quote">\’</a>,
+<a class="reference external" href="#cmd-doublequote">\”</a>, <a class="reference external" href="#cmd-equal">\=</a>, <a class="reference external" href="#cmd-dot">\.</a>,
+<a class="reference external" href="#cmd-hat">\^</a>, <a class="reference external" href="#cmd-grave">\`</a>, <a class="reference external" href="#cmd-space">\</a> , <a class="reference external" href="#cmd-minus">-
+\-</a>, <a class="reference external" href="#cmd-plus">\+</a>, <a class="reference external" href="#cmd-star">*</a>,
+<a class="reference external" href="#cmd-atsign">\&#64;</a>, <a class="reference external" href="#cmd-italiccor">\/</a>.</p>
+<hr class="docutils" />
+<p>The following definitions will be used here:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">testeq</span><span class="c1">#1#2{\def\tmp{#2}\ifx#1\tmp\else \toks0={#1wantd: -&gt;#2.}</span>
+\<span class="n">typeout</span><span class="p">{</span>\<span class="n">the</span>\<span class="n">toks0</span><span class="p">}</span>\<span class="n">show</span> <span class="c1">#1\uerror\fi}</span>
+\<span class="n">def</span>\<span class="n">xtesteq</span><span class="c1">#1#2{\xdef\tmp{#2}\ifx#1\tmp\else \toks0={#1wantd: -&gt;}</span>
+\<span class="n">typeout</span><span class="p">{</span>\<span class="n">the</span>\<span class="n">toks0</span> <span class="c1">#2.}\show #1\uerror\fi}</span>
+</pre></div>
+</div>
+</div>
+<p>This can be used as</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">def</span>\<span class="n">foo</span><span class="p">{</span><span class="n">something</span><span class="p">}</span> \<span class="n">testeq</span>\<span class="n">foo</span><span class="p">{</span><span class="n">Something</span> <span class="k">else</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>and will produce no XML, but an error and two lines of message, like</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">foo</span> <span class="n">wantd</span><span class="p">:</span> <span class="o">-&gt;</span><span class="n">Something</span> <span class="k">else</span><span class="o">.</span>
+\<span class="n">foo</span><span class="o">=</span><span class="n">macro</span><span class="p">:</span> <span class="o">-&gt;</span><span class="n">something</span><span class="o">.</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">352</span><span class="p">:</span>
+<span class="n">Undefined</span> <span class="n">command</span> \<span class="n">uerror</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<p>Note the following points. Both <code class="docutils literal notranslate"><span class="pre">\typeout</span></code> and <code class="docutils literal notranslate"><span class="pre">\show</span></code> print the
+value on the tty as well as the transcript file. The token list of
+<code class="docutils literal notranslate"><span class="pre">\typeout</span></code> is fully expanded, and for this reason, we put in a token
+list the quantity <code class="docutils literal notranslate"><span class="pre">#1wantd:</span> <span class="pre">-&gt;#2.</span></code> and inhibit expansion via <code class="docutils literal notranslate"><span class="pre">\the</span></code>.</p>
+<section id="the-symbols-by-catcode">
+<h2>The symbols, by catcode<a class="headerlink" href="#the-symbols-by-catcode" title="Link to this heading"></a></h2>
+<p>Unless stated otherwise, a category code (in short a catcode) is an
+integer between 0 and 15. It is a property of input characters, used by
+the scanner to convert the input stream into a sequence of tokens. The
+character with ASCII code 37 is the character %, and is normally of
+category 14, thus behaves like a start-of-comment. You can insert such a
+character in the XML output via the sequence <code class="docutils literal notranslate"><span class="pre">\char37</span></code> (However
+<code class="docutils literal notranslate"><span class="pre">\char60</span></code> produces <code class="docutils literal notranslate"><span class="pre">&amp;lt;</span></code>, see the
+<code class="docutils literal notranslate"><span class="pre">`\char</span></code> &lt;doc-c.html#cmd-char&gt;`__ command). In most of the cases, a
+character of catcode <em>c</em> is read as a command with command code <em>c</em>.</p>
+<p><em>Tralics</em> uses the same parsing rules as TeX, with the exception of
+characters of category 16 (see below), and the fact that the character
+range is not limited to 8bit characters but to 16 bits. A construction
+like <code class="docutils literal notranslate"><span class="pre">^^^^^1d7e0</span></code> provides a character without category code, see <a class="reference external" href="doc-chars.html">the
+documentation on characters</a>.</p>
+<section id="catcode-0">
+<h3>Catcode 0<a class="headerlink" href="#catcode-0" title="Link to this heading"></a></h3>
+<p>The only character with catcode 0 is the backslash. This character is
+used to construct command names. The number 0 is not a command code. The
+command name is created as follows: if the next character is not of
+category 11, the name consists of the single character, and <em>Tralics</em>
+goes into state <em>S</em> if the character is a space, state <em>M</em> otherwise; if
+the character is of category 11, the name consists of all characters
+category 11 starting with the current one, and <em>Tralics</em> goes into state
+<em>S</em>. The first unused character will be read again later, and a category
+code assigned to it. Normally, spaces after command names are ignored
+because the current state <em>S</em> and the category code of the space
+character is 10. But the command can change the category code of the
+character that follows.</p>
+<p>The following example shows how to change the <code class="docutils literal notranslate"><span class="pre">\catcode</span></code> of the letter
+x, so that x can be used like a backslash. In the second definition,
+there is no space between the digit zero and the letter x. This letter
+is scanned, found to be a non digit, and pushed back in the main token
+list; at this moment, the catcode is still unchanged, <code class="docutils literal notranslate"><span class="pre">xfoo</span></code> is
+considered as a string of four letters, and not a command.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\def\foo{\gdef\bar{OK}}  \catcode`x=0 xfoo}
+\testeq\bar{OK}
+{\def\foo{\gdef\bar{notOK}}  \catcode`x=0xfoo}
+\testeq\bar{OK}
+</pre></div>
+</div>
+</div>
+<p>The next example shows that the token after a control sequence like
+<code class="docutils literal notranslate"><span class="pre">\foo</span></code> can be of catcode letter (because when the character is read
+again, its catcode is analysed again).</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\def\bar#1{\egroup\show#1}
+\def\foo{\bgroup\catcode32=11\catcode`\%=11 \bar}\foo \foo%\foo=\foo$\foo#}
+</pre></div>
+</div>
+</div>
+<p>In the <em>Tralics</em> output below, `the letter’ means a character of
+category 11, `the character’ a character of category 12.</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>the letter  .
+the letter %.
+the character =.
+math shift character $.
+macro parameter character #.
+</pre></div>
+</div>
+</div>
+</section>
+<section id="catcode-1">
+<h3>Catcode 1<a class="headerlink" href="#catcode-1" title="Link to this heading"></a></h3>
+<p>Initially, the only character of catcode 1 is the open brace. See below.</p>
+</section>
+<section id="catcode-2">
+<h3>Catcode 2<a class="headerlink" href="#catcode-2" title="Link to this heading"></a></h3>
+<p>Initially, the only character of catcode 2 is the closing brace.</p>
+<p>The following example shows that you can use other characters. In
+<em>Tralics</em>, characters of catcode 1 and 2 serve two purposes: for
+grouping, so that modifications are local to a group, and for delimiting
+arguments.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\catcode`A1\catcode`B2
+\def\fooA2B\testeq\fooA2B
+\def\barA\bgroup\def\fooA3B\egroupB\bar% \bar modifies \foo locally
+\testeq\foo{2}}
+</pre></div>
+</div>
+</div>
+<p>Note the following trick: <code class="docutils literal notranslate"><span class="pre">\uppercase</span> <span class="pre">\relax\bgroup}</span></code>. After
+<code class="docutils literal notranslate"><span class="pre">\uppercase</span></code> and commands like that, you can have an arbitrary
+sequence of spaces and <code class="docutils literal notranslate"><span class="pre">\relax</span></code> commands. The argument is delimited on
+the left by an implicit left brace, on the right by an explicit right
+brace.</p>
+</section>
+<section id="catcode-3">
+<h3>Catcode 3<a class="headerlink" href="#catcode-3" title="Link to this heading"></a></h3>
+<p>Initially, the only character with catcode 3 is the dollar sign. It is
+used to enter and exit math and display math mode. A construct like
+<code class="docutils literal notranslate"><span class="pre">{catcode</span> <span class="pre">`x=3</span> <span class="pre">catcode`y=3</span> <span class="pre">xy</span> <span class="pre">sinxy}</span></code> is the same as
+<code class="docutils literal notranslate"><span class="pre">\[\sin\]</span></code>.</p>
+</section>
+<section id="catcode-4">
+<h3>Catcode 4<a class="headerlink" href="#catcode-4" title="Link to this heading"></a></h3>
+<p>The only character with catcode 4 is the alignment tab character &amp;. (see
+description of <a class="reference external" href="doc-array.html">arrays</a>).</p>
+</section>
+<section id="catcode-5">
+<h3>Catcode 5<a class="headerlink" href="#catcode-5" title="Link to this heading"></a></h3>
+<p>The only character with catcode 5 is the end-of-line character (carriage
+return, ASCII code 13). When TeX sees such a character, it throws away
+the remaining of the line. If TeX is in state <em>N</em>, the result is a
+<code class="docutils literal notranslate"><span class="pre">\par</span></code> token; if TeX is in state <em>M</em>, the result is a newline token of
+catcode 10, and otherwise, the character is ignored. For <em>Tralics</em>, the
+newline token has value 10 (line-feed), and not 32 (space) as in TeX. As
+a result, in most cases, newline characters remain in the XML result,
+whenever they are equivalent to space (the purpose is to make the output
+more readable). Note that <em>Tralics</em> is in state <em>N</em> whenever it reads
+the first character of a line. The number 5 is not a command code.</p>
+<p>Whenever <em>Tralics</em> sees a new line, it inserts the character defined by
+the <code class="docutils literal notranslate"><span class="pre">\endlinechar</span></code> command. This character is by default the end of
+line character, see <code class="docutils literal notranslate"><span class="pre">`\endlinechar</span></code> &lt;doc-e.html#cmd-endlinechar&gt;`__.</p>
+</section>
+<section id="catcode-6">
+<h3>Catcode 6<a class="headerlink" href="#catcode-6" title="Link to this heading"></a></h3>
+<p>The only character with catcode 6 is the sharp sign #. This character is
+used as parameter delimiter or parameter reference in macro definitions.
+It is also used in TeX table preambles (but not in LaTeX not <em>Tralics</em>).
+In the definition of <code class="docutils literal notranslate"><span class="pre">\xbar</span></code> below, the quantity <code class="docutils literal notranslate"><span class="pre">#1</span></code> refers to the
+first argument of <code class="docutils literal notranslate"><span class="pre">\Ma</span></code>, <code class="docutils literal notranslate"><span class="pre">##1</span></code> refers to the first argument of
+<code class="docutils literal notranslate"><span class="pre">\Mb</span></code> and <code class="docutils literal notranslate"><span class="pre">####1</span></code> could be used to refer to the first argument of
+<code class="docutils literal notranslate"><span class="pre">\xbar</span></code>. As you can see, the sharp character can be replaced by any
+character of catcode 6. In order to put in a command a character of
+category code 6, it suffices to precede it by any character of catcode
+6. The body of the <code class="docutils literal notranslate"><span class="pre">\xfoo</span></code> command is <code class="docutils literal notranslate"><span class="pre">#A#A</span></code>, but the printer shows
+it as <code class="docutils literal notranslate"><span class="pre">##AA##AA</span></code>. Example</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\catcode`A6 \def\fooA1A2{\xdef\bar{A2A1}}\foo23
+\testeq\bar{32}}
+\def\Ma#1{\def\Mb ##1{\xdef\xbar{#1##1}}}\Ma a\Mb b
+\testeq\xbar{ab}
+\def\foo{###AA#AA}\def\fooB{##AA##AA} \def\fooC{####AAAA}
+\ifx\foo\fooB\else\bad\fi \ifx\foo\fooC\bad\fi}
+</pre></div>
+</div>
+</div>
+<p>Note. There are some subtle differences between TeX and <em>Tralics</em>.
+Assume that X has category code 6, T has category 1 and that you define
+<code class="docutils literal notranslate"><span class="pre">\def\foo</span> <span class="pre">xX1yT#1}</span></code>. If you ask TeX to print the value, you will see
+\foo=macro: xX1y-&gt;X1 while <em>Tralics</em> says \foo=macro: x#1y-&gt;#1. The
+reason is the following: TeX stores the macro as a single list of
+tokens, replacing the start of the body (here T) by a special marker,
+and omitting the final brace. This explains why T is not printed. The
+body of the macro holds a reference to the first argument so
+<code class="docutils literal notranslate"><span class="pre">\def\xfoo</span> <span class="pre">xX1y{X1}</span></code> produces the same result, but
+<code class="docutils literal notranslate"><span class="pre">\def\yfoo</span> <span class="pre">x#1y{#1}</span></code> gives a different result. In case of
+<code class="docutils literal notranslate"><span class="pre">\def\foo</span> <span class="pre">X1#2{#1}</span></code>, the character used in the body is the last found
+in the argument list (here a sharp sign). On the other hand, <em>Tralics</em>
+stores somewhere the list of characters that are before the first
+argument (here x), and the delimitors for the arguments (here y for the
+first argument). In particular <code class="docutils literal notranslate"><span class="pre">\foo</span></code>, <code class="docutils literal notranslate"><span class="pre">\xfoo</span></code> and <code class="docutils literal notranslate"><span class="pre">\yfoo</span></code> use the
+same representation.</p>
+<p>As a consequence, comparing macros via <code class="docutils literal notranslate"><span class="pre">\ifx</span></code> may produce different
+results; the same holds for <code class="docutils literal notranslate"><span class="pre">\meaning</span></code>. Consider now
+<code class="docutils literal notranslate"><span class="pre">\def\foo</span> <span class="pre">X1XTX1}</span></code>; TeX prints \foo=macro: X1T-&gt;X1T while <em>Tralics</em>
+prints \foo=macro: #1T-&gt;#1. Here <code class="docutils literal notranslate"><span class="pre">\foo</span></code> is a macro with one argument
+delimited by T (of category code 1), and this character is reinserted
+after the expansion. <em>Tralics</em> does not show which character it
+reinserts; in fact it insert an open brace. One could use <code class="docutils literal notranslate"><span class="pre">\futurelet</span></code>
+in order to see the difference.</p>
+<p>Finally consider <code class="docutils literal notranslate"><span class="pre">\newcommand\foo[2][truc]{X1X2}</span></code>. You will see
+\xfoo=macro: -&gt;&#64;protected&#64;testopt \xfoo \xfoo {truc} in the case of
+TeX (this means that TeX created an auxiliary command, whose value is
+\xfoo=long macro:[#1]#2-&gt;#1#2) or \xfoo=opt \long macro:
+truc#2-&gt;#1#2 (this means that <em>Tralics</em> did not create other other
+commands).</p>
+</section>
+<section id="catcode-7">
+<h3>Catcode 7<a class="headerlink" href="#catcode-7" title="Link to this heading"></a></h3>
+<p>The only character with catcode 7 is the hat. This character is used in
+math mode for superscripts. It is also used in the double hat construct:
+if a character of catcode 7 appears twice in a row, like in <code class="docutils literal notranslate"><span class="pre">^^13</span></code> and
+<code class="docutils literal notranslate"><span class="pre">^^ab</span></code>, and is followed by two digits in base 16, it is as if the
+character with this code had been given (here, code 19, and 171); note
+that only lowercase letters are allowed here. In the case where a
+character of catcode 7 appears twice in a row, and is followed by a 7bit
+character of code <em>c</em> (like <code class="docutils literal notranslate"><span class="pre">^^Z</span></code> or <code class="docutils literal notranslate"><span class="pre">^^A</span></code> or <code class="docutils literal notranslate"><span class="pre">^^{</span></code>), it is as if
+TeX had seen a character of code <em>c-64</em> or <em>c+64</em> (the one which is
+between 0 and 128). In the example, the numbers are 26, 1 and 59. The
+catcode of this character is examined again, for instance <code class="docutils literal notranslate"><span class="pre">^^5e</span></code> is
+the hat character, of catcode 7.</p>
+<p>Example.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{1^^{^^ab2^^5e^ab3^^5e^5e^ab4\def\Abc{ok}\def\bAc{OK}\^^41bc\b^^41c}
+{\catcode `\é=7 ééab $xé2$ %next line should produce M
+éé
+$1^è=^^^AééT$}  %line contains hat, hat, control-A
+\def\msg{A message.^^J}
+</pre></div>
+</div>
+</div>
+<p>This is the XML translation</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;p&gt;1;«&amp;nbsp;2«&amp;nbsp;3«&amp;nbsp;4okOK
+«&amp;nbsp;&lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt; &lt;mn&gt;2&lt;/mn&gt; &lt;/msup&gt;&lt;/math&gt;&lt;/formula&gt;
+ M&lt;formula type=&#39;inline&#39;&gt;&lt;math xmlns=&#39;http://www.w3.org/1998/Math/MathML&#39;&gt;
+&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;1&lt;/mn&gt; &lt;mo&gt;è&lt;/mo&gt; &lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;
+&lt;mo&gt;&amp;#20;&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/formula&gt; &lt;/p&gt;
+</pre></div>
+</div>
+</div>
+<p>Note: The line that contains the two é characters translates as capital
+M, because the last character on the line is the newline character,
+control-M (even though on Unix, you would expect control-J). The
+<code class="docutils literal notranslate"><span class="pre">\msg</span></code> command contains as last token a newline character (control-J
+of catcode 12), and not an end-of-line character of catcode 5. The
+character control-T, represented by &amp;#20; seems to be illegal in XML.
+Without it, the preview is <img alt="some chars" src="../_images/img_13.png" />.</p>
+<p>If you say <code class="docutils literal notranslate"><span class="pre">^^^^ABCD</span></code>, the result is a character whose value is
+defined by the value ABCD (each letter must be a digit, or a lower case
+letter between A and F). Such a construct is equivalent to
+<code class="docutils literal notranslate"><span class="pre">\char</span> <span class="pre">&amp;ABCD</span></code>, but it is one token, and spaces are not ignored after
+it. (You can also use five hats, see <a class="reference external" href="doc-chars.html">the documentation on
+characters</a>). Example</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\def\foo#1#2#3{#1=#2=#3=}
+\foo^^^^0153^^^^0152^^^^0178
+ ^^^^017b^^8?
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="c1">#339;=&amp;#338;=&amp;#376;=</span>
+<span class="o">&amp;</span><span class="c1">#379;x?</span>
+</pre></div>
+</div>
+</div>
+<p>Preview: <img alt="^^^^ example" src="../_images/img_80.png" /></p>
+</section>
+<section id="catcode-8">
+<h3>Catcode 8<a class="headerlink" href="#catcode-8" title="Link to this heading"></a></h3>
+<p>The only character with catcode 8 is the underscore character. It is
+used for subscripts in math mode. See the
+<code class="docutils literal notranslate"><span class="pre">`\sp</span></code> &lt;doc-s.html#cmd-sp&gt;`__ command for an example of use.</p>
+<p>Outside math mode, you will get an error. For instance, if you say</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\catcode`x7 \catcode`y=8 a^b_c xy\sp\sb}
+</pre></div>
+</div>
+</div>
+<p>then <em>Tralics</em> will complain (but not in the same fashion as TeX).</p>
+<div class="tty-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">377</span><span class="p">:</span>
+<span class="n">Missing</span> <span class="n">dollar</span> <span class="ow">not</span> <span class="n">inserted</span><span class="p">,</span> <span class="n">token</span> <span class="n">ignored</span><span class="p">:</span> <span class="p">{</span><span class="n">Character</span> <span class="o">^</span> <span class="n">of</span> <span class="n">catcode</span> <span class="mi">7</span><span class="p">}</span><span class="o">.</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">377</span><span class="p">:</span>
+<span class="n">Missing</span> <span class="n">dollar</span> <span class="ow">not</span> <span class="n">inserted</span><span class="p">,</span> <span class="n">token</span> <span class="n">ignored</span><span class="p">:</span> <span class="p">{</span><span class="n">Character</span> <span class="n">_</span> <span class="n">of</span> <span class="n">catcode</span> <span class="mi">8</span><span class="p">}</span><span class="o">.</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">377</span><span class="p">:</span>
+<span class="n">Missing</span> <span class="n">dollar</span> <span class="ow">not</span> <span class="n">inserted</span><span class="p">,</span> <span class="n">token</span> <span class="n">ignored</span><span class="p">:</span> <span class="p">{</span><span class="n">Character</span> <span class="n">x</span> <span class="n">of</span> <span class="n">catcode</span> <span class="mi">7</span><span class="p">}</span><span class="o">.</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">377</span><span class="p">:</span>
+<span class="n">Missing</span> <span class="n">dollar</span> <span class="ow">not</span> <span class="n">inserted</span><span class="p">,</span> <span class="n">token</span> <span class="n">ignored</span><span class="p">:</span> <span class="p">{</span><span class="n">Character</span> <span class="n">y</span> <span class="n">of</span> <span class="n">catcode</span> <span class="mi">8</span><span class="p">}</span><span class="o">.</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">377</span><span class="p">:</span>
+<span class="n">Missing</span> <span class="n">dollar</span> <span class="ow">not</span> <span class="n">inserted</span><span class="p">,</span> <span class="n">token</span> <span class="n">ignored</span><span class="p">:</span> \<span class="n">sp</span><span class="o">.</span>
+<span class="n">Error</span> <span class="n">signaled</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">377</span><span class="p">:</span>
+<span class="n">Missing</span> <span class="n">dollar</span> <span class="ow">not</span> <span class="n">inserted</span><span class="p">,</span> <span class="n">token</span> <span class="n">ignored</span><span class="p">:</span> \<span class="n">sb</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="catcode-9">
+<h3>Catcode 9<a class="headerlink" href="#catcode-9" title="Link to this heading"></a></h3>
+<p>Characters of code 9 are ignored. Initially, no character has this
+category code.</p>
+</section>
+<section id="catcode-10">
+<h3>Catcode 10<a class="headerlink" href="#catcode-10" title="Link to this heading"></a></h3>
+<p>A character of catcode 10 acts like a space. If TeX sees a character of
+catcode 10, the action depends on the current state. If the state is <em>N</em>
+or <em>S</em>, the character is ignored. Otherwise, TeX is in state <em>M</em> and
+changes to state <em>S</em>, and the result is a space token (character 32,
+category 10). Space, tabulation are of catcode 10.</p>
+<p>Spaces are in general ignored at start of line, because TeX is in state
+<em>M</em>. In verbatim mode, the catcode of the space is changed, and thus
+spaces remain.</p>
+</section>
+<section id="catcode-11">
+<h3>Catcode 11<a class="headerlink" href="#catcode-11" title="Link to this heading"></a></h3>
+<p>Characters of catcode letter can be used to make multiletter control
+sequences (without using <code class="docutils literal notranslate"><span class="pre">\csname</span></code>). Only ASCII letter (between a and
+z, or between A and Z) are by default of catcode 11.</p>
+</section>
+<section id="catcode-12">
+<h3>Catcode 12<a class="headerlink" href="#catcode-12" title="Link to this heading"></a></h3>
+<p>Characters of catcode 12 cannot be used to make multiletter control
+sequences. All characters not liste elsewhere are of catcode 12
+(especially, all 8-bit characters).</p>
+</section>
+<section id="catcode-13">
+<h3>Catcode 13<a class="headerlink" href="#catcode-13" title="Link to this heading"></a></h3>
+<p>Characters of category 13 are active. They can be used only if a
+definition is associated. In <em>Tralics</em> only the tilde character is of
+13, but the three characters <code class="docutils literal notranslate"><span class="pre">_#&amp;</span></code> have a definition (the translation
+is the character). Note that, in PlainTeX, the tilde character expands
+to <code class="docutils literal notranslate"><span class="pre">\penalty</span> <span class="pre">\&#64;M</span> <span class="pre">\ ``</span> <span class="pre">(there</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">space</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">end</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">command)</span> <span class="pre">and</span>
+<span class="pre">in</span> <span class="pre">LaTeX</span> <span class="pre">to</span> <span class="pre">``\nobreakspace{}</span></code>, which is the same with a
+<code class="docutils literal notranslate"><span class="pre">\leavevmode</span></code> in front, in <em>Tralics</em>, the expansion is simply
+<code class="docutils literal notranslate"><span class="pre">\nobreakspace</span></code>.</p>
+</section>
+<section id="catcode-14">
+<h3>Catcode 14<a class="headerlink" href="#catcode-14" title="Link to this heading"></a></h3>
+<p>Characters of catcode 14 act like an start-of-comment character. The
+only character with catcode 14 is the percent character.</p>
+</section>
+<section id="catcode-15">
+<h3>Catcode 15<a class="headerlink" href="#catcode-15" title="Link to this heading"></a></h3>
+<p>Characters of catcode 15 are invalid. There is no invalid character in
+<em>Tralics</em>.</p>
+</section>
+<section id="catcode-16">
+<h3>Catcode 16<a class="headerlink" href="#catcode-16" title="Link to this heading"></a></h3>
+<p>There is no character of catcode 16 in TeX . In <em>Tralics</em>, this code is
+reserved for verbatim-like characters, defined by <code class="docutils literal notranslate"><span class="pre">\DefineShortVerb</span></code>.
+These characters act is if they were preceded by <code class="docutils literal notranslate"><span class="pre">\verb</span></code>. Note that
+the star character is not exceptional. You can use <code class="docutils literal notranslate"><span class="pre">\fvset</span></code>, if you
+want to change the translation of a space.</p>
+<p>Example:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">DefineShortVerb</span><span class="p">{</span>\<span class="o">|</span><span class="p">}</span>
+<span class="n">Test</span> <span class="n">of</span> <span class="o">|</span>\<span class="n">DefineShortVerb</span><span class="o">|</span> <span class="ow">and</span> <span class="o">|</span>\<span class="n">UndefineShortVerb</span><span class="o">|.</span>
+\<span class="n">DefineShortVerb</span><span class="p">{</span>\<span class="o">+</span><span class="p">}</span>
+<span class="n">test</span> <span class="mi">1</span> <span class="o">|</span><span class="n">toto</span><span class="o">|</span> <span class="o">+</span><span class="n">x</span><span class="o">+</span> <span class="o">|+</span><span class="n">x</span><span class="o">-|</span> <span class="o">+|</span><span class="n">t</span><span class="o">|+</span>
+\<span class="n">UndefineShortVerb</span><span class="p">{</span>\<span class="o">+</span><span class="p">}</span>
+<span class="n">test</span> <span class="mi">2</span> <span class="o">|</span><span class="n">toto</span><span class="o">|</span> <span class="o">+</span><span class="n">x</span><span class="o">+</span> <span class="o">|+</span><span class="n">x</span><span class="o">-|</span> <span class="o">+|</span><span class="n">t</span><span class="o">|+</span>
+<span class="n">espace</span><span class="p">:</span> <span class="o">|+</span> <span class="o">+|</span>\<span class="n">fvset</span><span class="p">{</span><span class="n">showspaces</span><span class="o">=</span><span class="n">true</span><span class="p">}</span><span class="o">|+</span> <span class="o">+|</span>\<span class="n">fvset</span><span class="p">{</span><span class="n">showspaces</span><span class="o">=</span><span class="n">false</span><span class="p">}</span><span class="o">|+</span> <span class="o">+|.</span>
+\<span class="n">DefineShortVerb</span><span class="p">{</span>\<span class="o">*</span><span class="p">}</span>
+<span class="n">Verbatimfoo</span><span class="p">:</span> <span class="o">*+</span> <span class="n">foo</span> <span class="o">+*</span>\<span class="n">verb</span><span class="o">+*</span><span class="n">foo</span><span class="o">*+</span>\<span class="n">verb</span><span class="o">*+</span><span class="n">foo</span><span class="o">*+</span>
+<span class="n">Verbatimfoo</span><span class="p">:</span> \<span class="n">verb</span><span class="o">|+</span> <span class="n">foo</span> <span class="o">+*</span><span class="n">foo</span><span class="o">*</span><span class="n">foo</span><span class="o">*|.</span>
+</pre></div>
+</div>
+</div>
+<p>The XML output is the following</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Test</span> <span class="n">of</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span>\<span class="n">DefineShortVerb</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;</span> <span class="ow">and</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span>\<span class="n">UndefineShortVerb</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;.</span>
+
+<span class="n">test</span> <span class="mi">1</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span><span class="n">toto</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;+</span><span class="n">x</span><span class="o">-&amp;</span><span class="c1">#x200B;&lt;/hi&gt;</span>
+  <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;|</span><span class="n">t</span><span class="o">|&lt;/</span><span class="n">hi</span><span class="o">&gt;</span>
+
+<span class="n">test</span> <span class="mi">2</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span><span class="n">toto</span><span class="o">&lt;/</span><span class="n">hi</span><span class="o">&gt;</span> <span class="o">+</span><span class="n">x</span><span class="o">+</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;+</span><span class="n">x</span><span class="o">-&amp;</span><span class="c1">#x200B;&lt;/hi&gt; +&lt;hi rend=&#39;tt&#39;&gt;t&lt;/hi&gt;+</span>
+<span class="n">espace</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;+&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">+&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;+&amp;</span><span class="n">blank</span><span class="p">;</span><span class="o">+&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;+&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">+&lt;/</span><span class="n">hi</span><span class="o">&gt;.</span>
+
+<span class="n">Verbatimfoo</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;+&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">+&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;*</span><span class="n">foo</span><span class="o">*&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;</span><span class="n">foo</span><span class="o">*&lt;/</span><span class="n">hi</span><span class="o">&gt;</span>
+<span class="n">Verbatimfoo</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;+&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="n">foo</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">+*</span><span class="n">foo</span><span class="o">*</span><span class="n">foo</span><span class="o">*&lt;/</span><span class="n">hi</span><span class="o">&gt;.</span>
+<span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>We can continue the example as follows. We show how to use <code class="docutils literal notranslate"><span class="pre">\SaveVerb</span></code>
+and <code class="docutils literal notranslate"><span class="pre">\UseVerb</span></code>.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\SaveVerb{FE}|}|\def\FE{\UseVerb{FE}}
+\DefineShortVerb{\+}
+\SaveVerb{VE}+|+\def\VE{\UseVerb{VE}}
+\SaveVerb{DU}|$_|\def\DU{\UseVerb{DU}} %$
+\UndefineShortVerb{\+}
+\UndefineShortVerb{\|}
+\UndefineShortVerb{\*}
+Test \FE,\VE, \DU.
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;p&gt;Test &lt;hi rend=&#39;tt&#39;&gt;}&lt;/hi&gt;,&lt;hi rend=&#39;tt&#39;&gt;|&lt;/hi&gt;, &lt;hi rend=&#39;tt&#39;&gt;$_&lt;/hi&gt;.
+&lt;/p&gt;
+</pre></div>
+</div>
+</div>
+<p>Preview: <img alt="example of ShortVerb" src="../_images/img_19.png" /></p>
+</section>
+</section>
+<section id="mono-letter-commands">
+<h2>Mono-letter commands<a class="headerlink" href="#mono-letter-commands" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>~<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p><em>(tralics version 1 description: The ``~`` character is a normal
+character, but translates into a non-breaking space. Of course, the
+result is a tilde in verbatim mode, and a mathematical space in math
+mode.)</em> Example:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Test tilde:~\verb=~=$a~b$.
+\href{\url{a~b\~c}}{some url}
+</pre></div>
+</div>
+</div>
+<p>The XML translation is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Test</span> <span class="n">tilde</span><span class="p">:</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="p">;</span><span class="o">&lt;</span><span class="n">hi</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;tt&#39;</span><span class="o">&gt;~&lt;/</span><span class="n">hi</span><span class="o">&gt;&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">math</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mspace</span> <span class="n">width</span><span class="o">=</span><span class="s1">&#39;1em&#39;</span><span class="o">/&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">math</span><span class="o">&gt;&lt;/</span><span class="n">formula</span><span class="o">&gt;.</span>
+<span class="o">&lt;</span><span class="n">xref</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;some url&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">~</span><span class="n">b</span><span class="o">~</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">xref</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Note how <code class="docutils literal notranslate"><span class="pre">~</span></code> and <code class="docutils literal notranslate"><span class="pre">\~</span></code> are handled by the <code class="docutils literal notranslate"><span class="pre">\url</span></code> command.</p>
+<p>In the current version of <em>Tralics</em>, the tilde character is active and
+defined as <code class="docutils literal notranslate"><span class="pre">\def~{\nobreakspace}</span></code>. The only purpose of the change is
+to make the following example work (it is file xii by David Carlisle).</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\let~\catcode~`76~`A13~`F1~`j00~`P2jdefA71F~`7113jdefPALLF
+PA&#39;&#39;FwPA;;FPAZZFLaLPA//71F71iPAHHFLPAzzFenPASSFthP;A$$FevP
+A@@FfPARR717273F737271P;ADDFRgniPAWW71FPATTFvePA**FstRsamP
+AGGFRruoPAqq71.72.F717271PAYY7172F727171PA??Fi*LmPA&amp;&amp;71jfi
+Fjfi71PAVVFjbigskipRPWGAUU71727374 75,76Fjpar71727375Djifx
+:76jelse&amp;U76jfiPLAKK7172F71l7271PAXX71FVLnOSeL71SLRyadR@oL
+RrhC?yLRurtKFeLPFovPgaTLtReRomL;PABB71 72,73:Fjif.73.jelse
+B73:jfiXF71PU71 72,73:PWs;AMM71F71diPAJJFRdriPAQQFRsreLPAI
+I71Fo71dPA!!FRgiePBt&#39;el@ lTLqdrYmu.Q.,Ke;vz vzLqpip.Q.,tz;
+;Lql.IrsZ.eap,qn.i. i.eLlMaesLdRcna,;!;h htLqm.MRasZ.ilk,%
+s$;z zLqs&#39;.ansZ.Ymi,/sx ;LYegseZRyal,@i;@ TLRlogdLrDsW,@;G
+LcYlaDLbJsW,SWXJW ree @rzchLhzsW,;WERcesInW qt.&#39;oL.Rtrul;e
+doTsW,Wk;Rri@stW aHAHHFndZPpqar.tridgeLinZpe.LtYer.W,:jbye
+</pre></div>
+</div>
+</div>
+</section>
+<section id="section-1">
+<span id="id2"></span><h3>\~<a class="headerlink" href="#section-1" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\~</span></code> command allows you to put a tilde accent on a letter (see
+also the <code class="docutils literal notranslate"><span class="pre">`\tilde</span></code> &lt;doc-t.html#cmd-tilde&gt;`__ command). The
+possibilities are given here:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="o">~</span><span class="n">A</span> \<span class="o">~</span><span class="n">a</span> \<span class="o">~</span><span class="p">{</span>\<span class="o">^</span><span class="n">A</span><span class="p">}</span> \<span class="o">~</span><span class="p">{</span>\<span class="o">^</span><span class="n">a</span><span class="p">}</span> \<span class="o">~</span><span class="p">{</span>\<span class="n">u</span> <span class="n">A</span><span class="p">}</span> \<span class="o">~</span><span class="p">{</span>\<span class="n">u</span> <span class="n">a</span><span class="p">}</span> \<span class="o">~</span><span class="n">E</span> \<span class="o">~</span><span class="n">e</span> \<span class="o">~</span><span class="p">{</span>\<span class="o">^</span><span class="n">E</span><span class="p">}</span> \<span class="o">~</span><span class="p">{</span>\<span class="o">^</span><span class="n">e</span><span class="p">}</span>
+ \<span class="o">~</span><span class="n">I</span> \<span class="o">~</span><span class="n">i</span> \<span class="o">~</span><span class="n">N</span> \<span class="o">~</span><span class="n">n</span> \<span class="o">~</span><span class="n">O</span> \<span class="o">~</span><span class="n">o</span> \<span class="o">~</span><span class="p">{</span>\<span class="o">=</span><span class="n">O</span><span class="p">}</span> \<span class="o">~</span><span class="p">{</span>\<span class="o">=</span><span class="n">o</span><span class="p">}</span> \<span class="o">~</span><span class="p">{</span>\<span class="s1">&#39;O} \~{</span><span class="se">\&#39;</span><span class="s1">o} \~{</span><span class="se">\&quot;</span><span class="s1">O}</span>
+\<span class="o">~</span><span class="p">{</span>\<span class="s2">&quot;o}  \~{\^O} \~{\^o} \~{\H O} \~{\H o}  \~U \~u \~{</span><span class="se">\&#39;</span><span class="s2">U} \~{</span><span class="se">\&#39;</span><span class="s2">u} \~{\H U}</span>
+\<span class="o">~</span><span class="p">{</span>\<span class="n">H</span> <span class="n">u</span><span class="p">}</span> \<span class="o">~</span><span class="n">V</span> \<span class="o">~</span><span class="n">v</span>  \<span class="o">~</span><span class="n">Y</span> \<span class="o">~</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<p>the result is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ã</span> <span class="n">ã</span> <span class="o">&amp;</span><span class="c1">#7850; &amp;#7851; &amp;#7860; &amp;#7861; &amp;#7868; &amp;#7869; &amp;#7876; &amp;#7877;</span>
+<span class="o">&amp;</span><span class="c1">#296; &amp;#297; Ñ ñ Õ õ &amp;#556; &amp;#557; &amp;#7756; &amp;#7757; &amp;#7758;</span>
+<span class="o">&amp;</span><span class="c1">#7759; &amp;#7894; &amp;#7895; &amp;#7904; &amp;#7905; &amp;#360; &amp;#361; &amp;#7800; &amp;#7801; &amp;#7918;</span>
+<span class="o">&amp;</span><span class="c1">#7919; &amp;#7804; &amp;#7805; &amp;#7928; &amp;#7929;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="tilde accent" src="../_images/img_20.png" /></p>
+</section>
+<section id="section-2">
+<span id="id3"></span><h3>\$<a class="headerlink" href="#section-2" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\$</span></code> command is valid in math mode and text mode. It generates a
+dollar sign (<code class="docutils literal notranslate"><span class="pre">&lt;mi&gt;$&lt;/mi&gt;</span></code> in math mode). See also the description of
+the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command. Remember that the
+dollar sign by itself (using default category codes) starts or finishes
+a math formula.</p>
+</section>
+<section id="section-3">
+<span id="id4"></span><h3>\%<a class="headerlink" href="#section-3" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\%</span></code> command is valid in math mode and text mode. It generates a
+percent sign ( <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;%&lt;/mo&gt;</span></code> in math mode). See also the description of
+the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command. Remember that the
+percent sign by itself (using default category codes) starts a comment.</p>
+</section>
+<section id="section-4">
+<span id="id5"></span><h3>\&amp;<a class="headerlink" href="#section-4" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\&amp;</span></code> command is valid in math mode and text mode. It generates a
+ampersand sign <code class="docutils literal notranslate"><span class="pre">&amp;amp;</span></code> (or <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;amp;&lt;/mo&gt;</span></code> in math mode). See
+description of the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command.
+Remember that the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> character is valid only inside arrays as a cell
+delimiter (see description of <a class="reference external" href="doc-array.html">arrays</a>).</p>
+</section>
+<section id="section-5">
+<span id="id6"></span><h3>\!<a class="headerlink" href="#section-5" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\!</span></code> command is valid in math mode and text mode. It generates a
+negative space of -3/18em in math mode <code class="docutils literal notranslate"><span class="pre">&lt;mspace</span> <span class="pre">width='-0.166667em'/&gt;</span></code>
+and nothing in text mode. See description of the
+<code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command.</p>
+</section>
+<section id="backslash-comma">
+<h3>\, (backslash comma)<a class="headerlink" href="#backslash-comma" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\,</span></code> command is valid in math mode and text mode. It generates a
+space of 3/18em in math mode, <code class="docutils literal notranslate"><span class="pre">&lt;mspace</span> <span class="pre">width='0.166667em'/&gt;</span></code>, and a
+<code class="docutils literal notranslate"><span class="pre">&amp;nbsp;</span></code> otherwise (this is <code class="docutils literal notranslate"><span class="pre">&amp;#xA0;</span></code>, as defined in isonum.ent).</p>
+<p>See description of the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command and
+<code class="docutils literal notranslate"><span class="pre">`\AA</span></code> &lt;doc-a.html#cmd-Caa&gt;`__ command.</p>
+</section>
+<section id="section-6">
+<span id="id7"></span><h3>\&gt;<a class="headerlink" href="#section-6" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\&gt;</span></code> command is valid in math mode. It generates a space of
+4/18em. See description of the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__
+command.</p>
+</section>
+<section id="section-7">
+<span id="id8"></span><h3>\;<a class="headerlink" href="#section-7" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\;</span></code> command is valid in math mode. It generates a space of
+5/18em. See description of the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__
+command.</p>
+</section>
+<section id="section-8">
+<span id="id9"></span><h3>\{<a class="headerlink" href="#section-8" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\{</span></code> command is valid in math mode and text mode. It generates an
+open brace, for instance <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;{&lt;/mo&gt;</span></code> in math mode. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command, and
+<code class="docutils literal notranslate"><span class="pre">`\AA</span></code> &lt;doc-a.html#cmd-Caa&gt;`__ command. It can be used as a math
+delimiter, see description of the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__
+command.</p>
+<p>Note that a single brace (without backslash), assuming default catcodes,
+opens a group.</p>
+</section>
+<section id="section-9">
+<span id="id10"></span><h3>\}<a class="headerlink" href="#section-9" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\}</span></code> command is valid in math mode and text mode. It generates an
+close brace, for instance <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;}&lt;/mo&gt;</span></code> in math mode. See description
+of the <code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command, and
+<code class="docutils literal notranslate"><span class="pre">`\AA</span></code> &lt;doc-a.html#cmd-Caa&gt;`__ command. It can be used as a math
+delimiter, see description of the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__
+command.</p>
+<p>Note that a single brace (withut backslash) (assuming default catcodes)
+closes a group.</p>
+</section>
+<section id="backslash-plus">
+<h3>\+ (backslash plus)<a class="headerlink" href="#backslash-plus" title="Link to this heading"></a></h3>
+<p>This command is undefined in <em>Tralics</em>; it is part of the unimplemented
+<code class="docutils literal notranslate"><span class="pre">\settabs</span></code> mechanism</p>
+</section>
+<section id="backslash-underscore">
+<h3>\_ (backslash underscore)<a class="headerlink" href="#backslash-underscore" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\_</span></code> command is valid in math mode and text mode. It generates an
+underscore, in math mode it is <code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;_&lt;/mo&gt;</span></code> See description of the
+<code class="docutils literal notranslate"><span class="pre">`\qquad</span></code> &lt;doc-q.html#cmd-qquad&gt;`__ command and
+<code class="docutils literal notranslate"><span class="pre">`\AA</span></code> &lt;doc-a.html#cmd-Caa&gt;`__ command.</p>
+<p>With defaults catcodes, a simple underscore character is valid only in
+math mode, and starts a subscript.</p>
+</section>
+<section id="backslash-minus">
+<h3>\- (backslash minus)<a class="headerlink" href="#backslash-minus" title="Link to this heading"></a></h3>
+<p>The LaTeX kernel contains <code class="docutils literal notranslate"><span class="pre">\def\-{\discretionary{-}{}{}}</span></code>. Since
+hyphenation is not implemented in <em>Tralics</em>, <code class="docutils literal notranslate"><span class="pre">\-</span></code> produces no result.</p>
+<p>The command is also redefined by the tabbing environment, which is not
+yet implemented.</p>
+<p>Note that hyphens are ligatures:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span> <span class="o">--</span> <span class="n">c</span> <span class="o">---</span> <span class="n">d</span>
+</pre></div>
+</div>
+</div>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span> <span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="n">c</span> <span class="o">&amp;</span><span class="n">mdash</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>preview <img alt="dashes" src="../_images/img-85.png" /></p>
+</section>
+<section id="vertical-bar">
+<h3>| (vertical bar)<a class="headerlink" href="#vertical-bar" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">|</span></code> command it is equivalent to <code class="docutils literal notranslate"><span class="pre">\vert</span></code> as a math delimiter. See
+description of the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command.</p>
+</section>
+<section id="backslash-vertical-bar">
+<h3>\| (backslash vertical bar)<a class="headerlink" href="#backslash-vertical-bar" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\|</span></code> command is valid only in math mode. It is equivalent to
+<code class="docutils literal notranslate"><span class="pre">\Vert</span></code>. It produces the character U+2225, ∥. See description of the
+<code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command.</p>
+</section>
+<section id="section-10">
+<span id="id11"></span><h3>\#<a class="headerlink" href="#section-10" title="Link to this heading"></a></h3>
+<p>The character # has category 6, is described <a class="reference external" href="catcode6">here</a> , and
+cannot be use to produce a sharp sign, you must used <code class="docutils literal notranslate"><span class="pre">\#</span></code> instead. It
+is valid in text and in math mode; you can also use
+<code class="docutils literal notranslate"><span class="pre">`\sharp</span></code> &lt;doc-s.html#cmd-sharp&gt;`__, that produces the musical sign
+character U+266F, ♯. See also description of the
+<code class="docutils literal notranslate"><span class="pre">`\AA</span></code> &lt;doc-a.html#cmd-Caa&gt;`__ command.</p>
+</section>
+<section id="backslash-backslash">
+<h3>\\ (backslash backslash)<a class="headerlink" href="#backslash-backslash" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\\</span></code> command has three meanings, depending on whether it is in
+text, in a text table, or in math table. It can be followed by a star
+(which is ignored) and an optional argument in brackets, which is a
+dimension. Inside a table, the <code class="docutils literal notranslate"><span class="pre">\\</span></code> indicates the end of the current
+row, and the optional argument specifies additional space between rows.
+This argument is currently ignored in math mode. Note that <code class="docutils literal notranslate"><span class="pre">\\</span></code>
+finished the current cell, the current row, and starts a new row and a
+new cell. If this is the last cell in the table, and if it is empty,
+then the row is removed. Said otherwise, a <code class="docutils literal notranslate"><span class="pre">\\</span></code> is ignored at the end
+of a table; it is however needed before a final <code class="docutils literal notranslate"><span class="pre">\hline</span></code> if you want
+an horizontal rule at the end of the table.</p>
+<p>Outside a table, a <code class="docutils literal notranslate"><span class="pre">\\</span></code> specifies the end of a paragraph, and the
+start of a new one, which is not indented. The optional argument
+indicates vertical space to be added (see also the
+<code class="docutils literal notranslate"><span class="pre">`\vskip</span></code> &lt;doc-v.html#cmd-vskip&gt;`__ command). In a title, the command
+with its arguments is replaced by <code class="docutils literal notranslate"><span class="pre">\&#64;headercr</span></code>, a command that
+produces a space by default. We give here an example of <code class="docutils literal notranslate"><span class="pre">\\</span></code> outside a
+table.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="n">A</span> \\<span class="o">*</span> <span class="n">text</span> <span class="n">B</span> \\<span class="p">[</span><span class="mi">3</span><span class="n">mm</span><span class="p">]</span> <span class="n">text</span> <span class="n">C</span>
+\<span class="n">expandafter</span>\<span class="n">def</span>\<span class="n">csname</span> <span class="nd">@headercr</span>\<span class="n">endcsname</span><span class="p">{;</span> <span class="p">}</span>
+\<span class="n">section</span><span class="p">{</span><span class="n">A</span>\\<span class="p">[</span><span class="mi">2</span><span class="n">mm</span><span class="p">]</span><span class="n">B</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
+<span class="n">line</span> <span class="n">one</span>\\
+<span class="n">this</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">second</span> <span class="n">line</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">center</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is the XML translation. The <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> element has a <code class="docutils literal notranslate"><span class="pre">noindent</span></code>
+attribute only if it has no <code class="docutils literal notranslate"><span class="pre">rend</span></code> attribute.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">text</span> <span class="n">A</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">text</span> <span class="n">B</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">noindent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">spacebefore</span><span class="o">=</span><span class="s1">&#39;8.53581&#39;</span><span class="o">&gt;</span><span class="n">text</span> <span class="n">C</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">div0</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;uid1&#39;</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span><span class="n">A</span><span class="p">;</span> <span class="n">B</span><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">line</span> <span class="n">one</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">p</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">this</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">second</span> <span class="n">line</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview. <img alt="example of bbbb in text" src="../_images/img_32.png" /></p>
+<p>This is an example of math table.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">equation</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">array</span><span class="p">}{</span><span class="n">lcl</span><span class="p">}</span>
+\<span class="n">dot</span><span class="p">{</span><span class="n">x</span><span class="p">}</span> <span class="o">&amp;</span> <span class="o">=</span> <span class="o">&amp;</span> <span class="n">Ax</span><span class="o">+</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">u</span><span class="p">)</span>\\<span class="p">[</span><span class="mi">2</span><span class="n">mm</span><span class="p">]</span>
+ <span class="n">y</span> <span class="o">&amp;</span> <span class="o">=</span> <span class="o">&amp;</span> <span class="n">Cx</span> \\
+ \<span class="n">multicolumn</span><span class="p">{</span><span class="mi">3</span><span class="p">}{</span><span class="n">l</span><span class="p">}{</span><span class="n">x</span>\<span class="ow">in</span> <span class="n">R</span><span class="o">^</span><span class="n">n</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">array</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">equation</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is the XML translation.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;display&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">math</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">mtable</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mover</span> <span class="n">accent</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">dot</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mover</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;=&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;+&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">g</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span>
+       <span class="o">&lt;</span><span class="n">mo</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">u</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">y</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;=&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">C</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">mtr</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">mtd</span> <span class="n">columnalign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">columnspan</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">Element</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">R</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">n</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">msup</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">mtd</span><span class="o">&gt;</span>
+   <span class="o">&lt;/</span><span class="n">mtr</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">mtable</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">math</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">formula</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>This is a preview. Note that the <code class="docutils literal notranslate"><span class="pre">\multicolumn</span></code> is ignored in the
+rendering. This has been corrected. <img alt="example of bbbb in a math table" src="../_images/img_31.png" /></p>
+<p>Other example.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">tabular</span><span class="p">}{</span><span class="o">|</span><span class="n">ll</span><span class="o">|</span><span class="n">rr</span><span class="o">|</span><span class="n">cc</span><span class="o">|</span><span class="p">}</span>
+\<span class="n">hline</span> <span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="o">&amp;</span><span class="n">c</span><span class="o">&amp;</span><span class="n">d</span><span class="o">&amp;</span><span class="n">e</span><span class="o">&amp;</span><span class="n">f</span>\\
+<span class="n">aaa</span><span class="o">&amp;</span><span class="n">bbb</span><span class="o">&amp;</span><span class="n">ccc</span><span class="o">&amp;</span><span class="n">ddd</span><span class="o">&amp;</span><span class="n">eee</span><span class="o">&amp;</span><span class="n">fff</span>\\
+\<span class="n">hline</span>
+<span class="n">A</span><span class="o">&amp;</span>\<span class="n">multicolumn</span><span class="p">{</span><span class="mi">3</span><span class="p">}{</span><span class="n">l</span><span class="o">|</span><span class="p">}{</span><span class="n">BCD</span><span class="p">}</span><span class="o">&amp;</span><span class="n">E</span><span class="o">&amp;</span><span class="n">F</span>\\
+\<span class="n">multicolumn</span><span class="p">{</span><span class="mi">2</span><span class="p">}{</span><span class="o">|</span><span class="n">l</span><span class="p">}{</span><span class="n">ab</span><span class="p">}</span><span class="o">&amp;</span><span class="n">c</span><span class="o">&amp;</span><span class="n">d</span><span class="o">&amp;</span><span class="n">e</span><span class="o">&amp;</span><span class="n">f</span>\\
+\<span class="n">cline</span><span class="p">{</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="p">}</span>\<span class="n">cline</span><span class="p">{</span><span class="mi">6</span><span class="o">-</span><span class="mi">6</span><span class="p">}</span>
+<span class="n">aaa</span><span class="o">&amp;</span><span class="n">bbb</span><span class="o">&amp;</span><span class="n">ccc</span><span class="o">&amp;</span><span class="n">ddd</span><span class="o">&amp;</span><span class="n">eee</span><span class="o">&amp;</span><span class="n">fff</span>\\\<span class="n">hline</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">tabular</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>This is the XML translation.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">table</span> <span class="n">rend</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">a</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">b</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">d</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">e</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">f</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">aaa</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">bbb</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">ccc</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">ddd</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">eee</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">fff</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">top</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">A</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;3&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">BCD</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">E</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">F</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;2&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">ab</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">c</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">d</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">e</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">f</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">row</span> <span class="n">bottom</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">left</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">aaa</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;left&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">bbb</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="o">&gt;</span><span class="n">ccc</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;right&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">ddd</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="o">&gt;</span><span class="n">eee</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">cell</span> <span class="n">halign</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="n">right</span><span class="o">-</span><span class="n">border</span><span class="o">=</span><span class="s1">&#39;true&#39;</span><span class="o">&gt;</span><span class="n">fff</span><span class="o">&lt;/</span><span class="n">cell</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">row</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>The rendering of the <code class="docutils literal notranslate"><span class="pre">tabular</span></code> is not good: first, the width of the
+table is the width of the page (changed to 15cm in this example), and
+the width of each column is defined by the number of characters in it
+(in this example, you do not see a difference, but replacing <code class="docutils literal notranslate"><span class="pre">a</span></code> by
+<code class="docutils literal notranslate"><span class="pre">$a$</span></code> would be catastrophic).</p>
+<p>You should look at the <a class="reference external" href="doc-array.html">page on arrays</a>. It contains
+an example similar to this one. You can see that we changed the
+algorithm: a <code class="docutils literal notranslate"><span class="pre">\hline</span></code> implies a <code class="docutils literal notranslate"><span class="pre">bottom-border</span></code> on the previous row.</p>
+<p><img alt="example of bbbb in a normal table" src="../_images/img_33.png" /></p>
+</section>
+<section id="section-11">
+<span id="id12"></span><h3>[, \[<a class="headerlink" href="#section-11" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">[</span></code> command can be used as a math delimiter. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command.</p>
+<p>The expansion of <code class="docutils literal notranslate"><span class="pre">\[</span></code> is <code class="docutils literal notranslate"><span class="pre">$$</span></code>. It means: `begin display math’ but
+<em>Tralics</em> does no check.</p>
+</section>
+<section id="section-12">
+<span id="id13"></span><h3>], \]<a class="headerlink" href="#section-12" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">]</span></code> command can be used as a math delimiter. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command.</p>
+<p>The expansion of <code class="docutils literal notranslate"><span class="pre">\]</span></code> is <code class="docutils literal notranslate"><span class="pre">$$</span></code>. It means: `end display math’ but
+<em>Tralics</em> does no check. Hence <code class="docutils literal notranslate"><span class="pre">$a\]b$</span></code> and <code class="docutils literal notranslate"><span class="pre">\]x\[</span></code> are valid
+expressions.</p>
+</section>
+<section id="section-13">
+<span id="id14"></span><h3>(, \(<a class="headerlink" href="#section-13" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">(</span></code> command can be used as a math delimiter. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command.</p>
+<p>The expansion of <code class="docutils literal notranslate"><span class="pre">\(</span></code> is <code class="docutils literal notranslate"><span class="pre">$</span></code>. It means: `start inline math’ but
+<em>Tralics</em> does no check. This command is also used as an opening
+delimiter by the <a class="reference external" href="doc-i.html#ifthenelse">ifthen package</a>.</p>
+</section>
+<section id="section-14">
+<span id="id15"></span><h3>), \)<a class="headerlink" href="#section-14" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">)</span></code> command can be used as a math delimiter. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command.</p>
+<p>The expansion of <code class="docutils literal notranslate"><span class="pre">\)</span></code> is <code class="docutils literal notranslate"><span class="pre">$</span></code>. It means: `end inline math’ but
+<em>Tralics</em> does no check. In particular <code class="docutils literal notranslate"><span class="pre">$$</span> <span class="pre">a\(\)</span></code> is valid; note also
+that <code class="docutils literal notranslate"><span class="pre">\(\)</span></code> is an empty math formula. This command is also used as a
+closing delimiter by the <a class="reference external" href="doc-i.html#ifthenelse">ifthen package</a>.</p>
+</section>
+<section id="less-than-sign">
+<h3>&lt; (less than sign)<a class="headerlink" href="#less-than-sign" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> command can be used as a math delimiter. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command. Otherwise, it
+translates like a normal character, but is always printed as <code class="docutils literal notranslate"><span class="pre">&amp;lt;</span></code> in
+the XML output. There is one exception: the
+<code class="docutils literal notranslate"><span class="pre">`rawxml</span></code> &lt;doc-r.html#env-rawxml&gt;`__ environment prints the convent
+verbatim, and the <code class="docutils literal notranslate"><span class="pre">`\xmllatex</span></code> &lt;doc-x.html#cmd-xmllatex&gt;`__ command
+print</p>
+</section>
+<section id="greater-than-sign">
+<h3>&gt; (greater than sign)<a class="headerlink" href="#greater-than-sign" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> command can be used as a math delimiter. See description of
+the <code class="docutils literal notranslate"><span class="pre">`\vert</span></code> &lt;doc-v.html#cmd-vert&gt;`__ command.</p>
+</section>
+<section id="single-quote-apostrophe-straight-quote">
+<h3>‘ (single quote, apostrophe, straight quote)<a class="headerlink" href="#single-quote-apostrophe-straight-quote" title="Link to this heading"></a></h3>
+<p>This character behaves normally in text mode; it has a special meaning
+when <em>Tralics</em> reads a number (see
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a>); it has a special meaning in math
+mode. Plain TeX defines an active apostrophe character as follows</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\catcode`\&#39;=\active \gdef&#39;{^\bgroup\prim@s}}
+\def\prim@s{\prime\futurelet\next\pr@m@s}
+\def\pr@m@s{\ifx&#39;\next\let\nxt\pr@@@s \else\ifx^\next\let\nxt\pr@@@t
+  \else\let\nxt\egroup\fi\fi \nxt}
+\def\pr@@@s#1{\prim@s} \def\pr@@@t#1#2{#2\egroup}
+</pre></div>
+</div>
+</div>
+<p>The definition of LaTeX is similar, with <code class="docutils literal notranslate"><span class="pre">\expandafter</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">\nxt</span></code>. In <em>Tralics</em>, these lines of TeX code are replaced by some
+lines of C++. The effect can be seen on the following example.</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{\tracingall $x&#39; x&#39;&#39; x&#39;&#39;&#39; x&#39;&#39;&#39;&#39; u_2&#39; v&#39;^3_4$}
+</pre></div>
+</div>
+</div>
+<p>The transcript file will hold</p>
+<div class="log-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{math shift}
++stack: level + 3
+...
+Math: $x^{\prime } x^{\prime \prime } x^{\prime \prime \prime }
+x^{\prime \prime \prime \prime } u_2^{\prime } v^{\prime 3}_4$
+</pre></div>
+</div>
+</div>
+<p>We have removed a bunch of lines of the form `+stack: level’, because
+each opening and closing brace changes the current level (by the way, it
+is the dollar sign that increases the level first). The XML translation
+is the following.</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">formula</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inline&#39;</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">math</span> <span class="n">xmlns</span><span class="o">=</span><span class="s1">&#39;http://www.w3.org/1998/Math/MathML&#39;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">mrow</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">msup</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">msup</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">msup</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">msup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">x</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;</span>
+     <span class="o">&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;&lt;/</span><span class="n">msup</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">msubsup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">u</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;/</span><span class="n">msubsup</span><span class="o">&gt;</span>
+   <span class="o">&lt;</span><span class="n">msubsup</span><span class="o">&gt;&lt;</span><span class="n">mi</span><span class="o">&gt;</span><span class="n">v</span><span class="o">&lt;/</span><span class="n">mi</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;&lt;</span><span class="n">mrow</span><span class="o">&gt;&lt;</span><span class="n">mo</span><span class="o">&gt;&amp;</span><span class="n">prime</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">mo</span><span class="o">&gt;&lt;</span><span class="n">mn</span><span class="o">&gt;</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">mn</span><span class="o">&gt;&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">msubsup</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">mrow</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">math</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">formula</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="primes in math mode" src="../_images/img_14.png" /></p>
+</section>
+<section id="backslash-left-quote">
+<h3>\’ (backslash left quote)<a class="headerlink" href="#backslash-left-quote" title="Link to this heading"></a></h3>
+<p>The single quote character behaves normally, but has a special meaning
+when <em>Tralics</em> reads a number (see
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a>). The <code class="docutils literal notranslate"><span class="pre">\'</span></code> command puts an acute
+accent over some letters. Do not confuse with <code class="docutils literal notranslate"><span class="pre">\acute</span></code>, which is a
+math-only command. Example</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="s1">&#39;A </span><span class="se">\&#39;</span><span class="s1">a </span><span class="se">\&#39;</span><span class="s1">{\AA} </span><span class="se">\&#39;</span><span class="s1">{</span><span class="se">\a</span><span class="s1">a} </span><span class="se">\&#39;</span><span class="s1">{\AE} </span><span class="se">\&#39;</span><span class="s1">{</span><span class="se">\a</span><span class="s1">e} </span><span class="se">\&#39;</span><span class="s1">{\^A} </span><span class="se">\&#39;</span><span class="s1">{\^a} </span><span class="se">\&#39;</span><span class="s1">{\u A} </span><span class="se">\&#39;</span><span class="s1">{\u a}</span>
+\<span class="s1">&#39;C </span><span class="se">\&#39;</span><span class="s1">c </span><span class="se">\&#39;</span><span class="s1">{\c C} </span><span class="se">\&#39;</span><span class="s1">{\c c} </span><span class="se">\&#39;</span><span class="s1">E </span><span class="se">\&#39;</span><span class="s1">e  </span><span class="se">\&#39;</span><span class="s1">{\=E}</span>
+\<span class="s1">&#39;{\=e} </span><span class="se">\&#39;</span><span class="s1">{\^E} </span><span class="se">\&#39;</span><span class="s1">{\^e} </span><span class="se">\&#39;</span><span class="s1">G </span><span class="se">\&#39;</span><span class="s1">g </span><span class="se">\&#39;</span><span class="s1">I </span><span class="se">\&#39;</span><span class="s1">i </span><span class="se">\\\&#39;</span><span class="s1">{</span><span class="se">\&quot;</span><span class="s1">I} </span><span class="se">\&#39;</span><span class="s1">{</span><span class="se">\&quot;</span><span class="s1">i} </span><span class="se">\&#39;</span><span class="s1">K </span><span class="se">\&#39;</span><span class="s1">k </span><span class="se">\&#39;</span><span class="s1">L </span><span class="se">\&#39;</span><span class="s1">l </span><span class="se">\&#39;</span><span class="s1">M</span>
+\<span class="s1">&#39;m </span><span class="se">\&#39;</span><span class="s1">N </span><span class="se">\&#39;</span><span class="s1">n </span><span class="se">\&#39;</span><span class="s1">O </span><span class="se">\&#39;</span><span class="s1">o </span><span class="se">\&#39;</span><span class="s1">{\O} </span><span class="se">\&#39;</span><span class="s1">{\o} </span><span class="se">\&#39;</span><span class="s1">{\~O} </span><span class="se">\&#39;</span><span class="s1">{\~o} </span><span class="se">\&#39;</span><span class="s1">{\=O} </span><span class="se">\&#39;</span><span class="s1">{\=o} </span><span class="se">\&#39;</span><span class="s1">{\^O}</span>
+\<span class="s1">&#39;{\^o} </span><span class="se">\&#39;</span><span class="s1">{\H O} </span><span class="se">\&#39;</span><span class="s1">{\H o}</span><span class="se">\\</span><span class="s1"> </span><span class="se">\&#39;</span><span class="s1">P </span><span class="se">\&#39;</span><span class="s1">p </span><span class="se">\&#39;</span><span class="s1">R </span><span class="se">\&#39;</span><span class="s1">r </span><span class="se">\&#39;</span><span class="s1"> S </span><span class="se">\&#39;</span><span class="s1">s</span>
+\<span class="s1">&#39;{\.S} </span><span class="se">\&#39;</span><span class="s1">{\.s} </span><span class="se">\&#39;</span><span class="s1">U </span><span class="se">\&#39;</span><span class="s1">u </span><span class="se">\&#39;</span><span class="s1">{</span><span class="se">\&quot;</span><span class="s1">U} </span><span class="se">\&#39;</span><span class="s1">{</span><span class="se">\&quot;</span><span class="s1">u} </span><span class="se">\&#39;</span><span class="s1">{\~U} </span><span class="se">\&#39;</span><span class="s1">{\~u} </span><span class="se">\&#39;</span><span class="s1">{\H U} </span><span class="se">\&#39;</span><span class="s1">{\H u}</span>
+\<span class="s1">&#39;W </span><span class="se">\&#39;</span><span class="s1">w </span><span class="se">\&#39;</span><span class="s1">Y </span><span class="se">\&#39;</span><span class="s1">y </span><span class="se">\&#39;</span><span class="s1">Z </span><span class="se">\&#39;</span><span class="s1">z</span>
+</pre></div>
+</div>
+</div>
+<p>gives</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Á</span> <span class="n">á</span> <span class="o">&amp;</span><span class="c1">#506; &amp;#507; &amp;#508; &amp;#509; &amp;#7844; &amp;#7845; &amp;#7854; &amp;#7855;</span>
+<span class="o">&amp;</span><span class="c1">#262; &amp;#263; &amp;#7688; &amp;#7689; É é &amp;#7702;</span>
+<span class="o">&amp;</span><span class="c1">#7703; &amp;#7870; &amp;#7871; &amp;#500; &amp;#501; Í í</span>
+<span class="o">&amp;</span><span class="c1">#7726; &amp;#7727; &amp;#7728; &amp;#7729; &amp;#313; &amp;#314; &amp;#7742;</span>
+<span class="o">&amp;</span><span class="c1">#7743; &amp;#323; &amp;#324; Ó ó &amp;#510; &amp;#511; &amp;#7756; &amp;#7757; &amp;#7762; &amp;#7763; &amp;#7888;</span>
+<span class="o">&amp;</span><span class="c1">#7889; &amp;#7898; &amp;#7899;</span>
+<span class="o">&amp;</span><span class="c1">#7764; &amp;#7765; &amp;#340; &amp;#341; &amp;#346; &amp;#347;</span>
+<span class="o">&amp;</span><span class="c1">#7780; &amp;#7781; Ú ú &amp;#471; &amp;#472; &amp;#7800; &amp;#7801; &amp;#7912; &amp;#7913;</span>
+<span class="o">&amp;</span><span class="c1">#7810; &amp;#7811; Ý ý &amp;#377; &amp;#378;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="acute accent" src="../_images/img_91.png" /></p>
+</section>
+<section id="backslash-double-quote">
+<h3>\” (backslash double quote)<a class="headerlink" href="#backslash-double-quote" title="Link to this heading"></a></h3>
+<p>The double quote character behaves normally, but has a special meaning
+when <em>Tralics</em> reads a number (see
+<a class="reference external" href="doc-s.html#fct-scanint">scanint</a>). The <code class="docutils literal notranslate"><span class="pre">\&quot;</span></code> command puts a umlaut
+or diaeresis accent over some letters. Example:</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="s2">&quot;A </span><span class="se">\&quot;</span><span class="s2">a </span><span class="se">\&quot;</span><span class="s2">{\=A} </span><span class="se">\&quot;</span><span class="s2">{\=a} </span><span class="se">\&quot;</span><span class="s2">E </span><span class="se">\&quot;</span><span class="s2">e </span><span class="se">\&quot;</span><span class="s2">H </span><span class="se">\&quot;</span><span class="s2">h </span><span class="se">\&quot;</span><span class="s2">I </span><span class="se">\&quot;</span><span class="s2">i </span><span class="se">\&quot;</span><span class="s2">{</span><span class="se">\&#39;</span><span class="s2">I} </span><span class="se">\&quot;</span><span class="s2">{</span><span class="se">\&#39;</span><span class="s2">i} </span><span class="se">\&quot;</span><span class="s2">O </span><span class="se">\&quot;</span><span class="s2">o</span>
+\<span class="s2">&quot;{\=O} </span><span class="se">\&quot;</span><span class="s2">{\=o} </span><span class="se">\&quot;</span><span class="s2">{\~O} </span><span class="se">\&quot;</span><span class="s2">{\~o} </span><span class="se">\&quot;</span><span class="s2">t</span><span class="se">\\</span><span class="s2"> </span><span class="se">\&quot;</span><span class="s2">U </span><span class="se">\&quot;</span><span class="s2">u </span><span class="se">\&quot;</span><span class="s2">{\=U} </span><span class="se">\&quot;</span><span class="s2">{\=u} </span><span class="se">\&quot;</span><span class="s2">{\`U} </span><span class="se">\&quot;</span><span class="s2">{\`u}</span>
+\<span class="s2">&quot;{</span><span class="se">\&#39;</span><span class="s2">U} </span><span class="se">\&quot;</span><span class="s2">{</span><span class="se">\&#39;</span><span class="s2">u} </span><span class="se">\&quot;</span><span class="s2">{</span><span class="se">\v</span><span class="s2"> U} </span><span class="se">\&quot;</span><span class="s2">{</span><span class="se">\v</span><span class="s2"> u} </span><span class="se">\&quot;</span><span class="s2">W </span><span class="se">\&quot;</span><span class="s2">w </span><span class="se">\&quot;</span><span class="s2">X </span><span class="se">\&quot;</span><span class="s2">x </span><span class="se">\&quot;</span><span class="s2">Y </span><span class="se">\&quot;</span><span class="s2">y</span>
+</pre></div>
+</div>
+</div>
+<p>gives</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ä</span> <span class="n">ä</span> <span class="o">&amp;</span><span class="c1">#478; &amp;#479; Ë ë &amp;#7718; &amp;#7719; Ï ï &amp;#7726; &amp;#7727; Ö ö</span>
+<span class="o">&amp;</span><span class="c1">#554; &amp;#555; &amp;#7758; &amp;#7759; &amp;#7831;</span>
+<span class="n">Ü</span> <span class="n">ü</span> <span class="o">&amp;</span><span class="c1">#7802; &amp;#7803; &amp;#475; &amp;#476;</span>
+<span class="o">&amp;</span><span class="c1">#471; &amp;#472; &amp;#473; &amp;#474; &amp;#7812; &amp;#7813; &amp;#7820; &amp;#7821; &amp;#376; ÿ</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="dieresis accent" src="../_images/img_16.png" /></p>
+</section>
+<section id="backslash-equals">
+<h3>\= (backslash equals)<a class="headerlink" href="#backslash-equals" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\=</span></code> command generates a macro accent, similar to the <code class="docutils literal notranslate"><span class="pre">\bar</span></code>
+(that works in math mode only). The translation of</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\=A \=a \={\&quot;A} \={\&quot;a} \={\.A} \={\.a} \=\AE \=\ae \=E \= e \={\&#39;E} \={\&#39;e}
+\={\`E} \={\`e} \=G \=g \=H \=h\\
+\=I \=i \={\d L} \={\d l} \= O \=o \={\k O} \={\k o} \={\&quot;O} \={\&quot;o} \={\~O}
+\={\~o} \={\.O} \={\.o} \={\`O} \={\`o} \={\&#39;O} \={\&#39;o}\\ \={\d R} \={\d r}
+ \=T \=t \=U \=u \={\&quot;U} \={\&quot;u} \=Y \=y
+</pre></div>
+</div>
+</div>
+<p>is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="c1">#256; &amp;#257; &amp;#478; &amp;#479; &amp;#480; &amp;#481; &amp;#482;&amp;#483;&amp;#274; &amp;#275; &amp;#7702; &amp;#7703;</span>
+<span class="o">&amp;</span><span class="c1">#7700; &amp;#7701; &amp;#7712; &amp;#7713; &amp;#294; &amp;#295;</span>
+<span class="o">&amp;</span><span class="c1">#298; &amp;#299; &amp;#7736; &amp;#7737; &amp;#332; &amp;#333; &amp;#492; &amp;#493; &amp;#554; &amp;#555; &amp;#556;</span>
+<span class="o">&amp;</span><span class="c1">#557; &amp;#560; &amp;#561; &amp;#7760; &amp;#7761; &amp;#7762; &amp;#7763; &amp;#7772; &amp;#7773;</span>
+<span class="o">&amp;</span><span class="c1">#358; &amp;#359; &amp;#362; &amp;#363; &amp;#7802; &amp;#7803; &amp;#562; &amp;#563;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="macro accent" src="../_images/img_18.png" /></p>
+</section>
+<section id="backslash-dot">
+<h3>\. (backslash dot)<a class="headerlink" href="#backslash-dot" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\.</span></code> command generates dot accent, similar to the <code class="docutils literal notranslate"><span class="pre">\dot</span></code> (that
+works in math mode only). The translation of</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="o">.</span><span class="n">A</span> \<span class="o">.</span><span class="n">a</span> \<span class="o">.</span><span class="p">{</span>\<span class="o">=</span><span class="n">A</span><span class="p">}</span> \<span class="o">.</span><span class="p">{</span>\<span class="o">=</span><span class="n">a</span><span class="p">}</span> \<span class="o">.</span><span class="n">B</span> \<span class="o">.</span><span class="n">b</span> \<span class="o">.</span><span class="n">C</span> \<span class="o">.</span><span class="n">c</span> \<span class="o">.</span><span class="n">D</span> \<span class="o">.</span><span class="n">d</span> \<span class="o">.</span><span class="n">E</span> \<span class="o">.</span><span class="n">e</span> \<span class="o">.</span><span class="n">F</span> \<span class="o">.</span><span class="n">f</span> \<span class="o">.</span><span class="n">G</span> \<span class="o">.</span><span class="n">g</span> \<span class="o">.</span><span class="n">H</span>
+\<span class="o">.</span><span class="n">h</span> \<span class="o">.</span><span class="n">I</span> \<span class="o">.</span><span class="n">L</span> \<span class="o">.</span><span class="n">l</span> \<span class="o">.</span><span class="n">M</span> \<span class="o">.</span><span class="n">m</span> \<span class="o">.</span><span class="n">N</span> \<span class="o">.</span><span class="n">n</span> \<span class="o">.</span><span class="n">O</span> \<span class="o">.</span><span class="n">o</span> \<span class="o">.</span><span class="p">{</span>\<span class="o">=</span><span class="n">O</span><span class="p">}</span> \<span class="o">.</span><span class="p">{</span>\<span class="o">=</span><span class="n">o</span><span class="p">}</span> \<span class="o">.</span><span class="n">P</span> \<span class="o">.</span><span class="n">p</span> \<span class="o">.</span><span class="n">R</span> \<span class="o">.</span><span class="n">r</span> \<span class="o">.</span><span class="n">S</span>
+\<span class="o">.</span><span class="n">s</span> \<span class="o">.</span><span class="p">{</span>\<span class="n">d</span> <span class="n">S</span><span class="p">}</span> \<span class="o">.</span><span class="p">{</span>\<span class="n">d</span> <span class="n">s</span><span class="p">}</span> \<span class="o">.</span><span class="p">{</span>\<span class="n">v</span> <span class="n">S</span><span class="p">}</span> \<span class="o">.</span><span class="p">{</span>\<span class="n">v</span> <span class="n">s</span><span class="p">}</span> \<span class="o">.</span><span class="p">{</span>\<span class="s1">&#39;S} \.{</span><span class="se">\&#39;</span><span class="s1">s} \.T \.t \.W \.w \.X</span>
+\<span class="o">.</span><span class="n">x</span> \<span class="o">.</span><span class="n">Y</span> \<span class="o">.</span><span class="n">y</span> \<span class="o">.</span><span class="n">Z</span> \<span class="o">.</span><span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<p>is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="c1">#550; &amp;#551; &amp;#480; &amp;#481; &amp;#7682; &amp;#7683; &amp;#266; &amp;#267; &amp;#7690; &amp;#7691; &amp;#278; &amp;#279;</span>
+<span class="o">&amp;</span><span class="c1">#7710; &amp;#7711; &amp;#288; &amp;#289; &amp;#7714; &amp;#7715; &amp;#304; &amp;#319; &amp;#320; &amp;#7744; &amp;#7745; &amp;#7748;</span>
+<span class="o">&amp;</span><span class="c1">#7749; &amp;#558; &amp;#559; &amp;#560; &amp;#561; &amp;#7766; &amp;#7767; &amp;#7768; &amp;#7769; &amp;#7776; &amp;#7777;</span>
+<span class="o">&amp;</span><span class="c1">#7784; &amp;#7785; &amp;#7782; &amp;#7783; &amp;#7780; &amp;#7781; &amp;#7786; &amp;#7787; &amp;#7814; &amp;#7815; &amp;#7818;</span>
+<span class="o">&amp;</span><span class="c1">#7819; &amp;#7822; &amp;#7823; &amp;#379; &amp;#380;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="dot accent" src="../_images/img_17.png" /></p>
+</section>
+<section id="backslash-hat">
+<h3>\^ (backslash hat)<a class="headerlink" href="#backslash-hat" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\^</span></code> command generates a circonflex accent, similar to the
+<code class="docutils literal notranslate"><span class="pre">\hat</span></code> command (that works in math mode only). The translation of</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="o">^</span><span class="n">A</span> \<span class="o">^</span><span class="n">a</span> \<span class="o">^</span><span class="p">{</span>\<span class="s1">&#39;A} \^{</span><span class="se">\&#39;</span><span class="s1">a} \^{\`A} \^{\`a} \^{\h A} \^{\h a} \^{\~A} \^{\~a}</span>
+\<span class="o">^</span><span class="p">{</span>\<span class="n">d</span> <span class="n">A</span><span class="p">}</span> \<span class="o">^</span><span class="p">{</span>\<span class="n">d</span> <span class="n">a</span><span class="p">}</span> \<span class="o">^</span><span class="n">C</span> \<span class="o">^</span><span class="n">c</span> \<span class="o">^</span><span class="n">E</span> \<span class="o">^</span><span class="n">e</span> \<span class="o">^</span><span class="p">{</span>\<span class="s1">&#39;E} \^{</span><span class="se">\&#39;</span><span class="s1">e} \^{\`E} \^{\`e} \^{\h E}</span>
+\<span class="o">^</span><span class="p">{</span>\<span class="n">h</span> <span class="n">e</span><span class="p">}</span> \<span class="o">^</span><span class="p">{</span>\<span class="o">~</span><span class="n">E</span><span class="p">}</span> \<span class="o">^</span><span class="p">{</span>\<span class="o">~</span><span class="n">e</span><span class="p">}</span> \<span class="o">^</span><span class="p">{</span>\<span class="n">d</span> <span class="n">E</span><span class="p">}</span> \<span class="o">^</span><span class="p">{</span>\<span class="n">d</span> <span class="n">e</span><span class="p">}</span> \<span class="o">^</span><span class="n">G</span> \<span class="o">^</span><span class="n">g</span> \<span class="o">^</span><span class="n">H</span> \<span class="o">^</span><span class="n">h</span> \<span class="o">^</span><span class="n">I</span> \<span class="o">^</span><span class="n">i</span> \<span class="o">^</span><span class="n">J</span> \<span class="o">^</span><span class="n">j</span>
+\<span class="o">^</span><span class="n">O</span> \<span class="o">^</span><span class="n">o</span> \<span class="o">^</span><span class="p">{</span>\<span class="s1">&#39;O} \^{</span><span class="se">\&#39;</span><span class="s1">o}  \^{\`O} \^{\`o}  \^{\h O} \^{\h o}  \^{\~O} \^{\~o}</span>
+\<span class="o">^</span><span class="p">{</span>\<span class="n">d</span> <span class="n">O</span><span class="p">}</span> \<span class="o">^</span><span class="p">{</span>\<span class="n">d</span> <span class="n">o</span><span class="p">}</span>  \<span class="o">^</span><span class="n">S</span> \<span class="o">^</span> <span class="n">s</span> \<span class="o">^</span><span class="n">U</span> \<span class="o">^</span><span class="n">u</span> \<span class="o">^</span><span class="n">W</span> \<span class="o">^</span><span class="n">w</span> \<span class="o">^</span><span class="n">Y</span> \<span class="o">^</span><span class="n">y</span> \<span class="o">^</span><span class="n">Z</span> \<span class="o">^</span><span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<p>is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Â</span> <span class="n">â</span> <span class="o">&amp;</span><span class="c1">#7844; &amp;#7845; &amp;#7846; &amp;#7847; &amp;#7848; &amp;#7849; &amp;#7850; &amp;#7851;</span>
+<span class="o">&amp;</span><span class="c1">#7852; &amp;#7853; &amp;#264; &amp;#265;</span>
+<span class="n">Ê</span> <span class="n">ê</span> <span class="o">&amp;</span><span class="c1">#7870; &amp;#7871; &amp;#7872; &amp;#7873; &amp;#7874;</span>
+<span class="o">&amp;</span><span class="c1">#7875; &amp;#7876; &amp;#7877; &amp;#7878; &amp;#7879; &amp;#284; &amp;#285; &amp;#292; &amp;#293; Î î &amp;#308; &amp;#309;</span>
+<span class="n">Ô</span> <span class="n">ô</span> <span class="o">&amp;</span><span class="c1">#7888; &amp;#7889; &amp;#7890; &amp;#7891; &amp;#7892; &amp;#7893; &amp;#7894; &amp;#7895;</span>
+<span class="o">&amp;</span><span class="c1">#7896; &amp;#7897; &amp;#348; &amp;#349; Û û &amp;#372; &amp;#373; &amp;#374; &amp;#375; &amp;#7824; &amp;#7825;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="circonflex accent" src="../_images/img_21.png" /></p>
+</section>
+<section id="backslash-backquote">
+<h3>\` (backslash backquote)<a class="headerlink" href="#backslash-backquote" title="Link to this heading"></a></h3>
+<p>The backquote character behaves normally, but has a special meaning when
+<em>Tralics</em> reads a number (see <a class="reference external" href="doc-s.html#fct-scanint">scanint</a>). The
+<code class="docutils literal notranslate"><span class="pre">\`</span></code> command generates a grave accent, similar to the
+<code class="docutils literal notranslate"><span class="pre">\grave</span></code> command (that works in math mode only). The translation of</p>
+<div class="ltx-source docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\`A \`a \`{\^A} \`{\^a} \`{\u A} \`{\u a} \`E \`e \`{\=E} \`{\=e} \`{\^E}
+\`{\^e}  \`I \`i \`N \`n \\\`O \`o \`{\=O} \`{\=o} \`{\^O} \`{\^o}
+\`{\H O} \`{\H o} \`U \`u \`{\&quot;U} \`{\&quot;u} \`{\H U} \`{\H u} \`W \`w \`Y\`y
+</pre></div>
+</div>
+</div>
+<p>is</p>
+<div class="xml-out docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">À</span> <span class="n">à</span> <span class="o">&amp;</span><span class="c1">#7846; &amp;#7847; &amp;#7856; &amp;#7857; È è &amp;#7700; &amp;#7701; &amp;#7872;</span>
+<span class="o">&amp;</span><span class="c1">#7873; Ì ì &amp;#504; &amp;#505;</span>
+<span class="n">Ò</span> <span class="n">ò</span> <span class="o">&amp;</span><span class="c1">#7760; &amp;#7761; &amp;#7890; &amp;#7891;</span>
+<span class="o">&amp;</span><span class="c1">#7900; &amp;#7901; Ù ù &amp;#475; &amp;#476; &amp;#7914; &amp;#7915; &amp;#7808; &amp;#7809; &amp;#7922;&amp;#7923;</span>
+</pre></div>
+</div>
+</div>
+<p>Preview <img alt="grave accent" src="../_images/img_22.png" /></p>
+</section>
+<section id="backslash-space">
+<h3>\ (backslash space)<a class="headerlink" href="#backslash-space" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\</span></code> command adds a space character to the XML tree. The command
+name is formed of a backslash followed by a space, a tabulation, a
+line-feed, or a carriage return. Since these characters are of catcode
+10 (space), spaces after them is ignored. At the start of chapter 25 of
+the <a class="reference external" href="index.html#texbook">TeXbook</a>, Knuth explains that the result of
+this command is as if a space had been given in a context where the
+space factor is 1000 (<em>Tralics</em> ignores <code class="docutils literal notranslate"><span class="pre">\spacefactor</span></code> and other
+factors that modify the space factor). In math mode, the translation is
+<code class="docutils literal notranslate"><span class="pre">&lt;mspace</span> <span class="pre">width='4pt'/&gt;</span></code>.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">\space</span></code> produces a single space.</p>
+</section>
+<section id="backslash-slash">
+<h3>\/ (backslash slash)<a class="headerlink" href="#backslash-slash" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">\/</span></code> command is assumed to insert a kern corresponding to the
+italic correction, if the last item on the horizontal list is a
+character or a ligature, or a kern of width zero in math mode. However,
+<em>Tralics</em> ignores such subtleties, so that this command does nothing.</p>
+</section>
+<section id="section-15">
+<span id="id16"></span><h3>\*<a class="headerlink" href="#section-15" title="Link to this heading"></a></h3>
+<p>This command is valid in math mode only, the translation is a
+<code class="docutils literal notranslate"><span class="pre">&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;</span></code>.</p>
+</section>
+<section id="backslash-atsign">
+<h3>\&#64; (backslash atsign)<a class="headerlink" href="#backslash-atsign" title="Link to this heading"></a></h3>
+<p>The LaTeX kernel contains <code class="docutils literal notranslate"><span class="pre">\def\&#64;{\spacefactor\&#64;m}</span></code>. However,
+<em>Tralics</em> ignores currently space factors, so that this command does
+nothing. If the at-sign character is of category `letter’, then
+<code class="docutils literal notranslate"><span class="pre">\&#64;ne</span></code> is a single command; but if it is of category `other’ (normal
+case), it is <code class="docutils literal notranslate"><span class="pre">\&#64;</span></code> followed by some characters, and this often gives an
+error in LaTeX, since the <code class="docutils literal notranslate"><span class="pre">\spacefactor</span></code> command cannot be used
+everywhere.</p>
+<p>The description of <code class="docutils literal notranslate"><span class="pre">\&#64;makeactive</span></code> is found near that of
+<code class="docutils literal notranslate"><span class="pre">\makeatletter</span></code>; there are som exceptions to this rule: <code class="docutils literal notranslate"><span class="pre">\&#64;ne</span></code> is
+described as if it were <code class="docutils literal notranslate"><span class="pre">\one</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2002-2020, INRIA and CNRS.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
